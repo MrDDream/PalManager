@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  L'app se connecte à des serveurs auto-hébergés dont l'hôte/port sont saisis par
+  l'utilisateur (LAN ou VPS perso), pas à des domaines fixes connus à l'avance.
+  PalDefender écoute par défaut en HTTP simple, d'où le cleartext autorisé ici.
+  Les certificats auto-signés HTTPS de l'API Palworld sont gérés au niveau OkHttp
+  via un toggle explicite par profil (jamais activé silencieusement).
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>

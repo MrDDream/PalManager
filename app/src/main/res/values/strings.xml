@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PalManager</string>
+
+    <!-- Commun -->
+    <string name="common_cancel">Annuler</string>
+    <string name="common_confirm">Confirmer</string>
+    <string name="common_delete">Supprimer</string>
+    <string name="common_edit">Modifier</string>
+    <string name="common_close">Fermer</string>
+    <string name="common_give">Donner</string>
+    <string name="common_save_action">Enregistrer</string>
+    <string name="common_search_hint">Rechercher par nom ou ID</string>
+    <string name="common_id_fmt">ID : %1$s</string>
+    <string name="common_player_label">Joueur</string>
+    <string name="common_player_hint">Tapez un pseudo…</string>
+    <string name="common_player_level_fmt">%1$s  ·  niveau %2$d</string>
+    <string name="filter_all_masc">Tous</string>
+    <string name="filter_all_fem">Toutes</string>
+    <string name="filter_button">Filtres</string>
+    <string name="filter_button_count_fmt">Filtres (%1$d)</string>
+
+    <!-- Content descriptions partagées -->
+    <string name="cd_back">Retour</string>
+    <string name="cd_refresh">Rafraîchir</string>
+    <string name="cd_actions">Actions</string>
+    <string name="cd_settings">Paramètres</string>
+    <string name="cd_add_server">Ajouter un serveur</string>
+    <string name="cd_edit">Modifier</string>
+    <string name="cd_delete">Supprimer</string>
+    <string name="cd_show">Afficher</string>
+    <string name="cd_hide">Masquer</string>
+
+    <!-- Écran de crash -->
+    <string name="crash_title">L\'app a planté au dernier lancement</string>
+    <string name="crash_subtitle">Copiez ce texte et envoyez-le pour diagnostiquer le problème.</string>
+    <string name="crash_copy">Copier</string>
+    <string name="crash_continue">Continuer</string>
+
+    <!-- Liste des serveurs -->
+    <string name="profiles_title">Serveurs Palworld</string>
+    <string name="profiles_empty_title">Aucun serveur configuré</string>
+    <string name="profiles_empty_subtitle">Ajoutez-en un avec le bouton + pour commencer</string>
+    <string name="profiles_delete_title_fmt">Supprimer « %1$s » ?</string>
+    <string name="profiles_delete_message">Le profil et ses identifiants enregistrés seront définitivement supprimés.</string>
+
+    <!-- Ajout/édition de serveur -->
+    <string name="profile_edit_new_title">Nouveau serveur</string>
+    <string name="profile_edit_edit_title">Modifier le serveur</string>
+    <string name="profile_edit_name_label">Nom du profil</string>
+    <string name="profile_edit_icon_label">Icône</string>
+    <string name="profile_edit_host_label">Hôte / IP</string>
+    <string name="profile_edit_host_support">Partagé par les deux API : c\'est toujours la même machine</string>
+    <string name="profile_edit_palworld_api">API Palworld</string>
+    <string name="profile_edit_paldefender_api">API PalDefender</string>
+    <string name="profile_edit_port_label">Port</string>
+    <string name="profile_edit_admin_password_label">Mot de passe admin</string>
+    <string name="profile_edit_bearer_token_label">Bearer token</string>
+
+    <!-- Dashboard -->
+    <string name="dashboard_title_fallback">Dashboard</string>
+    <string name="dashboard_info_unavailable">Infos indisponibles</string>
+    <string name="dashboard_version_fmt">Version %1$s</string>
+    <string name="dashboard_stat_players">Joueurs</string>
+    <string name="dashboard_stat_fps">FPS serveur</string>
+    <string name="dashboard_ip_fmt">IP : %1$s</string>
+    <string name="dashboard_version_palworld_fmt">Palworld : %1$s</string>
+    <string name="dashboard_version_paldefender_fmt">PalDefender : %1$s</string>
+    <string name="dashboard_actions_header">Actions rapides</string>
+    <string name="dashboard_action_players">Joueurs connectés</string>
+    <string name="dashboard_action_livemap">Carte en direct</string>
+    <string name="dashboard_action_give_item">Donner un item</string>
+    <string name="dashboard_action_give_pal">Donner un Pal</string>
+    <string name="dashboard_action_give_human">Donner un PNJ</string>
+    <string name="dashboard_action_guilds">Guildes</string>
+    <string name="dashboard_action_bans">Bannissements</string>
+    <string name="dashboard_action_save">Sauvegarder le monde</string>
+    <string name="dashboard_action_broadcast">Diffusion &amp; maintenance</string>
+    <string name="dashboard_danger_header">Zone danger</string>
+    <string name="dashboard_action_restart">Redémarrer le serveur</string>
+    <string name="dashboard_action_force_stop">Arrêt immédiat (force)</string>
+    <string name="dashboard_save_confirm_title">Sauvegarder le monde ?</string>
+    <string name="dashboard_save_confirm_message">Déclenche une sauvegarde immédiate côté serveur.</string>
+    <string name="dashboard_restart_explanation">Ni l\'API Palworld ni PalDefender n\'exposent de commande "redémarrer" : ceci déclenche un arrêt propre après le délai choisi. La plupart des hébergeurs relancent automatiquement le serveur juste après.</string>
+    <string name="dashboard_wait_time_label">Délai (secondes)</string>
+    <string name="dashboard_message_label">Message</string>
+    <string name="dashboard_schedule_stop">Programmer l\'arrêt</string>
+    <string name="dashboard_force_stop_title">Arrêt immédiat du serveur</string>
+    <string name="dashboard_force_stop_message">Action destructive : le serveur s\'arrête sans délai, sans sauvegarde garantie. Confirmer ?</string>
+    <string name="dashboard_stop_action">Arrêter</string>
+    <string name="dashboard_default_restart_message">Le serveur va redémarrer.</string>
+    <string name="dashboard_error_profile_not_found">Profil introuvable</string>
+    <string name="dashboard_error_connection">Connexion au serveur impossible</string>
+    <string name="dashboard_msg_save_done">Sauvegarde effectuée</string>
+    <string name="dashboard_msg_shutdown_scheduled">Arrêt du serveur programmé</string>
+    <string name="dashboard_msg_stopped">Serveur arrêté</string>
+    <string name="dashboard_error_action_failed">Action échouée</string>
+
+    <!-- Donner un item -->
+    <string name="itempicker_title">Donner un item</string>
+    <string name="item_detail_quantity_label">Quantité</string>
+    <string name="item_given_fmt">%1$s x%2$d envoyé</string>
+    <string name="item_error_send_failed">Échec de l\'envoi</string>
+
+    <!-- Donner un Pal -->
+    <string name="palpicker_title">Donner un Pal</string>
+    <string name="palpicker_template_button">Template</string>
+    <string name="filter_element_label">Élément</string>
+    <string name="filter_rarity_label">Rareté</string>
+    <string name="filter_job_label">Métier</string>
+    <string name="pal_stat_hp">PV</string>
+    <string name="pal_stat_atk">ATQ</string>
+    <string name="pal_stat_def">DEF</string>
+    <string name="pal_jobs_header">Métiers</string>
+    <string name="pal_job_level_fmt">%1$s · Nv.%2$d</string>
+    <string name="pal_partner_skill_header">Compétence de partenaire</string>
+    <string name="pal_level_label">Niveau</string>
+    <string name="pal_template_dialog_title">Donner un template Pal</string>
+    <string name="pal_template_name_label">Nom du template (ex: MyPalTemplate)</string>
+    <string name="pal_given_fmt">%1$s (niveau %2$d) envoyé</string>
+    <string name="pal_template_given_fmt">Template "%1$s" envoyé</string>
+    <string name="pal_error_template_failed">Échec de l\'envoi du template</string>
+
+    <!-- Donner un PNJ -->
+    <string name="humanpicker_title">Donner un PNJ</string>
+    <string name="human_drops_header">Butin possible</string>
+    <string name="human_drop_line_fmt">• %1$s × %2$s (%3$d%%)</string>
+
+    <!-- Joueurs connectés -->
+    <string name="players_title">Joueurs connectés</string>
+    <string name="players_empty">Aucun joueur connecté</string>
+    <string name="players_supporting_fmt">Niveau %1$d · %2$s · %3$d ms</string>
+    <string name="players_action_message">Envoyer un message</string>
+    <string name="players_action_inventory">Voir inventaire</string>
+    <string name="players_action_team">Voir équipe</string>
+    <string name="players_action_progression">Voir progression</string>
+    <string name="players_action_techs">Voir technologies</string>
+    <string name="players_action_kick">Exclure (kick)</string>
+    <string name="players_action_kick_short">Exclure</string>
+    <string name="players_action_ban">Bannir</string>
+    <string name="players_action_send">Envoyer</string>
+    <string name="players_kick_title_fmt">Exclure %1$s ?</string>
+    <string name="players_ban_title_fmt">Bannir %1$s ?</string>
+    <string name="players_message_title_fmt">Message à %1$s</string>
+    <string name="players_reason_label">Raison</string>
+    <string name="player_detail_title_fmt">%1$s — %2$s</string>
+    <string name="player_detail_inventory">Inventaire</string>
+    <string name="player_detail_team">Équipe</string>
+    <string name="player_detail_progression">Progression</string>
+    <string name="player_detail_techs">Technologies</string>
+    <string name="inventory_unavailable">Inventaire indisponible</string>
+    <string name="inventory_empty">Inventaire vide</string>
+    <string name="inventory_section_items">Objets</string>
+    <string name="inventory_section_key_items">Objets clés</string>
+    <string name="inventory_section_weapons">Armes</string>
+    <string name="inventory_section_armor">Armures</string>
+    <string name="inventory_section_food">Nourriture</string>
+    <string name="inventory_section_dropslot">Slot de largage</string>
+    <string name="team_empty">Aucun Pal dans l\'équipe</string>
+    <string name="team_shiny">Chromatique</string>
+    <string name="progression_level_fmt">Niveau : %1$d</string>
+    <string name="progression_exp_fmt">EXP : %1$d</string>
+    <string name="progression_unused_points_fmt">Points de statut non utilisés : %1$d</string>
+    <string name="progression_tech_points_fmt">Points de technologie : %1$d</string>
+    <string name="progression_ancient_tech_points_fmt">Points de technologie ancienne : %1$d</string>
+    <string name="techs_unlocked_fmt">Débloquées : %1$d/%2$d</string>
+    <string name="techs_level_fmt">Niveau %1$d</string>
+    <string name="common_yes">Oui</string>
+    <string name="common_no">Non</string>
+    <string name="progression_section_currencies">Monnaies</string>
+    <string name="progression_section_bosses">Boss</string>
+    <string name="progression_section_captures">Captures</string>
+    <string name="progression_section_activities">Activités</string>
+    <string name="progression_relics_fmt">Reliques : %1$d</string>
+    <string name="progression_boss_total_fmt">Boss vaincus (total) : %1$d</string>
+    <string name="progression_predator_fmt">Prédateurs vaincus : %1$d</string>
+    <string name="progression_tower_boss_fmt">Boss de tour vaincus : %1$d</string>
+    <string name="progression_raid_boss_fmt">Boss de raid vaincus : %1$d</string>
+    <string name="progression_normal_boss_fmt">Boss normaux vaincus : %1$d</string>
+    <string name="progression_tribe_capture_fmt">Tribus capturées : %1$d</string>
+    <string name="progression_pal_capture_fmt">Pals capturés : %1$d</string>
+    <string name="progression_pal_capture_bonus_fmt">Pals capturés (bonus) : %1$d</string>
+    <string name="progression_pal_butcher_fmt">Pals dépecés : %1$d</string>
+    <string name="progression_craft_fmt">Objets fabriqués : %1$d</string>
+    <string name="progression_normal_dungeon_fmt">Donjons normaux terminés : %1$d</string>
+    <string name="progression_fixed_dungeon_fmt">Donjons fixes terminés : %1$d</string>
+    <string name="progression_oilrig_fmt">Plateformes pétrolières terminées : %1$d</string>
+    <string name="progression_pal_rankup_fmt">Pals promus : %1$d</string>
+    <string name="progression_arena_fmt">Victoires solo en arène : %1$d</string>
+    <string name="progression_npc_talk_fmt">PNJ contactés : %1$d</string>
+    <string name="progression_fishing_fmt">Pêches réussies : %1$d</string>
+    <string name="progression_treasure_fmt">Trésors trouvés : %1$d</string>
+    <string name="progression_camp_conquered_fmt">Camps conquis : %1$d</string>
+    <string name="progression_first_fishing_fmt">Première pêche complétée : %1$s</string>
+    <string name="players_error_load_failed">Impossible de charger les joueurs</string>
+    <string name="players_msg_kicked_fmt">%1$s exclu</string>
+    <string name="players_msg_banned_fmt">%1$s banni</string>
+    <string name="players_msg_message_sent_fmt">Message envoyé à %1$s</string>
+    <string name="players_error_message_failed">Échec de l\'envoi du message</string>
+    <string name="players_error_detail_load_failed">Chargement impossible</string>
+    <string name="players_error_action_failed">Action échouée</string>
+
+    <!-- Guildes -->
+    <string name="guilds_title">Guildes</string>
+    <string name="guilds_search_hint">Rechercher une guilde</string>
+    <string name="guilds_empty">Aucune guilde</string>
+    <string name="guilds_level_members_fmt">Niveau %1$d · %2$d membre(s)</string>
+    <string name="guilds_location_cd">Voir la base sur la carte</string>
+    <string name="guilds_unnamed">Guilde sans nom</string>
+    <string name="guilds_error_load_failed">Impossible de charger les guildes</string>
+
+    <!-- Bannissements -->
+    <string name="bans_title">Bannissements</string>
+    <string name="bans_ip_ban_header">Ban par IP</string>
+    <string name="bans_ip_label">Adresse IP</string>
+    <string name="bans_ban_action">Bannir</string>
+    <string name="bans_unban_action">Débannir</string>
+    <string name="bans_banned_players_header">Joueurs bannis</string>
+    <string name="bans_empty">Aucun joueur banni</string>
+    <string name="bans_no_reason">Aucune raison indiquée</string>
+    <string name="bans_ban_ip_confirm_title_fmt">Bannir l\'IP %1$s ?</string>
+    <string name="bans_ban_ip_confirm_message">Cette adresse IP ne pourra plus se connecter au serveur.</string>
+    <string name="bans_error_load_failed">Impossible de charger la liste des bans</string>
+    <string name="bans_msg_unbanned">Joueur débanni</string>
+    <string name="bans_error_generic">Échec</string>
+    <string name="bans_msg_ip_banned_fmt">IP %1$s bannie</string>
+    <string name="bans_msg_ip_unbanned_fmt">IP %1$s débannie</string>
+
+    <!-- Diffusion & maintenance -->
+    <string name="broadcast_title">Diffusion &amp; maintenance</string>
+    <string name="broadcast_message_label">Message diffusé à tout le serveur</string>
+    <string name="broadcast_send_action">Diffuser</string>
+    <string name="broadcast_alert_label">Message d\'alerte</string>
+    <string name="broadcast_alert_action">Envoyer l\'alerte</string>
+    <string name="broadcast_danger_header">Zone danger</string>
+    <string name="broadcast_base_id_label">Identifiant de base (baseCampId)</string>
+    <string name="broadcast_delete_base_action">Supprimer cette base</string>
+    <string name="broadcast_delete_base_confirm_title_fmt">Supprimer la base %1$s ?</string>
+    <string name="broadcast_delete_base_confirm_message">Action irréversible : toutes les constructions de cette base seront détruites.</string>
+    <string name="broadcast_msg_sent">Diffusion envoyée</string>
+    <string name="broadcast_alert_sent">Alerte envoyée</string>
+    <string name="broadcast_base_deleted">Base supprimée</string>
+    <string name="broadcast_error_action_failed">Action échouée</string>
+
+    <!-- Carte en direct -->
+    <string name="livemap_title">Carte en direct</string>
+    <string name="livemap_tab_world">Monde</string>
+    <string name="livemap_tab_tree">Arbre-Monde</string>
+    <string name="livemap_empty_players">Aucun joueur sur cette carte</string>
+    <string name="livemap_player_level_fmt">Niveau %1$d</string>
+    <string name="livemap_base_marker_cd">Base de guilde</string>
+    <string name="livemap_map_cd">Carte</string>
+    <string name="livemap_marker_label_fmt">%1$s · Nv. %2$d</string>
+    <string name="livemap_error_profile_not_found">Profil introuvable</string>
+    <string name="livemap_error_connection">Connexion au serveur impossible</string>
+
+    <!-- Éléments Pal -->
+    <string name="element_fire">Feu</string>
+    <string name="element_water">Eau</string>
+    <string name="element_leaf">Herbe</string>
+    <string name="element_electricity">Foudre</string>
+    <string name="element_ice">Glace</string>
+    <string name="element_earth">Terre</string>
+    <string name="element_dark">Ténèbres</string>
+    <string name="element_dragon">Dragon</string>
+    <string name="element_normal">Neutre</string>
+
+    <!-- Métiers -->
+    <string name="job_emitflame">Allumage de feu</string>
+    <string name="job_watering">Arrosage</string>
+    <string name="job_seeding">Semence</string>
+    <string name="job_generateelectricity">Génération d\'énergie</string>
+    <string name="job_handcraft">Artisanat</string>
+    <string name="job_collection">Collecte</string>
+    <string name="job_deforest">Abattage</string>
+    <string name="job_mining">Extraction</string>
+    <string name="job_oilextraction">Extraction de pétrole</string>
+    <string name="job_productmedicine">Pharmacie</string>
+    <string name="job_cool">Réfrigération</string>
+    <string name="job_transport">Transport</string>
+    <string name="job_monsterfarm">Exploitation</string>
+
+    <!-- Rareté -->
+    <string name="rarity_common">Commun</string>
+    <string name="rarity_uncommon">Peu commun</string>
+    <string name="rarity_rare">Rare</string>
+    <string name="rarity_epic">Épique</string>
+    <string name="rarity_legendary">Légendaire</string>
+
+    <!-- Paramètres -->
+    <string name="settings_title">Paramètres</string>
+    <string name="settings_theme_header">Thème</string>
+    <string name="settings_theme_system">Système</string>
+    <string name="settings_theme_light">Clair</string>
+    <string name="settings_theme_dark">Sombre</string>
+    <string name="settings_language_header">Langue</string>
+</resources>

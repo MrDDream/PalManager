@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PalManager</string>
+
+    <!-- Common -->
+    <string name="common_cancel">Cancel</string>
+    <string name="common_confirm">Confirm</string>
+    <string name="common_delete">Delete</string>
+    <string name="common_edit">Edit</string>
+    <string name="common_close">Close</string>
+    <string name="common_give">Give</string>
+    <string name="common_save_action">Save</string>
+    <string name="common_search_hint">Search by name or ID</string>
+    <string name="common_id_fmt">ID: %1$s</string>
+    <string name="common_player_label">Player</string>
+    <string name="common_player_hint">Type a nickname…</string>
+    <string name="common_player_level_fmt">%1$s  ·  level %2$d</string>
+    <string name="filter_all_masc">All</string>
+    <string name="filter_all_fem">All</string>
+    <string name="filter_button">Filters</string>
+    <string name="filter_button_count_fmt">Filters (%1$d)</string>
+
+    <!-- Shared content descriptions -->
+    <string name="cd_back">Back</string>
+    <string name="cd_refresh">Refresh</string>
+    <string name="cd_actions">Actions</string>
+    <string name="cd_settings">Settings</string>
+    <string name="cd_add_server">Add server</string>
+    <string name="cd_edit">Edit</string>
+    <string name="cd_delete">Delete</string>
+    <string name="cd_show">Show</string>
+    <string name="cd_hide">Hide</string>
+
+    <!-- Crash screen -->
+    <string name="crash_title">The app crashed on last launch</string>
+    <string name="crash_subtitle">Copy this text and send it to diagnose the problem.</string>
+    <string name="crash_copy">Copy</string>
+    <string name="crash_continue">Continue</string>
+
+    <!-- Server list -->
+    <string name="profiles_title">Palworld Servers</string>
+    <string name="profiles_empty_title">No server configured</string>
+    <string name="profiles_empty_subtitle">Add one with the + button to get started</string>
+    <string name="profiles_delete_title_fmt">Delete "%1$s"?</string>
+    <string name="profiles_delete_message">The profile and its saved credentials will be permanently deleted.</string>
+
+    <!-- Add/edit server -->
+    <string name="profile_edit_new_title">New server</string>
+    <string name="profile_edit_edit_title">Edit server</string>
+    <string name="profile_edit_name_label">Profile name</string>
+    <string name="profile_edit_icon_label">Icon</string>
+    <string name="profile_edit_host_label">Host / IP</string>
+    <string name="profile_edit_host_support">Shared by both APIs: it\'s always the same machine</string>
+    <string name="profile_edit_palworld_api">Palworld API</string>
+    <string name="profile_edit_paldefender_api">PalDefender API</string>
+    <string name="profile_edit_port_label">Port</string>
+    <string name="profile_edit_admin_password_label">Admin password</string>
+    <string name="profile_edit_bearer_token_label">Bearer token</string>
+
+    <!-- Dashboard -->
+    <string name="dashboard_title_fallback">Dashboard</string>
+    <string name="dashboard_info_unavailable">Info unavailable</string>
+    <string name="dashboard_version_fmt">Version %1$s</string>
+    <string name="dashboard_stat_players">Players</string>
+    <string name="dashboard_stat_fps">Server FPS</string>
+    <string name="dashboard_ip_fmt">IP: %1$s</string>
+    <string name="dashboard_version_palworld_fmt">Palworld: %1$s</string>
+    <string name="dashboard_version_paldefender_fmt">PalDefender: %1$s</string>
+    <string name="dashboard_actions_header">Quick actions</string>
+    <string name="dashboard_action_players">Connected players</string>
+    <string name="dashboard_action_livemap">Live map</string>
+    <string name="dashboard_action_give_item">Give an item</string>
+    <string name="dashboard_action_give_pal">Give a Pal</string>
+    <string name="dashboard_action_give_human">Give an NPC</string>
+    <string name="dashboard_action_guilds">Guilds</string>
+    <string name="dashboard_action_bans">Bans</string>
+    <string name="dashboard_action_save">Save the world</string>
+    <string name="dashboard_action_broadcast">Broadcast &amp; maintenance</string>
+    <string name="dashboard_danger_header">Danger zone</string>
+    <string name="dashboard_action_restart">Restart the server</string>
+    <string name="dashboard_action_force_stop">Immediate stop (force)</string>
+    <string name="dashboard_save_confirm_title">Save the world?</string>
+    <string name="dashboard_save_confirm_message">Triggers an immediate save on the server.</string>
+    <string name="dashboard_restart_explanation">Neither the Palworld nor the PalDefender API expose a "restart" command: this triggers a clean shutdown after the chosen delay. Most hosts automatically relaunch the server right after.</string>
+    <string name="dashboard_wait_time_label">Delay (seconds)</string>
+    <string name="dashboard_message_label">Message</string>
+    <string name="dashboard_schedule_stop">Schedule the shutdown</string>
+    <string name="dashboard_force_stop_title">Immediate server stop</string>
+    <string name="dashboard_force_stop_message">Destructive action: the server stops immediately, with no guaranteed save. Confirm?</string>
+    <string name="dashboard_stop_action">Stop</string>
+    <string name="dashboard_default_restart_message">The server is about to restart.</string>
+    <string name="dashboard_error_profile_not_found">Server profile not found</string>
+    <string name="dashboard_error_connection">Unable to connect to the server</string>
+    <string name="dashboard_msg_save_done">Save completed</string>
+    <string name="dashboard_msg_shutdown_scheduled">Server shutdown scheduled</string>
+    <string name="dashboard_msg_stopped">Server stopped</string>
+    <string name="dashboard_error_action_failed">Action failed</string>
+
+    <!-- Give item -->
+    <string name="itempicker_title">Give an item</string>
+    <string name="item_detail_quantity_label">Quantity</string>
+    <string name="item_given_fmt">%1$s x%2$d sent</string>
+    <string name="item_error_send_failed">Failed to send</string>
+
+    <!-- Give Pal -->
+    <string name="palpicker_title">Give a Pal</string>
+    <string name="palpicker_template_button">Template</string>
+    <string name="filter_element_label">Element</string>
+    <string name="filter_rarity_label">Rarity</string>
+    <string name="filter_job_label">Job</string>
+    <string name="pal_stat_hp">HP</string>
+    <string name="pal_stat_atk">ATK</string>
+    <string name="pal_stat_def">DEF</string>
+    <string name="pal_jobs_header">Jobs</string>
+    <string name="pal_job_level_fmt">%1$s · Lv.%2$d</string>
+    <string name="pal_partner_skill_header">Partner Skill</string>
+    <string name="pal_level_label">Level</string>
+    <string name="pal_template_dialog_title">Give a Pal template</string>
+    <string name="pal_template_name_label">Template name (e.g. MyPalTemplate)</string>
+    <string name="pal_given_fmt">%1$s (level %2$d) sent</string>
+    <string name="pal_template_given_fmt">Template "%1$s" sent</string>
+    <string name="pal_error_template_failed">Failed to send template</string>
+
+    <!-- Give NPC -->
+    <string name="humanpicker_title">Give an NPC</string>
+    <string name="human_drops_header">Possible drops</string>
+    <string name="human_drop_line_fmt">• %1$s × %2$s (%3$d%%)</string>
+
+    <!-- Connected players -->
+    <string name="players_title">Connected players</string>
+    <string name="players_empty">No player connected</string>
+    <string name="players_supporting_fmt">Level %1$d · %2$s · %3$d ms</string>
+    <string name="players_action_message">Send a message</string>
+    <string name="players_action_inventory">View inventory</string>
+    <string name="players_action_team">View team</string>
+    <string name="players_action_progression">View progression</string>
+    <string name="players_action_techs">View technologies</string>
+    <string name="players_action_kick">Kick</string>
+    <string name="players_action_kick_short">Kick</string>
+    <string name="players_action_ban">Ban</string>
+    <string name="players_action_send">Send</string>
+    <string name="players_kick_title_fmt">Kick %1$s?</string>
+    <string name="players_ban_title_fmt">Ban %1$s?</string>
+    <string name="players_message_title_fmt">Message to %1$s</string>
+    <string name="players_reason_label">Reason</string>
+    <string name="player_detail_title_fmt">%1$s — %2$s</string>
+    <string name="player_detail_inventory">Inventory</string>
+    <string name="player_detail_team">Team</string>
+    <string name="player_detail_progression">Progression</string>
+    <string name="player_detail_techs">Technologies</string>
+    <string name="inventory_unavailable">Inventory unavailable</string>
+    <string name="inventory_empty">Empty inventory</string>
+    <string name="inventory_section_items">Items</string>
+    <string name="inventory_section_key_items">Key items</string>
+    <string name="inventory_section_weapons">Weapons</string>
+    <string name="inventory_section_armor">Armor</string>
+    <string name="inventory_section_food">Food</string>
+    <string name="inventory_section_dropslot">Drop slot</string>
+    <string name="team_empty">No Pal in the team</string>
+    <string name="team_shiny">Shiny</string>
+    <string name="progression_level_fmt">Level: %1$d</string>
+    <string name="progression_exp_fmt">EXP: %1$d</string>
+    <string name="progression_unused_points_fmt">Unused status points: %1$d</string>
+    <string name="progression_tech_points_fmt">Technology points: %1$d</string>
+    <string name="progression_ancient_tech_points_fmt">Ancient technology points: %1$d</string>
+    <string name="techs_unlocked_fmt">Unlocked: %1$d/%2$d</string>
+    <string name="techs_level_fmt">Level %1$d</string>
+    <string name="common_yes">Yes</string>
+    <string name="common_no">No</string>
+    <string name="progression_section_currencies">Currencies</string>
+    <string name="progression_section_bosses">Bosses</string>
+    <string name="progression_section_captures">Captures</string>
+    <string name="progression_section_activities">Activities</string>
+    <string name="progression_relics_fmt">Relics: %1$d</string>
+    <string name="progression_boss_total_fmt">Bosses defeated (total): %1$d</string>
+    <string name="progression_predator_fmt">Predators defeated: %1$d</string>
+    <string name="progression_tower_boss_fmt">Tower bosses defeated: %1$d</string>
+    <string name="progression_raid_boss_fmt">Raid bosses defeated: %1$d</string>
+    <string name="progression_normal_boss_fmt">Normal bosses defeated: %1$d</string>
+    <string name="progression_tribe_capture_fmt">Tribes captured: %1$d</string>
+    <string name="progression_pal_capture_fmt">Pals captured: %1$d</string>
+    <string name="progression_pal_capture_bonus_fmt">Pals captured (bonus): %1$d</string>
+    <string name="progression_pal_butcher_fmt">Pals butchered: %1$d</string>
+    <string name="progression_craft_fmt">Items crafted: %1$d</string>
+    <string name="progression_normal_dungeon_fmt">Normal dungeons cleared: %1$d</string>
+    <string name="progression_fixed_dungeon_fmt">Fixed dungeons cleared: %1$d</string>
+    <string name="progression_oilrig_fmt">Oil rigs cleared: %1$d</string>
+    <string name="progression_pal_rankup_fmt">Pals ranked up: %1$d</string>
+    <string name="progression_arena_fmt">Solo arena wins: %1$d</string>
+    <string name="progression_npc_talk_fmt">NPCs talked to: %1$d</string>
+    <string name="progression_fishing_fmt">Successful catches: %1$d</string>
+    <string name="progression_treasure_fmt">Treasures found: %1$d</string>
+    <string name="progression_camp_conquered_fmt">Camps conquered: %1$d</string>
+    <string name="progression_first_fishing_fmt">First catch completed: %1$s</string>
+    <string name="players_error_load_failed">Unable to load players</string>
+    <string name="players_msg_kicked_fmt">%1$s kicked</string>
+    <string name="players_msg_banned_fmt">%1$s banned</string>
+    <string name="players_msg_message_sent_fmt">Message sent to %1$s</string>
+    <string name="players_error_message_failed">Failed to send the message</string>
+    <string name="players_error_detail_load_failed">Unable to load</string>
+    <string name="players_error_action_failed">Action failed</string>
+
+    <!-- Guilds -->
+    <string name="guilds_title">Guilds</string>
+    <string name="guilds_search_hint">Search a guild</string>
+    <string name="guilds_empty">No guild</string>
+    <string name="guilds_level_members_fmt">Level %1$d · %2$d member(s)</string>
+    <string name="guilds_location_cd">View base on the map</string>
+    <string name="guilds_unnamed">Unnamed guild</string>
+    <string name="guilds_error_load_failed">Unable to load guilds</string>
+
+    <!-- Bans -->
+    <string name="bans_title">Bans</string>
+    <string name="bans_ip_ban_header">IP ban</string>
+    <string name="bans_ip_label">IP address</string>
+    <string name="bans_ban_action">Ban</string>
+    <string name="bans_unban_action">Unban</string>
+    <string name="bans_banned_players_header">Banned players</string>
+    <string name="bans_empty">No banned player</string>
+    <string name="bans_no_reason">No reason given</string>
+    <string name="bans_ban_ip_confirm_title_fmt">Ban IP %1$s?</string>
+    <string name="bans_ban_ip_confirm_message">This IP address will no longer be able to connect to the server.</string>
+    <string name="bans_error_load_failed">Unable to load the ban list</string>
+    <string name="bans_msg_unbanned">Player unbanned</string>
+    <string name="bans_error_generic">Failed</string>
+    <string name="bans_msg_ip_banned_fmt">IP %1$s banned</string>
+    <string name="bans_msg_ip_unbanned_fmt">IP %1$s unbanned</string>
+
+    <!-- Broadcast & maintenance -->
+    <string name="broadcast_title">Broadcast &amp; maintenance</string>
+    <string name="broadcast_message_label">Message broadcast to the whole server</string>
+    <string name="broadcast_send_action">Broadcast</string>
+    <string name="broadcast_alert_label">Alert message</string>
+    <string name="broadcast_alert_action">Send alert</string>
+    <string name="broadcast_danger_header">Danger zone</string>
+    <string name="broadcast_base_id_label">Base ID (baseCampId)</string>
+    <string name="broadcast_delete_base_action">Delete this base</string>
+    <string name="broadcast_delete_base_confirm_title_fmt">Delete base %1$s?</string>
+    <string name="broadcast_delete_base_confirm_message">Irreversible action: all buildings on this base will be destroyed.</string>
+    <string name="broadcast_msg_sent">Broadcast sent</string>
+    <string name="broadcast_alert_sent">Alert sent</string>
+    <string name="broadcast_base_deleted">Base deleted</string>
+    <string name="broadcast_error_action_failed">Action failed</string>
+
+    <!-- Live map -->
+    <string name="livemap_title">Live map</string>
+    <string name="livemap_tab_world">World</string>
+    <string name="livemap_tab_tree">World Tree</string>
+    <string name="livemap_empty_players">No player on this map</string>
+    <string name="livemap_player_level_fmt">Level %1$d</string>
+    <string name="livemap_base_marker_cd">Guild base</string>
+    <string name="livemap_map_cd">Map</string>
+    <string name="livemap_marker_label_fmt">%1$s · Lv. %2$d</string>
+    <string name="livemap_error_profile_not_found">Server profile not found</string>
+    <string name="livemap_error_connection">Unable to connect to the server</string>
+
+    <!-- Pal elements -->
+    <string name="element_fire">Fire</string>
+    <string name="element_water">Water</string>
+    <string name="element_leaf">Leaf</string>
+    <string name="element_electricity">Electric</string>
+    <string name="element_ice">Ice</string>
+    <string name="element_earth">Earth</string>
+    <string name="element_dark">Dark</string>
+    <string name="element_dragon">Dragon</string>
+    <string name="element_normal">Neutral</string>
+
+    <!-- Jobs -->
+    <string name="job_emitflame">Kindling</string>
+    <string name="job_watering">Watering</string>
+    <string name="job_seeding">Planting</string>
+    <string name="job_generateelectricity">Generating Electricity</string>
+    <string name="job_handcraft">Handiwork</string>
+    <string name="job_collection">Gathering</string>
+    <string name="job_deforest">Lumbering</string>
+    <string name="job_mining">Mining</string>
+    <string name="job_oilextraction">Oil Extraction</string>
+    <string name="job_productmedicine">Medicine Production</string>
+    <string name="job_cool">Cooling</string>
+    <string name="job_transport">Transporting</string>
+    <string name="job_monsterfarm">Farming</string>
+
+    <!-- Rarity -->
+    <string name="rarity_common">Common</string>
+    <string name="rarity_uncommon">Uncommon</string>
+    <string name="rarity_rare">Rare</string>
+    <string name="rarity_epic">Epic</string>
+    <string name="rarity_legendary">Legendary</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_theme_header">Theme</string>
+    <string name="settings_theme_system">System</string>
+    <string name="settings_theme_light">Light</string>
+    <string name="settings_theme_dark">Dark</string>
+    <string name="settings_language_header">Language</string>
+</resources>

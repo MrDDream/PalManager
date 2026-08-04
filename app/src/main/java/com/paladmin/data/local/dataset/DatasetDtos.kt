@@ -1,0 +1,84 @@
+package com.paladmin.data.local.dataset
+
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
+
+/** Reflète le JSON produit par tools/scrape_paldb.py — voir ce script pour le format exact. */
+@Serializable
+data class ItemDatasetEntry(
+    val id: String,
+    val slug: String,
+    val category: String,
+    @SerialName("name_fr") val nameFr: String,
+    @SerialName("name_en") val nameEn: String,
+    val description: String = "",
+    val stats: Map<String, String> = emptyMap(),
+    val image: String,
+)
+
+@Serializable
+data class PalStatsDto(val hp: Int, val attack: Int, val defense: Int)
+
+@Serializable
+data class PalWorkSuitabilityDto(val job: String, val level: Int)
+
+@Serializable
+data class PalPartnerSkillDto(val name: String, val description: String)
+
+@Serializable
+data class PalMapPositionDto(val x: Double, val y: Double)
+
+/** Champs enrichis par tools/enrich_pals.py à partir des données déjà extraites du jeu par PalSite. */
+@Serializable
+data class PalDatasetEntry(
+    val id: String,
+    val slug: String,
+    @SerialName("name_fr") val nameFr: String,
+    @SerialName("name_en") val nameEn: String,
+    val image: String,
+    val element1: String = "Normal",
+    val element2: String? = null,
+    val rarity: Int = 1,
+    val zukanIndex: Int = -1,
+    val stats: PalStatsDto? = null,
+    val workSuitabilities: List<PalWorkSuitabilityDto> = emptyList(),
+    val partnerSkill: PalPartnerSkillDto? = null,
+    val locations: List<String> = emptyList(),
+    val mapPosition: PalMapPositionDto? = null,
+)
+
+@Serializable
+data class HumanDropDto(
+    val itemId: String,
+    val name: String,
+    val minQuantity: Int,
+    val maxQuantity: Int,
+    val probability: Int,
+)
+
+/** stats/workSuitabilities/drops enrichis par tools/scrape_paldb.py::scrape_human_details (page
+ * wiki paldb.cc du slug — première variante cosmétique documentée, prise comme représentative). */
+@Serializable
+data class HumanDatasetEntry(
+    val id: String,
+    val slug: String,
+    @SerialName("name_fr") val nameFr: String,
+    @SerialName("name_en") val nameEn: String,
+    val image: String,
+    val stats: PalStatsDto? = null,
+    val workSuitabilities: List<PalWorkSuitabilityDto> = emptyList(),
+    val drops: List<HumanDropDto> = emptyList(),
+)
+
+/** Reflète tools/scrape_paldb.py::scrape_technologies (paldb.cc/fr/Technologies, une seule page
+ * pour les 587 technologies — id = même identifiant que Techs.Unlocked côté PalDefender). */
+@Serializable
+data class TechnologyDatasetEntry(
+    val id: String,
+    val level: Int,
+    val cost: Int,
+    val category: String,
+    @SerialName("name_fr") val nameFr: String,
+    @SerialName("name_en") val nameEn: String,
+    val image: String,
+)
