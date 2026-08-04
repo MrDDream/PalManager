@@ -1,3 +1,5 @@
+<p align="center"><img src="docs/logo.svg" width="88" height="88" alt="PalManager logo"></p>
+
 # PalManager
 
 *[Lire en français](README.fr.md)*
