@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PalManager — Admin Android pour serveurs Palworld</title>
+<meta name="description" content="Application Android d'administration pour serveurs dédiés Palworld, via l'API REST officielle et PalDefender.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 108 108'%3E%3Cpath fill='%234CD08A' d='M39,66 a15,12 0 1,0 30,0 a15,12 0 1,0 -30,0 Z'/%3E%3Cpath fill='%234CD08A' d='M24,46 a8,10 0 1,0 16,0 a8,10 0 1,0 -16,0 Z'/%3E%3Cpath fill='%234CD08A' d='M36.5,34 a8.5,10.5 0 1,0 17,0 a8.5,10.5 0 1,0 -17,0 Z'/%3E%3Cpath fill='%234CD08A' d='M54.5,34 a8.5,10.5 0 1,0 17,0 a8.5,10.5 0 1,0 -17,0 Z'/%3E%3Cpath fill='%234CD08A' d='M68,46 a8,10 0 1,0 16,0 a8,10 0 1,0 -16,0 Z'/%3E%3C/svg%3E">
+<style>
+  :root {
+    --green: #2fae72;
+    --green-strong: #1f7a4e;
+    --green-soft: #e6f9f0;
+    --amber: #c9821f;
+    --sky: #2f8fb3;
+    --danger: #d1483f;
+    --bg: #fbfdfc;
+    --surface: #ffffff;
+    --surface-alt: #f3f7f5;
+    --text: #16211c;
+    --text-muted: #52645c;
+    --border: #dfe8e3;
+    --shadow: 0 1px 2px rgba(20, 40, 30, .06), 0 8px 24px -12px rgba(20, 40, 30, .18);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --green: #4cd08a;
+      --green-strong: #7fe6b3;
+      --green-soft: #103524;
+      --amber: #e8a33d;
+      --sky: #6fc3e8;
+      --danger: #e8837c;
+      --bg: #0e1512;
+      --surface: #141d19;
+      --surface-alt: #182420;
+      --text: #eaf3ef;
+      --text-muted: #9fb3ab;
+      --border: #263832;
+      --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 8px 24px -12px rgba(0, 0, 0, .5);
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--green); }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+  header.hero {
+    padding: 72px 0 56px;
+    text-align: center;
+    background:
+      radial-gradient(60% 50% at 50% 0%, var(--green-soft), transparent 70%);
+  }
+  .logo {
+    width: 64px; height: 64px;
+    margin-bottom: 20px;
+  }
+  h1 {
+    font-size: clamp(2rem, 5vw, 2.75rem);
+    margin: 0 0 8px;
+    letter-spacing: -0.02em;
+  }
+  .tagline {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    max-width: 620px;
+    margin: 0 auto 28px;
+  }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: .8rem;
+    font-weight: 600;
+    color: var(--amber);
+    background: color-mix(in srgb, var(--amber) 14%, transparent);
+    border: 1px solid color-mix(in srgb, var(--amber) 35%, transparent);
+    padding: 5px 12px;
+    border-radius: 999px;
+    margin-bottom: 28px;
+  }
+  .cta-row {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 24px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: .95rem;
+    text-decoration: none;
+    border: 1px solid transparent;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .btn:hover { transform: translateY(-1px); }
+  .btn-primary {
+    background: var(--green);
+    color: #04180f;
+    box-shadow: var(--shadow);
+  }
+  .btn-secondary {
+    background: var(--surface);
+    color: var(--text);
+    border-color: var(--border);
+  }
+
+  section { padding: 56px 0; }
+  section.alt { background: var(--surface-alt); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  h2 {
+    font-size: 1.6rem;
+    margin: 0 0 8px;
+    letter-spacing: -0.01em;
+  }
+  .section-sub {
+    color: var(--text-muted);
+    margin: 0 0 32px;
+    max-width: 620px;
+  }
+
+  .shots {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+  }
+  .shots figure {
+    margin: 0;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+  .shots img { display: block; width: 100%; height: auto; }
+  .shots figcaption {
+    padding: 10px 14px;
+    font-size: .85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border);
+  }
+
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+  }
+  .feature {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 20px;
+  }
+  .feature h3 {
+    margin: 0 0 6px;
+    font-size: 1.02rem;
+  }
+  .feature p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: .9rem;
+  }
+  .feature .emoji { font-size: 1.4rem; margin-bottom: 8px; display: block; }
+
+  .stack-pills {
+    display: flex; flex-wrap: wrap; gap: 8px;
+  }
+  .pill {
+    font-size: .8rem;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+  }
+
+  .req-list { padding-left: 20px; color: var(--text-muted); }
+  .req-list li { margin-bottom: 8px; }
+  .req-list code {
+    background: var(--surface-alt);
+    border: 1px solid var(--border);
+    padding: 1px 6px;
+    border-radius: 6px;
+    font-size: .85em;
+  }
+
+  footer {
+    padding: 40px 0 56px;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: .85rem;
+  }
+  footer a { color: var(--text-muted); text-decoration: underline; text-underline-offset: 2px; }
+  footer .links { margin-bottom: 12px; display: flex; gap: 18px; justify-content: center; flex-wrap: wrap; }
+
+  @media (max-width: 640px) {
+    header.hero { padding: 56px 0 40px; }
+    section { padding: 40px 0; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <svg class="logo" viewBox="0 0 108 108" xmlns="http://www.w3.org/2000/svg">
+      <path fill="#4CD08A" d="M39,66 a15,12 0 1,0 30,0 a15,12 0 1,0 -30,0 Z"/>
+      <path fill="#4CD08A" d="M24,46 a8,10 0 1,0 16,0 a8,10 0 1,0 -16,0 Z"/>
+      <path fill="#4CD08A" d="M36.5,34 a8.5,10.5 0 1,0 17,0 a8.5,10.5 0 1,0 -17,0 Z"/>
+      <path fill="#4CD08A" d="M54.5,34 a8.5,10.5 0 1,0 17,0 a8.5,10.5 0 1,0 -17,0 Z"/>
+      <path fill="#4CD08A" d="M68,46 a8,10 0 1,0 16,0 a8,10 0 1,0 -16,0 Z"/>
+    </svg>
+    <h1>PalManager</h1>
+    <p class="tagline">
+      Pilote ton serveur dédié Palworld depuis ton téléphone — joueurs, inventaires, Pals, guildes,
+      bannissements et plus, via l'API officielle et PalDefender.
+    </p>
+    <div class="badge">⚠️ Projet non-officiel, sans lien avec Pocketpair</div>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="https://github.com/MrDDream/PalManager/releases/latest">
+        ⬇ Télécharger l'APK
+      </a>
+      <a class="btn btn-secondary" href="https://github.com/MrDDream/PalManager">
+        Voir le code sur GitHub
+      </a>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>Aperçu</h2>
+    <p class="section-sub">Captures d'écran réelles de l'application (serveur/joueurs floutés pour la confidentialité).</p>
+    <div class="shots">
+      <figure><img src="screenshots/home.png" alt="Dashboard" loading="lazy"><figcaption>Dashboard</figcaption></figure>
+      <figure><img src="screenshots/players.png" alt="Joueurs connectés" loading="lazy"><figcaption>Joueurs connectés</figcaption></figure>
+      <figure><img src="screenshots/give_item.png" alt="Donner un item" loading="lazy"><figcaption>Donner un item</figcaption></figure>
+      <figure><img src="screenshots/give_pals.png" alt="Donner un Pal" loading="lazy"><figcaption>Donner un Pal</figcaption></figure>
+      <figure><img src="screenshots/inventory.png" alt="Inventaire d'un joueur" loading="lazy"><figcaption>Inventaire d'un joueur</figcaption></figure>
+      <figure><img src="screenshots/alert.png" alt="Diffusion & maintenance" loading="lazy"><figcaption>Diffusion & maintenance</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <h2>Fonctionnalités</h2>
+    <p class="section-sub">Un panel d'admin complet, pas juste un give-item.</p>
+    <div class="features">
+      <div class="feature">
+        <span class="emoji">📊</span>
+        <h3>Dashboard</h3>
+        <p>Infos serveur, joueurs en ligne, FPS, versions Palworld/PalDefender, sauvegarde, redémarrage/arrêt.</p>
+      </div>
+      <div class="feature">
+        <span class="emoji">👥</span>
+        <h3>Joueurs connectés</h3>
+        <p>Liste en temps réel, kick/ban, message privé, inventaire/équipe/progression/technologies par joueur.</p>
+      </div>
+      <div class="feature">
+        <span class="emoji">🎁</span>
+        <h3>Give item / Give Pal</h3>
+        <p>Recherche par nom ou image dans un catalogue embarqué (items, Pals, PNJ, technologies), filtres par catégorie/élément/rareté/métier.</p>
+      </div>
+      <div class="feature">
+        <span class="emoji">🗺️</span>
+        <h3>Carte en direct</h3>
+        <p>Position des joueurs sur la carte des Îles Palpagos.</p>
+      </div>
+      <div class="feature">
+        <span class="emoji">🛡️</span>
+        <h3>Guildes & bannissements</h3>
+        <p>Gestion des guildes, bannissements joueurs et IP.</p>
+      </div>
+      <div class="feature">
+        <span class="emoji">📣</span>
+        <h3>Diffusion & maintenance</h3>
+        <p>Broadcast, alertes, messages, zone danger (reload config, suppression de base).</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Prérequis serveur</h2>
+    <ul class="req-list">
+      <li>Un serveur Palworld avec l'<a href="https://docs.palworldgame.com/">API REST officielle</a> activée (<code>RESTAPIEnabled=True</code> dans <code>PalWorldSettings.ini</code>).</li>
+      <li>Le mod <a href="https://github.com/UltimeIT/PalDefender">PalDefender</a> installé et son API REST activée, pour les fonctionnalités que l'API officielle ne couvre pas (give item/Pal, techs, guildes, bans IP...).</li>
+    </ul>
+    <h2 style="margin-top:40px">Stack technique</h2>
+    <div class="stack-pills">
+      <span class="pill">Kotlin</span>
+      <span class="pill">Jetpack Compose</span>
+      <span class="pill">Material 3</span>
+      <span class="pill">Hilt</span>
+      <span class="pill">Room</span>
+      <span class="pill">Retrofit / OkHttp</span>
+      <span class="pill">Coil</span>
+      <span class="pill">Navigation Compose</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="links">
+      <a href="https://github.com/MrDDream/PalManager">Code source</a>
+      <a href="https://github.com/MrDDream/PalManager/releases">Releases</a>
+      <a href="https://github.com/MrDDream/PalManager/blob/main/README.md">README (EN)</a>
+      <a href="https://github.com/MrDDream/PalManager/blob/main/README.fr.md">README (FR)</a>
+      <a href="https://github.com/MrDDream/PalManager/blob/main/LICENSE">Licence MIT</a>
+    </div>
+    Les données de jeu (noms/images d'objets et de Pals) proviennent de <a href="https://paldb.cc">paldb.cc</a>
+    et restent la propriété de leurs ayants droit.
+  </div>
+</footer>
+
+</body>
+</html>
