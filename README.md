@@ -1,52 +1,58 @@
 # PalManager
 
-Application Android d'administration pour serveurs dédiés **Palworld**, pilotée via l'API REST
-officielle Palworld et l'API REST du mod **[PalDefender](https://github.com/UltimeIT/PalDefender)**.
+*[Lire en français](README.fr.md)*
 
-> Projet non-officiel, sans lien avec Pocketpair. Les données de jeu (noms/images d'objets et de
-> Pals) proviennent de [paldb.cc](https://paldb.cc) et restent la propriété de leurs ayants droit —
-> voir [Licence](#licence).
+Android admin app for dedicated **Palworld** servers, driven through the official Palworld
+REST API and the **[PalDefender](https://github.com/UltimeIT/PalDefender)** mod's REST API.
 
-## Aperçu
+> Unofficial fan project, not affiliated with Pocketpair. Game data (item/Pal names and images)
+> comes from [paldb.cc](https://paldb.cc) and remains the property of its rightful owners — see
+> [License](#license).
 
-| Dashboard | Joueurs connectés | Donner un item |
-|---|---|---|
-| ![Dashboard](docs/screenshots/home.png) | ![Joueurs connectés](docs/screenshots/players.png) | ![Donner un item](docs/screenshots/give_item.png) |
+## Screenshots
 
-| Donner un Pal | Inventaire d'un joueur | Diffusion & maintenance |
-|---|---|---|
-| ![Donner un Pal](docs/screenshots/give_pals.png) | ![Inventaire](docs/screenshots/inventory.png) | ![Diffusion & maintenance](docs/screenshots/alert.png) |
+<table>
+<tr>
+<td align="center"><b>Dashboard</b><br><img src="docs/screenshots/home.png" width="230"></td>
+<td align="center"><b>Connected players</b><br><img src="docs/screenshots/players.png" width="230"></td>
+<td align="center"><b>Give an item</b><br><img src="docs/screenshots/give_item.png" width="230"></td>
+</tr>
+<tr>
+<td align="center"><b>Give a Pal</b><br><img src="docs/screenshots/give_pals.png" width="230"></td>
+<td align="center"><b>Player inventory</b><br><img src="docs/screenshots/inventory.png" width="230"></td>
+<td align="center"><b>Broadcast & maintenance</b><br><img src="docs/screenshots/alert.png" width="230"></td>
+</tr>
+<tr>
+<td align="center"><b>Add a server</b><br><img src="docs/screenshots/add_server.png" width="230"></td>
+</tr>
+</table>
 
-| Ajout d'un serveur |
-|---|
-| ![Ajout d'un serveur](docs/screenshots/add_server.png) |
+## Features
 
-## Fonctionnalités
+- **Dashboard**: server info, online players, FPS, Palworld/PalDefender versions, save,
+  restart/stop.
+- **Connected players**: live list, kick/ban, private message, per-player inventory/team/
+  progression/technologies detail views.
+- **Give item / Give Pal**: search by name or image in a bundled catalog (items, Pals, NPCs,
+  technologies), filters by category/element/rarity/job.
+- **Live map**: player positions on the Palpagos Islands map.
+- **Guilds** and **bans** (players + IP).
+- **Broadcast & maintenance**: broadcast, alerts, messages, danger zone (reload config,
+  delete base).
+- Light/dark theme, FR/EN interface.
 
-- **Dashboard** : infos serveur, joueurs en ligne, FPS, versions Palworld/PalDefender, sauvegarde,
-  redémarrage/arrêt.
-- **Joueurs connectés** : liste en temps réel, kick/ban, message privé, inventaire/équipe/
-  progression/technologies détaillés par joueur.
-- **Give item / Give Pal** : recherche par nom ou image dans un catalogue embarqué (items, Pals,
-  PNJ, technologies), filtres par catégorie/élément/rareté/métier.
-- **Carte en direct** : position des joueurs sur la carte des Îles Palpagos.
-- **Guildes** et **bannissements** (joueurs + IP).
-- **Diffusion & maintenance** : broadcast, alertes, messages, zone danger (reload config,
-  suppression de base).
-- Thème clair/sombre, interface FR/EN.
-
-## Stack technique
+## Tech stack
 
 Kotlin + Jetpack Compose (Material 3), MVVM, Hilt, Room, Retrofit/OkHttp + kotlinx.serialization,
 Coil, Jetpack Navigation Compose, DataStore Preferences.
 
-## Prérequis serveur
+## Server requirements
 
-- Un serveur Palworld avec l'[API REST officielle](https://docs.palworldgame.com/) activée
-  (`RESTAPIEnabled=True` dans `PalWorldSettings.ini`).
-- Le mod **[PalDefender](https://github.com/UltimeIT/PalDefender)** installé et son API REST
-  activée, pour les fonctionnalités que l'API officielle ne couvre pas (give item/Pal, techs,
-  guildes, bans IP...).
+- A Palworld server with the [official REST API](https://docs.palworldgame.com/) enabled
+  (`RESTAPIEnabled=True` in `PalWorldSettings.ini`).
+- The **[PalDefender](https://github.com/UltimeIT/PalDefender)** mod installed with its REST API
+  enabled, for the features the official API doesn't cover (give item/Pal, techs, guilds,
+  IP bans...).
 
 ## Build
 
@@ -54,28 +60,28 @@ Coil, Jetpack Navigation Compose, DataStore Preferences.
 ./gradlew assembleDebug
 ```
 
-L'APK debug est généré dans `app/build/outputs/apk/debug/`.
+The debug APK is generated in `app/build/outputs/apk/debug/`.
 
-### Tests visuels (Paparazzi)
+### Visual tests (Paparazzi)
 
-Le projet embarque [Paparazzi](https://github.com/cashapp/paparazzi) pour rendre les composables
-Compose sur JVM sans émulateur (utile en dev pour vérifier rapidement un écran) :
+The project bundles [Paparazzi](https://github.com/cashapp/paparazzi) to render Compose
+composables on the JVM without an emulator (handy in dev to quickly check a screen):
 
 ```bash
 ./gradlew :app:recordPaparazziDebug
 ```
 
-### Régénérer le dataset items/Pals
+### Regenerating the item/Pal dataset
 
-`tools/scrape_paldb.py` scrape paldb.cc/fr pour produire `app/src/main/assets/data/*.json` +
-les images associées (catalogue embarqué, chargé une fois au premier lancement dans une base
-Room avec recherche FTS).
+`tools/scrape_paldb.py` scrapes paldb.cc/fr to produce `app/src/main/assets/data/*.json` +
+the associated images (bundled catalog, loaded once on first launch into a Room database with
+FTS search).
 
-## Licence
+## License
 
-Le code de ce dépôt est publié sous licence [MIT](LICENSE).
+This repo's code is published under the [MIT](LICENSE) license.
 
-Les données de jeu embarquées dans `app/src/main/assets/data/` et `app/src/main/assets/images/`
-(noms, statistiques, images d'objets/Pals/technologies) sont extraites de paldb.cc et restent la
-propriété de leurs ayants droit respectifs (Pocketpair). Elles ne sont pas couvertes par la
-licence MIT et sont incluses ici à titre d'usage non commercial, pour le fonctionnement de l'outil.
+The game data bundled in `app/src/main/assets/data/` and `app/src/main/assets/images/`
+(names, stats, item/Pal/technology images) is extracted from paldb.cc and remains the property
+of its respective rights holders (Pocketpair). It is not covered by the MIT license and is
+included here for non-commercial use, to make the tool work.
