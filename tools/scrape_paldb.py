@@ -37,22 +37,23 @@ ITEM_CATEGORIES = [
 # paldb.cc sert le data-hover d'un item sous deux formes : "?s=Items%2F{id}" (donne l'id directement)
 # ou un hover mis en cache "/cache/fr/Game_Items_hover/{hash}" (aucun id dedans). Avec un seul motif
 # exigeant le premier format, les items servis sous la seconde forme (ex. Méga Sphère) disparaissaient
-# silencieusement du dataset — on capture donc les deux et on résout l'id via l'icône si besoin
-# (nom de fichier "T_itemicon_{id}.webp", fiable dans les deux cas).
+# silencieusement du dataset — on capture donc les deux.
+#
+# Pour résoudre l'id des entrées en format caché, on NE devine PAS depuis le nom de fichier de
+# l'icône ("T_itemicon_{id}.webp") : ce nom embarque parfois un préfixe de catégorie absent du vrai
+# id (ex. icône "T_itemicon_Material_Wood.webp" pour l'id réel "Wood") — deviner à partir de là a
+# créé un doublon "Material_Wood" à côté du "Wood" déjà correct, avec un id qui n'existe pas pour
+# la commande give. À la place : le même slug (href) apparaît presque toujours ailleurs sur le site
+# au moins une fois sous le format clair ?s=Items%2F{id} (comme ingrédient de craft d'un autre item,
+# sur une autre page/catégorie) — on construit une table slug -> id à partir de TOUTES les occurrences
+# claires rencontrées durant tout le scrape, et on ne retombe sur le nom de fichier de l'icône qu'en
+# tout dernier recours, pour les rares slugs jamais vus en clair nulle part.
 ITEM_PATTERN = re.compile(
     r'class="itemname" data-hover="([^"]*)" href="([^"]+)">([^<]+)</a>',
 )
 LIVE_HOVER_ID_PATTERN = re.compile(r'^\?s=Items%2F(.+)$')
 ITEM_ICON_PATTERN = re.compile(r'<a href="([^"]+)"><img loading="lazy" src="([^"]+\.webp)"')
 ITEM_ICON_ID_PATTERN = re.compile(r'/T_itemicon_([A-Za-z0-9_]+)\.webp$')
-
-
-def resolve_item_code(hover: str, slug: str, icon_by_slug: dict[str, str]) -> str | None:
-    live_match = LIVE_HOVER_ID_PATTERN.match(hover)
-    if live_match:
-        return live_match.group(1)
-    icon_match = ITEM_ICON_ID_PATTERN.search(icon_by_slug.get(slug, ""))
-    return icon_match.group(1) if icon_match else None
 ITEM_CARD_SPLIT = re.compile(r'(?=<div class="card itemPopup">)')
 ITEM_DESCRIPTION_PATTERN = re.compile(r'<div class="card-body py-2">\s*<div>(.*?)</div>\s*</div>', re.DOTALL)
 ITEM_STAT_PATTERN = re.compile(
@@ -138,48 +139,73 @@ def is_unavailable_in_game(item: dict) -> bool:
 
 
 def scrape_items() -> list[dict]:
-    # code -> {slug, category, name_fr, name_en, description, stats, icon_url}
+    # Passe 1 : télécharge toutes les pages une seule fois et construit slug -> id à partir de
+    # TOUTES les occurrences en format clair (?s=Items%2F{id}) rencontrées n'importe où sur le site.
+    pages: list[tuple[str, str, str, dict[str, str]]] = []  # (category, lang, html, icon_by_slug)
+    slug_to_id: dict[str, str] = {}
+
+    for category in ITEM_CATEGORIES:
+        for lang in ("fr", "en"):
+            page_html = fetch_with_retry(f"/{lang}/{category}")
+            icon_by_slug = dict(ITEM_ICON_PATTERN.findall(page_html))
+            pages.append((category, lang, page_html, icon_by_slug))
+            for hover, slug, _name in ITEM_PATTERN.findall(page_html):
+                live_match = LIVE_HOVER_ID_PATTERN.match(hover)
+                if live_match:
+                    slug_to_id.setdefault(slug, live_match.group(1))
+            print(f"  [1/2] {category} [{lang}] chargé")
+            time.sleep(REQUEST_DELAY_SECONDS)
+
+    def resolve(hover: str, slug: str, icon_by_slug: dict[str, str]) -> str | None:
+        live_match = LIVE_HOVER_ID_PATTERN.match(hover)
+        if live_match:
+            return live_match.group(1)
+        known = slug_to_id.get(slug)
+        if known:
+            return known
+        # Dernier recours (slug jamais vu en clair nulle part) : nom de fichier de l'icône.
+        icon_match = ITEM_ICON_ID_PATTERN.search(icon_by_slug.get(slug, ""))
+        return icon_match.group(1) if icon_match else None
+
+    # Passe 2 : résout chaque occurrence avec la table slug -> id désormais complète.
     items: dict[str, dict] = {}
     unresolved = 0
 
-    for category in ITEM_CATEGORIES:
-        for lang, name_key in (("fr", "name_fr"), ("en", "name_en")):
-            page_html = fetch_with_retry(f"/{lang}/{category}")
-            icon_by_slug = dict(ITEM_ICON_PATTERN.findall(page_html))
-            for hover, slug, name in ITEM_PATTERN.findall(page_html):
-                code = resolve_item_code(hover, slug, icon_by_slug)
-                if code is None:
-                    unresolved += 1
+    for category, lang, page_html, icon_by_slug in pages:
+        name_key = "name_fr" if lang == "fr" else "name_en"
+        for hover, slug, name in ITEM_PATTERN.findall(page_html):
+            code = resolve(hover, slug, icon_by_slug)
+            if code is None:
+                unresolved += 1
+                continue
+            entry = items.setdefault(code, {
+                "id": code,
+                "slug": slug,
+                "category": category,
+                "name_fr": "",
+                "name_en": "",
+                "description": "",
+                "stats": {},
+                "icon_url": icon_by_slug.get(slug, ""),
+            })
+            entry[name_key] = name.strip()
+            if not entry["icon_url"]:
+                entry["icon_url"] = icon_by_slug.get(slug, "")
+
+        if lang == "fr":
+            # Description/stats affichées en FR uniquement, une fois par item.
+            for block in ITEM_CARD_SPLIT.split(page_html)[1:]:
+                match = ITEM_PATTERN.search(block)
+                if not match:
                     continue
-                entry = items.setdefault(code, {
-                    "id": code,
-                    "slug": slug,
-                    "category": category,
-                    "name_fr": "",
-                    "name_en": "",
-                    "description": "",
-                    "stats": {},
-                    "icon_url": icon_by_slug.get(slug, ""),
-                })
-                entry[name_key] = name.strip()
-                if not entry["icon_url"]:
-                    entry["icon_url"] = icon_by_slug.get(slug, "")
+                code = resolve(match.group(1), match.group(2), icon_by_slug)
+                if code is None or code not in items or items[code]["description"]:
+                    continue
+                description, stats = parse_item_card(block)
+                items[code]["description"] = description
+                items[code]["stats"] = stats
 
-            if lang == "fr":
-                # Description/stats affichées en FR uniquement, une fois par item.
-                for block in ITEM_CARD_SPLIT.split(page_html)[1:]:
-                    match = ITEM_PATTERN.search(block)
-                    if not match:
-                        continue
-                    code = resolve_item_code(match.group(1), match.group(2), icon_by_slug)
-                    if code is None or code not in items or items[code]["description"]:
-                        continue
-                    description, stats = parse_item_card(block)
-                    items[code]["description"] = description
-                    items[code]["stats"] = stats
-
-            print(f"  {category} [{lang}] -> {len(items)} items cumulés")
-            time.sleep(REQUEST_DELAY_SECONDS)
+        print(f"  [2/2] {category} [{lang}] -> {len(items)} items cumulés")
 
     if unresolved:
         print(f"  {unresolved} item(s) vu(s) mais id irrésoluble (ni data-hover ni icône exploitable)")
