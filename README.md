@@ -9,13 +9,17 @@ officielle Palworld et l'API REST du mod **[PalDefender](https://github.com/Ulti
 
 ## Aperçu
 
-| Dashboard | Sélecteur d'item | Sélecteur de Pal |
+| Dashboard | Joueurs connectés | Donner un item |
 |---|---|---|
-| ![Dashboard](docs/screenshots/01_dashboard.png) | ![Sélecteur d'item](docs/screenshots/02_item_picker.png) | ![Sélecteur de Pal](docs/screenshots/03_pal_picker_grid.png) |
+| ![Dashboard](docs/screenshots/home.png) | ![Joueurs connectés](docs/screenshots/players.png) | ![Donner un item](docs/screenshots/give_item.png) |
 
-| Fiche détail Pal | Joueurs connectés |
-|---|---|
-| ![Fiche détail Pal](docs/screenshots/04_pal_detail_dialog.png) | ![Joueurs connectés](docs/screenshots/05_players_list.png) |
+| Donner un Pal | Inventaire d'un joueur | Diffusion & maintenance |
+|---|---|---|
+| ![Donner un Pal](docs/screenshots/give_pals.png) | ![Inventaire](docs/screenshots/inventory.png) | ![Diffusion & maintenance](docs/screenshots/alert.png) |
+
+| Ajout d'un serveur |
+|---|
+| ![Ajout d'un serveur](docs/screenshots/add_server.png) |
 
 ## Fonctionnalités
 
@@ -52,10 +56,10 @@ Coil, Jetpack Navigation Compose, DataStore Preferences.
 
 L'APK debug est généré dans `app/build/outputs/apk/debug/`.
 
-### Régénérer les captures d'écran
+### Tests visuels (Paparazzi)
 
-Les images de `docs/screenshots/` sont produites via [Paparazzi](https://github.com/cashapp/paparazzi)
-(rendu réel des composables Compose sur JVM, sans émulateur) :
+Le projet embarque [Paparazzi](https://github.com/cashapp/paparazzi) pour rendre les composables
+Compose sur JVM sans émulateur (utile en dev pour vérifier rapidement un écran) :
 
 ```bash
 ./gradlew :app:recordPaparazziDebug
