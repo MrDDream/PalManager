@@ -171,9 +171,9 @@
     "id": "Accessory_DFHP_1",
     "slug": "Warsect_Terras_Belt",
     "category": "Accessory",
-    "name_fr": "",
+    "name_fr": "Ceinture de Warsect Terra",
     "name_en": "Warsect Terra's Belt",
-    "description": "",
+    "description": "Un accessoire permettant d'accroître considérablement la défense et les PV.Défense augmentée Niv. 4 PV augmentés Niv. 4",
     "stats": {},
     "image": "Accessory_DFHP_1.webp"
   },
@@ -678,6 +678,16 @@
     "image": "Accessory_Otomo_Electricity_1.webp"
   },
   {
+    "id": "Accessory_Otomo_Exp_up",
+    "slug": "Growth_Acceleration_Bell",
+    "category": "Accessory",
+    "name_fr": "",
+    "name_en": "Growth Acceleration Bell",
+    "description": "",
+    "stats": {},
+    "image": "Accessory_Otomo_Exp_up.webp"
+  },
+  {
     "id": "Accessory_Otomo_Fire_1",
     "slug": "Blazehowl_Ring",
     "category": "Accessory",
@@ -963,6 +973,78 @@
     "description": "",
     "stats": {},
     "image": "AirGrapplingGun.webp"
+  },
+  {
+    "id": "Ammo_Arrow",
+    "slug": "Arrow",
+    "category": "Ammo",
+    "name_fr": "",
+    "name_en": "Arrow",
+    "description": "",
+    "stats": {},
+    "image": "Ammo_Arrow.webp"
+  },
+  {
+    "id": "Ammo_BeamLauncherBullet",
+    "slug": "Beam_Launcher_Ammo",
+    "category": "Ammo",
+    "name_fr": "",
+    "name_en": "Beam Launcher Ammo",
+    "description": "",
+    "stats": {},
+    "image": "Ammo_BeamLauncherBullet.webp"
+  },
+  {
+    "id": "Ammo_GatlingBullet",
+    "slug": "Gatling_Gun_Ammo",
+    "category": "Ammo",
+    "name_fr": "",
+    "name_en": "Gatling Gun Ammo",
+    "description": "",
+    "stats": {},
+    "image": "Ammo_GatlingBullet.webp"
+  },
+  {
+    "id": "Ammo_GrenadeBullet",
+    "slug": "Grenade_Ammo",
+    "category": "Ammo",
+    "name_fr": "",
+    "name_en": "Grenade Ammo",
+    "description": "",
+    "stats": {},
+    "image": "Ammo_GrenadeBullet.webp"
+  },
+  {
+    "id": "Ammo_LaserBullet",
+    "slug": "Energy_Cartridge",
+    "category": "Ammo",
+    "name_fr": "",
+    "name_en": "Energy Cartridge",
+    "description": "",
+    "stats": {},
+    "image": "Ammo_LaserBullet.webp"
+  },
+  {
+    "id": "Ammo_SkyBowArrow",
+    "slug": "Mechanical_Bow_Ammo",
+    "category": "Ammo",
+    "name_fr": "Flèches d’arc astral",
+    "name_en": "Mechanical Bow Ammo",
+    "description": "Une flèche renforcée destinée à l’Arc astral.\r\nFabrication possible à : Établi antique.",
+    "stats": {
+      "Technologies": "67"
+    },
+    "image": "Ammo_SkyBowArrow.webp"
+  },
+  {
+    "id": "Ammo_WidePenetrateShotgunBullet",
+    "slug": "Beam_Scatter_Ammo",
+    "category": "Ammo",
+    "name_fr": "",
+    "name_en": "Beam Scatter Ammo",
+    "description": "",
+    "stats": {},
+    "image": "Ammo_WidePenetrateShotgunBullet.webp"
   },
   {
     "id": "AncientArmor",
@@ -1369,6 +1451,203 @@
     "description": "fr_Text",
     "stats": {},
     "image": "Antibiotic_Super.webp"
+  },
+  {
+    "id": "Armor_AncientArmor",
+    "slug": "Ancient_Armor",
+    "category": "Armor",
+    "name_fr": "Armure antique",
+    "name_en": "",
+    "description": "Une armure antique forgée à partir de Lingot de soralite.\r\nFruit du savoir d’une civilisation disparue, elle offre une puissance défensive écrasante.\r\nUne protection ultime capable de résister aux menaces les plus dévastatrices.Antifroid Niv. 2 Antichaleur Niv. 2 Attaque augmentée (faible) Niv. 2",
+    "stats": {
+      "Défense": "920",
+      "PV": "2760"
+    },
+    "image": "Armor_AncientArmor.webp"
+  },
+  {
+    "id": "Armor_AncientArmorCold",
+    "slug": "Cold-Resistant_Ancient_Armor_Schematic_3",
+    "category": "Schematic",
+    "name_fr": "Plan d’armure antique anti-froid 4",
+    "name_en": "",
+    "description": "Le posséder débloque la recette \r\n« Armure antique anti-froid (Épique) ».\r\nFabrication possible à : Établi antique.",
+    "stats": {},
+    "image": "Armor_AncientArmorCold.webp"
+  },
+  {
+    "id": "Armor_AncientArmorHeat",
+    "slug": "Heat-Resistant_Ancient_Armor",
+    "category": "Armor",
+    "name_fr": "Armure antique anti-chaleur",
+    "name_en": "",
+    "description": "Une Armure antique améliorée.\r\nLes technologies antiques ont renforcé sa résistance à la chaleur, lui permettant de supporter les environnements les plus extrêmes.Antifroid Niv. 2 Antichaleur Niv. 3 Réduction des dégâts de feu Niv. 1 Attaque augmentée (faible) Niv. 1",
+    "stats": {
+      "Défense": "924",
+      "PV": "2640"
+    },
+    "image": "Armor_AncientArmorHeat.webp"
+  },
+  {
+    "id": "Armor_ClothArmor",
+    "slug": "Cloth_Outfit",
+    "category": "Armor",
+    "name_fr": "Vêtement en tissu",
+    "name_en": "",
+    "description": "Des habits en tissu.\r\nProtègent contre le froid nocturne.Antifroid Niv. 1 Attaque augmentée (faible) Niv. 2",
+    "stats": {
+      "Défense": "21",
+      "PV": "98"
+    },
+    "image": "Armor_ClothArmor.webp"
+  },
+  {
+    "id": "Armor_ClothArmorHeat",
+    "slug": "Tropical_Outfit",
+    "category": "Armor",
+    "name_fr": "Tenue tropicale",
+    "name_en": "",
+    "description": "Un Vêtement en tissu originaire d'une région chaude. Elle offre une grande résistance à la chaleur.Antichaleur Niv. 2 Attaque augmentée (faible) Niv. 3",
+    "stats": {
+      "Défense": "37",
+      "PV": "105"
+    },
+    "image": "Armor_ClothArmorHeat.webp"
+  },
+  {
+    "id": "Armor_FurArmor",
+    "slug": "Pelt_Armor",
+    "category": "Armor",
+    "name_fr": "Armure en cuir",
+    "name_en": "",
+    "description": "Une armure faite de cuir.\r\nSa durabilité et sa défense ont été améliorées.Antifroid Niv. 1 Attaque augmentée (faible) Niv. 4",
+    "stats": {
+      "Défense": "56",
+      "PV": "224"
+    },
+    "image": "Armor_FurArmor.webp"
+  },
+  {
+    "id": "Armor_FurArmorCold",
+    "slug": "Cold_Resistant_Pelt_Armor",
+    "category": "Armor",
+    "name_fr": "Armure en cuir anti-froid",
+    "name_en": "",
+    "description": "Une Armure en cuir originaire d'une région froide. Elle protège contre le gel.Antifroid Niv. 2 Réduction des dégâts de glace Niv. 1 Attaque augmentée (faible) Niv. 4",
+    "stats": {
+      "Défense": "72",
+      "PV": "224"
+    },
+    "image": "Armor_FurArmorCold.webp"
+  },
+  {
+    "id": "Armor_GYM_Head_Viking",
+    "slug": "Bjorn_Hat",
+    "category": "Armor",
+    "name_fr": "Coiffe de Björn",
+    "name_en": "",
+    "description": "Un couvre-chef pour incarner Björn.",
+    "stats": {
+      "Défense": "20",
+      "PV": "60"
+    },
+    "image": "Armor_GYM_Head_Viking.webp"
+  },
+  {
+    "id": "Armor_Head001",
+    "slug": "Monarchs_Crown_Schematic_1",
+    "category": "Schematic",
+    "name_fr": "Plan de couronne royale 1",
+    "name_en": "",
+    "description": "Le posséder débloque la recette\r\n« Couronne royale (Commun) ».\r\nFabrication possible à : Établi de fortune.",
+    "stats": {},
+    "image": "Armor_Head001.webp"
+  },
+  {
+    "id": "Armor_IronArmorCold",
+    "slug": "Cold_Resistant_Refined_Metal_Armor_Schematic_3",
+    "category": "Schematic",
+    "name_fr": "",
+    "name_en": "Cold Resistant Refined Metal Armor Schematic 3",
+    "description": "",
+    "stats": {},
+    "image": "Armor_IronArmorCold.webp"
+  },
+  {
+    "id": "Armor_IronHelmet",
+    "slug": "Refined_Metal_Helm_Schematic_2",
+    "category": "Schematic",
+    "name_fr": "",
+    "name_en": "Refined Metal Helm Schematic 4",
+    "description": "",
+    "stats": {},
+    "image": "Armor_IronHelmet.webp"
+  },
+  {
+    "id": "Armor_PlasticArmorCold",
+    "slug": "Cold_Resistant_Plasteel_Armor",
+    "category": "Armor",
+    "name_fr": "Armure en plastacier anti-froid",
+    "name_en": "",
+    "description": "Une armure en plastacier améliorée.\r\nSa résistance au froid n'est plus à prouver.Antifroid Niv. 2 Antichaleur Niv. 1 Réduction des dégâts de glace Niv. 1",
+    "stats": {
+      "Défense": "400",
+      "PV": "1300",
+      "Technologies": "54"
+    },
+    "image": "Armor_PlasticArmorCold.webp"
+  },
+  {
+    "id": "Armor_SFArmorCold",
+    "slug": "Cold_Resistant_Hexolite_Armor",
+    "category": "Armor",
+    "name_fr": "Armure en hexolite anti-froid",
+    "name_en": "",
+    "description": "Une armure en hexolite améliorée.\r\nSa résistance au froid n'est plus à prouver.Antifroid Niv. 3 Antichaleur Niv. 2 Réduction des dégâts de glace Niv. 1 Attaque augmentée (faible) Niv. 4",
+    "stats": {
+      "Défense": "780",
+      "PV": "2275"
+    },
+    "image": "Armor_SFArmorCold.webp"
+  },
+  {
+    "id": "Armor_StealArmorHeat",
+    "slug": "Heat_Resistant_Pal_Metal_Armor",
+    "category": "Armor",
+    "name_fr": "Armure en paluminium anti-chaleur",
+    "name_en": "",
+    "description": "Une Armure en paluminium améliorée. Elle offre une grande résistance à la chaleur.Antichaleur Niv. 2 Antifroid Niv. 1 Réduction des dégâts de feu Niv. 1 Attaque augmentée (faible) Niv. 4",
+    "stats": {
+      "Défense": "400",
+      "PV": "1200"
+    },
+    "image": "Armor_StealArmorHeat.webp"
+  },
+  {
+    "id": "Armor_StealHelmet",
+    "slug": "Pal_Metal_Helm",
+    "category": "Armor",
+    "name_fr": "Heaume en paluminium",
+    "name_en": "",
+    "description": "Un casque en lingot de paluminium.\r\nD'une qualité exemplaire, c'est la marque d'un guerrier d'élite.",
+    "stats": {
+      "Défense": "195",
+      "PV": "455"
+    },
+    "image": "Armor_StealHelmet.webp"
+  },
+  {
+    "id": "Armor_YakushimaHeadEquip004",
+    "slug": "Hallowed_Hood",
+    "category": "Armor",
+    "name_fr": "Capuche sacrée",
+    "name_en": "",
+    "description": "[Collaboration Terraria]\r\nUn couvre-chef en lingots sacrés.\r\nLe pouvoir saint qu'il renferme augmente les dégâts infligés par la Terraprisma.Pouvoir Saint (Invocation)",
+    "stats": {
+      "Défense": "168",
+      "PV": "384"
+    },
+    "image": "Armor_YakushimaHeadEquip004.webp"
   },
   {
     "id": "Arrow",
@@ -10021,6 +10300,58 @@
     "image": "Computer.webp"
   },
   {
+    "id": "Consume_PalSummon_LegendDeer_2",
+    "slug": "Hartalis_%28Ultra%29_Slab",
+    "category": "Consumable",
+    "name_fr": "",
+    "name_en": "Hartalis (Ultra) Slab",
+    "description": "",
+    "stats": {},
+    "image": "Consume_PalSummon_LegendDeer_2.webp"
+  },
+  {
+    "id": "Consume_PalSummon_NightLady",
+    "slug": "Summoning_Altar",
+    "category": "Consumable",
+    "name_fr": "",
+    "name_en": "Summoning Altar",
+    "description": "",
+    "stats": {},
+    "image": "Consume_PalSummon_NightLady.webp"
+  },
+  {
+    "id": "Consume_PalWorkLvUp_11",
+    "slug": "Applied_Transporting_Handbook_I",
+    "category": "Consumable",
+    "name_fr": "",
+    "name_en": "Applied Transporting Handbook I",
+    "description": "",
+    "stats": {},
+    "image": "Consume_PalWorkLvUp_11.webp"
+  },
+  {
+    "id": "Consume_SkillCard_Earth",
+    "slug": "Ground_Skill_Fruit%3A_Stone_Blast",
+    "category": "Consumable",
+    "name_fr": "Fruit Terra : Explosion Rocailleuse",
+    "name_en": "Ground Skill Fruit: Stone Blast",
+    "description": "À utiliser sur un Pal pour\r\nlui faire apprendre Explosion Rocailleuse.",
+    "stats": {},
+    "image": "Consume_SkillCard_Earth.webp"
+  },
+  {
+    "id": "Consume_TechnologyBook_G1",
+    "slug": "Advanced_Technical_Manual",
+    "category": "Consumable",
+    "name_fr": "Manuel technique supérieur",
+    "name_en": "",
+    "description": "Un livre traitant d'une technologie singulière.\r\nL'utiliser fait gagner quelques points technologiques.",
+    "stats": {
+      "Points Technologiques": "1"
+    },
+    "image": "Consume_TechnologyBook_G1.webp"
+  },
+  {
     "id": "CopperArmor",
     "slug": "Metal_Armor",
     "category": "Armor",
@@ -11025,6 +11356,26 @@
     "image": "EnergyShotgun_5.webp"
   },
   {
+    "id": "Essential_BossDefeatReward_FlowerPrince",
+    "slug": "Dandilords_Petal",
+    "category": "Key_Items",
+    "name_fr": "",
+    "name_en": "Dandilord's Petal",
+    "description": "",
+    "stats": {},
+    "image": "Essential_BossDefeatReward_FlowerPrince.webp"
+  },
+  {
+    "id": "Essential_SkillUnlock_Saddle",
+    "slug": "Faleris_Saddle",
+    "category": "Key_Items",
+    "name_fr": "",
+    "name_en": "Rayhound Cryst Saddle",
+    "description": "",
+    "stats": {},
+    "image": "Essential_SkillUnlock_Saddle.webp"
+  },
+  {
     "id": "ExpBoost_01",
     "slug": "Training_Manual_%28S%29",
     "category": "Consumable",
@@ -11472,6 +11823,89 @@
       "Valeurs nutritionnelles": "3"
     },
     "image": "Flour.webp"
+  },
+  {
+    "id": "Food_Egg",
+    "slug": "Egg",
+    "category": "Ingredient",
+    "name_fr": "",
+    "name_en": "Egg",
+    "description": "",
+    "stats": {},
+    "image": "Food_Egg.webp"
+  },
+  {
+    "id": "Food_HealingMushroom",
+    "slug": "Cavern_Mushroom",
+    "category": "Ingredient",
+    "name_fr": "",
+    "name_en": "Cavern Mushroom",
+    "description": "",
+    "stats": {},
+    "image": "Food_HealingMushroom.webp"
+  },
+  {
+    "id": "Food_Honey",
+    "slug": "Honey",
+    "category": "Ingredient",
+    "name_fr": "",
+    "name_en": "Honey",
+    "description": "",
+    "stats": {},
+    "image": "Food_Honey.webp"
+  },
+  {
+    "id": "Food_HotMilk",
+    "slug": "Hot_Milk",
+    "category": "Ingredient",
+    "name_fr": "",
+    "name_en": "Hot Milk",
+    "description": "",
+    "stats": {},
+    "image": "Food_HotMilk.webp"
+  },
+  {
+    "id": "Food_Opium",
+    "slug": "Suspicious_Juice",
+    "category": "Consumable",
+    "name_fr": "Boisson douteuse",
+    "name_en": "",
+    "description": "Une boisson qui remonte le moral. En boire augmente légèrement et temporairement la vitesse de travail au détriment de quelques points MEN.",
+    "stats": {
+      "Valeurs nutritionnelles": "1",
+      "MEN": "30",
+      "Vitesse de travail": "200",
+      "SANResist": "-25000",
+      "Temps de restauration": "10"
+    },
+    "image": "Food_Opium.webp"
+  },
+  {
+    "id": "Food_Poppy",
+    "slug": "Beautiful_Flower",
+    "category": "Material",
+    "name_fr": "Belle fleur",
+    "name_en": "Beautiful Flower",
+    "description": "Une plante donnant des fleurs aux couleurs vives. Permet la production de : Boisson douteuse et Boisson étrange.",
+    "stats": {
+      "Valeurs nutritionnelles": "1",
+      "MEN": "5"
+    },
+    "image": "Food_Poppy.webp"
+  },
+  {
+    "id": "Food_Potion",
+    "slug": "Recovery_Meds",
+    "category": "Consumable",
+    "name_fr": "Potion",
+    "name_en": "Recovery Meds",
+    "description": "Un remède qui soigne les blessures sur la durée.\r\nRestaure une quantité correcte de PV.",
+    "stats": {
+      "Valeurs nutritionnelles": "1",
+      "Restauration des PV": "5",
+      "Temps de restauration": "600"
+    },
+    "image": "Food_Potion.webp"
   },
   {
     "id": "FragGrenade",
@@ -15852,6 +16286,408 @@
     "image": "MateItem01.webp"
   },
   {
+    "id": "Material_Bio_Battery",
+    "slug": "Bio_Battery",
+    "category": "Material",
+    "name_fr": "Bio-batterie",
+    "name_en": "",
+    "description": "Une batterie spéciale stockant la bio-énergie sous forme d'électricité.\r\nSa densité énergétique élevée permet d'assurer une alimentation électrique prolongée.\r\nFabrication possible à : Chaîne de production II.",
+    "stats": {
+      "Technologies": "44"
+    },
+    "image": "Material_Bio_Battery.webp"
+  },
+  {
+    "id": "Material_Cement",
+    "slug": "Cement",
+    "category": "Material",
+    "name_fr": "Ciment",
+    "name_en": "",
+    "description": "Du ciment faisant office de matériau pour les structures.\r\nPeut être fabriqué dans un établi de qualité.",
+    "stats": {
+      "Technologies": "19"
+    },
+    "image": "Material_Cement.webp"
+  },
+  {
+    "id": "Material_Cloth",
+    "slug": "High_Quality_Cloth",
+    "category": "Material",
+    "name_fr": "Tissu de qualité",
+    "name_en": "High Quality Cloth",
+    "description": "Du tissu de qualité tissé à partir d'une grande quantité de laine. \r\nSert à fabriquer des armures de qualité supérieure.\r\nFabrication possible à : Établi de qualité.",
+    "stats": {
+      "Technologies": "36"
+    },
+    "image": "Material_Cloth.webp"
+  },
+  {
+    "id": "Material_Coal",
+    "slug": "Coal",
+    "category": "Material",
+    "name_fr": "Charbon",
+    "name_en": "",
+    "description": "Du charbon présent notamment dans les grottes.\r\nNécessaire à la fabrication de métal raffiné.",
+    "stats": {},
+    "image": "Material_Coal.webp"
+  },
+  {
+    "id": "Material_Computer",
+    "slug": "Computer",
+    "category": "Material",
+    "name_fr": "Ordinateur",
+    "name_en": "",
+    "description": "Un appareil électronique capable d’effectuer des calculs avancés.\r\nUtilisé pour contrôler les systèmes automatisés et les machines de précision, il constitue un composant fondamental des technologies modernes.\r\nFabrication possible à : Chaîne de production II.",
+    "stats": {
+      "Technologies": "50"
+    },
+    "image": "Material_Computer.webp"
+  },
+  {
+    "id": "Material_CopperOre",
+    "slug": "Ore",
+    "category": "Material",
+    "name_fr": "Minerai de métal",
+    "name_en": "Ore",
+    "description": "Se transforme en lingot une fois raffiné dans une fournaise.\r\nOn en trouve notamment dans les grottes.",
+    "stats": {},
+    "image": "Material_CopperOre.webp"
+  },
+  {
+    "id": "Material_Corrosive_Solvent",
+    "slug": "Corrosive_Solvent",
+    "category": "Material",
+    "name_fr": "Solvant corrosif",
+    "name_en": "",
+    "description": "Un dangereux solvant chimique doté d’un puissant pouvoir de décomposition.\r\nCapable de dissoudre métaux et matières organiques, il est utilisé dans les procédés de précision et les traitements spécialisés.\r\nFabrication possible à : Chaîne de production.",
+    "stats": {
+      "Technologies": "37"
+    },
+    "image": "Material_Corrosive_Solvent.webp"
+  },
+  {
+    "id": "Material_Diamond",
+    "slug": "Diamond",
+    "category": "Material",
+    "name_fr": "Diamant",
+    "name_en": "",
+    "description": "Une pierre précieuse très rare à la lueur éclatante.\r\nLes marchands l'achètent à un prix élevé.",
+    "stats": {},
+    "image": "Material_Diamond.webp"
+  },
+  {
+    "id": "Material_ElectronicCircuit",
+    "slug": "Circuit_Board",
+    "category": "Material",
+    "name_fr": "Circuit imprimé",
+    "name_en": "",
+    "description": "Des circuits imprimés nécessaires à la fabrication d'équipements délicats.\r\nPeut être confectionné dans une chaine de production.",
+    "stats": {
+      "Technologies": "35"
+    },
+    "image": "Material_ElectronicCircuit.webp"
+  },
+  {
+    "id": "Material_Fiber",
+    "slug": "Fiber",
+    "category": "Material",
+    "name_fr": "Fibre",
+    "name_en": "Fiber",
+    "description": "Une fibre obtenue à partir des arbres.\r\nSert à fabriquer des arcs, entre autres.",
+    "stats": {},
+    "image": "Material_Fiber.webp"
+  },
+  {
+    "id": "Material_FireOrgan",
+    "slug": "Flame_Organ",
+    "category": "Material",
+    "name_fr": "Organe de feu",
+    "name_en": "",
+    "description": "Un matériau obtenu sur les Pals de type feu.\r\nPeut servir à fabriquer des flèches de feu.",
+    "stats": {},
+    "image": "Material_FireOrgan.webp"
+  },
+  {
+    "id": "Material_IceOrgan",
+    "slug": "Ice_Organ",
+    "category": "Material",
+    "name_fr": "Organe de glace",
+    "name_en": "Ice Organ",
+    "description": "Un matériau obtenu sur les Pals de type glace.\r\nPeut servir à fabriquer des mines gelées.",
+    "stats": {},
+    "image": "Material_IceOrgan.webp"
+  },
+  {
+    "id": "Material_IronIngot",
+    "slug": "Refined_Ingot",
+    "category": "Material",
+    "name_fr": "Lingot de métal raffiné",
+    "name_en": "",
+    "description": "Un casque fait de métal raffiné.\r\nL'éclat du métal poli accroît sa valeur.",
+    "stats": {},
+    "image": "Material_IronIngot.webp"
+  },
+  {
+    "id": "Material_Leather",
+    "slug": "Leather",
+    "category": "Material",
+    "name_fr": "",
+    "name_en": "Leather",
+    "description": "",
+    "stats": {},
+    "image": "Material_Leather.webp"
+  },
+  {
+    "id": "Material_LettuceSeeds",
+    "slug": "Lettuce_Seeds",
+    "category": "Material",
+    "name_fr": "Graines de laitue",
+    "name_en": "",
+    "description": "Des graines pour faire pousser de la laitue. \r\nNécessaires à l'établissement d'une culture. \r\nS'achètent chez les marchands.",
+    "stats": {},
+    "image": "Material_LettuceSeeds.webp"
+  },
+  {
+    "id": "Material_MachineParts",
+    "slug": "Nail",
+    "category": "Material",
+    "name_fr": "",
+    "name_en": "Nail",
+    "description": "",
+    "stats": {},
+    "image": "Material_MachineParts.webp"
+  },
+  {
+    "id": "Material_Money",
+    "slug": "Gold_Coin",
+    "category": "Material",
+    "name_fr": "Pièce d'or",
+    "name_en": "",
+    "description": "Une devise utilisée sur l'île de Palpagos.\r\nPeut être échangée contre des objets ou des Pals auprès des marchands.",
+    "stats": {},
+    "image": "Material_Money.webp"
+  },
+  {
+    "id": "Material_PalCrystal_Ex",
+    "slug": "Ancient_Civilization_Parts",
+    "category": "Material",
+    "name_fr": "Fragments d'une civilisation antique",
+    "name_en": "",
+    "description": "Un objet en provenance directe du passé.\r\nRenferme une grande quantité d'informations sur une technologie perdue.\r\nSa valeur inestimable le rend très convoité par tout humain qui se respecte.",
+    "stats": {},
+    "image": "Material_PalCrystal_Ex.webp"
+  },
+  {
+    "id": "Material_PalEgg",
+    "slug": "Large_Common_Egg",
+    "category": "Material",
+    "name_fr": "Énorme œuf ordinaire",
+    "name_en": "",
+    "description": "Un gros œuf ordinaire. \r\nDes palpitations tranquilles le font remuer. \r\nÀ installer dans un incubateur pour le faire éclore.",
+    "stats": {},
+    "image": "Material_PalEgg.webp"
+  },
+  {
+    "id": "Material_PalEgg_Dark_01",
+    "slug": "Large_Dark_Egg",
+    "category": "Material",
+    "name_fr": "Énorme œuf sombre",
+    "name_en": "",
+    "description": "Un gros œuf sombre. \r\nDes palpitations malfaisantes le font remuer. \r\nÀ installer dans un incubateur pour le faire éclore.",
+    "stats": {},
+    "image": "Material_PalEgg_Dark_01.webp"
+  },
+  {
+    "id": "Material_PalEgg_Earth_01",
+    "slug": "Huge_Rocky_Egg",
+    "category": "Material",
+    "name_fr": "Énorme œuf rocailleux",
+    "name_en": "",
+    "description": "Un énorme œuf rocailleux. \r\nOn ressent l'élan de vie d'une âme terrestre, comme si un monstre allait en sortir. \r\nÀ installer dans un incubateur pour le faire éclore.",
+    "stats": {},
+    "image": "Material_PalEgg_Earth_01.webp"
+  },
+  {
+    "id": "Material_PalEgg_Electricity_01",
+    "slug": "Huge_Electric_Egg",
+    "category": "Material",
+    "name_fr": "Énorme œuf électrique",
+    "name_en": "",
+    "description": "Un énorme œuf électrique. \r\nOn ressent l'élan de vie d'une âme féroce, comme si un monstre allait en sortir. \r\nÀ installer dans un incubateur pour le faire éclore.",
+    "stats": {},
+    "image": "Material_PalEgg_Electricity_01.webp"
+  },
+  {
+    "id": "Material_PalEgg_Ice_01",
+    "slug": "Huge_Frozen_Egg",
+    "category": "Material",
+    "name_fr": "Énorme œuf gelé",
+    "name_en": "",
+    "description": "Un énorme œuf gelé. \r\nOn ressent l'élan de vie d'une âme au zéro absolu, comme si un monstre allait en sortir. \r\nÀ installer dans un incubateur pour le faire éclore.",
+    "stats": {},
+    "image": "Material_PalEgg_Ice_01.webp"
+  },
+  {
+    "id": "Material_PalEgg_Leaf_01",
+    "slug": "Huge_Verdant_Egg",
+    "category": "Material",
+    "name_fr": "Énorme œuf feuillu",
+    "name_en": "",
+    "description": "Un énorme œuf feuillu. \r\nOn ressent l'élan de vie d'une âme verte, comme si un monstre allait en sortir. \r\nÀ installer dans un incubateur pour le faire éclore.",
+    "stats": {},
+    "image": "Material_PalEgg_Leaf_01.webp"
+  },
+  {
+    "id": "Material_PalEgg_Water_01",
+    "slug": "Huge_Damp_Egg",
+    "category": "Material",
+    "name_fr": "Énorme œuf mouillé",
+    "name_en": "",
+    "description": "Un énorme œuf mouillé. \r\nOn ressent l'élan de vie d'une âme claire, comme si un monstre allait en sortir. \r\nÀ installer dans un incubateur pour le faire éclore.",
+    "stats": {},
+    "image": "Material_PalEgg_Water_01.webp"
+  },
+  {
+    "id": "Material_PalFluid",
+    "slug": "Aquatic_Pal_Fluids",
+    "category": "Material",
+    "name_fr": "Fluides de Pal",
+    "name_en": "",
+    "description": "Un liquide récupéré sur les Pals de type Eau.\r\nSa forte viscosité le rend particulièrement utile.",
+    "stats": {},
+    "image": "Material_PalFluid.webp"
+  },
+  {
+    "id": "Material_PalItem_RaijinDaughter",
+    "slug": "Dazzi_Cloud",
+    "category": "Material",
+    "name_fr": "Nuage de Dazzi",
+    "name_en": "",
+    "description": "Un nuage de Dazzi.\r\nSa légèreté fait qu'on l'utilise notamment dans la confection d'habits.",
+    "stats": {},
+    "image": "Material_PalItem_RaijinDaughter.webp"
+  },
+  {
+    "id": "Material_PalPassiveSkillChange",
+    "slug": "Implant%3A_Serenity",
+    "category": "Key_Items",
+    "name_fr": "Implant : Guide de l'effort",
+    "name_en": "Implant: Ace Swimmer",
+    "description": "Un implant à greffer sur un Pal pour modifier sa compétence passive.\r\nLe posséder permet de choisir une compétence passive sur une Table d'opération pour Pals.",
+    "stats": {},
+    "image": "Material_PalPassiveSkillChange.webp"
+  },
+  {
+    "id": "Material_PalPassiveSkillChange_Consumable",
+    "slug": "Disposable_Implant%3A_Demon_God",
+    "category": "Consumable",
+    "name_fr": "Implant unique : Blindage",
+    "name_en": "",
+    "description": "Un implant à greffer sur un Pal pour modifier sa compétence passive.\r\nLe posséder permet de choisir une compétence passive sur une Table d'opération pour Pals.",
+    "stats": {},
+    "image": "Material_PalPassiveSkillChange_Consumable.webp"
+  },
+  {
+    "id": "Material_Pal_crystal_S",
+    "slug": "Paldium_Fragment",
+    "category": "Material",
+    "name_fr": "Fragment de paldium",
+    "name_en": "Paldium Fragment",
+    "description": "Énergie cristallisée de l'Arbre-monde.\r\nPermet de créer des objets et des structures aux propriétés prodigieuses.",
+    "stats": {},
+    "image": "Material_Pal_crystal_S.webp"
+  },
+  {
+    "id": "Material_PredatorCrystal",
+    "slug": "Predator_Core",
+    "category": "Material",
+    "name_fr": "Cœur de prédateur",
+    "name_en": "",
+    "description": "Un cœur laissé par un Pal prédateur.\r\nRenferme une énergie mystérieuse.",
+    "stats": {},
+    "image": "Material_PredatorCrystal.webp"
+  },
+  {
+    "id": "Material_RainbowCrystal",
+    "slug": "Hexolite_Quartz",
+    "category": "Material",
+    "name_fr": "Hexoquartz",
+    "name_en": "",
+    "description": "Un cristal rare que l'on ne trouve que sur les Terres du paradis déchu. \r\nAu fil des siècles, le paldium s'est condensé et métamorphosé jusqu'à acquérir cet éclat irisé unique.",
+    "stats": {},
+    "image": "Material_RainbowCrystal.webp"
+  },
+  {
+    "id": "Material_Stone",
+    "slug": "Stone",
+    "category": "Material",
+    "name_fr": "Pierre",
+    "name_en": "Stone",
+    "description": "Un matériau utilisé pour fabriquer des structures et des objets.\r\nS’obtient en minant de la pierre.",
+    "stats": {},
+    "image": "Material_Stone.webp"
+  },
+  {
+    "id": "Material_Venom",
+    "slug": "Venom_Gland",
+    "category": "Material",
+    "name_fr": "Glande à venin",
+    "name_en": "",
+    "description": "Un matériau obtenu sur les Pals venimeux. \r\nPeut servir à fabriquer des flèches empoisonnées.",
+    "stats": {},
+    "image": "Material_Venom.webp"
+  },
+  {
+    "id": "Material_WheatSeeds",
+    "slug": "Wheat_Seeds",
+    "category": "Material",
+    "name_fr": "Graines de blé",
+    "name_en": "",
+    "description": "Des graines pour faire pousser du blé. \r\nNécessaires à l'établissement d'une culture. \r\nS'achètent chez les marchands.",
+    "stats": {},
+    "image": "Material_WheatSeeds.webp"
+  },
+  {
+    "id": "Material_Wood",
+    "slug": "Wood",
+    "category": "Material",
+    "name_fr": "Bois",
+    "name_en": "",
+    "description": "Un matériau utilisé pour fabriquer des structures et des objets.\r\nS’obtient principalement en abattant des arbres.",
+    "stats": {},
+    "image": "Material_Wood.webp"
+  },
+  {
+    "id": "Material_Wool",
+    "slug": "Wool",
+    "category": "Material",
+    "name_fr": "Laine",
+    "name_en": "",
+    "description": "Un matériau obtenu à partir de Pals laineux.\r\nIndispensable à la fabrication des lits et du tissu.",
+    "stats": {},
+    "image": "Material_Wool.webp"
+  },
+  {
+    "id": "Material_WorldTreeRelic_1",
+    "slug": "Decayed_Ancient_Relic",
+    "category": "Material",
+    "name_fr": "Relique antique détériorée",
+    "name_en": "",
+    "description": "Un fragment provenant d'une civilisation antique.\r\nSon état de délabrement est tel qu'il ne contient plus aucune énergie.",
+    "stats": {},
+    "image": "Material_WorldTreeRelic_1.webp"
+  },
+  {
+    "id": "Material_WorldTreeRelic_4",
+    "slug": "Glowing_Ancient_Relic",
+    "category": "Material",
+    "name_fr": "Relique antique lumineuse",
+    "name_en": "",
+    "description": "Un fragment provenant d'une civilisation antique.\r\nSon excellent état fait qu'on peut encore voir de la lumière s'en échapper.",
+    "stats": {},
+    "image": "Material_WorldTreeRelic_4.webp"
+  },
+  {
     "id": "MeaninglessItem_ButcheringImportPal",
     "slug": "Scrapped_Tissue_Sample",
     "category": "Material",
@@ -19132,10 +19968,13 @@
     "id": "PalSphere",
     "slug": "Pal_Sphere",
     "category": "Sphere",
-    "name_fr": "",
+    "name_fr": "Sphère de Pal",
     "name_en": "Pal Sphere",
-    "description": "",
-    "stats": {},
+    "description": "Sphère permettant de capturer des Pals.\r\nProduite en masse, elle n’est efficace que contre les Pals de faible niveau.",
+    "stats": {
+      "Technologies": "2",
+      "Force de capture": "7"
+    },
     "image": "PalSphere.webp"
   },
   {
@@ -19155,30 +19994,39 @@
     "id": "PalSphere_Ancient_2",
     "slug": "Ancient_Sphere",
     "category": "Sphere",
-    "name_fr": "",
+    "name_fr": "Sphère Antique",
     "name_en": "Ancient Sphere",
-    "description": "",
-    "stats": {},
+    "description": "Sphère permettant de capturer des Pals.\r\nImprégnée de la puissance de l’Arbre-Monde, cette sphère ultime représente l’aboutissement des technologies antiques.",
+    "stats": {
+      "Technologies": "74",
+      "Force de capture": "64"
+    },
     "image": "PalSphere_Ancient_2.webp"
   },
   {
     "id": "PalSphere_Exotic",
     "slug": "Exotic_Sphere",
     "category": "Sphere",
-    "name_fr": "",
+    "name_fr": "Sphère Exotique",
     "name_en": "Exotic Sphere",
-    "description": "",
-    "stats": {},
+    "description": "Sphère permettant de capturer des Pals.\r\nDotée de performances prodigieuses, elle permet de capturer même les Pals les plus exceptionnels.",
+    "stats": {
+      "Technologies": "58",
+      "Force de capture": "50"
+    },
     "image": "PalSphere_Exotic.webp"
   },
   {
     "id": "PalSphere_Giga",
     "slug": "Giga_Sphere",
     "category": "Sphere",
-    "name_fr": "",
+    "name_fr": "Giga Sphère",
     "name_en": "Giga Sphere",
-    "description": "",
-    "stats": {},
+    "description": "Sphère permettant de capturer des Pals.\r\nElle permet de capturer des Pals d’une puissance modérée.",
+    "stats": {
+      "Technologies": "20",
+      "Force de capture": "20"
+    },
     "image": "PalSphere_Giga.webp"
   },
   {
@@ -19199,13 +20047,26 @@
     "slug": "Ultra_Sphere",
     "category": "Sphere",
     "name_fr": "Ultra Sphère",
-    "name_en": "",
+    "name_en": "Ultra Sphere",
     "description": "Sphère permettant de capturer des Pals.\r\nSes excellentes performances laissent peu de chances d’évasion.",
     "stats": {
       "Technologies": "35",
       "Force de capture": "33"
     },
     "image": "PalSphere_Master.webp"
+  },
+  {
+    "id": "PalSphere_Mega",
+    "slug": "Mega_Sphere",
+    "category": "Sphere",
+    "name_fr": "Méga Sphère",
+    "name_en": "Mega Sphere",
+    "description": "Sphère permettant de capturer des Pals.\r\nSes performances améliorées permettent de capturer une plus grande variété de Pals.",
+    "stats": {
+      "Technologies": "14",
+      "Force de capture": "14"
+    },
+    "image": "PalSphere_Mega.webp"
   },
   {
     "id": "PalSphere_Robbery",
@@ -19220,11 +20081,24 @@
     "image": "PalSphere_Robbery.webp"
   },
   {
+    "id": "PalSphere_Tera",
+    "slug": "Hyper_Sphere",
+    "category": "Sphere",
+    "name_fr": "Hyper Sphère",
+    "name_en": "Hyper Sphere",
+    "description": "Sphère permettant de capturer des Pals.\r\nElle permet de capturer des Pals plus puissants.",
+    "stats": {
+      "Technologies": "27",
+      "Force de capture": "27"
+    },
+    "image": "PalSphere_Tera.webp"
+  },
+  {
     "id": "PalSphere_Ultimate",
     "slug": "Ultimate_Sphere",
     "category": "Sphere",
     "name_fr": "Sphère Ultime",
-    "name_en": "",
+    "name_en": "Ultimate Sphere",
     "description": "Sphère permettant de capturer des Pals.\r\nSes performances exceptionnelles permettent de capturer la très grande majorité des Pals.",
     "stats": {
       "Technologies": "51",
@@ -19466,9 +20340,9 @@
     "id": "PalUpgradeStone3",
     "slug": "Large_Pal_Soul",
     "category": "Material",
-    "name_fr": "",
+    "name_fr": "Âme de Pal majeur",
     "name_en": "Large Pal Soul",
-    "description": "",
+    "description": "L'âme d'un Pal majeur.\r\nEn faire une offrande à une statue de puissance pour éveiller le potentiel de vos Pals.",
     "stats": {},
     "image": "PalUpgradeStone3.webp"
   },
@@ -20483,7 +21357,7 @@
     "slug": "Yakumo_Effigy",
     "category": "Key_Items",
     "name_fr": "Statue de Yakumo",
-    "name_en": "",
+    "name_en": "Yakumo Effigy",
     "description": "Une mystérieuse statue de Pal que l'on trouve aux quatre coins de l'île de Palpagos.\r\nOffrez-la à une statue de puissance afin d'améliorer diverses capacités du joueur.",
     "stats": {},
     "image": "Relic_11.webp"
@@ -25567,6 +26441,278 @@
     "image": "WeakerBow_5.webp"
   },
   {
+    "id": "Weapon_Bat3",
+    "slug": "Metal_Bat_Schematic_3",
+    "category": "Schematic",
+    "name_fr": "Plan de batte en métal 3",
+    "name_en": "Metal Bat Schematic 4",
+    "description": "Le posséder débloque la recette \r\n« Batte en métal (Épique) ».\r\nFabrication possible à : Chaîne de production d'armes.",
+    "stats": {},
+    "image": "Weapon_Bat3.webp"
+  },
+  {
+    "id": "Weapon_BeamSword",
+    "slug": "Beam_Sword",
+    "category": "Weapon",
+    "name_fr": "",
+    "name_en": "Beam Sword",
+    "description": "",
+    "stats": {},
+    "image": "Weapon_BeamSword.webp"
+  },
+  {
+    "id": "Weapon_BowGun",
+    "slug": "Crossbow",
+    "category": "Weapon",
+    "name_fr": "",
+    "name_en": "Crossbow",
+    "description": "",
+    "stats": {},
+    "image": "Weapon_BowGun.webp"
+  },
+  {
+    "id": "Weapon_ChargeLaserRifle",
+    "slug": "Charge_Rifle",
+    "category": "Weapon",
+    "name_fr": "",
+    "name_en": "Charge Rifle",
+    "description": "",
+    "stats": {},
+    "image": "Weapon_ChargeLaserRifle.webp"
+  },
+  {
+    "id": "Weapon_CompoundBow",
+    "slug": "Compound_Bow",
+    "category": "Weapon",
+    "name_fr": "Arc composite",
+    "name_en": "",
+    "description": "Un arc modernisé.\r\nPermet de tirer des flèches avec une puissance accrue.",
+    "stats": {
+      "Attaque": "1650"
+    },
+    "image": "Weapon_CompoundBow.webp"
+  },
+  {
+    "id": "Weapon_DoubleBarrelShotgun",
+    "slug": "Double-Barreled_Shotgun",
+    "category": "Weapon",
+    "name_fr": "",
+    "name_en": "Double-Barreled Shotgun",
+    "description": "",
+    "stats": {},
+    "image": "Weapon_DoubleBarrelShotgun.webp"
+  },
+  {
+    "id": "Weapon_DroneLauncher",
+    "slug": "Drone_Launcher",
+    "category": "Weapon",
+    "name_fr": "Lance-drones",
+    "name_en": "Drone Launcher",
+    "description": "Un lanceur de drones capables d’attaques autonomes.\r\nPeut en déployer jusqu’à neuf simultanément pour assurer une pression continue sur l’ennemi.",
+    "stats": {
+      "Attaque": "200",
+      "Technologies": "77"
+    },
+    "image": "Weapon_DroneLauncher.webp"
+  },
+  {
+    "id": "Weapon_ElectricArcAssaultRifle",
+    "slug": "Plasma_Rifle",
+    "category": "Weapon",
+    "name_fr": "",
+    "name_en": "Plasma Rifle",
+    "description": "",
+    "stats": {},
+    "image": "Weapon_ElectricArcAssaultRifle.webp"
+  },
+  {
+    "id": "Weapon_FishingRod_4",
+    "slug": "Intermediate_Fishing_Rod_%28Croajiro%29",
+    "category": "Weapon",
+    "name_fr": "Canne à pêche standard (Croajiro)",
+    "name_en": "",
+    "description": "Une canne à pêche permettant de remonter des Pals.\r\nPlus robuste que la canne à pêche standard (Cattiva), elle offre des performances légèrement accrues.",
+    "stats": {
+      "Attaque": "25",
+      "FishingMaxDistance": "1500",
+      "HitBarSizeRate": "1.4"
+    },
+    "image": "Weapon_FishingRod_4.webp"
+  },
+  {
+    "id": "Weapon_FishingRod_6",
+    "slug": "Advanced_Fishing_Rod_%28Depresso%29",
+    "category": "Weapon",
+    "name_fr": "",
+    "name_en": "Advanced Fishing Rod (Depresso)",
+    "description": "",
+    "stats": {},
+    "image": "Weapon_FishingRod_6.webp"
+  },
+  {
+    "id": "Weapon_FlameThrower_Default",
+    "slug": "Flamethrower",
+    "category": "Weapon",
+    "name_fr": "",
+    "name_en": "Flamethrower",
+    "description": "",
+    "stats": {},
+    "image": "Weapon_FlameThrower_Default.webp"
+  },
+  {
+    "id": "Weapon_HandGun_Default",
+    "slug": "Handgun",
+    "category": "Weapon",
+    "name_fr": "",
+    "name_en": "Handgun",
+    "description": "",
+    "stats": {},
+    "image": "Weapon_HandGun_Default.webp"
+  },
+  {
+    "id": "Weapon_LaserRifle",
+    "slug": "Laser_Rifle",
+    "category": "Weapon",
+    "name_fr": "",
+    "name_en": "Laser Rifle",
+    "description": "",
+    "stats": {},
+    "image": "Weapon_LaserRifle.webp"
+  },
+  {
+    "id": "Weapon_MakeshiftAssaultRifle",
+    "slug": "Makeshift_Assault_Rifle",
+    "category": "Weapon",
+    "name_fr": "Fusil d'assaut usé",
+    "name_en": "",
+    "description": "Un fusil d'assaut assemblé à partir de matériaux de récupération.\r\nSa cadence de tir et sa portée sont élevées pour compenser sa faible puissance.",
+    "stats": {
+      "Attaque": "297"
+    },
+    "image": "Weapon_MakeshiftAssaultRifle.webp"
+  },
+  {
+    "id": "Weapon_MakeshiftHandgun",
+    "slug": "Makeshift_Handgun",
+    "category": "Weapon",
+    "name_fr": "Pistolet rouillé",
+    "name_en": "",
+    "description": "Un pistolet artisanal fabriqué avec des pièces de récupération. Idéal à courte portée, bien qu'il ne tire qu'une balle à la fois.",
+    "stats": {
+      "Attaque": "800"
+    },
+    "image": "Weapon_MakeshiftHandgun.webp"
+  },
+  {
+    "id": "Weapon_MeatCutterKnife",
+    "slug": "Meat_Cleaver",
+    "category": "Weapon",
+    "name_fr": "",
+    "name_en": "Meat Cleaver",
+    "description": "",
+    "stats": {},
+    "image": "Weapon_MeatCutterKnife.webp"
+  },
+  {
+    "id": "Weapon_OverheatRifle",
+    "slug": "Overheat_Rifle",
+    "category": "Weapon",
+    "name_fr": "",
+    "name_en": "Overheat Rifle",
+    "description": "",
+    "stats": {},
+    "image": "Weapon_OverheatRifle.webp"
+  },
+  {
+    "id": "Weapon_SkyAssaultRifle",
+    "slug": "Heavy_Assault_Rifle",
+    "category": "Weapon",
+    "name_fr": "Fusil d’assaut astral",
+    "name_en": "",
+    "description": "Un fusil d’assaut fabriqué à partir de lingots de soralite.\r\nPolyvalent, il a été amélioré pour permettre l’utilisation de munitions à la puissance accrue.",
+    "stats": {
+      "Attaque": "1615",
+      "Technologies": "70"
+    },
+    "image": "Weapon_SkyAssaultRifle.webp"
+  },
+  {
+    "id": "Weapon_SkyGrenadeLauncher",
+    "slug": "Tactical_Grenade_Launcher",
+    "category": "Weapon",
+    "name_fr": "Lance-grenades astral",
+    "name_en": "",
+    "description": "Un lance-grenades fabriqué à partir de lingots de soralite.\r\nSa trajectoire a été stabilisée, le rendant capable de tirer des explosifs avec une grande précision à longue distance.",
+    "stats": {
+      "Attaque": "8066"
+    },
+    "image": "Weapon_SkyGrenadeLauncher.webp"
+  },
+  {
+    "id": "Weapon_SkyShotgun",
+    "slug": "Prototype_Shotgun_Schematic_4",
+    "category": "Schematic",
+    "name_fr": "Plan de fusil à pompe astral 4",
+    "name_en": "",
+    "description": "Le posséder débloque la recette \r\n« Fusil à pompe astral (Légendaire) ».\r\nFabrication possible à : Établi antique.",
+    "stats": {},
+    "image": "Weapon_SkyShotgun.webp"
+  },
+  {
+    "id": "Weapon_Sword",
+    "slug": "Sword",
+    "category": "Weapon",
+    "name_fr": "Épée",
+    "name_en": "",
+    "description": "Une épée pour le combat rapproché.\r\nUn tranchant redoutable, au prix d’un combat à haut risque.",
+    "stats": {
+      "Attaque": "396"
+    },
+    "image": "Weapon_Sword.webp"
+  },
+  {
+    "id": "Weapon_WidePenetrateShotgun",
+    "slug": "Beam_Scatter_Schematic_4",
+    "category": "Schematic",
+    "name_fr": "Plan de disperseur à faisceau 4",
+    "name_en": "",
+    "description": "Le posséder débloque la recette \r\n« Disperseur à faisceau (Légendaire) ».\r\nFabrication possible à : Établi antique.",
+    "stats": {},
+    "image": "Weapon_WidePenetrateShotgun.webp"
+  },
+  {
+    "id": "Weapon_YakushimaBlade",
+    "slug": "Meowmere",
+    "category": "Weapon",
+    "name_fr": "",
+    "name_en": "Meowmere",
+    "description": "",
+    "stats": {},
+    "image": "Weapon_YakushimaBlade.webp"
+  },
+  {
+    "id": "Weapon_YakushimaBlade002",
+    "slug": "Terra_Blade",
+    "category": "Weapon",
+    "name_fr": "Lame Terra",
+    "name_en": "",
+    "description": "[Collaboration Terraria]\r\nUne mystérieuse épée qui émet des ondes de choc vert émeraude lorsqu'on l'agite.\r\nUne arme à courte portée capable d'attaquer les ennemis à distance.",
+    "stats": {
+      "Attaque": "637"
+    },
+    "image": "Weapon_YakushimaBlade002.webp"
+  },
+  {
+    "id": "Weapon_YakushimaBlade005",
+    "slug": "Legendary_Meowmere",
+    "category": "Weapon",
+    "name_fr": "",
+    "name_en": "Legendary Meowmere",
+    "description": "",
+    "stats": {},
+    "image": "Weapon_YakushimaBlade005.webp"
+  },
+  {
     "id": "WhaleWhistle",
     "slug": "Echoing_Flute",
     "category": "Key_Items",
@@ -26735,5 +27881,17 @@
     "description": "",
     "stats": {},
     "image": "YakushimaParts003.webp"
+  },
+  {
+    "id": "food_Meat_OctopusGirl",
+    "slug": "Gloopie_Tentacle",
+    "category": "Ingredient",
+    "name_fr": "Tentacule de Gloopie",
+    "name_en": "",
+    "description": "Un tentacule de Gloopie.\r\nSa texture moelleuse renferme une saveur pleine de légèreté et d'élégance.",
+    "stats": {
+      "Valeurs nutritionnelles": "40"
+    },
+    "image": "food_Meat_OctopusGirl.webp"
   }
 ]

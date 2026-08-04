@@ -115,6 +115,6 @@ class DatasetLoader @Inject constructor(
         // À incrémenter à chaque changement de contenu de items/pals/humans.json (filtrage,
         // nouveaux champs...), même sans changement du schéma Room — sinon les installations
         // existantes gardent l'ancien contenu indéfiniment (ensureLoaded ne réimporte que si vide).
-        const val CURRENT_DATASET_VERSION = 5
+        const val CURRENT_DATASET_VERSION = 6
     }
 }

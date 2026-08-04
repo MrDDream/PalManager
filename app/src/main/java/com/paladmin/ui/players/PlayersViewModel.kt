@@ -19,6 +19,7 @@ import com.paladmin.data.remote.palworld.KickBanRequest
 import com.paladmin.data.remote.palworld.PalworldClientFactory
 import com.paladmin.data.remote.palworld.PalworldPlayer
 import com.paladmin.data.repository.ItemRepository
+import com.paladmin.data.repository.PalRepository
 import com.paladmin.data.repository.ServerRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
@@ -66,6 +67,7 @@ class PlayersViewModel @Inject constructor(
     private val palDefenderClientFactory: PalDefenderClientFactory,
     private val technologyCatalog: TechnologyCatalog,
     private val itemRepository: ItemRepository,
+    private val palRepository: PalRepository,
     savedStateHandle: SavedStateHandle,
 ) : ViewModel() {
 
@@ -169,20 +171,23 @@ class PlayersViewModel @Inject constructor(
     }
 
     // Les Pals Boss/Alpha ont un PalID préfixé "BOSS_" (ex. "BOSS_Foxcicle") qui ne correspond à
-    // aucune image bundlée (nos assets sont nommés d'après l'espèce de base) — on retire ce préfixe
-    // uniquement pour résoudre l'icône, le texte affiché garde le PalID complet.
+    // aucune entrée du dataset (id de base sans préfixe) — on le retire pour résoudre nom/icône.
     private fun basePalImageId(palId: String): String = palId.removePrefix("BOSS_")
 
-    private fun formatTeam(response: PlayerPalsResponse): List<PlayerDetailRow> {
+    private suspend fun formatTeam(response: PlayerPalsResponse): List<PlayerDetailRow> {
         val team = response.pals.team.values
         if (team.isEmpty()) return listOf(PlayerDetailRow.Plain(context.getString(R.string.team_empty)))
         return team.map { pal ->
+            val entry = palRepository.getById(basePalImageId(pal.palId))
+            val speciesName = entry?.nameFr?.ifBlank { entry.nameEn } ?: pal.palId
             val text = buildString {
-                append("${pal.nickname.ifBlank { pal.palId }} · Nv.${pal.level}")
+                append("${pal.nickname.ifBlank { speciesName }} · Nv.${pal.level}")
                 if (pal.shiny) append(" · ✨ ${context.getString(R.string.team_shiny)}")
                 if (pal.gender.isNotBlank()) append(" · ${pal.gender}")
             }
-            PlayerDetailRow.WithImage(imagePath = "file:///android_asset/images/pals/${basePalImageId(pal.palId)}.webp", text = text)
+            val imagePath = entry?.image?.let { "file:///android_asset/images/pals/$it" }
+                ?: "file:///android_asset/images/pals/${basePalImageId(pal.palId)}.webp"
+            PlayerDetailRow.WithImage(imagePath = imagePath, text = text)
         }
     }
 

@@ -34,10 +34,25 @@ ITEM_CATEGORIES = [
     "Ammo", "Ingredient", "Key_Items", "Glider", "Schematic",
 ]
 
+# paldb.cc sert le data-hover d'un item sous deux formes : "?s=Items%2F{id}" (donne l'id directement)
+# ou un hover mis en cache "/cache/fr/Game_Items_hover/{hash}" (aucun id dedans). Avec un seul motif
+# exigeant le premier format, les items servis sous la seconde forme (ex. Méga Sphère) disparaissaient
+# silencieusement du dataset — on capture donc les deux et on résout l'id via l'icône si besoin
+# (nom de fichier "T_itemicon_{id}.webp", fiable dans les deux cas).
 ITEM_PATTERN = re.compile(
-    r'class="itemname" data-hover="\?s=Items%2F([^"]+)" href="([^"]+)">([^<]+)</a>',
+    r'class="itemname" data-hover="([^"]*)" href="([^"]+)">([^<]+)</a>',
 )
+LIVE_HOVER_ID_PATTERN = re.compile(r'^\?s=Items%2F(.+)$')
 ITEM_ICON_PATTERN = re.compile(r'<a href="([^"]+)"><img loading="lazy" src="([^"]+\.webp)"')
+ITEM_ICON_ID_PATTERN = re.compile(r'/T_itemicon_([A-Za-z0-9_]+)\.webp$')
+
+
+def resolve_item_code(hover: str, slug: str, icon_by_slug: dict[str, str]) -> str | None:
+    live_match = LIVE_HOVER_ID_PATTERN.match(hover)
+    if live_match:
+        return live_match.group(1)
+    icon_match = ITEM_ICON_ID_PATTERN.search(icon_by_slug.get(slug, ""))
+    return icon_match.group(1) if icon_match else None
 ITEM_CARD_SPLIT = re.compile(r'(?=<div class="card itemPopup">)')
 ITEM_DESCRIPTION_PATTERN = re.compile(r'<div class="card-body py-2">\s*<div>(.*?)</div>\s*</div>', re.DOTALL)
 ITEM_STAT_PATTERN = re.compile(
@@ -125,12 +140,17 @@ def is_unavailable_in_game(item: dict) -> bool:
 def scrape_items() -> list[dict]:
     # code -> {slug, category, name_fr, name_en, description, stats, icon_url}
     items: dict[str, dict] = {}
+    unresolved = 0
 
     for category in ITEM_CATEGORIES:
         for lang, name_key in (("fr", "name_fr"), ("en", "name_en")):
             page_html = fetch_with_retry(f"/{lang}/{category}")
             icon_by_slug = dict(ITEM_ICON_PATTERN.findall(page_html))
-            for code, slug, name in ITEM_PATTERN.findall(page_html):
+            for hover, slug, name in ITEM_PATTERN.findall(page_html):
+                code = resolve_item_code(hover, slug, icon_by_slug)
+                if code is None:
+                    unresolved += 1
+                    continue
                 entry = items.setdefault(code, {
                     "id": code,
                     "slug": slug,
@@ -151,8 +171,8 @@ def scrape_items() -> list[dict]:
                     match = ITEM_PATTERN.search(block)
                     if not match:
                         continue
-                    code = match.group(1)
-                    if code not in items or items[code]["description"]:
+                    code = resolve_item_code(match.group(1), match.group(2), icon_by_slug)
+                    if code is None or code not in items or items[code]["description"]:
                         continue
                     description, stats = parse_item_card(block)
                     items[code]["description"] = description
@@ -160,6 +180,9 @@ def scrape_items() -> list[dict]:
 
             print(f"  {category} [{lang}] -> {len(items)} items cumulés")
             time.sleep(REQUEST_DELAY_SECONDS)
+
+    if unresolved:
+        print(f"  {unresolved} item(s) vu(s) mais id irrésoluble (ni data-hover ni icône exploitable)")
 
     available = [item for item in items.values() if not is_unavailable_in_game(item)]
     excluded_count = len(items) - len(available)
