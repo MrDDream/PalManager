@@ -82,3 +82,23 @@ data class TechnologyDatasetEntry(
     @SerialName("name_en") val nameEn: String,
     val image: String,
 )
+
+/** Reflète tools/import_paljson_skills.py (source github.com/MrDDream/PalJSON/data/skills.js — id =
+ * EPalWazaID, le même identifiant que ActiveSkills/LearntSkills côté PalDefender). */
+@Serializable
+data class ActiveSkillDatasetEntry(
+    val id: String,
+    @SerialName("name_fr") val nameFr: String,
+    @SerialName("name_en") val nameEn: String,
+)
+
+/** Reflète tools/import_paljson_skills.py (source github.com/MrDDream/PalJSON/data/passives.js —
+ * id = le même identifiant que Passives côté PalDefender ; couvre aussi les passifs négatifs
+ * "_downN" et les variantes "ElementBoost_*_PAL", absents du catalogue d'implants d'items.json). */
+@Serializable
+data class PassiveDatasetEntry(
+    val id: String,
+    @SerialName("name_fr") val nameFr: String,
+    @SerialName("name_en") val nameEn: String,
+    val rank: Int = 0,
+)

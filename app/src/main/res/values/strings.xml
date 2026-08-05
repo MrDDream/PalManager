@@ -156,8 +156,17 @@
     <string name="inventory_section_armor">Armures</string>
     <string name="inventory_section_food">Nourriture</string>
     <string name="inventory_section_dropslot">Slot de largage</string>
-    <string name="team_empty">Aucun Pal dans l\'équipe</string>
-    <string name="team_shiny">Chromatique</string>
+    <string name="pal_info_iv_header">IV</string>
+    <string name="pal_stat_health_fmt">HP %1$d</string>
+    <string name="pal_stat_attack_fmt">ATK %1$d</string>
+    <string name="pal_stat_defense_fmt">DEF %1$d</string>
+    <string name="pal_stat_work_fmt">WORK %1$d</string>
+    <string name="pal_info_soul_header">Âme de Pal</string>
+    <string name="pal_info_active_skills">Compétences actives</string>
+    <string name="pal_info_passives">Passifs</string>
+    <string name="pal_grid_empty">Aucun Pal</string>
+    <string name="pal_gender_male">Mâle</string>
+    <string name="pal_gender_female">Femelle</string>
     <string name="progression_level_fmt">Niveau : %1$d</string>
     <string name="progression_exp_fmt">EXP : %1$d</string>
     <string name="progression_unused_points_fmt">Points de statut non utilisés : %1$d</string>
@@ -202,12 +211,42 @@
 
     <!-- Guildes -->
     <string name="guilds_title">Guildes</string>
-    <string name="guilds_search_hint">Rechercher une guilde</string>
+    <string name="guilds_search_hint">Rechercher une guilde ou un membre</string>
     <string name="guilds_empty">Aucune guilde</string>
     <string name="guilds_level_members_fmt">Niveau %1$d · %2$d membre(s)</string>
-    <string name="guilds_location_cd">Voir la base sur la carte</string>
     <string name="guilds_unnamed">Guilde sans nom</string>
     <string name="guilds_error_load_failed">Impossible de charger les guildes</string>
+    <string name="guilds_error_detail_load_failed">Impossible de charger le détail de la guilde</string>
+    <string name="guilds_action_location">Voir la localisation</string>
+    <string name="guilds_action_chest">Voir le coffre de guilde</string>
+    <string name="guilds_action_expeditions">Voir les expéditions</string>
+    <string name="guilds_action_lab">Voir le laboratoire</string>
+    <string name="guilds_action_camp_pals">Voir les Pals du camp</string>
+    <string name="guild_detail_camp_pals_title_fmt">Pals du camp — %1$s</string>
+    <string name="guild_camp_label_fmt">Base %1$d (Niveau %2$d)</string>
+    <string name="guild_detail_chest">Coffre de guilde</string>
+    <string name="guild_detail_expeditions">Expéditions</string>
+    <string name="guild_detail_lab">Laboratoire</string>
+    <string name="guild_chest_unavailable">Coffre indisponible</string>
+    <string name="guild_chest_empty">Coffre vide</string>
+    <string name="guild_chest_slots_fmt">%1$d/%2$d emplacements utilisés</string>
+    <string name="guild_expeditions_unavailable">Expéditions indisponibles</string>
+    <string name="guild_expeditions_finished_fmt">Expéditions terminées : %1$d</string>
+    <string name="guild_expeditions_released_fmt">Missions débloquées : %1$d/%2$d</string>
+    <string name="guild_lab_unavailable">Laboratoire indisponible</string>
+    <string name="guild_lab_current_fmt">Recherche en cours : %1$s</string>
+    <string name="guild_lab_no_research">Aucune recherche en cours</string>
+    <string name="guild_lab_progress_fmt">%1$s — %2$d%%</string>
+    <string name="guild_lab_category_handiwork">Artisanat</string>
+    <string name="guild_lab_category_kindling">Allumage</string>
+    <string name="guild_lab_category_watering">Arrosage</string>
+    <string name="guild_lab_category_planting">Plantation</string>
+    <string name="guild_lab_category_electricity">Électricité</string>
+    <string name="guild_lab_category_lumbering">Bûcheronnage</string>
+    <string name="guild_lab_category_mining">Minage</string>
+    <string name="guild_lab_category_cooling">Réfrigération</string>
+    <string name="guild_lab_category_medicine">Production de médicaments</string>
+    <string name="guild_lab_category_other">Autres</string>
 
     <!-- Bannissements -->
     <string name="bans_title">Bannissements</string>

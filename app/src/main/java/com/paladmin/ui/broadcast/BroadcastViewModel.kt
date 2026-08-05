@@ -1,6 +1,7 @@
 package com.paladmin.ui.broadcast
 
 import com.paladmin.util.describe
+import com.paladmin.util.requireSuccess
 
 import android.content.Context
 import androidx.lifecycle.SavedStateHandle
@@ -40,11 +41,11 @@ class BroadcastViewModel @Inject constructor(
 
     private fun runAction(
         successMessageRes: Int,
-        block: suspend (com.paladmin.data.remote.paldefender.PalDefenderApiService) -> Any,
+        block: suspend (com.paladmin.data.remote.paldefender.PalDefenderApiService) -> retrofit2.Response<*>,
     ) {
         viewModelScope.launch {
             val profile = serverRepository.getProfile(profileId) ?: return@launch
-            runCatching { block(palDefenderClientFactory.create(profile)) }
+            runCatching { block(palDefenderClientFactory.create(profile)).requireSuccess() }
                 .onSuccess { _statusMessage.value = context.getString(successMessageRes) }
                 .onFailure { error -> _statusMessage.value = error.describe(context.getString(R.string.broadcast_error_action_failed)) }
         }

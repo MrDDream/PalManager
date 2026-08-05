@@ -12567,7 +12567,7 @@
     "image": "Gunpowder.webp"
   },
   {
-    "id": "Gunpowder2",
+    "id": "GunPowder2",
     "slug": "Gunpowder",
     "category": "Material",
     "name_fr": "Poudre à canon",
@@ -12576,7 +12576,7 @@
     "stats": {
       "Technologies": "21"
     },
-    "image": "Gunpowder2.webp"
+    "image": "GunPowder2.webp"
   },
   {
     "id": "Gyoza",
@@ -15919,7 +15919,7 @@
     "image": "MateItem01.webp"
   },
   {
-    "id": "Material_Cloth",
+    "id": "Cloth2",
     "slug": "High_Quality_Cloth",
     "category": "Material",
     "name_fr": "Tissu de qualité",
@@ -15928,7 +15928,7 @@
     "stats": {
       "Technologies": "36"
     },
-    "image": "Material_Cloth.webp"
+    "image": "Cloth2.webp"
   },
   {
     "id": "CopperOre",

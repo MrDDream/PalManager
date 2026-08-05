@@ -19,4 +19,9 @@ class HumanRepository @Inject constructor(
         datasetLoader.ensureLoaded()
         emitAll(humanDao.search(SearchNormalizer.normalize(query)))
     }
+
+    suspend fun getById(id: String): HumanEntity? {
+        datasetLoader.ensureLoaded()
+        return humanDao.getById(id)
+    }
 }

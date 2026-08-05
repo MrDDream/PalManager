@@ -15,7 +15,9 @@ class PalworldClientFactory @Inject constructor(
     private val debugLogger: DebugLogger,
 ) {
 
-    private val json = Json { ignoreUnknownKeys = true }
+    // encodeDefaults=true : voir le commentaire équivalent dans PalDefenderClientFactory — même
+    // piège possible ici pour KickBanRequest.message/ShutdownRequest si un futur appel les omet.
+    private val json = Json { ignoreUnknownKeys = true; encodeDefaults = true }
 
     fun create(profile: ServerProfile): PalworldApiService {
         val client = NetworkClients.build(

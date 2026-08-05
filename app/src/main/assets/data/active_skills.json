@@ -1,0 +1,1877 @@
+[
+  {
+    "id": "AcidRain",
+    "name_fr": "Pluie Acide",
+    "name_en": "Acid Rain"
+  },
+  {
+    "id": "AirBlade",
+    "name_fr": "Lame Aérienne",
+    "name_en": "Air Blade"
+  },
+  {
+    "id": "AirCanon",
+    "name_fr": "Canon à Air",
+    "name_en": "Air Cannon"
+  },
+  {
+    "id": "Apocalypse",
+    "name_fr": "Apocalypse",
+    "name_en": "Apocalypse"
+  },
+  {
+    "id": "AquaJet",
+    "name_fr": "Jet d'Eau",
+    "name_en": "Hydro Jet"
+  },
+  {
+    "id": "BeamSlicer",
+    "name_fr": "Tranche-Faisceau",
+    "name_en": "Beam Slicer"
+  },
+  {
+    "id": "BlastCanon",
+    "name_fr": "Canon Explosif",
+    "name_en": "Blast Cannon"
+  },
+  {
+    "id": "BlizzardLance",
+    "name_fr": "Iceberg",
+    "name_en": "Iceberg"
+  },
+  {
+    "id": "BlueThunderHorse_PartnerSkill",
+    "name_fr": "Plasma Dash",
+    "name_en": "Plasma Dash"
+  },
+  {
+    "id": "BubbleShot",
+    "name_fr": "Tir Bulleux",
+    "name_en": "Bubble Blast"
+  },
+  {
+    "id": "BubbleShower",
+    "name_fr": "Douche Toxique",
+    "name_en": "Poison Shower"
+  },
+  {
+    "id": "ChargeCanon",
+    "name_fr": "Canon Chargé",
+    "name_en": "Charge Cannon"
+  },
+  {
+    "id": "Commet",
+    "name_fr": "Comète",
+    "name_en": "Comet Strike"
+  },
+  {
+    "id": "CommetRain",
+    "name_fr": "Pluie de Météorites",
+    "name_en": "Meteorain"
+  },
+  {
+    "id": "CreepingBubble",
+    "name_fr": "Marche d'Écume",
+    "name_en": "Creeping Bubbles"
+  },
+  {
+    "id": "CrossWind",
+    "name_fr": "Vent Croisé",
+    "name_en": "Crosswind"
+  },
+  {
+    "id": "DarkArrow",
+    "name_fr": "Flèche Noire",
+    "name_en": "Dark Arrow"
+  },
+  {
+    "id": "DarkBall",
+    "name_fr": "Balle Sombre",
+    "name_en": "Dark Ball"
+  },
+  {
+    "id": "DarkCanon",
+    "name_fr": "Canon Noir",
+    "name_en": "Dark Cannon"
+  },
+  {
+    "id": "DarkLaser",
+    "name_fr": "Laser Noir",
+    "name_en": "Dark Laser"
+  },
+  {
+    "id": "DarkLegion",
+    "name_fr": "Légion Sombre",
+    "name_en": "Dark Whisp"
+  },
+  {
+    "id": "DarkPulse",
+    "name_fr": "Noirceur Expansive",
+    "name_en": "Umbral Surge"
+  },
+  {
+    "id": "DarkWave",
+    "name_fr": "Déchaînement d'Ombre",
+    "name_en": "Shadow Burst"
+  },
+  {
+    "id": "DiamondFall",
+    "name_fr": "Chute de Diamants",
+    "name_en": "Diamond Rain"
+  },
+  {
+    "id": "DiversionLaser",
+    "name_fr": "Double-Aqua",
+    "name_en": "Torrential Blast"
+  },
+  {
+    "id": "DoubleIcicleThrow",
+    "name_fr": "Double Morsure du Blizzard",
+    "name_en": "Double Blizzard Spike"
+  },
+  {
+    "id": "DragonBreath",
+    "name_fr": "Souffle Draconique",
+    "name_en": "Dragon Breath"
+  },
+  {
+    "id": "DragonCanon",
+    "name_fr": "Canon Draconique",
+    "name_en": "Dragon Cannon"
+  },
+  {
+    "id": "DragonMeteor",
+    "name_fr": "Météore Draconique",
+    "name_en": "Dragon Meteor"
+  },
+  {
+    "id": "DragonWave",
+    "name_fr": "Déchaînement Draconique",
+    "name_en": "Dragon Burst"
+  },
+  {
+    "id": "ElecWave",
+    "name_fr": "Onde Électrique",
+    "name_en": "Shockwave"
+  },
+  {
+    "id": "Eruption",
+    "name_fr": "Pluie Volcanique",
+    "name_en": "Volcanic Rain"
+  },
+  {
+    "id": "FireBall",
+    "name_fr": "Boule Enflammée",
+    "name_en": "Fire Ball"
+  },
+  {
+    "id": "FireBlast",
+    "name_fr": "Tir Enflammé",
+    "name_en": "Ignis Blast"
+  },
+  {
+    "id": "FireSeed",
+    "name_fr": "Flammes Scindées",
+    "name_en": "Spirit Fire"
+  },
+  {
+    "id": "FlameFunnel",
+    "name_fr": "Concentration de Flammes",
+    "name_en": "Flame Funnel"
+  },
+  {
+    "id": "FlameWall",
+    "name_fr": "Mur de Flammes",
+    "name_en": "Flame Wall"
+  },
+  {
+    "id": "Flamethrower",
+    "name_fr": "Souffle Enflammé",
+    "name_en": "Ignis Breath"
+  },
+  {
+    "id": "FlareArrow",
+    "name_fr": "Trait de Feu",
+    "name_en": "Flare Arrow"
+  },
+  {
+    "id": "FlareTornado",
+    "name_fr": "Tempête Ardente",
+    "name_en": "Flare Storm"
+  },
+  {
+    "id": "FrostBreath",
+    "name_fr": "Souffle Givré",
+    "name_en": "Crystal Breath"
+  },
+  {
+    "id": "Funnel_DreamDemon",
+    "name_fr": "Funnel_DreamDemon",
+    "name_en": "Funnel_DreamDemon"
+  },
+  {
+    "id": "Funnel_RaijinDaughter",
+    "name_fr": "Funnel_RaijinDaughter",
+    "name_en": "Funnel_RaijinDaughter"
+  },
+  {
+    "id": "Funnel_RaijinDaughter_Water",
+    "name_fr": "Funnel_RaijinDaughter_Water",
+    "name_en": "Funnel_RaijinDaughter_Water"
+  },
+  {
+    "id": "GhostFlame",
+    "name_fr": "Flamme Spirituelle",
+    "name_en": "Spirit Flame"
+  },
+  {
+    "id": "GrassGolem_Dark_PartnerSkill",
+    "name_fr": "Corruption Laser",
+    "name_en": "Corruption Laser"
+  },
+  {
+    "id": "GrassGolem_PartnerSkill",
+    "name_fr": "Forest Laser",
+    "name_en": "Forest Laser"
+  },
+  {
+    "id": "GrassTornado",
+    "name_fr": "Tornade Verte",
+    "name_en": "Grass Tornado"
+  },
+  {
+    "id": "GravityShot",
+    "name_fr": "Tir Obscur",
+    "name_en": "Dark Shot"
+  },
+  {
+    "id": "HolyBlast",
+    "name_fr": "Explosion Sacrée",
+    "name_en": "Holy Burst"
+  },
+  {
+    "id": "Human_Punch",
+    "name_fr": "Coup de Poing",
+    "name_en": "Punch"
+  },
+  {
+    "id": "Human_Rolling",
+    "name_fr": "Human_Rolling",
+    "name_en": "Human_Rolling"
+  },
+  {
+    "id": "HydroPump",
+    "name_fr": "Hydro-Laser",
+    "name_en": "Hydro Laser"
+  },
+  {
+    "id": "HydroSlicer",
+    "name_fr": "Hydro Tranchant",
+    "name_en": "Hydro Slicer"
+  },
+  {
+    "id": "HyperBeam",
+    "name_fr": "Hyper Rayon",
+    "name_en": "Pal Blast"
+  },
+  {
+    "id": "IceAge",
+    "name_fr": "Ère Glaciaire",
+    "name_en": "Absolute Frost"
+  },
+  {
+    "id": "IceBlade",
+    "name_fr": "Coupe-Glace",
+    "name_en": "Icicle Cutter"
+  },
+  {
+    "id": "IceMissile",
+    "name_fr": "Missile de Glace",
+    "name_en": "Ice Missile"
+  },
+  {
+    "id": "IceWall",
+    "name_fr": "Mur de Glace",
+    "name_en": "Freeze Wall"
+  },
+  {
+    "id": "IcicleLine",
+    "name_fr": "Trident Glacé",
+    "name_en": "Icicle Line"
+  },
+  {
+    "id": "IciclePierce",
+    "name_fr": "Grêle Tranchante",
+    "name_en": "Icicle Bullet"
+  },
+  {
+    "id": "IcicleThrow",
+    "name_fr": "Morsure du Blizzard",
+    "name_en": "Blizzard Spike"
+  },
+  {
+    "id": "Inferno",
+    "name_fr": "Inferno",
+    "name_en": "Ignis Rage"
+  },
+  {
+    "id": "LightningStrike",
+    "name_fr": "Coup de Foudre",
+    "name_en": "Lightning Strike"
+  },
+  {
+    "id": "LineGeyser",
+    "name_fr": "Geyser",
+    "name_en": "Splash"
+  },
+  {
+    "id": "LineThunder",
+    "name_fr": "Éclair Horizontal",
+    "name_en": "Lightning Streak"
+  },
+  {
+    "id": "LockonLaser",
+    "name_fr": "Laser Chercheur",
+    "name_en": "Lock-on Laser"
+  },
+  {
+    "id": "MudShot",
+    "name_fr": "Tir Boueux",
+    "name_en": "Bog Blast"
+  },
+  {
+    "id": "PoisonFog",
+    "name_fr": "Nuage Toxique",
+    "name_en": "Poison Fog"
+  },
+  {
+    "id": "PoisonShot",
+    "name_fr": "Tir Empoisonné",
+    "name_en": "Poison Blast"
+  },
+  {
+    "id": "PoseidonOrca_PartnerSkill",
+    "name_fr": "Sentinel of the Great Sea",
+    "name_en": "Sentinel of the Great Sea"
+  },
+  {
+    "id": "PoseidonOrca_PartnerSkill_SpearBullet",
+    "name_fr": "PoseidonOrca_PartnerSkill_SpearBullet",
+    "name_en": "PoseidonOrca_PartnerSkill_SpearBullet"
+  },
+  {
+    "id": "PowerBall",
+    "name_fr": "Boule d'Énergie",
+    "name_en": "Power Bomb"
+  },
+  {
+    "id": "PowerShot",
+    "name_fr": "Tir Puissant",
+    "name_en": "Power Shot"
+  },
+  {
+    "id": "PredatorBeam",
+    "name_fr": "Rayon Prédateur",
+    "name_en": "Predator Blast"
+  },
+  {
+    "id": "PredatorLockon",
+    "name_fr": "Ciblage Prédateur",
+    "name_en": "Predator Mark"
+  },
+  {
+    "id": "PredatorWave",
+    "name_fr": "Vague Prédatrice",
+    "name_en": "Predator Surge"
+  },
+  {
+    "id": "Psychokinesis",
+    "name_fr": "Gravité Psy",
+    "name_en": "Psycho Gravity"
+  },
+  {
+    "id": "RadiantBarrage",
+    "name_fr": "Salve Lumineuse",
+    "name_en": "Radiant Barrage"
+  },
+  {
+    "id": "RaidCutter",
+    "name_fr": "Tranche-Rafale",
+    "name_en": "Raid Cutter"
+  },
+  {
+    "id": "Railbolt",
+    "name_fr": "Canon Fulgurant",
+    "name_en": "Thunder Rail"
+  },
+  {
+    "id": "RangeThunder",
+    "name_fr": "Tonnerre Omniprésent",
+    "name_en": "All Range Thunder"
+  },
+  {
+    "id": "ReflectiveShuriken",
+    "name_fr": "Feuille Ricochet",
+    "name_en": "Reflect Leaf"
+  },
+  {
+    "id": "RipTide",
+    "name_fr": "Vague Scélérate",
+    "name_en": "Aqua Surge"
+  },
+  {
+    "id": "RockBeat",
+    "name_fr": "Impact Rocheux",
+    "name_en": "Rocky Impact"
+  },
+  {
+    "id": "RockLance",
+    "name_fr": "Lance-Roche",
+    "name_en": "Rock Lance"
+  },
+  {
+    "id": "RootAttack",
+    "name_fr": "Lierre Rampant",
+    "name_en": "Spine Vine"
+  },
+  {
+    "id": "RootLance",
+    "name_fr": "Lierre Circulaire",
+    "name_en": "Circle Vine"
+  },
+  {
+    "id": "SandTornado",
+    "name_fr": "Tornade de Sable",
+    "name_en": "Sand Tornado"
+  },
+  {
+    "id": "SandTwister",
+    "name_fr": "Tourbillon de Sable",
+    "name_en": "Sand Twister"
+  },
+  {
+    "id": "Scratch",
+    "name_fr": "en Text",
+    "name_en": "en Text"
+  },
+  {
+    "id": "SeaGush",
+    "name_fr": "Éruption Aquatique",
+    "name_en": "Geyser Gush"
+  },
+  {
+    "id": "SeedMachinegun",
+    "name_fr": "Mitraille-Graines",
+    "name_en": "Seed Machine Gun"
+  },
+  {
+    "id": "SeedMine",
+    "name_fr": "Explose-Graines",
+    "name_en": "Seed Mine"
+  },
+  {
+    "id": "SelfDestruct",
+    "name_fr": "Autodestruction",
+    "name_en": "Implode"
+  },
+  {
+    "id": "SelfDestruct_Bee",
+    "name_fr": "Sacrifice Ultime",
+    "name_en": "Bee Quiet"
+  },
+  {
+    "id": "SelfExplosion",
+    "name_fr": "Autodestruction Ultime",
+    "name_en": "Megaton Implode"
+  },
+  {
+    "id": "ShadowBall",
+    "name_fr": "Balle Cauchemar",
+    "name_en": "Nightmare Ball"
+  },
+  {
+    "id": "ShokeiLaser",
+    "name_fr": "Laser Léthal",
+    "name_en": "Lethal Laser"
+  },
+  {
+    "id": "SolarBeam",
+    "name_fr": "Rayon Solaire",
+    "name_en": "Solar Blast"
+  },
+  {
+    "id": "SpecialCutter",
+    "name_fr": "Multi-Coupe",
+    "name_en": "Multicutter"
+  },
+  {
+    "id": "SpreadPulse",
+    "name_fr": "Tir Étincelant",
+    "name_en": "Spark Blast"
+  },
+  {
+    "id": "StarMine",
+    "name_fr": "Pluie d'Étoiles",
+    "name_en": "Star Mine"
+  },
+  {
+    "id": "StoneShotgun",
+    "name_fr": "Explosion Rocailleuse",
+    "name_en": "Stone Blast"
+  },
+  {
+    "id": "ThreeCommet",
+    "name_fr": "Chute de Comètes",
+    "name_en": "Comet Barrage"
+  },
+  {
+    "id": "ThreeThunder",
+    "name_fr": "Triple Éclair",
+    "name_en": "Tri-Lightning"
+  },
+  {
+    "id": "Throw",
+    "name_fr": "en Text",
+    "name_en": "en Text"
+  },
+  {
+    "id": "ThrowRock",
+    "name_fr": "Canon à Pierre",
+    "name_en": "Stone Cannon"
+  },
+  {
+    "id": "ThunderBall",
+    "name_fr": "Boule de Foudre",
+    "name_en": "Electric Ball"
+  },
+  {
+    "id": "ThunderFunnel",
+    "name_fr": "Orbes de Plasma",
+    "name_en": "Plasma Funnel"
+  },
+  {
+    "id": "ThunderRain",
+    "name_fr": "Pluie Foudroyante",
+    "name_en": "Thunder Rain"
+  },
+  {
+    "id": "ThunderSpear",
+    "name_fr": "Lance Foudroyante",
+    "name_en": "Thunder Spear"
+  },
+  {
+    "id": "ThunderStorm",
+    "name_fr": "Tempête Éclair",
+    "name_en": "Thunderstorm"
+  },
+  {
+    "id": "Thunderbolt",
+    "name_fr": "Éclair Fulgurant",
+    "name_en": "Lightning Bolt"
+  },
+  {
+    "id": "Tremor",
+    "name_fr": "Tremblement",
+    "name_en": "Rockburst"
+  },
+  {
+    "id": "TriSpark",
+    "name_fr": "Triple Étincelle",
+    "name_en": "TriSpark"
+  },
+  {
+    "id": "Unique_Alpaca_Tackle",
+    "name_fr": "Tacle Duveteux",
+    "name_en": "Fluffy Tackle"
+  },
+  {
+    "id": "Unique_AmaterasuWolf_Bite",
+    "name_fr": "Croc Sauvage (Flamma)",
+    "name_en": "Fierce Fang (Fire)"
+  },
+  {
+    "id": "Unique_AmaterasuWolf_BiteV2",
+    "name_fr": "Double Croc (Flamma)",
+    "name_en": "Double Fang (Fire)"
+  },
+  {
+    "id": "Unique_AmaterasuWolf_Dark_Bite",
+    "name_fr": "Croc Sauvage (Tenebrae)",
+    "name_en": "Fierce Fang (Dark)"
+  },
+  {
+    "id": "Unique_AmaterasuWolf_Dark_BiteV2",
+    "name_fr": "Double Croc (Tenebrae)",
+    "name_en": "Double Fang (Dark)"
+  },
+  {
+    "id": "Unique_AmaterasuWolf_Dark_DarkCharge",
+    "name_fr": "Éclair Ardent de l'Ombre",
+    "name_en": "Daring Shadowstorm"
+  },
+  {
+    "id": "Unique_AmaterasuWolf_FireCharge",
+    "name_fr": "Flammes Azur",
+    "name_en": "Daring Flames"
+  },
+  {
+    "id": "Unique_Anubis_GroundPunch",
+    "name_fr": "Fracasse-Sol",
+    "name_en": "Ground Smash"
+  },
+  {
+    "id": "Unique_Anubis_LowRoundKick",
+    "name_fr": "Coup de Pied tournoyant",
+    "name_en": "Spinning Roundhouse"
+  },
+  {
+    "id": "Unique_Anubis_Tackle",
+    "name_fr": "Frappe Énergique",
+    "name_en": "Forceful Charge"
+  },
+  {
+    "id": "Unique_Baphomet_Dark_DarkKite",
+    "name_fr": "Griffe Cauchemardesque",
+    "name_en": "Nightmare Claw"
+  },
+  {
+    "id": "Unique_Baphomet_SwallowKite",
+    "name_fr": "Griffe Infernale",
+    "name_en": "Hellfire Claw"
+  },
+  {
+    "id": "Unique_BirdDragon_FireBreath",
+    "name_fr": "Souffle Aérien",
+    "name_en": "Flame Breath"
+  },
+  {
+    "id": "Unique_BirdDragon_Ice_IceBreath",
+    "name_fr": "Tempête de Glace",
+    "name_en": "Tempest Blizzard"
+  },
+  {
+    "id": "Unique_BlackCentaur_TwoSpearRushes",
+    "name_fr": "Lance Double",
+    "name_en": "Twin Spears"
+  },
+  {
+    "id": "Unique_BlackGriffon_TackleLaser",
+    "name_fr": "Catastrophe Divine",
+    "name_en": "Divine Disaster"
+  },
+  {
+    "id": "Unique_BlackGriffon_TackleLaser2",
+    "name_fr": "Catastrophe Divine II",
+    "name_en": "Divine Disaster II"
+  },
+  {
+    "id": "Unique_BlackMetalDragon_FirePunch",
+    "name_fr": "Poing Brûlant",
+    "name_en": "Firefist Breathstorm"
+  },
+  {
+    "id": "Unique_BlackPuppy_Bite",
+    "name_fr": "Croc Sauvage (Tenebrae)",
+    "name_en": "Fierce Fang (Dark)"
+  },
+  {
+    "id": "Unique_BlackPuppy_BiteV2",
+    "name_fr": "Double Croc (Tenebrae)",
+    "name_en": "Double Fang (Dark)"
+  },
+  {
+    "id": "Unique_BluePlatypus_Toboggan",
+    "name_fr": "Coud'Surf",
+    "name_en": "Surfing Slam"
+  },
+  {
+    "id": "Unique_BluePlatypus_Toboggan_Fire",
+    "name_fr": "Tacle de Feu",
+    "name_en": "Fire Tackle"
+  },
+  {
+    "id": "Unique_BlueSkyDragon_DrainStorm",
+    "name_fr": "Tourbillon Céleste",
+    "name_en": "Celestial Vortex"
+  },
+  {
+    "id": "Unique_BlueSkyDragon_GYM_Act",
+    "name_fr": "Unique_BlueSkyDragon_GYM_Act",
+    "name_en": "Unique_BlueSkyDragon_GYM_Act"
+  },
+  {
+    "id": "Unique_BlueSkyDragon_SweepBreath",
+    "name_fr": "Dracoflamme Azur",
+    "name_en": "Azure Dracoflare"
+  },
+  {
+    "id": "Unique_BlueSkyDragon_Tossin",
+    "name_fr": "Ruée Azurée",
+    "name_en": "Hydra Charge"
+  },
+  {
+    "id": "Unique_BlueThunderHorse_FlashDash",
+    "name_fr": "Charge Flash",
+    "name_en": "Bolt Blink"
+  },
+  {
+    "id": "Unique_BlueThunderHorse_Tossin",
+    "name_fr": "Charge Flash",
+    "name_en": "Flash Charge"
+  },
+  {
+    "id": "Unique_Boar_Tackle",
+    "name_fr": "Charge Furieuse",
+    "name_en": "Reckless Charge"
+  },
+  {
+    "id": "Unique_CaptainPenguin_Black_BodySlide_Electric",
+    "name_fr": "Glissade Foudroyante",
+    "name_en": "Thunderslide"
+  },
+  {
+    "id": "Unique_CaptainPenguin_BodySlide",
+    "name_fr": "Capitaine Glissade",
+    "name_en": "Emperor Slide"
+  },
+  {
+    "id": "Unique_ChickenPal_ChickenPeck",
+    "name_fr": "Coup de Bec",
+    "name_en": "Chicken Rush"
+  },
+  {
+    "id": "Unique_ClownRabbit_TrickShow",
+    "name_fr": "Passe-passe",
+    "name_en": "Trickster Show"
+  },
+  {
+    "id": "Unique_CubeTurtle_CubePress",
+    "name_fr": "Cube Press",
+    "name_en": "Cube Press"
+  },
+  {
+    "id": "Unique_CubeTurtle_Neutral_HolyPress",
+    "name_fr": "Holy Press",
+    "name_en": "Holy Press"
+  },
+  {
+    "id": "Unique_CuteMole_DiggingAttack",
+    "name_fr": "Fouission",
+    "name_en": "Fuddler Tunneler"
+  },
+  {
+    "id": "Unique_DarkAlien_JumpScractch",
+    "name_fr": "Griffe Maléfique",
+    "name_en": "Evil Slash"
+  },
+  {
+    "id": "Unique_DarkCrow_TelePoke",
+    "name_fr": "Assaut Fantôme",
+    "name_en": "Phantom Peck"
+  },
+  {
+    "id": "Unique_DarkMechaDragon_BeamSlash",
+    "name_fr": "Taillade Rayonnante",
+    "name_en": "Beam Slash"
+  },
+  {
+    "id": "Unique_DarkMechaDragon_ConvergentBeam",
+    "name_fr": "Rayon Astral",
+    "name_en": "Astral Ray"
+  },
+  {
+    "id": "Unique_DarkMechaDragon_FunnelLaser",
+    "name_fr": "Laser Oméga",
+    "name_en": "Omega Laser"
+  },
+  {
+    "id": "Unique_DarkMechaDragon_SetFunnel",
+    "name_fr": "Ailes Traqueuses",
+    "name_en": "Satellite Bit"
+  },
+  {
+    "id": "Unique_DarkMechaDragon_WarpComet",
+    "name_fr": "Météore Cosmique",
+    "name_en": "Cosmic Meteor"
+  },
+  {
+    "id": "Unique_DarkScorpion_Pierce",
+    "name_fr": "Piqûre Sautée",
+    "name_en": "Jumping Stinger"
+  },
+  {
+    "id": "Unique_Deer_Ground_DirtyHorn",
+    "name_fr": "Corne Boueuse",
+    "name_en": "Mud Horn"
+  },
+  {
+    "id": "Unique_Deer_PushupHorn",
+    "name_fr": "Corne Ascendante",
+    "name_en": "Antler Uppercut"
+  },
+  {
+    "id": "Unique_DomeArmorDragon_ExplosiveMissile",
+    "name_fr": "Missile Kaboum",
+    "name_en": "Missile Burst"
+  },
+  {
+    "id": "Unique_DrillGame_ShellAttack",
+    "name_fr": "Coquille Rotative",
+    "name_en": "Shell Spin"
+  },
+  {
+    "id": "Unique_Eagle_GlidingNail",
+    "name_fr": "Griffe Planante",
+    "name_en": "Gale Claw"
+  },
+  {
+    "id": "Unique_ElecPanda_ElecScratch",
+    "name_fr": "Griffe Éclair",
+    "name_en": "Lightning Claw"
+  },
+  {
+    "id": "Unique_ElecPanda_GatlingAttack",
+    "name_fr": "Tank Foudroyant",
+    "name_en": "Heavy Thunder Tank"
+  },
+  {
+    "id": "Unique_ElecPomeranian_Bite",
+    "name_fr": "Croc Sauvage (Fulgura)",
+    "name_en": "Fierce Fang (Electric)"
+  },
+  {
+    "id": "Unique_ElecPomeranian_BiteV2",
+    "name_fr": "Double Croc (Fulgura)",
+    "name_en": "Double Fang (Electric)"
+  },
+  {
+    "id": "Unique_ElecSnail_ShellCharge",
+    "name_fr": "Électrocarapace",
+    "name_en": "Shell Charge"
+  },
+  {
+    "id": "Unique_FairyDragon_FairyTornado",
+    "name_fr": "Ouragan Mystique",
+    "name_en": "Mystic Whirlwind"
+  },
+  {
+    "id": "Unique_FeatherOstrich_Tossin",
+    "name_fr": "Ruée Terrestre",
+    "name_en": "Earth Dash"
+  },
+  {
+    "id": "Unique_FengyunDeeper_CloudTempest",
+    "name_fr": "Tempête Nuageuse",
+    "name_en": "Cloud Tempest"
+  },
+  {
+    "id": "Unique_FengyunDeeper_Electric_ThunderTempest",
+    "name_fr": "Tempête Orageuse",
+    "name_en": "Thunder Tempest"
+  },
+  {
+    "id": "Unique_FireKirin_Dark_DarkTossin",
+    "name_fr": "Charge-Ombre",
+    "name_en": "Dark Charge"
+  },
+  {
+    "id": "Unique_FireKirin_Tackle",
+    "name_fr": "Charge-Flammes",
+    "name_en": "Ignis Charge"
+  },
+  {
+    "id": "Unique_FlameBuffalo_FlameHorn",
+    "name_fr": "Corne Brûlante",
+    "name_en": "Blazing Horn"
+  },
+  {
+    "id": "Unique_FlowerDinosaur_Electric_ThunderWhip",
+    "name_fr": "Fracas Éclair",
+    "name_en": "Lightning Smash"
+  },
+  {
+    "id": "Unique_FlowerDinosaur_Whip",
+    "name_fr": "Fracas Botanique",
+    "name_en": "Botanical Smash"
+  },
+  {
+    "id": "Unique_FlowerPrince_PoisonGasDance",
+    "name_fr": "Danse Toxique",
+    "name_en": "Toxic Dance"
+  },
+  {
+    "id": "Unique_FlowerPrince_PoisonGasTackle",
+    "name_fr": "Balade Toxique",
+    "name_en": "Poison Promenade"
+  },
+  {
+    "id": "Unique_Garm_Bite",
+    "name_fr": "Croc Sauvage",
+    "name_en": "Fierce Fang"
+  },
+  {
+    "id": "Unique_Garm_BiteV2",
+    "name_fr": "Double Croc",
+    "name_en": "Double Fang"
+  },
+  {
+    "id": "Unique_GhostAnglerfish_Fire_SweepBait_Fire",
+    "name_fr": "Fouet-Lanterne Ardente",
+    "name_en": "Scorching Lantern Sweep"
+  },
+  {
+    "id": "Unique_GhostAnglerfish_SweepBait",
+    "name_fr": "Fouet-Lanterne",
+    "name_en": "Lantern Sweep"
+  },
+  {
+    "id": "Unique_GhostBeast_Tossin",
+    "name_fr": "Ruée Spirituelle",
+    "name_en": "Spirit Dash"
+  },
+  {
+    "id": "Unique_GhostDragon_PhosphorousBeam",
+    "name_fr": "Phosphorayon",
+    "name_en": "Blazing Beam"
+  },
+  {
+    "id": "Unique_GhostDragon_TailSlash",
+    "name_fr": "Queue Tranchante",
+    "name_en": "Tail Slash"
+  },
+  {
+    "id": "Unique_GoldenHorse_Bite",
+    "name_fr": "Croc Sauvage (Terra)",
+    "name_en": "Fierce Fang (Ground)"
+  },
+  {
+    "id": "Unique_GoldenHorse_BiteV2",
+    "name_fr": "Double Croc (Terra)",
+    "name_en": "Double Fang (Ground)"
+  },
+  {
+    "id": "Unique_GoldenHorse_StoneDash",
+    "name_fr": "Ruée Écrasante",
+    "name_en": "Crash Dash"
+  },
+  {
+    "id": "Unique_Gorilla_GroundPunch",
+    "name_fr": "Combo Gorille",
+    "name_en": "Ground Pound"
+  },
+  {
+    "id": "Unique_Gorilla_Ground_EarthPunch",
+    "name_fr": "Combo Primate",
+    "name_en": "Rumble Combo"
+  },
+  {
+    "id": "Unique_GrassGolem_ArmCannon",
+    "name_fr": "Germocanon",
+    "name_en": "Root Cannon"
+  },
+  {
+    "id": "Unique_GrassGolem_Dark_DarkArmCannon",
+    "name_fr": "Obscuracine",
+    "name_en": "Dark Root"
+  },
+  {
+    "id": "Unique_GrassGolem_RocketPunch",
+    "name_fr": "Bras Fusée",
+    "name_en": "Rocket Arm"
+  },
+  {
+    "id": "Unique_GrassMinotaur_BullRush",
+    "name_fr": "Ruée Taurine Furieuse",
+    "name_en": "Raging Bull Rush"
+  },
+  {
+    "id": "Unique_GrassMinotaur_BullRush_Lower",
+    "name_fr": "Ruée Taurine",
+    "name_en": "Bull Rush"
+  },
+  {
+    "id": "Unique_GrassMinotaur_Ice_BullRush",
+    "name_fr": "Ruée Boréale Furieuse",
+    "name_en": "Raging Snow Rush"
+  },
+  {
+    "id": "Unique_GrassMinotaur_Ice_BullRush_Lower",
+    "name_fr": "Ruée Boréale",
+    "name_en": "Snow Rush"
+  },
+  {
+    "id": "Unique_GrassPanda_Electric_ElectricPunch",
+    "name_fr": "Explo-Poing",
+    "name_en": "Blast Punch"
+  },
+  {
+    "id": "Unique_GrassPanda_MusclePunch",
+    "name_fr": "Poing Musclé",
+    "name_en": "Crushing Punch"
+  },
+  {
+    "id": "Unique_GrassRabbitMan_GrassRoundKick",
+    "name_fr": "Ruée Rotative",
+    "name_en": "Leaping Roundhouse"
+  },
+  {
+    "id": "Unique_Grassmammoth_Earthquake",
+    "name_fr": "Impact Terrestre",
+    "name_en": "Earth Impact"
+  },
+  {
+    "id": "Unique_GrimGirl_BrutalMachete",
+    "name_fr": "Rancune Déchaînée",
+    "name_en": "Grudge Barrage"
+  },
+  {
+    "id": "Unique_GuardianDog_Bite",
+    "name_fr": "Croc Sauvage",
+    "name_en": "Fierce Fang"
+  },
+  {
+    "id": "Unique_GuardianDog_BiteV2",
+    "name_fr": "Double Croc",
+    "name_en": "Double Fang"
+  },
+  {
+    "id": "Unique_HawkBird_Storm",
+    "name_fr": "Attaque Tornade",
+    "name_en": "Tornado Attack"
+  },
+  {
+    "id": "Unique_HerculesBeetle_BeetleTackle",
+    "name_fr": "Gigacorne",
+    "name_en": "Giga Horn"
+  },
+  {
+    "id": "Unique_Horus_FlareBird",
+    "name_fr": "Ailes Flamboyantes",
+    "name_en": "Phoenix Flare"
+  },
+  {
+    "id": "Unique_Horus_PerfectStorm",
+    "name_fr": "Vague Brûlante",
+    "name_en": "Raging Flame Wave"
+  },
+  {
+    "id": "Unique_Horus_Water_AquaStorm",
+    "name_fr": "Ailes Aqueuses",
+    "name_en": "Phoenix Tide"
+  },
+  {
+    "id": "Unique_IceCrocodile_SpitAttack",
+    "name_fr": "Crachat Glacé",
+    "name_en": "Chaotic Spray"
+  },
+  {
+    "id": "Unique_IceDeer_IceHorn",
+    "name_fr": "Ruée Glacée",
+    "name_en": "Freezing Charge"
+  },
+  {
+    "id": "Unique_IceHorse_Dark_DarkBladeAttack",
+    "name_fr": "Ailes Noires",
+    "name_en": "Dark Wing"
+  },
+  {
+    "id": "Unique_IceHorse_IceBladeAttack",
+    "name_fr": "Ailes Cristallines",
+    "name_en": "Crystal Wing"
+  },
+  {
+    "id": "Unique_IceNarwhal_JumpingHorn",
+    "name_fr": "Cryolance",
+    "name_en": "High Breach"
+  },
+  {
+    "id": "Unique_JetDragon_JumpBeam",
+    "name_fr": "Faisceau Stellaire",
+    "name_en": "Beam Comet"
+  },
+  {
+    "id": "Unique_KingAlpaca_BodyPress",
+    "name_fr": "Presse Royale",
+    "name_en": "Kingly Slam"
+  },
+  {
+    "id": "Unique_KingAlpaca_Ice_IcePress",
+    "name_fr": "Presse Glaciale",
+    "name_en": "Frozen Press"
+  },
+  {
+    "id": "Unique_KingBahamut_AirCrash",
+    "name_fr": "Magna-Écrasement",
+    "name_en": "Magna Crush"
+  },
+  {
+    "id": "Unique_KingBahamut_ArmSmash",
+    "name_fr": "Impact Brûlant",
+    "name_en": "Brawn Impact"
+  },
+  {
+    "id": "Unique_KingWhale_AquaBlade",
+    "name_fr": "Lames Marines",
+    "name_en": "Aqua Blade"
+  },
+  {
+    "id": "Unique_KingWhale_AquaTornado",
+    "name_fr": "Hurle-Cyclone",
+    "name_en": "Aqua Tornado"
+  },
+  {
+    "id": "Unique_KingWhale_Breaching",
+    "name_fr": "Surgissement Colossal",
+    "name_en": "Grand Breach"
+  },
+  {
+    "id": "Unique_KingWhale_HomingBubble",
+    "name_fr": "Pluie de Bulles",
+    "name_en": "Bubble Rain"
+  },
+  {
+    "id": "Unique_KingWhale_Maelstrom",
+    "name_fr": "Maelström",
+    "name_en": "Maelstrom"
+  },
+  {
+    "id": "Unique_KingWhale_SuperTidalBore",
+    "name_fr": "Unique_KingWhale_SuperTidalBore",
+    "name_en": "Unique_KingWhale_SuperTidalBore"
+  },
+  {
+    "id": "Unique_KingWhale_TidalBore",
+    "name_fr": "Unique_KingWhale_TidalBore",
+    "name_en": "Unique_KingWhale_TidalBore"
+  },
+  {
+    "id": "Unique_KingWhale_WaveTackle",
+    "name_fr": "Déferlante Abyssale",
+    "name_en": "Tidal Charge"
+  },
+  {
+    "id": "Unique_Kirin_Ice_IceTackle",
+    "name_fr": "Ouraglace",
+    "name_en": "Ice Gale Strike"
+  },
+  {
+    "id": "Unique_Kirin_LightningTackle",
+    "name_fr": "Ruée Foudroyante",
+    "name_en": "Lightning Gale"
+  },
+  {
+    "id": "Unique_LanternButler_LanternFlame",
+    "name_fr": "Feu-Follet",
+    "name_en": "Lantern Flame"
+  },
+  {
+    "id": "Unique_LeafMomonga_SomerSault",
+    "name_fr": "Volte-Feuille",
+    "name_en": "Konoha Flip"
+  },
+  {
+    "id": "Unique_LegendDeer_BarrierRelease_Grass",
+    "name_fr": "Unique_LegendDeer_BarrierRelease_Grass",
+    "name_en": "Unique_LegendDeer_BarrierRelease_Grass"
+  },
+  {
+    "id": "Unique_LegendDeer_BarrierRelease_Normal",
+    "name_fr": "Unique_LegendDeer_BarrierRelease_Normal",
+    "name_en": "Unique_LegendDeer_BarrierRelease_Normal"
+  },
+  {
+    "id": "Unique_LegendDeer_BarrierRelease_Water",
+    "name_fr": "Unique_LegendDeer_BarrierRelease_Water",
+    "name_en": "Unique_LegendDeer_BarrierRelease_Water"
+  },
+  {
+    "id": "Unique_LegendDeer_RadiantPurge",
+    "name_fr": "Unique_LegendDeer_RadiantPurge",
+    "name_en": "Unique_LegendDeer_RadiantPurge"
+  },
+  {
+    "id": "Unique_LegendDeer_RadiantPurge_Otomo",
+    "name_fr": "Lumière Salvatrice",
+    "name_en": "Purifying Light"
+  },
+  {
+    "id": "Unique_LegendDeer_RadiantWingRush",
+    "name_fr": "Ailes Célestes",
+    "name_en": "Divine Wing"
+  },
+  {
+    "id": "Unique_LegendDeer_WarpPillarBurst",
+    "name_fr": "Pluie Sacrée",
+    "name_en": "Sacred Rain"
+  },
+  {
+    "id": "Unique_LilyQueen_GYM_Act",
+    "name_fr": "Unique_LilyQueen_GYM_Act",
+    "name_en": "Unique_LilyQueen_GYM_Act"
+  },
+  {
+    "id": "Unique_LilyQueen_LilyHealing",
+    "name_fr": "Protection de Fertilité",
+    "name_en": "Bountiful Protection"
+  },
+  {
+    "id": "Unique_LilyQueen_LilyHealing_Boss",
+    "name_fr": "Unique_LilyQueen_LilyHealing_Boss",
+    "name_en": "Unique_LilyQueen_LilyHealing_Boss"
+  },
+  {
+    "id": "Unique_LilyQueen_WindBarrier",
+    "name_fr": "Barrière venteuse",
+    "name_en": "Wind Barrier"
+  },
+  {
+    "id": "Unique_LotusDragon_LotusBloom",
+    "name_fr": "Lotus Astral",
+    "name_en": "Lotus Bloom"
+  },
+  {
+    "id": "Unique_Manticore_InfernoStrike",
+    "name_fr": "Croc Volcanique",
+    "name_en": "Volcanic Fang"
+  },
+  {
+    "id": "Unique_MonochromeQueen_BalletJump",
+    "name_fr": "Danse de la Plume Noire",
+    "name_en": "Black Quilled Ballet"
+  },
+  {
+    "id": "Unique_MoonQueen_GYM_Act",
+    "name_fr": "Unique_MoonQueen_GYM_Act",
+    "name_en": "Unique_MoonQueen_GYM_Act"
+  },
+  {
+    "id": "Unique_MoonQueen_GYM_Hard_Act",
+    "name_fr": "Unique_MoonQueen_GYM_Hard_Act",
+    "name_en": "Unique_MoonQueen_GYM_Hard_Act"
+  },
+  {
+    "id": "Unique_MoonQueen_IceMoonBlade",
+    "name_fr": "Flash Seigetsu",
+    "name_en": "Seigetsu Flash"
+  },
+  {
+    "id": "Unique_MoonQueen_MoonBeam",
+    "name_fr": "Rayon Lunaire",
+    "name_en": "Moonlight Beam"
+  },
+  {
+    "id": "Unique_MoonQueen_MoonBlade",
+    "name_fr": "Lame Seigetsu",
+    "name_en": "Seigetsu Blade"
+  },
+  {
+    "id": "Unique_Mothman_GiantSpore",
+    "name_fr": "Mégaspore",
+    "name_en": "Giant Spore"
+  },
+  {
+    "id": "Unique_Mothman_SporeScatter",
+    "name_fr": "Spores Explosives",
+    "name_en": "Spore Burst"
+  },
+  {
+    "id": "Unique_MummyPal_MummyAttack",
+    "name_fr": "Momirage",
+    "name_en": "Mummy Rush"
+  },
+  {
+    "id": "Unique_MysteryMask_LifeSteal",
+    "name_fr": "Vol d'Âme",
+    "name_en": "Soul Drain"
+  },
+  {
+    "id": "Unique_NaughtyCat_CatPress",
+    "name_fr": "Presse Féline",
+    "name_en": "Cat Press"
+  },
+  {
+    "id": "Unique_NightBlueHorse_DeathStep",
+    "name_fr": "Piétinement Mortel",
+    "name_en": "Lethal Step"
+  },
+  {
+    "id": "Unique_NightBlueHorse_Neutral_AirStep",
+    "name_fr": "Pas Royal",
+    "name_en": "Royal Step"
+  },
+  {
+    "id": "Unique_NightBlueHorse_Neutral_Tossin",
+    "name_fr": "Galopade Argentée",
+    "name_en": "Silver Steed"
+  },
+  {
+    "id": "Unique_NightBlueHorse_Tossin",
+    "name_fr": "Galopade Spectrale",
+    "name_en": "Spectral Steed"
+  },
+  {
+    "id": "Unique_NightLady_FlameNightmare",
+    "name_fr": "Valse Enflammée",
+    "name_en": "Flame Waltz"
+  },
+  {
+    "id": "Unique_NightLady_WarpBeam",
+    "name_fr": "Floraison Cauchemardesque",
+    "name_en": "Nightmare Bloom"
+  },
+  {
+    "id": "Unique_NightLady_WarpBeam_Straight",
+    "name_fr": "Rayons Cauchemardesques",
+    "name_en": "Nightmare Ray"
+  },
+  {
+    "id": "Unique_OctopursGirl_InkJet",
+    "name_fr": "Fumée de Jais",
+    "name_en": "Smoke Jet"
+  },
+  {
+    "id": "Unique_PandaGirl_RapidKick",
+    "name_fr": "Combo Mawashi",
+    "name_en": "Rapid Kick"
+  },
+  {
+    "id": "Unique_PinkCat_CatPunch",
+    "name_fr": "Enchaînement de Poings",
+    "name_en": "Punch Flurry"
+  },
+  {
+    "id": "Unique_Plesiosaur_LongBreath",
+    "name_fr": "Souffle Persistant",
+    "name_en": "Deep Breath"
+  },
+  {
+    "id": "Unique_PoseidonOrca_TorrentLaser",
+    "name_fr": "Laser Torrentiel",
+    "name_en": "Thalassonic Laser"
+  },
+  {
+    "id": "Unique_PurpleSpider_SpiderRaid",
+    "name_fr": "Charge Arachnéenne",
+    "name_en": "Webstrike Impact"
+  },
+  {
+    "id": "Unique_QueenBee_SpinLance",
+    "name_fr": "Bâton Tournoyant",
+    "name_en": "Spinning Staff"
+  },
+  {
+    "id": "Unique_RedArmorBird_TriplePeck",
+    "name_fr": "Ruée Aviaire",
+    "name_en": "Rush Beak"
+  },
+  {
+    "id": "Unique_RedFlowerBird_JumpKick",
+    "name_fr": "Piétinement Floral",
+    "name_en": "Flower Stomp"
+  },
+  {
+    "id": "Unique_RobinHood_BowSnipe",
+    "name_fr": "Tir Précis",
+    "name_en": "Focus Shot"
+  },
+  {
+    "id": "Unique_RockBeast_Ice_IceHorn",
+    "name_fr": "Carnage Glacé",
+    "name_en": "Ice Burst"
+  },
+  {
+    "id": "Unique_RockBeast_RockHorn",
+    "name_fr": "Carnage Cornu",
+    "name_en": "Horn Burst"
+  },
+  {
+    "id": "Unique_Ronin_Iai",
+    "name_fr": "Iaigiri",
+    "name_en": "Iaigiri"
+  },
+  {
+    "id": "Unique_Ronin_Iai_PartnerSkill",
+    "name_fr": "Iaigiri",
+    "name_en": "Iaigiri"
+  },
+  {
+    "id": "Unique_SaintCentaur_OneSpearRushes",
+    "name_fr": "Lance Sacrée",
+    "name_en": "Spear Thrust"
+  },
+  {
+    "id": "Unique_SakuraSaurus_SideTackle",
+    "name_fr": "Fracas Corporel",
+    "name_en": "Muscle Slam"
+  },
+  {
+    "id": "Unique_SakuraSaurus_Water_SplashTackle",
+    "name_fr": "Plaquage Trempé",
+    "name_en": "Splash Tackle"
+  },
+  {
+    "id": "Unique_SamuraiDog_Bite",
+    "name_fr": "Croc Sauvage (Terra)",
+    "name_en": "Fierce Fang (Ground)"
+  },
+  {
+    "id": "Unique_SamuraiDog_BiteV2",
+    "name_fr": "Double Croc (Terra)",
+    "name_en": "Double Fang (Ground)"
+  },
+  {
+    "id": "Unique_SamuraiDog_DashSlash",
+    "name_fr": "Taillade Vaillante",
+    "name_en": "Persistent Slash"
+  },
+  {
+    "id": "Unique_ScorpionMan_Erectric_UpperThunder",
+    "name_fr": "Uppercut Fulgurant",
+    "name_en": "Thunder Uppercut"
+  },
+  {
+    "id": "Unique_ScorpionMan_Uppercut",
+    "name_fr": "Fracas Vertical",
+    "name_en": "Upper Smash"
+  },
+  {
+    "id": "Unique_Sekhmet_RollingScratch",
+    "name_fr": "Roulagriffe",
+    "name_en": "Rolling Scratch"
+  },
+  {
+    "id": "Unique_Sekhmet_SomersaultScratch",
+    "name_fr": "Saltogriffe",
+    "name_en": "Somersault Scratch"
+  },
+  {
+    "id": "Unique_SheepBall_Roll",
+    "name_fr": "Roulé-Boulé",
+    "name_en": "Roly Poly"
+  },
+  {
+    "id": "Unique_SifuDog_Counter",
+    "name_fr": "Posture Résolue",
+    "name_en": "Wholehearted Stance"
+  },
+  {
+    "id": "Unique_SnakeGirl_SnakeShot",
+    "name_fr": "Dispersion Toxique",
+    "name_en": "Poison Scatter"
+  },
+  {
+    "id": "Unique_SnowTigerBeastman_SnowImpact",
+    "name_fr": "Impact Glacial",
+    "name_en": "Glacial Impact"
+  },
+  {
+    "id": "Unique_SnowTigerBeastman_TrampleSlash",
+    "name_fr": "Griffe Glacée",
+    "name_en": "Frost Talon"
+  },
+  {
+    "id": "Unique_SoldierBee_NeedleLance",
+    "name_fr": "Lance Aiguille",
+    "name_en": "Needle Spear"
+  },
+  {
+    "id": "Unique_StuffedShark_HiddenWeapon",
+    "name_fr": "Fou de la Gâchette",
+    "name_en": "Trigger Happy"
+  },
+  {
+    "id": "Unique_SumoDog_SumoStomp",
+    "name_fr": "Plaquage Dosukoï",
+    "name_en": "Sumo Stomp"
+  },
+  {
+    "id": "Unique_TentacleTurtle_HydroSpin",
+    "name_fr": "Hydro-Tourbillon",
+    "name_en": "Hydro Spin"
+  },
+  {
+    "id": "Unique_ThunderBird_Ice_SnowStrom",
+    "name_fr": "Plongeon Glacial",
+    "name_en": "Glacial Plunge"
+  },
+  {
+    "id": "Unique_ThunderBird_ThunderStorm",
+    "name_fr": "Plongeon Éclair",
+    "name_en": "Lightning Dive"
+  },
+  {
+    "id": "Unique_ThunderDog_Bite",
+    "name_fr": "Croc Sauvage (Fulgura)",
+    "name_en": "Fierce Fang (Electric)"
+  },
+  {
+    "id": "Unique_ThunderDog_BiteV2",
+    "name_fr": "Double Croc (Fulgura)",
+    "name_en": "Double Fang (Electric)"
+  },
+  {
+    "id": "Unique_ThunderDog_Ice_Bite",
+    "name_fr": "Croc Sauvage (Glacia)",
+    "name_en": "Fierce Fang (Ice)"
+  },
+  {
+    "id": "Unique_ThunderDog_Ice_BiteV2",
+    "name_fr": "Double Croc (Glacia)",
+    "name_en": "Double Fang (Ice)"
+  },
+  {
+    "id": "Unique_ThunderDog_Ice_KoriShorai",
+    "name_fr": "Frimas",
+    "name_en": "Frostcall"
+  },
+  {
+    "id": "Unique_ThunderDog_InazumaShorai",
+    "name_fr": "Appel Éclair",
+    "name_en": "Beckon Lightning"
+  },
+  {
+    "id": "Unique_ThunderDragonMan_GYM_Act",
+    "name_fr": "Unique_ThunderDragonMan_GYM_Act",
+    "name_en": "Unique_ThunderDragonMan_GYM_Act"
+  },
+  {
+    "id": "Unique_ThunderDragonMan_NumerousSwordAttack",
+    "name_fr": "Polykeraunos",
+    "name_en": "Polykeraunos"
+  },
+  {
+    "id": "Unique_ThunderDragonMan_ThunderSwordAttack",
+    "name_fr": "Keraunos",
+    "name_en": "Kerauno"
+  },
+  {
+    "id": "Unique_TropicalOstrich_DashKick",
+    "name_fr": "Coup de Pied Fulgurant",
+    "name_en": "Dash Kick"
+  },
+  {
+    "id": "Unique_Umihebi_Fire_FireWindingTackle",
+    "name_fr": "Serpent de Feu",
+    "name_en": "Magma Serpent"
+  },
+  {
+    "id": "Unique_Umihebi_WindingTackle",
+    "name_fr": "Serpent Marin",
+    "name_en": "Slither Slam"
+  },
+  {
+    "id": "Unique_VolcanicMonster_Ice_IceAttack",
+    "name_fr": "Explosion Givrée",
+    "name_en": "Frost Burst"
+  },
+  {
+    "id": "Unique_VolcanicMonster_MagmaAttack",
+    "name_fr": "Déchaînement Volcanique",
+    "name_en": "Volcanic Burst"
+  },
+  {
+    "id": "Unique_VolcanoDragon_Ice_IceLaser",
+    "name_fr": "Laser-Glace",
+    "name_en": "Ice Laser"
+  },
+  {
+    "id": "Unique_VolcanoDragon_Ice_IcicleSpit",
+    "name_fr": "Crache-Glace",
+    "name_en": "Ice Spit"
+  },
+  {
+    "id": "Unique_VolcanoDragon_MagmaSpit",
+    "name_fr": "Crache-Magma",
+    "name_en": "Magma Spit"
+  },
+  {
+    "id": "Unique_VolcanoDragon_VolcanicLaser",
+    "name_fr": "Laser Magma",
+    "name_en": "Magma Laser"
+  },
+  {
+    "id": "Unique_WeaselDragon_FlyingTackle",
+    "name_fr": "Piqué Fusée",
+    "name_en": "Rocket Slam"
+  },
+  {
+    "id": "Unique_Werewolf_Ice_SnowScratch",
+    "name_fr": "Griffe Neigeuse",
+    "name_en": "Snow Claw"
+  },
+  {
+    "id": "Unique_Werewolf_Scratch",
+    "name_fr": "Griffe Sautée",
+    "name_en": "Jumping Claw"
+  },
+  {
+    "id": "Unique_WhiteDeer_Dark_DarkPillar",
+    "name_fr": "Nova Noire",
+    "name_en": "Dark Nova"
+  },
+  {
+    "id": "Unique_WhiteDeer_HolyPillar",
+    "name_fr": "Nova Sacrée",
+    "name_en": "Holy Nova"
+  },
+  {
+    "id": "Unique_WhiteShieldDragon_ShieldTackle",
+    "name_fr": "Charge Aegis",
+    "name_en": "Aegis Charge"
+  },
+  {
+    "id": "Unique_WhiteTiger_Ground_IronScratch",
+    "name_fr": "Griffe Rocailleuse",
+    "name_en": "Stone Claw"
+  },
+  {
+    "id": "Unique_WhiteTiger_IceScratch",
+    "name_fr": "Griffe Blizzard",
+    "name_en": "Blizzard Claw"
+  },
+  {
+    "id": "Unique_WingGolem_Fire_FlameCutter",
+    "name_fr": "Trancheflamme",
+    "name_en": "Flame Cutter"
+  },
+  {
+    "id": "Unique_WingGolem_RoundCutter",
+    "name_fr": "Coupe-Sol",
+    "name_en": "Ground Cutter"
+  },
+  {
+    "id": "Unique_WorldTreeDragon_BigBang",
+    "name_fr": "Unique_WorldTreeDragon_BigBang",
+    "name_en": "Unique_WorldTreeDragon_BigBang"
+  },
+  {
+    "id": "Unique_WorldTreeDragon_HaloBeam",
+    "name_fr": "Unique_WorldTreeDragon_HaloBeam",
+    "name_en": "Unique_WorldTreeDragon_HaloBeam"
+  },
+  {
+    "id": "Unique_WorldTreeDragon_HaloCutter",
+    "name_fr": "Unique_WorldTreeDragon_HaloCutter",
+    "name_en": "Unique_WorldTreeDragon_HaloCutter"
+  },
+  {
+    "id": "Unique_WorldTreeDragon_LaserGliding",
+    "name_fr": "Unique_WorldTreeDragon_LaserGliding",
+    "name_en": "Unique_WorldTreeDragon_LaserGliding"
+  },
+  {
+    "id": "Unique_WorldTreeDragon_PaldiumCannon",
+    "name_fr": "Unique_WorldTreeDragon_PaldiumCannon",
+    "name_en": "Unique_WorldTreeDragon_PaldiumCannon"
+  },
+  {
+    "id": "Unique_WorldTreeDragon_PaldiumExplosion",
+    "name_fr": "Unique_WorldTreeDragon_PaldiumExplosion",
+    "name_en": "Unique_WorldTreeDragon_PaldiumExplosion"
+  },
+  {
+    "id": "Unique_WorldTreeDragon_PaldiumRain",
+    "name_fr": "Unique_WorldTreeDragon_PaldiumRain",
+    "name_en": "Unique_WorldTreeDragon_PaldiumRain"
+  },
+  {
+    "id": "Unique_WorldTreeDragon_PaldiumShot",
+    "name_fr": "Unique_WorldTreeDragon_PaldiumShot",
+    "name_en": "Unique_WorldTreeDragon_PaldiumShot"
+  },
+  {
+    "id": "Unique_WorldTreeDragon_Supernova",
+    "name_fr": "Unique_WorldTreeDragon_Supernova",
+    "name_en": "Unique_WorldTreeDragon_Supernova"
+  },
+  {
+    "id": "Unique_YakushimaBoss001_Green_2_PhantasmalBolt",
+    "name_fr": "Unique_YakushimaBoss001_Green_2_PhantasmalBolt",
+    "name_en": "Unique_YakushimaBoss001_Green_2_PhantasmalBolt"
+  },
+  {
+    "id": "Unique_YakushimaBoss001_Green_2_PhantasmalDeathray",
+    "name_fr": "Unique_YakushimaBoss001_Green_2_PhantasmalDeathray",
+    "name_en": "Unique_YakushimaBoss001_Green_2_PhantasmalDeathray"
+  },
+  {
+    "id": "Unique_YakushimaBoss001_Green_2_PhantasmalEye",
+    "name_fr": "Unique_YakushimaBoss001_Green_2_PhantasmalEye",
+    "name_en": "Unique_YakushimaBoss001_Green_2_PhantasmalEye"
+  },
+  {
+    "id": "Unique_YakushimaBoss001_Green_2_PhantasmalSphere",
+    "name_fr": "Unique_YakushimaBoss001_Green_2_PhantasmalSphere",
+    "name_en": "Unique_YakushimaBoss001_Green_2_PhantasmalSphere"
+  },
+  {
+    "id": "Unique_YakushimaBoss001_Green_PhantasmalBolt",
+    "name_fr": "Unique_YakushimaBoss001_Green_PhantasmalBolt",
+    "name_en": "Unique_YakushimaBoss001_Green_PhantasmalBolt"
+  },
+  {
+    "id": "Unique_YakushimaBoss001_Green_PhantasmalDeathray",
+    "name_fr": "Unique_YakushimaBoss001_Green_PhantasmalDeathray",
+    "name_en": "Unique_YakushimaBoss001_Green_PhantasmalDeathray"
+  },
+  {
+    "id": "Unique_YakushimaBoss001_Green_PhantasmalEye",
+    "name_fr": "Unique_YakushimaBoss001_Green_PhantasmalEye",
+    "name_en": "Unique_YakushimaBoss001_Green_PhantasmalEye"
+  },
+  {
+    "id": "Unique_YakushimaBoss001_Green_PhantasmalSphere",
+    "name_fr": "Unique_YakushimaBoss001_Green_PhantasmalSphere",
+    "name_en": "Unique_YakushimaBoss001_Green_PhantasmalSphere"
+  },
+  {
+    "id": "Unique_YakushimaBoss001_Small_DemonEyeCharge",
+    "name_fr": "Charge Oculaire",
+    "name_en": "Ocular Rush"
+  },
+  {
+    "id": "Unique_YakushimaBoss002_2_PhantasmalBolt",
+    "name_fr": "Unique_YakushimaBoss002_2_PhantasmalBolt",
+    "name_en": "Unique_YakushimaBoss002_2_PhantasmalBolt"
+  },
+  {
+    "id": "Unique_YakushimaBoss002_2_PhantasmalDeathray",
+    "name_fr": "Unique_YakushimaBoss002_2_PhantasmalDeathray",
+    "name_en": "Unique_YakushimaBoss002_2_PhantasmalDeathray"
+  },
+  {
+    "id": "Unique_YakushimaBoss002_2_PhantasmalEye",
+    "name_fr": "Unique_YakushimaBoss002_2_PhantasmalEye",
+    "name_en": "Unique_YakushimaBoss002_2_PhantasmalEye"
+  },
+  {
+    "id": "Unique_YakushimaBoss002_2_PhantasmalSphere",
+    "name_fr": "Unique_YakushimaBoss002_2_PhantasmalSphere",
+    "name_en": "Unique_YakushimaBoss002_2_PhantasmalSphere"
+  },
+  {
+    "id": "Unique_YakushimaBoss002_PhantasmalBolt",
+    "name_fr": "Unique_YakushimaBoss002_PhantasmalBolt",
+    "name_en": "Unique_YakushimaBoss002_PhantasmalBolt"
+  },
+  {
+    "id": "Unique_YakushimaBoss002_PhantasmalDeathray",
+    "name_fr": "Unique_YakushimaBoss002_PhantasmalDeathray",
+    "name_en": "Unique_YakushimaBoss002_PhantasmalDeathray"
+  },
+  {
+    "id": "Unique_YakushimaBoss002_PhantasmalEye",
+    "name_fr": "Unique_YakushimaBoss002_PhantasmalEye",
+    "name_en": "Unique_YakushimaBoss002_PhantasmalEye"
+  },
+  {
+    "id": "Unique_YakushimaBoss002_PhantasmalSphere",
+    "name_fr": "Unique_YakushimaBoss002_PhantasmalSphere",
+    "name_en": "Unique_YakushimaBoss002_PhantasmalSphere"
+  },
+  {
+    "id": "Unique_YakushimaMonster001_SlimePress_Dark",
+    "name_fr": "Écrasement Gélatineux (ténèbres)",
+    "name_en": "Slime Press (Dark)"
+  },
+  {
+    "id": "Unique_YakushimaMonster001_SlimePress_Fire",
+    "name_fr": "Écrasement Gélatineux (feu)",
+    "name_en": "Slime Press (Fire)"
+  },
+  {
+    "id": "Unique_YakushimaMonster001_SlimePress_Leaf",
+    "name_fr": "Écrasement Gélatineux (plante)",
+    "name_en": "Slime Press (Grass)"
+  },
+  {
+    "id": "Unique_YakushimaMonster001_SlimePress_Normal",
+    "name_fr": "Écrasement Gélatineux (non élémentaire)",
+    "name_en": "Slime Press (Neutral)"
+  },
+  {
+    "id": "Unique_YakushimaMonster001_SlimePress_Rainbow",
+    "name_fr": "Écrasement Gélatineux (arc-en-ciel)",
+    "name_en": "Slime Press (Rainbow)"
+  },
+  {
+    "id": "Unique_YakushimaMonster001_SlimePress_Water",
+    "name_fr": "Écrasement Gélatineux (eau)",
+    "name_en": "Slime Press (Water)"
+  },
+  {
+    "id": "Unique_YakushimaMonster002_SwordCharge",
+    "name_fr": "Charge de l'Épée",
+    "name_en": "Sword Charge"
+  },
+  {
+    "id": "Unique_YakushimaMonster003_BatCharge",
+    "name_fr": "Assaut Vampire",
+    "name_en": "Winged Assault"
+  },
+  {
+    "id": "Unique_Yakushima_EyeTossin",
+    "name_fr": "Charge Hypnotique",
+    "name_en": "Lock-On Lunge"
+  },
+  {
+    "id": "Unique_Yakushima_MouthTossin",
+    "name_fr": "Charge Fulgurante",
+    "name_en": "Frenzied Charge"
+  },
+  {
+    "id": "Unique_Yakushima_SummonServant",
+    "name_fr": "Invocation de Serviteurs",
+    "name_en": "Servant Call"
+  },
+  {
+    "id": "Unique_Yeti_Grass_GrassBall",
+    "name_fr": "Roulade Herbeuse",
+    "name_en": "Lawn Bowling"
+  },
+  {
+    "id": "Unique_Yeti_SnowBall",
+    "name_fr": "Boule de Neige",
+    "name_en": "Snow Bowling"
+  },
+  {
+    "id": "WallSplash",
+    "name_fr": "Éclabousse-Mur",
+    "name_en": "Curtain Splash"
+  },
+  {
+    "id": "WaterBall",
+    "name_fr": "Bombao",
+    "name_en": "Aqua Burst"
+  },
+  {
+    "id": "WaterGun",
+    "name_fr": "Tir Aquatique",
+    "name_en": "Aqua Gun"
+  },
+  {
+    "id": "Weapon_Use",
+    "name_fr": "Utiliser l'arme",
+    "name_en": "Use Weapon"
+  },
+  {
+    "id": "WindBurst",
+    "name_fr": "Rafale Vent",
+    "name_en": "Wind Burst"
+  },
+  {
+    "id": "WindCutter",
+    "name_fr": "Coupe-Rafale",
+    "name_en": "Wind Cutter"
+  },
+  {
+    "id": "WindEdge",
+    "name_fr": "Tranche Venteuse",
+    "name_en": "Wind Edge"
+  },
+  {
+    "id": "WorkAttack",
+    "name_fr": "WorkAttack",
+    "name_en": "WorkAttack"
+  }
+]

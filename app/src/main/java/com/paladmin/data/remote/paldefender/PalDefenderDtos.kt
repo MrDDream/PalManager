@@ -2,6 +2,7 @@ package com.paladmin.data.remote.paldefender
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.json.JsonObject
 
 /** Schéma confirmé via la doc PalDefender (Endpoints/version) : {"Version":{"Version":"x.x.x",...}}
  * — imbriqué sous une clé "Version", pas un champ "version" plat comme on l'avait supposé au départ. */
@@ -132,8 +133,24 @@ data class ProgressionGroup(
 @Serializable
 data class PlayerProgressionResponse(@SerialName("Progression") val progression: ProgressionGroup = ProgressionGroup())
 
-/** Schéma confirmé via la doc PalDefender (Endpoints/pals) — seuls les champs utiles à un affichage
- * admin sont typés, le reste (IVs, PalSouls, BaseCamps...) est ignoré (ignoreUnknownKeys=true). */
+@Serializable
+data class PalIVs(
+    @SerialName("Health") val health: Int = 0,
+    @SerialName("AttackMelee") val attackMelee: Int = 0,
+    @SerialName("AttackShot") val attackShot: Int = 0,
+    @SerialName("Defense") val defense: Int = 0,
+)
+
+@Serializable
+data class PalSoulRanks(
+    @SerialName("Health") val health: Int = 0,
+    @SerialName("Attack") val attack: Int = 0,
+    @SerialName("Defense") val defense: Int = 0,
+    @SerialName("CraftSpeed") val craftSpeed: Int = 0,
+)
+
+/** Schéma confirmé via la doc PalDefender (Endpoints/pals) — ExtraWorkSuitabilities/
+ * DisableWorkPreferences restent ignorés (ignoreUnknownKeys=true), pas utiles à un affichage admin. */
 @Serializable
 data class PlayerPalInstance(
     @SerialName("PalID") val palId: String = "",
@@ -141,6 +158,18 @@ data class PlayerPalInstance(
     @SerialName("Level") val level: Int = 0,
     @SerialName("Gender") val gender: String = "",
     @SerialName("Shiny") val shiny: Boolean = false,
+    @SerialName("FriendshipPoints") val friendshipPoints: Int = 0,
+    @SerialName("SAN") val sanity: Double = 0.0,
+    @SerialName("PhysicalHealth") val physicalHealth: String = "",
+    @SerialName("WorkerSick") val workerSick: String = "",
+    @SerialName("ActiveSkills") val activeSkills: List<String> = emptyList(),
+    @SerialName("LearntSkills") val learntSkills: List<String> = emptyList(),
+    @SerialName("Passives") val passives: List<String> = emptyList(),
+    @SerialName("HP") val hp: Double? = null,
+    @SerialName("SP") val stamina: Double? = null,
+    @SerialName("CraftSpeed") val craftSpeed: Int? = null,
+    @SerialName("IVs") val ivs: PalIVs? = null,
+    @SerialName("PalSouls") val palSouls: PalSoulRanks? = null,
 )
 
 @Serializable
@@ -191,6 +220,35 @@ data class WorldPos(val x: Double = 0.0, val y: Double = 0.0)
 @Serializable
 data class GuildCamp(val id: String = "", @SerialName("world_pos") val worldPos: WorldPos? = null)
 
+/** Même schéma "Pal" (snake_case) que les Pals de base camp de GET /pals/{id} — juste une
+ * convention de nommage différente de PlayerPalInstance (PascalCase, endpoint joueur). */
+@Serializable
+data class CampPalRaw(
+    @SerialName("pal_id") val palId: String = "",
+    @SerialName("npc_id") val npcId: String = "",
+    val nickname: String = "",
+    val gender: String = "",
+    val level: Int = 0,
+    val shiny: Boolean = false,
+    @SerialName("phisical_health") val physicalHealth: String = "",
+    @SerialName("worker_sick") val workerSick: String = "",
+    val san: Double = 0.0,
+    val friendship: Int = 0,
+    @SerialName("active_skills") val activeSkills: List<String> = emptyList(),
+    @SerialName("learnt_skills") val learntSkills: List<String> = emptyList(),
+    val passives: List<String> = emptyList(),
+)
+
+/** Camp détaillé (endpoint GET /guild/{id} uniquement — le résumé de GET /guilds n'a que id/world_pos). */
+@Serializable
+data class GuildCampDetail(
+    val id: String = "",
+    val level: Int = 0,
+    @SerialName("world_pos") val worldPos: WorldPos? = null,
+    val state: String = "",
+    val pals: Map<String, CampPalRaw> = emptyMap(),
+)
+
 @Serializable
 data class GuildRaw(
     val name: String = "",
@@ -210,6 +268,31 @@ data class GuildMemberRaw(
     val status: String = "",
 )
 
+/** L'objet "items" du coffre de guilde mélange des clés fixes (container_id/current/max) et des clés
+ * numériques dynamiques (un emplacement par slot) — pas décodable en data class classique, on le
+ * garde en JsonObject brut et on l'analyse à la main (voir GuildsViewModel.formatChest). */
+@Serializable
+data class GuildChestSlotRaw(@SerialName("item_id") val itemId: String = "", val count: Int = 0)
+
+@Serializable
+data class GuildExpeditionsRaw(
+    val finished: Int = 0,
+    val missions: Map<String, Boolean> = emptyMap(),
+)
+
+@Serializable
+data class GuildResearchProgress(
+    @SerialName("work_amount") val workAmount: Double = 0.0,
+    @SerialName("required_work_amount") val requiredWorkAmount: Double = 0.0,
+    val percentage: Double = 0.0,
+)
+
+@Serializable
+data class GuildLaboratoryRaw(
+    @SerialName("current_research") val currentResearch: String = "",
+    val researches: Map<String, GuildResearchProgress> = emptyMap(),
+)
+
 @Serializable
 data class GuildDetailRaw(
     val name: String = "",
@@ -217,6 +300,10 @@ data class GuildDetailRaw(
     val admin: GuildAdmin? = null,
     @SerialName("camp_count") val campCount: Int = 0,
     val members: List<GuildMemberRaw> = emptyList(),
+    val camps: List<GuildCampDetail> = emptyList(),
+    val items: JsonObject? = null,
+    val expeditions: GuildExpeditionsRaw? = null,
+    val laboratory: GuildLaboratoryRaw? = null,
 )
 
 @Serializable

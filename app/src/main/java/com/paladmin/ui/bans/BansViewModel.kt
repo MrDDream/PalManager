@@ -1,6 +1,7 @@
 package com.paladmin.ui.bans
 
 import com.paladmin.util.describe
+import com.paladmin.util.requireSuccess
 
 import android.content.Context
 import androidx.lifecycle.SavedStateHandle
@@ -62,7 +63,7 @@ class BansViewModel @Inject constructor(
     fun unbanPlayer(uid: String) {
         viewModelScope.launch {
             val profile = serverRepository.getProfile(profileId) ?: return@launch
-            runCatching { palworldClientFactory.create(profile).unban(UnbanRequest(userid = uid)) }
+            runCatching { palworldClientFactory.create(profile).unban(UnbanRequest(userid = uid)).requireSuccess() }
                 .onSuccess { _state.value = _state.value.copy(statusMessage = context.getString(R.string.bans_msg_unbanned)); refresh() }
                 .onFailure { error -> _state.value = _state.value.copy(statusMessage = error.describe(context.getString(R.string.bans_error_generic))) }
         }
@@ -71,7 +72,7 @@ class BansViewModel @Inject constructor(
     fun banIp(ip: String) {
         viewModelScope.launch {
             val profile = serverRepository.getProfile(profileId) ?: return@launch
-            runCatching { palDefenderClientFactory.create(profile).banIp(ip) }
+            runCatching { palDefenderClientFactory.create(profile).banIp(ip).requireSuccess() }
                 .onSuccess { _state.value = _state.value.copy(statusMessage = context.getString(R.string.bans_msg_ip_banned_fmt, ip)) }
                 .onFailure { error -> _state.value = _state.value.copy(statusMessage = error.describe(context.getString(R.string.bans_error_generic))) }
         }
@@ -80,7 +81,7 @@ class BansViewModel @Inject constructor(
     fun unbanIp(ip: String) {
         viewModelScope.launch {
             val profile = serverRepository.getProfile(profileId) ?: return@launch
-            runCatching { palDefenderClientFactory.create(profile).unbanIp(ip) }
+            runCatching { palDefenderClientFactory.create(profile).unbanIp(ip).requireSuccess() }
                 .onSuccess { _state.value = _state.value.copy(statusMessage = context.getString(R.string.bans_msg_ip_unbanned_fmt, ip)) }
                 .onFailure { error -> _state.value = _state.value.copy(statusMessage = error.describe(context.getString(R.string.bans_error_generic))) }
         }

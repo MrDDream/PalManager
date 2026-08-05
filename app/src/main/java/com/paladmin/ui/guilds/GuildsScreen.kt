@@ -10,11 +10,18 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.Explore
 import androidx.compose.material.icons.filled.Groups
+import androidx.compose.material.icons.filled.Inventory2
 import androidx.compose.material.icons.filled.LocationOn
+import androidx.compose.material.icons.filled.MoreVert
+import androidx.compose.material.icons.filled.Pets
 import androidx.compose.material.icons.filled.Refresh
+import androidx.compose.material.icons.filled.Science
 import androidx.compose.material3.Card
 import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.DropdownMenu
+import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -28,26 +35,33 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.paladmin.R
+import com.paladmin.ui.components.DetailDialog
 import com.paladmin.ui.components.IconBadge
+import com.paladmin.ui.components.PalGridDialog
 import com.paladmin.ui.components.SearchField
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun GuildsScreen(
     onBack: () -> Unit,
-    onOpenLiveMap: (Double, Double) -> Unit,
+    onOpenLiveMap: (List<Pair<Double, Double>>) -> Unit,
     viewModel: GuildsViewModel = hiltViewModel(),
 ) {
     val state by viewModel.state.collectAsState()
     val query by viewModel.query.collectAsState()
+    val detail by viewModel.detail.collectAsState()
+    val palGrid by viewModel.palGrid.collectAsState()
     val snackbarHostState = remember { SnackbarHostState() }
+    var menuFor by remember { mutableStateOf<String?>(null) }
 
     LaunchedEffect(state.statusMessage) {
         state.statusMessage?.let {
@@ -103,12 +117,40 @@ fun GuildsScreen(
                                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                                         )
                                     }
-                                    if (guild.basePositions.isNotEmpty()) {
-                                        IconButton(onClick = {
-                                            val base = guild.basePositions.first()
-                                            onOpenLiveMap(base.x, base.y)
-                                        }) {
-                                            Icon(Icons.Filled.LocationOn, contentDescription = stringResource(R.string.guilds_location_cd))
+                                    Box {
+                                        IconButton(onClick = { menuFor = guild.guildId }) {
+                                            Icon(Icons.Filled.MoreVert, contentDescription = stringResource(R.string.cd_actions))
+                                        }
+                                        DropdownMenu(expanded = menuFor == guild.guildId, onDismissRequest = { menuFor = null }) {
+                                            DropdownMenuItem(
+                                                text = { Text(stringResource(R.string.guilds_action_location)) },
+                                                leadingIcon = { Icon(Icons.Filled.LocationOn, contentDescription = null) },
+                                                enabled = guild.basePositions.isNotEmpty(),
+                                                onClick = {
+                                                    onOpenLiveMap(guild.basePositions.map { it.x to it.y })
+                                                    menuFor = null
+                                                },
+                                            )
+                                            DropdownMenuItem(
+                                                text = { Text(stringResource(R.string.guilds_action_camp_pals)) },
+                                                leadingIcon = { Icon(Icons.Filled.Pets, contentDescription = null) },
+                                                onClick = { viewModel.openCampPals(guild); menuFor = null },
+                                            )
+                                            DropdownMenuItem(
+                                                text = { Text(stringResource(R.string.guilds_action_chest)) },
+                                                leadingIcon = { Icon(Icons.Filled.Inventory2, contentDescription = null) },
+                                                onClick = { viewModel.openDetail(guild, GuildDetailKind.CHEST); menuFor = null },
+                                            )
+                                            DropdownMenuItem(
+                                                text = { Text(stringResource(R.string.guilds_action_expeditions)) },
+                                                leadingIcon = { Icon(Icons.Filled.Explore, contentDescription = null) },
+                                                onClick = { viewModel.openDetail(guild, GuildDetailKind.EXPEDITIONS); menuFor = null },
+                                            )
+                                            DropdownMenuItem(
+                                                text = { Text(stringResource(R.string.guilds_action_lab)) },
+                                                leadingIcon = { Icon(Icons.Filled.Science, contentDescription = null) },
+                                                onClick = { viewModel.openDetail(guild, GuildDetailKind.LAB); menuFor = null },
+                                            )
                                         }
                                     }
                                 }
@@ -130,5 +172,19 @@ fun GuildsScreen(
                 }
             }
         }
+    }
+
+    detail?.let { detailState ->
+        DetailDialog(
+            title = stringResource(R.string.player_detail_title_fmt, stringResource(detailState.kind.titleRes), detailState.guildName),
+            isLoading = detailState.isLoading,
+            error = detailState.error,
+            rows = detailState.rows,
+            onDismiss = viewModel::dismissDetail,
+        )
+    }
+
+    palGrid?.let { palGridState ->
+        PalGridDialog(state = palGridState, onDismiss = viewModel::dismissPalGrid)
     }
 }

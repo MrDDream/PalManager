@@ -21,7 +21,7 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material.icons.filled.LocationOn
+import androidx.compose.material.icons.filled.Cabin
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -72,7 +72,7 @@ fun LiveMapScreen(
     viewModel: LiveMapViewModel = hiltViewModel(),
 ) {
     val state by viewModel.state.collectAsState()
-    var selectedTab by remember { mutableStateOf(if (state.focusMarker?.onWorldTree == true) MapTab.TREE else MapTab.WORLD) }
+    var selectedTab by remember { mutableStateOf(if (state.focusMarkers.any { it.onWorldTree }) MapTab.TREE else MapTab.WORLD) }
     var focusedPlayerName by remember { mutableStateOf<String?>(null) }
 
     Scaffold(
@@ -97,7 +97,7 @@ fun LiveMapScreen(
             else -> {
                 val allPlayers = if (selectedTab == MapTab.WORLD) state.worldPlayers else state.treePlayers
                 val visiblePlayers = focusedPlayerName?.let { name -> allPlayers.filter { it.name == name } } ?: allPlayers
-                val focusMarker = state.focusMarker?.takeIf { it.onWorldTree == (selectedTab == MapTab.TREE) }
+                val focusMarkers = state.focusMarkers.filter { it.onWorldTree == (selectedTab == MapTab.TREE) }
 
                 Column(modifier = Modifier.fillMaxSize().padding(padding)) {
                     Row(
@@ -114,7 +114,7 @@ fun LiveMapScreen(
                     }
 
                     Box(modifier = Modifier.fillMaxWidth().aspectRatio(1f)) {
-                        PanZoomMap(mapImage = selectedTab.image, players = visiblePlayers, focusMarker = focusMarker, key = selectedTab)
+                        PanZoomMap(mapImage = selectedTab.image, players = visiblePlayers, focusMarkers = focusMarkers, key = selectedTab)
                     }
 
                     if (allPlayers.isEmpty()) {
@@ -157,7 +157,7 @@ fun LiveMapScreen(
 }
 
 @Composable
-private fun PanZoomMap(mapImage: String, players: List<LiveMapPlayer>, focusMarker: LiveMapBaseMarker?, key: Any) {
+private fun PanZoomMap(mapImage: String, players: List<LiveMapPlayer>, focusMarkers: List<LiveMapBaseMarker>, key: Any) {
     var scale by remember(key) { mutableFloatStateOf(MIN_SCALE) }
     var offset by remember(key) { mutableStateOf(Offset.Zero) }
 
@@ -231,7 +231,7 @@ private fun PanZoomMap(mapImage: String, players: List<LiveMapPlayer>, focusMark
                 }
             }
 
-            focusMarker?.let { marker ->
+            focusMarkers.forEach { marker ->
                 val xDp = with(density) { (mapSizePx * marker.xPercent / 100f).toDp() } - markerHalfDp
                 val yDp = with(density) { (mapSizePx * marker.yPercent / 100f).toDp() } - markerHalfDp
                 Box(
@@ -246,19 +246,20 @@ private fun PanZoomMap(mapImage: String, players: List<LiveMapPlayer>, focusMark
     }
 }
 
-/** Marqueur de base de guilde — distinct des joueurs (pin coloré au lieu de l'icône personnage). */
+/** Marqueur de camp de base de guilde — distinct des joueurs (icône de cabane dans un badge coloré
+ * au lieu de l'icône personnage). */
 @Composable
 private fun BaseMarker() {
     Box(
         modifier = Modifier
             .size(28.dp)
-            .background(MaterialTheme.colorScheme.error, CircleShape),
+            .background(MaterialTheme.colorScheme.tertiary, CircleShape),
         contentAlignment = Alignment.Center,
     ) {
         Icon(
-            Icons.Filled.LocationOn,
+            Icons.Filled.Cabin,
             contentDescription = stringResource(R.string.livemap_base_marker_cd),
-            tint = MaterialTheme.colorScheme.onError,
+            tint = MaterialTheme.colorScheme.onTertiary,
             modifier = Modifier.size(18.dp),
         )
     }

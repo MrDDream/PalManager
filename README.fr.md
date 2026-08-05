@@ -34,14 +34,20 @@ officielle Palworld et l'API REST du mod **[PalDefender](https://github.com/Ulti
 - **Dashboard** : infos serveur, joueurs en ligne, FPS, versions Palworld/PalDefender, sauvegarde,
   redémarrage/arrêt.
 - **Joueurs connectés** : liste en temps réel, kick/ban, message privé, inventaire/équipe/
-  progression/technologies détaillés par joueur.
+  progression/technologies détaillés par joueur. Les Pals de l'équipe sont cliquables pour une
+  fiche détaillée (IV, Âme de Pal, compétences actives, passifs).
+- **Guildes** : liste des membres (recherche par nom de guilde ou de membre), toutes les bases
+  épinglées sur la carte en direct, Pals de chaque camp avec fiche détaillée, coffre, expéditions
+  et progression des recherches de labo.
 - **Give item / Give Pal** : recherche par nom ou image dans un catalogue embarqué (items, Pals,
   PNJ, technologies), filtres par catégorie/élément/rareté/métier.
 - **Carte en direct** : position des joueurs sur la carte des Îles Palpagos.
-- **Guildes** et **bannissements** (joueurs + IP).
+- **Bannissements** (joueurs + IP).
 - **Diffusion & maintenance** : broadcast, alertes, messages, zone danger (reload config,
   suppression de base).
-- Thème clair/sombre, interface FR/EN.
+- **Mode debug** : log réseau optionnel écrit dans un dossier de votre choix, pour diagnostiquer
+  les problèmes de connexion.
+- Thème clair/sombre, interface FR/EN (appliquée aussi aux données de jeu).
 
 ## Stack technique
 

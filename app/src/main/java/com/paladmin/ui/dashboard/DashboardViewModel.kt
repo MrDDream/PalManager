@@ -1,6 +1,7 @@
 package com.paladmin.ui.dashboard
 
 import com.paladmin.util.describe
+import com.paladmin.util.requireSuccess
 
 import android.content.Context
 import androidx.lifecycle.SavedStateHandle
@@ -96,12 +97,12 @@ class DashboardViewModel @Inject constructor(
 
     fun forceStop() = runAction(R.string.dashboard_msg_stopped) { api -> api.stop() }
 
-    private fun runAction(successMessageRes: Int, block: suspend (com.paladmin.data.remote.palworld.PalworldApiService) -> Any) {
+    private fun runAction(successMessageRes: Int, block: suspend (com.paladmin.data.remote.palworld.PalworldApiService) -> retrofit2.Response<*>) {
         val profile = _state.value.profile ?: return
         viewModelScope.launch {
             runCatching {
                 val api = palworldClientFactory.create(profile)
-                block(api)
+                block(api).requireSuccess()
             }.onSuccess {
                 _state.value = _state.value.copy(actionMessage = context.getString(successMessageRes))
             }.onFailure { error ->

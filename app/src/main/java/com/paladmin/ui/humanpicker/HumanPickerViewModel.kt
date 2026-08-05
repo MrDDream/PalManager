@@ -14,6 +14,7 @@ import com.paladmin.data.remote.palworld.PalworldPlayer
 import com.paladmin.data.repository.HumanRepository
 import com.paladmin.data.repository.ServerRepository
 import com.paladmin.util.describe
+import com.paladmin.util.requireSuccess
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -76,6 +77,7 @@ class HumanPickerViewModel @Inject constructor(
             runCatching {
                 palDefenderClientFactory.create(profile)
                     .givePal(playerIdentifier, GivePalRequest(pals = listOf(GivePalEntry(palId = human.id, level = level))))
+                    .requireSuccess()
             }.onSuccess {
                 _statusMessage.value = context.getString(R.string.pal_given_fmt, human.nameFr, level)
             }.onFailure { error ->

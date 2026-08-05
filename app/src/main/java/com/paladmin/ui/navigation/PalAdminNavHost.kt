@@ -97,7 +97,7 @@ fun PalAdminNavHost(navController: NavHostController) {
             val profileId = checkNotNull(backStackEntry.arguments?.getString("profileId")).toLong()
             GuildsScreen(
                 onBack = { navController.popBackStack() },
-                onOpenLiveMap = { x, y -> navController.navigate(NavRoutes.liveMap(profileId, x, y)) },
+                onOpenLiveMap = { points -> navController.navigate(NavRoutes.liveMap(profileId, points)) },
             )
         }
         composable(
@@ -116,8 +116,7 @@ fun PalAdminNavHost(navController: NavHostController) {
             route = NavRoutes.LIVE_MAP,
             arguments = listOf(
                 navArgument("profileId") { type = NavType.StringType },
-                navArgument("focusX") { type = NavType.StringType; defaultValue = "" },
-                navArgument("focusY") { type = NavType.StringType; defaultValue = "" },
+                navArgument("focusPoints") { type = NavType.StringType; defaultValue = "" },
             ),
         ) {
             LiveMapScreen(onBack = { navController.popBackStack() })

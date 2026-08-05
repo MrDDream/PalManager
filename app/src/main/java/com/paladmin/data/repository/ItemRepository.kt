@@ -22,5 +22,8 @@ class ItemRepository @Inject constructor(
 
     fun observeCategories(): Flow<List<String>> = itemDao.observeCategories()
 
-    suspend fun getById(id: String): ItemEntity? = itemDao.getById(id)
+    suspend fun getById(id: String): ItemEntity? {
+        datasetLoader.ensureLoaded()
+        return itemDao.getById(id)
+    }
 }

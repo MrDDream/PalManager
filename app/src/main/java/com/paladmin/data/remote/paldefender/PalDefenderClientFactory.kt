@@ -15,7 +15,11 @@ class PalDefenderClientFactory @Inject constructor(
     private val debugLogger: DebugLogger,
 ) {
 
-    private val json = Json { ignoreUnknownKeys = true }
+    // encodeDefaults=true : sinon kotlinx.serialization omet purement et simplement du JSON envoyé
+    // tout champ de requête dont la valeur par défaut n'est pas explicitement repassée au constructeur
+    // (ex. SendType="PlayerChat" sur PlayerMessageRequest) — /SendPlayerMessage renvoyait alors
+    // VALIDATION_FAILED (SendType manquant), pas une histoire de permission comme il y paraissait.
+    private val json = Json { ignoreUnknownKeys = true; encodeDefaults = true }
 
     fun create(profile: ServerProfile): PalDefenderApiService {
         val client = NetworkClients.build(

@@ -156,8 +156,17 @@
     <string name="inventory_section_armor">Armor</string>
     <string name="inventory_section_food">Food</string>
     <string name="inventory_section_dropslot">Drop slot</string>
-    <string name="team_empty">No Pal in the team</string>
-    <string name="team_shiny">Shiny</string>
+    <string name="pal_info_iv_header">IVs</string>
+    <string name="pal_stat_health_fmt">HP %1$d</string>
+    <string name="pal_stat_attack_fmt">ATK %1$d</string>
+    <string name="pal_stat_defense_fmt">DEF %1$d</string>
+    <string name="pal_stat_work_fmt">WORK %1$d</string>
+    <string name="pal_info_soul_header">Pal Soul</string>
+    <string name="pal_info_active_skills">Active skills</string>
+    <string name="pal_info_passives">Passives</string>
+    <string name="pal_grid_empty">No Pal</string>
+    <string name="pal_gender_male">Male</string>
+    <string name="pal_gender_female">Female</string>
     <string name="progression_level_fmt">Level: %1$d</string>
     <string name="progression_exp_fmt">EXP: %1$d</string>
     <string name="progression_unused_points_fmt">Unused status points: %1$d</string>
@@ -202,12 +211,42 @@
 
     <!-- Guilds -->
     <string name="guilds_title">Guilds</string>
-    <string name="guilds_search_hint">Search a guild</string>
+    <string name="guilds_search_hint">Search a guild or member</string>
     <string name="guilds_empty">No guild</string>
     <string name="guilds_level_members_fmt">Level %1$d · %2$d member(s)</string>
-    <string name="guilds_location_cd">View base on the map</string>
     <string name="guilds_unnamed">Unnamed guild</string>
     <string name="guilds_error_load_failed">Unable to load guilds</string>
+    <string name="guilds_error_detail_load_failed">Unable to load guild details</string>
+    <string name="guilds_action_location">View location</string>
+    <string name="guilds_action_chest">View guild chest</string>
+    <string name="guilds_action_expeditions">View expeditions</string>
+    <string name="guilds_action_lab">View laboratory</string>
+    <string name="guilds_action_camp_pals">View camp Pals</string>
+    <string name="guild_detail_camp_pals_title_fmt">Camp Pals — %1$s</string>
+    <string name="guild_camp_label_fmt">Base %1$d (Level %2$d)</string>
+    <string name="guild_detail_chest">Guild Chest</string>
+    <string name="guild_detail_expeditions">Expeditions</string>
+    <string name="guild_detail_lab">Laboratory</string>
+    <string name="guild_chest_unavailable">Chest unavailable</string>
+    <string name="guild_chest_empty">Empty chest</string>
+    <string name="guild_chest_slots_fmt">%1$d/%2$d slots used</string>
+    <string name="guild_expeditions_unavailable">Expeditions unavailable</string>
+    <string name="guild_expeditions_finished_fmt">Finished expeditions: %1$d</string>
+    <string name="guild_expeditions_released_fmt">Unlocked missions: %1$d/%2$d</string>
+    <string name="guild_lab_unavailable">Laboratory unavailable</string>
+    <string name="guild_lab_current_fmt">Current research: %1$s</string>
+    <string name="guild_lab_no_research">No research in progress</string>
+    <string name="guild_lab_progress_fmt">%1$s — %2$d%%</string>
+    <string name="guild_lab_category_handiwork">Handiwork</string>
+    <string name="guild_lab_category_kindling">Kindling</string>
+    <string name="guild_lab_category_watering">Watering</string>
+    <string name="guild_lab_category_planting">Planting</string>
+    <string name="guild_lab_category_electricity">Electricity</string>
+    <string name="guild_lab_category_lumbering">Lumbering</string>
+    <string name="guild_lab_category_mining">Mining</string>
+    <string name="guild_lab_category_cooling">Cooling</string>
+    <string name="guild_lab_category_medicine">Medicine Production</string>
+    <string name="guild_lab_category_other">Other</string>
 
     <!-- Bans -->
     <string name="bans_title">Bans</string>

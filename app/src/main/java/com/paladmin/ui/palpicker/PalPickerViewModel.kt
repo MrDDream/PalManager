@@ -16,6 +16,7 @@ import com.paladmin.data.remote.palworld.PalworldPlayer
 import com.paladmin.data.repository.PalRepository
 import com.paladmin.data.repository.ServerRepository
 import com.paladmin.util.describe
+import com.paladmin.util.requireSuccess
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -117,6 +118,7 @@ class PalPickerViewModel @Inject constructor(
             runCatching {
                 palDefenderClientFactory.create(profile)
                     .givePal(playerIdentifier, GivePalRequest(pals = listOf(GivePalEntry(palId = pal.id, level = level))))
+                    .requireSuccess()
             }.onSuccess {
                 _statusMessage.value = context.getString(R.string.pal_given_fmt, pal.nameFr, level)
             }.onFailure { error ->
@@ -131,6 +133,7 @@ class PalPickerViewModel @Inject constructor(
             runCatching {
                 palDefenderClientFactory.create(profile)
                     .givePalTemplate(playerIdentifier, GivePalTemplateRequest(palTemplates = listOf(templateName)))
+                    .requireSuccess()
             }.onSuccess {
                 _statusMessage.value = context.getString(R.string.pal_template_given_fmt, templateName)
             }.onFailure { error ->

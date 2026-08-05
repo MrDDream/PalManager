@@ -1,25 +1,14 @@
 package com.paladmin.ui.players
 
-import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.ExperimentalLayoutApi
-import androidx.compose.foundation.layout.FlowRow
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.Message
-import androidx.compose.material.icons.automirrored.filled.HelpOutline
 import androidx.compose.material.icons.filled.Block
 import androidx.compose.material.icons.filled.Inventory2
 import androidx.compose.material.icons.filled.Logout
@@ -29,7 +18,6 @@ import androidx.compose.material.icons.filled.Pets
 import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material.icons.filled.Science
 import androidx.compose.material.icons.filled.TrendingUp
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
@@ -56,24 +44,21 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
-import coil.compose.AsyncImagePainter
-import coil.compose.SubcomposeAsyncImage
-import coil.compose.SubcomposeAsyncImageContent
 import com.paladmin.R
 import com.paladmin.data.remote.palworld.PalworldPlayer
+import com.paladmin.ui.components.DetailDialog
 import com.paladmin.ui.components.IconBadge
+import com.paladmin.ui.components.PalGridDialog
 
 private enum class PendingAction { KICK, BAN, MESSAGE }
 
 private data class ActionDialogCopy(val title: String, val label: String, val confirmLabel: String, val isDangerous: Boolean)
 
-@OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun PlayersScreen(
     onBack: () -> Unit,
@@ -81,6 +66,7 @@ fun PlayersScreen(
 ) {
     val state by viewModel.state.collectAsState()
     val detail by viewModel.detail.collectAsState()
+    val palGrid by viewModel.palGrid.collectAsState()
     val snackbarHostState = remember { SnackbarHostState() }
 
     var menuFor by remember { mutableStateOf<PalworldPlayer?>(null) }
@@ -159,7 +145,7 @@ fun PlayersScreen(
                                 DropdownMenuItem(
                                     text = { Text(stringResource(R.string.players_action_team)) },
                                     leadingIcon = { Icon(Icons.Filled.Pets, contentDescription = null) },
-                                    onClick = { viewModel.openDetail(player, PlayerDetailKind.TEAM); menuFor = null },
+                                    onClick = { viewModel.openTeam(player); menuFor = null },
                                 )
                                 DropdownMenuItem(
                                     text = { Text(stringResource(R.string.players_action_progression)) },
@@ -206,75 +192,17 @@ fun PlayersScreen(
     }
 
     detail?.let { detailState ->
-        var selectedInfo by remember(detailState) { mutableStateOf<Pair<String, String>?>(null) }
-        AlertDialog(
-            onDismissRequest = viewModel::dismissDetail,
-            title = { Text(stringResource(R.string.player_detail_title_fmt, stringResource(detailState.kind.titleRes), detailState.playerName)) },
-            text = {
-                Column {
-                    selectedInfo?.let { (imagePath, label) ->
-                        Row(
-                            verticalAlignment = Alignment.CenterVertically,
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .background(MaterialTheme.colorScheme.secondaryContainer, RoundedCornerShape(8.dp))
-                                .padding(horizontal = 12.dp, vertical = 8.dp),
-                        ) {
-                            FallbackAsyncImage(model = imagePath, modifier = Modifier.size(32.dp))
-                            Text(
-                                label,
-                                color = MaterialTheme.colorScheme.onSecondaryContainer,
-                                modifier = Modifier.padding(start = 8.dp),
-                            )
-                        }
-                    }
-                    Column(modifier = Modifier.padding(top = if (selectedInfo != null) 8.dp else 0.dp).verticalScroll(rememberScrollState())) {
-                        when {
-                            detailState.isLoading -> CircularProgressIndicator(modifier = Modifier.padding(16.dp))
-                            detailState.error != null -> Text(detailState.error)
-                            else -> detailState.rows.forEach { row ->
-                                when (row) {
-                                    is PlayerDetailRow.Section -> Text(
-                                        row.text,
-                                        style = MaterialTheme.typography.labelLarge,
-                                        modifier = Modifier.padding(top = 8.dp, bottom = 2.dp),
-                                    )
-                                    is PlayerDetailRow.WithImage -> Row(
-                                        verticalAlignment = Alignment.CenterVertically,
-                                        modifier = Modifier
-                                            .fillMaxWidth()
-                                            .clickable { selectedInfo = row.imagePath to row.text }
-                                            .padding(vertical = 2.dp),
-                                    ) {
-                                        FallbackAsyncImage(model = row.imagePath, modifier = Modifier.size(28.dp))
-                                        Text(row.text, modifier = Modifier.padding(start = 8.dp))
-                                    }
-                                    is PlayerDetailRow.Plain -> Text(row.text, modifier = Modifier.padding(vertical = 2.dp))
-                                    is PlayerDetailRow.Grid -> FlowRow(
-                                        horizontalArrangement = Arrangement.spacedBy(6.dp),
-                                        verticalArrangement = Arrangement.spacedBy(6.dp),
-                                        modifier = Modifier.padding(vertical = 4.dp),
-                                    ) {
-                                        row.items.forEach { gridItem ->
-                                            InventoryTile(
-                                                gridItem,
-                                                onClick = {
-                                                    val label = gridItem.quantity?.let { "${gridItem.label} × $it" } ?: gridItem.label
-                                                    selectedInfo = gridItem.imagePath to label
-                                                },
-                                            )
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            },
-            confirmButton = {
-                Button(onClick = viewModel::dismissDetail) { Text(stringResource(R.string.common_close)) }
-            },
+        DetailDialog(
+            title = stringResource(R.string.player_detail_title_fmt, stringResource(detailState.kind.titleRes), detailState.playerName),
+            isLoading = detailState.isLoading,
+            error = detailState.error,
+            rows = detailState.rows,
+            onDismiss = viewModel::dismissDetail,
         )
+    }
+
+    palGrid?.let { palGridState ->
+        PalGridDialog(state = palGridState, onDismiss = viewModel::dismissPalGrid)
     }
 }
 
@@ -321,6 +249,7 @@ private fun PlayerActionDialog(
         confirmButton = {
             Button(
                 onClick = { onConfirm(text) },
+                enabled = action != PendingAction.MESSAGE || text.isNotBlank(),
                 colors = if (isDangerous) {
                     ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.error)
                 } else {
@@ -334,60 +263,3 @@ private fun PlayerActionDialog(
     )
 }
 
-/** Case d'inventaire : icône + badge de quantité en superposition, comme dans le jeu. Cliquable
- * pour identifier l'objet (nom + quantité exacte), les icônes seules ne suffisent pas à tout reconnaître. */
-@Composable
-private fun InventoryTile(item: InventoryGridItem, onClick: () -> Unit) {
-    Box(
-        modifier = Modifier
-            .size(48.dp)
-            .background(MaterialTheme.colorScheme.surfaceVariant, RoundedCornerShape(8.dp))
-            .clickable(onClick = onClick),
-    ) {
-        FallbackAsyncImage(model = item.imagePath, modifier = Modifier.fillMaxSize().padding(4.dp))
-        item.quantity?.let { quantity ->
-            Text(
-                "×${formatQuantity(quantity)}",
-                style = MaterialTheme.typography.labelSmall,
-                color = MaterialTheme.colorScheme.inverseOnSurface,
-                maxLines = 1,
-                overflow = TextOverflow.Visible,
-                modifier = Modifier
-                    .align(Alignment.BottomEnd)
-                    .background(MaterialTheme.colorScheme.inverseSurface, RoundedCornerShape(topStart = 6.dp, bottomEnd = 8.dp))
-                    .padding(horizontal = 4.dp, vertical = 1.dp),
-            )
-        }
-    }
-}
-
-/** Image avec repli sur une icône générique si le fichier n'existe pas côté assets (id d'item/Pal
- * non résolu — variantes, ids obsolètes...) : mieux vaut un symbole visible qu'un vide silencieux. */
-@Composable
-private fun FallbackAsyncImage(model: String, modifier: Modifier = Modifier) {
-    SubcomposeAsyncImage(
-        model = model,
-        contentDescription = null,
-        modifier = modifier,
-    ) {
-        when (painter.state) {
-            is AsyncImagePainter.State.Error -> Icon(
-                Icons.AutoMirrored.Filled.HelpOutline,
-                contentDescription = null,
-                tint = MaterialTheme.colorScheme.onSurfaceVariant,
-            )
-            else -> SubcomposeAsyncImageContent()
-        }
-    }
-}
-
-/** Abrège les grosses quantités (ex. pièces d'or) façon jeu : 3 346 473 -> "3.3M". */
-private fun formatQuantity(value: Int): String {
-    val v = value.toDouble()
-    return when {
-        v >= 1_000_000_000 -> String.format(java.util.Locale.getDefault(), "%.1fB", v / 1_000_000_000)
-        v >= 1_000_000 -> String.format(java.util.Locale.getDefault(), "%.1fM", v / 1_000_000)
-        v > 9_999 -> String.format(java.util.Locale.getDefault(), "%.1fK", v / 1_000)
-        else -> value.toString()
-    }
-}

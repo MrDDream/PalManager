@@ -39,9 +39,21 @@ class DebugLogger @Inject constructor(
 
     @Volatile private var folderUri: Uri? = null
 
+    // findFile() ne retrouve pas toujours de façon fiable, sur certains fournisseurs SAF, un fichier
+    // tout juste créé par createFile() dans la même session — chaque ligne de log qui ratait cette
+    // recherche déclenchait un nouveau createFile(), donc un nouveau fichier à chaque ligne (une
+    // requête HTTP en génère une dizaine). On résout le fichier une seule fois et on garde sa
+    // référence exacte pour tous les appends suivants, sans jamais retenter findFile().
+    @Volatile private var resolvedLogFile: DocumentFile? = null
+    @Volatile private var resolvedForFolderUri: Uri? = null
+
     init {
         appPreferences.debugLoggingEnabled.onEach { enabled = it }.launchIn(scope)
-        appPreferences.debugLogFolderUri.onEach { folderUri = it?.let(Uri::parse) }.launchIn(scope)
+        appPreferences.debugLogFolderUri.onEach {
+            folderUri = it?.let(Uri::parse)
+            resolvedLogFile = null
+            resolvedForFolderUri = null
+        }.launchIn(scope)
     }
 
     fun log(message: String) {
@@ -51,9 +63,17 @@ class DebugLogger @Inject constructor(
     }
 
     private fun appendLine(treeUri: Uri, message: String) {
-        val tree = DocumentFile.fromTreeUri(context, treeUri) ?: return
-        val file = tree.findFile(LOG_FILE_NAME) ?: tree.createFile("text/plain", LOG_FILE_NAME) ?: return
+        val file = resolveLogFile(treeUri) ?: return
         val line = "[${timestampFormat.format(Date())}] $message\n"
         context.contentResolver.openOutputStream(file.uri, "wa")?.use { it.write(line.toByteArray()) }
+    }
+
+    private fun resolveLogFile(treeUri: Uri): DocumentFile? {
+        resolvedLogFile?.takeIf { resolvedForFolderUri == treeUri }?.let { return it }
+        val tree = DocumentFile.fromTreeUri(context, treeUri) ?: return null
+        val file = tree.findFile(LOG_FILE_NAME) ?: tree.createFile("text/plain", LOG_FILE_NAME) ?: return null
+        resolvedLogFile = file
+        resolvedForFolderUri = treeUri
+        return file
     }
 }

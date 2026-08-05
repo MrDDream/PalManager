@@ -422,6 +422,8 @@ def main() -> None:
     technologies = scrape_technologies()
     write_dataset("technologies", technologies, "technologies")
 
+    print("Compétences actives/passifs : voir tools/import_paljson_skills.py (source PalJSON, pas paldb.cc).")
+
 
 if __name__ == "__main__":
     main()

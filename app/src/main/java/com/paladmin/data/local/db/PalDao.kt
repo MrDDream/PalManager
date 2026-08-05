@@ -31,6 +31,6 @@ interface PalDao {
     )
     fun search(query: String, element: String?, minRarity: Int?, maxRarity: Int?): Flow<List<PalEntity>>
 
-    @Query("SELECT * FROM pals WHERE id = :id")
+    @Query("SELECT * FROM pals WHERE id = :id COLLATE NOCASE")
     suspend fun getById(id: String): PalEntity?
 }

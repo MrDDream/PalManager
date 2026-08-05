@@ -34,7 +34,7 @@ data class LiveMapUiState(
     val isLoading: Boolean = true,
     val worldPlayers: List<LiveMapPlayer> = emptyList(),
     val treePlayers: List<LiveMapPlayer> = emptyList(),
-    val focusMarker: LiveMapBaseMarker? = null,
+    val focusMarkers: List<LiveMapBaseMarker> = emptyList(),
     val errorMessage: String? = null,
 )
 
@@ -50,16 +50,20 @@ class LiveMapViewModel @Inject constructor(
 
     private val profileId: Long = checkNotNull(savedStateHandle.get<String>("profileId")).toLong()
 
-    private val focusMarker: LiveMapBaseMarker? = run {
-        val x = savedStateHandle.get<String>("focusX")?.toDoubleOrNull()
-        val y = savedStateHandle.get<String>("focusY")?.toDoubleOrNull()
-        if (x == null || y == null) return@run null
-        val onTree = isOnWorldTree(x, y)
-        val (left, top) = if (onTree) worldTreeToScreenPercent(x, y) else worldToScreenPercent(x, y)
-        LiveMapBaseMarker(left, top, onTree)
-    }
+    /** "x1,y1;x2,y2;..." — une guilde peut avoir plusieurs camps, voir NavRoutes.liveMap(). */
+    private val focusMarkers: List<LiveMapBaseMarker> = savedStateHandle.get<String>("focusPoints")
+        .orEmpty()
+        .split(";")
+        .mapNotNull { pair ->
+            val (xRaw, yRaw) = pair.split(",").takeIf { it.size == 2 } ?: return@mapNotNull null
+            val x = xRaw.toDoubleOrNull() ?: return@mapNotNull null
+            val y = yRaw.toDoubleOrNull() ?: return@mapNotNull null
+            val onTree = isOnWorldTree(x, y)
+            val (left, top) = if (onTree) worldTreeToScreenPercent(x, y) else worldToScreenPercent(x, y)
+            LiveMapBaseMarker(left, top, onTree)
+        }
 
-    private val _state = MutableStateFlow(LiveMapUiState(focusMarker = focusMarker))
+    private val _state = MutableStateFlow(LiveMapUiState(focusMarkers = focusMarkers))
     val state: StateFlow<LiveMapUiState> = _state.asStateFlow()
 
     init {

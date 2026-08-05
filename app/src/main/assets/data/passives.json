@@ -1,0 +1,692 @@
+[
+  {
+    "id": "Alien",
+    "name_fr": "Organisme Inconnu",
+    "name_en": "Otherworldly Cells",
+    "rank": 1
+  },
+  {
+    "id": "AutoHPRegeneRate_Passive",
+    "name_fr": "Ange Médecin",
+    "name_en": "Healing Coach",
+    "rank": 3
+  },
+  {
+    "id": "CoolTimeReduction_Down_1",
+    "name_fr": "Tranquille",
+    "name_en": "Easygoing",
+    "rank": -1
+  },
+  {
+    "id": "CoolTimeReduction_Up_1",
+    "name_fr": "Sérénité",
+    "name_en": "Serenity",
+    "rank": 3
+  },
+  {
+    "id": "CoolTimeReduction_Up_2",
+    "name_fr": "Impatient",
+    "name_en": "Impatient",
+    "rank": 1
+  },
+  {
+    "id": "CraftSpeed_down1",
+    "name_fr": "Maladroit",
+    "name_en": "Clumsy",
+    "rank": -1
+  },
+  {
+    "id": "CraftSpeed_down2",
+    "name_fr": "Négligent",
+    "name_en": "Slacker",
+    "rank": -3
+  },
+  {
+    "id": "CraftSpeed_up1",
+    "name_fr": "Sérieux",
+    "name_en": "Serious",
+    "rank": 1
+  },
+  {
+    "id": "CraftSpeed_up2",
+    "name_fr": "Appliqué",
+    "name_en": "Artisan",
+    "rank": 3
+  },
+  {
+    "id": "CraftSpeed_up3",
+    "name_fr": "Maîtrise Exceptionnelle",
+    "name_en": "Remarkable Craftsmanship",
+    "rank": 4
+  },
+  {
+    "id": "Deffence_down1",
+    "name_fr": "Vulnérable aux Coups",
+    "name_en": "Downtrodden",
+    "rank": -1
+  },
+  {
+    "id": "Deffence_down2",
+    "name_fr": "Os fragiles",
+    "name_en": "Brittle",
+    "rank": -3
+  },
+  {
+    "id": "Deffence_up1",
+    "name_fr": "Peau dure",
+    "name_en": "Hard Skin",
+    "rank": 1
+  },
+  {
+    "id": "Deffence_up2",
+    "name_fr": "Corps Robuste",
+    "name_en": "Burly Body",
+    "rank": 3
+  },
+  {
+    "id": "Deffence_up2_2",
+    "name_fr": "Poids Lourd",
+    "name_en": "Heavyweight",
+    "rank": 2
+  },
+  {
+    "id": "Deffence_up3",
+    "name_fr": "Corps Adamantin",
+    "name_en": "Diamond Body",
+    "rank": 4
+  },
+  {
+    "id": "ElementBoost_Aqua_1_PAL",
+    "name_fr": "Hydrophile",
+    "name_en": "Hydromaniac",
+    "rank": 1
+  },
+  {
+    "id": "ElementBoost_Aqua_2_PAL",
+    "name_fr": "Seigneur des Mers",
+    "name_en": "Lord of the Sea",
+    "rank": 3
+  },
+  {
+    "id": "ElementBoost_Dark_1_PAL",
+    "name_fr": "Voile des Ténèbres",
+    "name_en": "Veil of Darkness",
+    "rank": 1
+  },
+  {
+    "id": "ElementBoost_Dark_2_PAL",
+    "name_fr": "Seigneur des Enfers",
+    "name_en": "Lord of the Underworld",
+    "rank": 3
+  },
+  {
+    "id": "ElementBoost_Dragon_1_PAL",
+    "name_fr": "Sang de Dragon",
+    "name_en": "Blood of the Dragon",
+    "rank": 1
+  },
+  {
+    "id": "ElementBoost_Dragon_2_PAL",
+    "name_fr": "Dragon Divin",
+    "name_en": "Divine Dragon",
+    "rank": 3
+  },
+  {
+    "id": "ElementBoost_Earth_1_PAL",
+    "name_fr": "Force Tellurique",
+    "name_en": "Power of Gaia",
+    "rank": 1
+  },
+  {
+    "id": "ElementBoost_Earth_2_PAL",
+    "name_fr": "Empereur Terrestre",
+    "name_en": "Earth Emperor",
+    "rank": 3
+  },
+  {
+    "id": "ElementBoost_Fire_1_PAL",
+    "name_fr": "Pyromane",
+    "name_en": "Pyromaniac",
+    "rank": 1
+  },
+  {
+    "id": "ElementBoost_Fire_2_PAL",
+    "name_fr": "Empereur Enflammé",
+    "name_en": "Flame Emperor",
+    "rank": 3
+  },
+  {
+    "id": "ElementBoost_Ice_1_PAL",
+    "name_fr": "Sang Froid",
+    "name_en": "Coldblooded",
+    "rank": 1
+  },
+  {
+    "id": "ElementBoost_Ice_2_PAL",
+    "name_fr": "Empereur Glacial",
+    "name_en": "Ice Emperor",
+    "rank": 3
+  },
+  {
+    "id": "ElementBoost_Leaf_1_PAL",
+    "name_fr": "Fragrance Boisée",
+    "name_en": "Fragrant Foliage",
+    "rank": 1
+  },
+  {
+    "id": "ElementBoost_Leaf_2_PAL",
+    "name_fr": "Divinité de la Forêt",
+    "name_en": "Spirit Emperor",
+    "rank": 3
+  },
+  {
+    "id": "ElementBoost_Normal_1_PAL",
+    "name_fr": "Esprit Zen",
+    "name_en": "Spirit of Zen",
+    "rank": 1
+  },
+  {
+    "id": "ElementBoost_Normal_2_PAL",
+    "name_fr": "Empereur Céleste",
+    "name_en": "Celestial Emperor",
+    "rank": 3
+  },
+  {
+    "id": "ElementBoost_Thunder_1_PAL",
+    "name_fr": "Condensateur",
+    "name_en": "Capacitor",
+    "rank": 1
+  },
+  {
+    "id": "ElementBoost_Thunder_2_PAL",
+    "name_fr": "Seigneur des Tempêtes",
+    "name_en": "Lord of Lightning",
+    "rank": 3
+  },
+  {
+    "id": "ElementResist_Aqua_1_PAL",
+    "name_fr": "Imperméabilité",
+    "name_en": "Waterproof",
+    "rank": 1
+  },
+  {
+    "id": "ElementResist_Dark_1_PAL",
+    "name_fr": "Lumineux",
+    "name_en": "Cheery",
+    "rank": 1
+  },
+  {
+    "id": "ElementResist_Dragon_1_PAL",
+    "name_fr": "Tueur de Dragons",
+    "name_en": "Dragonkiller",
+    "rank": 1
+  },
+  {
+    "id": "ElementResist_Earth_1_PAL",
+    "name_fr": "Parasismique",
+    "name_en": "Earthquake Resistant",
+    "rank": 1
+  },
+  {
+    "id": "ElementResist_Fire_1_PAL",
+    "name_fr": "Bronzage Naturel",
+    "name_en": "Suntan Lover",
+    "rank": 1
+  },
+  {
+    "id": "ElementResist_Ice_1_PAL",
+    "name_fr": "Sang Chaud",
+    "name_en": "Heated Body",
+    "rank": 1
+  },
+  {
+    "id": "ElementResist_Leaf_1_PAL",
+    "name_fr": "Protection Végétale",
+    "name_en": "Botanical Barrier",
+    "rank": 1
+  },
+  {
+    "id": "ElementResist_Normal_1_PAL",
+    "name_fr": "Anormal",
+    "name_en": "Abnormal",
+    "rank": 1
+  },
+  {
+    "id": "ElementResist_Thunder_1_PAL",
+    "name_fr": "Isolant",
+    "name_en": "Insulated Body",
+    "rank": 1
+  },
+  {
+    "id": "EternalFlame",
+    "name_fr": "Feu Éternel",
+    "name_en": "Eternal Flame",
+    "rank": 4
+  },
+  {
+    "id": "Invader",
+    "name_fr": "Envahisseur",
+    "name_en": "Invader",
+    "rank": 4
+  },
+  {
+    "id": "Legend",
+    "name_fr": "Légende",
+    "name_en": "Legend",
+    "rank": 4
+  },
+  {
+    "id": "MiniNushi",
+    "name_fr": "Caïd",
+    "name_en": "Whopper",
+    "rank": 3
+  },
+  {
+    "id": "MoveSpeed_up_1",
+    "name_fr": "Vif",
+    "name_en": "Nimble",
+    "rank": 1
+  },
+  {
+    "id": "MoveSpeed_up_2",
+    "name_fr": "Coursier",
+    "name_en": "Runner",
+    "rank": 3
+  },
+  {
+    "id": "MoveSpeed_up_3",
+    "name_fr": "Sprinteur",
+    "name_en": "Swift",
+    "rank": 4
+  },
+  {
+    "id": "MutationPal_Babysitter",
+    "name_fr": "Baby-sitter",
+    "name_en": "Babysitter",
+    "rank": 4
+  },
+  {
+    "id": "MutationPal_ExplosionResist",
+    "name_fr": "Blindage",
+    "name_en": "Heavily Armored",
+    "rank": 4
+  },
+  {
+    "id": "MutationPal_Immortal",
+    "name_fr": "Immortel",
+    "name_en": "Immortality",
+    "rank": 4
+  },
+  {
+    "id": "MutationPal_Mutant",
+    "name_fr": "Anomalie",
+    "name_en": "Idiosyncratic",
+    "rank": 4
+  },
+  {
+    "id": "NightOwl",
+    "name_fr": "Oiseau de Nuit",
+    "name_en": "Night Owl",
+    "rank": -1
+  },
+  {
+    "id": "Nocturnal",
+    "name_fr": "Nocturne",
+    "name_en": "Insomnia",
+    "rank": 1
+  },
+  {
+    "id": "NonKilling",
+    "name_fr": "Pitié",
+    "name_en": "Mercy Hit",
+    "rank": -1
+  },
+  {
+    "id": "Noukin",
+    "name_fr": "Impulsif",
+    "name_en": "Musclehead",
+    "rank": 2
+  },
+  {
+    "id": "Nushi",
+    "name_fr": "Trophée des Flots",
+    "name_en": "Lunker",
+    "rank": 4
+  },
+  {
+    "id": "PAL_ALLAttack_down1",
+    "name_fr": "Lâche",
+    "name_en": "Coward",
+    "rank": -1
+  },
+  {
+    "id": "PAL_ALLAttack_down2",
+    "name_fr": "Pacifiste",
+    "name_en": "Pacifist",
+    "rank": -3
+  },
+  {
+    "id": "PAL_ALLAttack_up1",
+    "name_fr": "Brave",
+    "name_en": "Brave",
+    "rank": 1
+  },
+  {
+    "id": "PAL_ALLAttack_up2",
+    "name_fr": "Féroce",
+    "name_en": "Ferocious",
+    "rank": 3
+  },
+  {
+    "id": "PAL_ALLAttack_up3",
+    "name_fr": "Colère Divine",
+    "name_en": "Demon God",
+    "rank": 4
+  },
+  {
+    "id": "PAL_CorporateSlave",
+    "name_fr": "Soumis",
+    "name_en": "Work Slave",
+    "rank": 1
+  },
+  {
+    "id": "PAL_FullStomach_Down_1",
+    "name_fr": "Frugal",
+    "name_en": "Dainty Eater",
+    "rank": 1
+  },
+  {
+    "id": "PAL_FullStomach_Down_2",
+    "name_fr": "Nutritionniste",
+    "name_en": "Diet Lover",
+    "rank": 3
+  },
+  {
+    "id": "PAL_FullStomach_Down_3",
+    "name_fr": "Maîtrise de la Faim",
+    "name_en": "Mastery of Fasting",
+    "rank": 4
+  },
+  {
+    "id": "PAL_FullStomach_Up_1",
+    "name_fr": "Glouton",
+    "name_en": "Glutton",
+    "rank": -1
+  },
+  {
+    "id": "PAL_FullStomach_Up_2",
+    "name_fr": "Estomac sans Fond",
+    "name_en": "Bottomless Stomach",
+    "rank": -2
+  },
+  {
+    "id": "PAL_Sanity_Down_1",
+    "name_fr": "Optimiste",
+    "name_en": "Positive Thinker",
+    "rank": 1
+  },
+  {
+    "id": "PAL_Sanity_Down_2",
+    "name_fr": "Acharné",
+    "name_en": "Workaholic",
+    "rank": 3
+  },
+  {
+    "id": "PAL_Sanity_Down_3",
+    "name_fr": "Inébranlable",
+    "name_en": "Heart of the Immovable King",
+    "rank": 4
+  },
+  {
+    "id": "PAL_Sanity_Up_1",
+    "name_fr": "Mentalement Instable",
+    "name_en": "Unstable",
+    "rank": -1
+  },
+  {
+    "id": "PAL_Sanity_Up_2",
+    "name_fr": "Soif de Destruction",
+    "name_en": "Destructive",
+    "rank": -2
+  },
+  {
+    "id": "PAL_conceited",
+    "name_fr": "Vaniteux",
+    "name_en": "Conceited",
+    "rank": 1
+  },
+  {
+    "id": "PAL_masochist",
+    "name_fr": "Masochiste",
+    "name_en": "Masochist",
+    "rank": 1
+  },
+  {
+    "id": "PAL_oraora",
+    "name_fr": "Rentre-Dedans",
+    "name_en": "Aggressive",
+    "rank": 1
+  },
+  {
+    "id": "PAL_rude",
+    "name_fr": "Trouble-Fête",
+    "name_en": "Hooligan",
+    "rank": 1
+  },
+  {
+    "id": "PAL_sadist",
+    "name_fr": "Sadique",
+    "name_en": "Sadist",
+    "rank": 1
+  },
+  {
+    "id": "PlayerSP_DecreaseRate_Passive",
+    "name_fr": "Guide de l'effort",
+    "name_en": "Wellness Watcher",
+    "rank": 3
+  },
+  {
+    "id": "Rare",
+    "name_fr": "Chanceux",
+    "name_en": "Lucky",
+    "rank": 4
+  },
+  {
+    "id": "ReloadSpeedUp_Passive",
+    "name_fr": "Instructeur de Tir",
+    "name_en": "Reload Master",
+    "rank": 3
+  },
+  {
+    "id": "RideJumpCount_Increase1",
+    "name_fr": "Légèreté",
+    "name_en": "Lightfooted",
+    "rank": 4
+  },
+  {
+    "id": "RideJumpCount_Increase2",
+    "name_fr": "Marche Céleste",
+    "name_en": "Skymarcher",
+    "rank": 4
+  },
+  {
+    "id": "SalePrice_Down_1",
+    "name_fr": "Miteux",
+    "name_en": "Shabby",
+    "rank": -1
+  },
+  {
+    "id": "SalePrice_Up_1",
+    "name_fr": "Noble",
+    "name_en": "Noble",
+    "rank": 3
+  },
+  {
+    "id": "SalePrice_Up_2",
+    "name_fr": "Belle Fourrure",
+    "name_en": "Fine Furs",
+    "rank": 1
+  },
+  {
+    "id": "Salvation",
+    "name_fr": "Sauveur",
+    "name_en": "Savior",
+    "rank": 4
+  },
+  {
+    "id": "SelfDeathAddItemDrop_up_2",
+    "name_fr": "Généreux",
+    "name_en": "Service-Minded",
+    "rank": 3
+  },
+  {
+    "id": "SelfDeathAddItemDrop_up_3",
+    "name_fr": "Grand Prince",
+    "name_en": "Lavish Hospitality",
+    "rank": 4
+  },
+  {
+    "id": "Stamina_Down_1",
+    "name_fr": "Reclus",
+    "name_en": "Sickly",
+    "rank": -1
+  },
+  {
+    "id": "Stamina_Up_1",
+    "name_fr": "Infatigable",
+    "name_en": "Infinite Stamina",
+    "rank": 3
+  },
+  {
+    "id": "Stamina_Up_2",
+    "name_fr": "Force de la Nature",
+    "name_en": "Fit as a Fiddle",
+    "rank": 1
+  },
+  {
+    "id": "Stamina_Up_3",
+    "name_fr": "Vigueur Éternelle",
+    "name_en": "Eternal Engine",
+    "rank": 4
+  },
+  {
+    "id": "SwimSpeed_up_1",
+    "name_fr": "Nage Fluide",
+    "name_en": "Sleek Stroke",
+    "rank": 1
+  },
+  {
+    "id": "SwimSpeed_up_2",
+    "name_fr": "Coursier Marin",
+    "name_en": "Ace Swimmer",
+    "rank": 3
+  },
+  {
+    "id": "SwimSpeed_up_3",
+    "name_fr": "Roi des Vagues",
+    "name_en": "King of the Waves",
+    "rank": 4
+  },
+  {
+    "id": "Test_PalEgg_HatchingSpeed_Up",
+    "name_fr": "Philanthrope",
+    "name_en": "Philanthropist",
+    "rank": 3
+  },
+  {
+    "id": "TrainerATK_UP_1",
+    "name_fr": "Chef d'Assaut",
+    "name_en": "Vanguard",
+    "rank": 3
+  },
+  {
+    "id": "TrainerDEF_UP_1",
+    "name_fr": "Stratège de Forteresse",
+    "name_en": "Stronghold Strategist",
+    "rank": 3
+  },
+  {
+    "id": "TrainerLogging_up1",
+    "name_fr": "Chef d'Abattage",
+    "name_en": "Logging Foreman",
+    "rank": 3
+  },
+  {
+    "id": "TrainerMining_up1",
+    "name_fr": "Chef d'Extraction",
+    "name_en": "Mine Foreman",
+    "rank": 3
+  },
+  {
+    "id": "TrainerWorkSpeed_UP_1",
+    "name_fr": "Motivateur",
+    "name_en": "Motivational Leader",
+    "rank": 3
+  },
+  {
+    "id": "Vampire",
+    "name_fr": "Vampire",
+    "name_en": "Vampiric",
+    "rank": 4
+  },
+  {
+    "id": "Witch",
+    "name_fr": "Sorcière",
+    "name_en": "Siren of the Void",
+    "rank": 4
+  },
+  {
+    "id": "WorkSuitabilityAddRank_MonsterFarm_1",
+    "name_fr": "Apprenti Éleveur",
+    "name_en": "Farmhand",
+    "rank": 3
+  },
+  {
+    "id": "WorkSuitabilityAddRank_MonsterFarm_2",
+    "name_fr": "Maître Éleveur",
+    "name_en": "Ranch Master",
+    "rank": 4
+  },
+  {
+    "id": "WorldTree_ATK",
+    "name_fr": "Lame du Jugement",
+    "name_en": "Twin-Edged Holy Blade",
+    "rank": 5
+  },
+  {
+    "id": "WorldTree_ATK_DEF",
+    "name_fr": "Dieu de la Destruction",
+    "name_en": "God of Destruction",
+    "rank": 5
+  },
+  {
+    "id": "WorldTree_CraftSpeed",
+    "name_fr": "Main du Démon",
+    "name_en": "Demon’s Hand",
+    "rank": 5
+  },
+  {
+    "id": "WorldTree_DEF",
+    "name_fr": "Rempart Sacré",
+    "name_en": "Sanctified Meat Shield",
+    "rank": 5
+  },
+  {
+    "id": "WorldTree_FullStomach",
+    "name_fr": "Berceau Divin",
+    "name_en": "World Tree Seedbed",
+    "rank": 5
+  },
+  {
+    "id": "WorldTree_MoveSpeed",
+    "name_fr": "Traverse-Mondes",
+    "name_en": "Dimensional Leap",
+    "rank": 5
+  },
+  {
+    "id": "WorldTree_Sanity",
+    "name_fr": "Sage Immortel",
+    "name_en": "Hermit Sage",
+    "rank": 5
+  }
+]

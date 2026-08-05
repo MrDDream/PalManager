@@ -31,4 +31,7 @@ interface HumanDao {
         """,
     )
     fun search(query: String): Flow<List<HumanEntity>>
+
+    @Query("SELECT * FROM humans WHERE id = :id COLLATE NOCASE")
+    suspend fun getById(id: String): HumanEntity?
 }

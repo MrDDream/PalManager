@@ -20,5 +20,8 @@ class PalRepository @Inject constructor(
         emitAll(palDao.search(SearchNormalizer.normalize(query), element, minRarity, maxRarity))
     }
 
-    suspend fun getById(id: String): PalEntity? = palDao.getById(id)
+    suspend fun getById(id: String): PalEntity? {
+        datasetLoader.ensureLoaded()
+        return palDao.getById(id)
+    }
 }

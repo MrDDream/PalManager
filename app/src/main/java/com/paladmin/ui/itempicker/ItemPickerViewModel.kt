@@ -1,6 +1,7 @@
 package com.paladmin.ui.itempicker
 
 import com.paladmin.util.describe
+import com.paladmin.util.requireSuccess
 
 import android.content.Context
 import androidx.lifecycle.SavedStateHandle
@@ -88,6 +89,7 @@ class ItemPickerViewModel @Inject constructor(
             runCatching {
                 palDefenderClientFactory.create(profile)
                     .giveItems(playerIdentifier, GiveItemsRequest(items = listOf(GiveItemEntry(itemId = item.id, count = amount))))
+                    .requireSuccess()
             }.onSuccess {
                 _statusMessage.value = context.getString(R.string.item_given_fmt, item.nameFr, amount)
             }.onFailure { error ->

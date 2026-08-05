@@ -34,14 +34,19 @@ REST API and the **[PalDefender](https://github.com/UltimeIT/PalDefender)** mod'
 - **Dashboard**: server info, online players, FPS, Palworld/PalDefender versions, save,
   restart/stop.
 - **Connected players**: live list, kick/ban, private message, per-player inventory/team/
-  progression/technologies detail views.
+  progression/technologies detail views. Team Pals are tappable for a detail view (IV, Pal Soul,
+  active skills, passives).
+- **Guilds**: member list (searchable by guild or member name), all base locations pinned on the
+  live map, per-camp Pal roster with detail view, chest, expeditions and lab research progress.
 - **Give item / Give Pal**: search by name or image in a bundled catalog (items, Pals, NPCs,
   technologies), filters by category/element/rarity/job.
 - **Live map**: player positions on the Palpagos Islands map.
-- **Guilds** and **bans** (players + IP).
+- **Bans** (players + IP).
 - **Broadcast & maintenance**: broadcast, alerts, messages, danger zone (reload config,
   delete base).
-- Light/dark theme, FR/EN interface.
+- **Debug logging**: optional network request/response log written to a folder you choose, to
+  help diagnose connectivity issues.
+- Light/dark theme, FR/EN interface (consistently applied to in-game data too).
 
 ## Tech stack
 

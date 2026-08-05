@@ -42,7 +42,14 @@ object NetworkClients {
                 HttpLoggingInterceptor { message ->
                     HttpLoggingInterceptor.Logger.DEFAULT.log(message)
                     debugLogger?.log(message)
-                }.apply { level = HttpLoggingInterceptor.Level.BASIC },
+                }.apply {
+                    // BODY (pas juste BASIC) : le fichier de debug doit pouvoir montrer le JSON
+                    // réel renvoyé par le serveur (ex. IVs/PalSouls d'un Pal) pour diagnostiquer un
+                    // champ mal mappé sans deviner. Authorization masqué : c'est le seul header
+                    // sensible (Bearer PalDefender / Basic Palworld), le reste est sans risque.
+                    level = HttpLoggingInterceptor.Level.BODY
+                    redactHeader("Authorization")
+                },
             )
 
         if (trustAllCerts) {
