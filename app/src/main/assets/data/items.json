@@ -965,7 +965,7 @@
     "image": "AirGrapplingGun.webp"
   },
   {
-    "id": "Ammo_SkyBowArrow",
+    "id": "SkyBowArrow",
     "slug": "Mechanical_Bow_Ammo",
     "category": "Ammo",
     "name_fr": "Flèches d’arc astral",
@@ -974,7 +974,7 @@
     "stats": {
       "Technologies": "67"
     },
-    "image": "Ammo_SkyBowArrow.webp"
+    "image": "SkyBowArrow.webp"
   },
   {
     "id": "AncientArmor",
@@ -10039,14 +10039,14 @@
     "image": "Computer.webp"
   },
   {
-    "id": "Consume_SkillCard_Earth",
+    "id": "SkillCard_Earth",
     "slug": "Ground_Skill_Fruit%3A_Stone_Blast",
     "category": "Consumable",
     "name_fr": "Fruit Terra : Explosion Rocailleuse",
     "name_en": "Ground Skill Fruit: Stone Blast",
     "description": "À utiliser sur un Pal pour\r\nlui faire apprendre Explosion Rocailleuse.",
     "stats": {},
-    "image": "Consume_SkillCard_Earth.webp"
+    "image": "SkillCard_Earth.webp"
   },
   {
     "id": "CopperArmor",
@@ -11509,7 +11509,7 @@
     "image": "Flour.webp"
   },
   {
-    "id": "Food_Poppy",
+    "id": "Poppy",
     "slug": "Beautiful_Flower",
     "category": "Material",
     "name_fr": "Belle fleur",
@@ -11519,10 +11519,10 @@
       "Valeurs nutritionnelles": "1",
       "MEN": "5"
     },
-    "image": "Food_Poppy.webp"
+    "image": "Poppy.webp"
   },
   {
-    "id": "Food_Potion",
+    "id": "Potion",
     "slug": "Recovery_Meds",
     "category": "Consumable",
     "name_fr": "Potion",
@@ -11533,7 +11533,7 @@
       "Restauration des PV": "5",
       "Temps de restauration": "600"
     },
-    "image": "Food_Potion.webp"
+    "image": "Potion.webp"
   },
   {
     "id": "FragGrenade",
@@ -15931,64 +15931,64 @@
     "image": "Material_Cloth.webp"
   },
   {
-    "id": "Material_CopperOre",
+    "id": "CopperOre",
     "slug": "Ore",
     "category": "Material",
     "name_fr": "Minerai de métal",
     "name_en": "Ore",
     "description": "Se transforme en lingot une fois raffiné dans une fournaise.\r\nOn en trouve notamment dans les grottes.",
     "stats": {},
-    "image": "Material_CopperOre.webp"
+    "image": "CopperOre.webp"
   },
   {
-    "id": "Material_Fiber",
+    "id": "Fiber",
     "slug": "Fiber",
     "category": "Material",
     "name_fr": "Fibre",
     "name_en": "Fiber",
     "description": "Une fibre obtenue à partir des arbres.\r\nSert à fabriquer des arcs, entre autres.",
     "stats": {},
-    "image": "Material_Fiber.webp"
+    "image": "Fiber.webp"
   },
   {
-    "id": "Material_IceOrgan",
+    "id": "IceOrgan",
     "slug": "Ice_Organ",
     "category": "Material",
     "name_fr": "Organe de glace",
     "name_en": "Ice Organ",
     "description": "Un matériau obtenu sur les Pals de type glace.\r\nPeut servir à fabriquer des mines gelées.",
     "stats": {},
-    "image": "Material_IceOrgan.webp"
+    "image": "IceOrgan.webp"
   },
   {
-    "id": "Material_PalPassiveSkillChange",
+    "id": "PalPassiveSkillChange_CraftSpeed_up2",
     "slug": "Implant%3A_Artisan",
     "category": "Key_Items",
     "name_fr": "Implant : Appliqué",
     "name_en": "Implant: Artisan",
     "description": "Un implant à greffer sur un Pal pour modifier sa compétence passive.\r\nLe posséder permet de choisir une compétence passive sur une Table d'opération pour Pals.",
     "stats": {},
-    "image": "Material_PalPassiveSkillChange.webp"
+    "image": "PalPassiveSkillChange_CraftSpeed_up2.webp"
   },
   {
-    "id": "Material_Pal_crystal_S",
+    "id": "Pal_crystal_S",
     "slug": "Paldium_Fragment",
     "category": "Material",
     "name_fr": "Fragment de paldium",
     "name_en": "Paldium Fragment",
     "description": "Énergie cristallisée de l'Arbre-monde.\r\nPermet de créer des objets et des structures aux propriétés prodigieuses.",
     "stats": {},
-    "image": "Material_Pal_crystal_S.webp"
+    "image": "Pal_crystal_S.webp"
   },
   {
-    "id": "Material_Stone",
+    "id": "Stone",
     "slug": "Stone",
     "category": "Material",
     "name_fr": "Pierre",
     "name_en": "Stone",
     "description": "Un matériau utilisé pour fabriquer des structures et des objets.\r\nS’obtient en minant de la pierre.",
     "stats": {},
-    "image": "Material_Stone.webp"
+    "image": "Stone.webp"
   },
   {
     "id": "MeaninglessItem_ButcheringImportPal",
@@ -25756,14 +25756,14 @@
     "image": "WeakerBow_5.webp"
   },
   {
-    "id": "Weapon_Bat3",
+    "id": "Blueprint_Bat3_4",
     "slug": "Metal_Bat_Schematic_3",
     "category": "Schematic",
     "name_fr": "Plan de batte en métal 3",
     "name_en": "Metal Bat Schematic 3",
     "description": "Le posséder débloque la recette \r\n« Batte en métal (Épique) ».\r\nFabrication possible à : Chaîne de production d'armes.",
     "stats": {},
-    "image": "Weapon_Bat3.webp"
+    "image": "Blueprint_Bat3_4.webp"
   },
   {
     "id": "WhaleWhistle",
