@@ -1,5 +1,6 @@
 package com.paladmin.data.remote
 
+import com.paladmin.debug.DebugLogger
 import okhttp3.ConnectionPool
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
@@ -27,7 +28,7 @@ private val CLOSE_CONNECTION_INTERCEPTOR = Interceptor { chain ->
 
 object NetworkClients {
 
-    fun build(authInterceptor: Interceptor, trustAllCerts: Boolean = false): OkHttpClient {
+    fun build(authInterceptor: Interceptor, trustAllCerts: Boolean = false, debugLogger: DebugLogger? = null): OkHttpClient {
         val builder = OkHttpClient.Builder()
             .connectTimeout(10, TimeUnit.SECONDS)
             .readTimeout(15, TimeUnit.SECONDS)
@@ -38,7 +39,10 @@ object NetworkClients {
             .addInterceptor(authInterceptor)
             .addInterceptor(CLOSE_CONNECTION_INTERCEPTOR)
             .addInterceptor(
-                HttpLoggingInterceptor().apply { level = HttpLoggingInterceptor.Level.BASIC },
+                HttpLoggingInterceptor { message ->
+                    HttpLoggingInterceptor.Logger.DEFAULT.log(message)
+                    debugLogger?.log(message)
+                }.apply { level = HttpLoggingInterceptor.Level.BASIC },
             )
 
         if (trustAllCerts) {

@@ -1,6 +1,10 @@
 package com.paladmin.ui.settings
 
 import android.app.Activity
+import android.content.Intent
+import android.net.Uri
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -14,16 +18,20 @@ import androidx.compose.material3.FilterChip
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import androidx.documentfile.provider.DocumentFile
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.paladmin.R
 import com.paladmin.data.local.prefs.AppLanguage
@@ -36,7 +44,17 @@ fun AppSettingsScreen(
     viewModel: AppSettingsViewModel = hiltViewModel(),
 ) {
     val state by viewModel.state.collectAsState()
-    val activity = LocalContext.current as? Activity
+    val context = LocalContext.current
+    val activity = context as? Activity
+    val folderPicker = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocumentTree()) { uri ->
+        if (uri != null) {
+            context.contentResolver.takePersistableUriPermission(
+                uri,
+                Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION,
+            )
+            viewModel.setDebugLogFolder(uri)
+        }
+    }
 
     Scaffold(
         topBar = {
@@ -97,6 +115,45 @@ fun AppSettingsScreen(
                     }
                 }
             }
+
+            Card(modifier = Modifier.fillMaxWidth()) {
+                Column(modifier = Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                    Text(stringResource(R.string.settings_debug_header), style = MaterialTheme.typography.titleMedium)
+                    Text(
+                        stringResource(R.string.settings_debug_description),
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        verticalAlignment = Alignment.CenterVertically,
+                    ) {
+                        Text(
+                            text = state.debugLogFolderUri?.let { folderDisplayName(context, it) }
+                                ?: stringResource(R.string.settings_debug_no_folder),
+                            style = MaterialTheme.typography.bodyMedium,
+                            modifier = Modifier.weight(1f),
+                        )
+                        Switch(
+                            checked = state.debugLoggingEnabled,
+                            onCheckedChange = { checked ->
+                                if (checked && state.debugLogFolderUri == null) {
+                                    folderPicker.launch(null)
+                                } else {
+                                    viewModel.setDebugLoggingEnabled(checked)
+                                }
+                            },
+                        )
+                    }
+                    OutlinedButton(onClick = { folderPicker.launch(null) }) {
+                        Text(stringResource(R.string.settings_debug_choose_folder))
+                    }
+                }
+            }
         }
     }
 }
+
+private fun folderDisplayName(context: android.content.Context, uriString: String): String =
+    runCatching { DocumentFile.fromTreeUri(context, Uri.parse(uriString))?.name }
+        .getOrNull() ?: uriString

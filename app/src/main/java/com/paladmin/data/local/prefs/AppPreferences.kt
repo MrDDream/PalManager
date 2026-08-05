@@ -1,6 +1,7 @@
 package com.paladmin.data.local.prefs
 
 import android.content.Context
+import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.intPreferencesKey
 import androidx.datastore.preferences.core.longPreferencesKey
@@ -19,6 +20,8 @@ private val LAST_PROFILE_ID = longPreferencesKey("last_profile_id")
 private val DATASET_VERSION = intPreferencesKey("dataset_version")
 private val THEME_MODE = stringPreferencesKey("theme_mode")
 private val LANGUAGE = stringPreferencesKey("language")
+private val DEBUG_LOGGING_ENABLED = booleanPreferencesKey("debug_logging_enabled")
+private val DEBUG_LOG_FOLDER_URI = stringPreferencesKey("debug_log_folder_uri")
 
 enum class ThemeMode { SYSTEM, LIGHT, DARK }
 enum class AppLanguage(val code: String) { FRENCH("fr"), ENGLISH("en") }
@@ -60,5 +63,21 @@ class AppPreferences @Inject constructor(
 
     suspend fun setLanguage(language: AppLanguage) {
         context.dataStore.edit { it[LANGUAGE] = language.code }
+    }
+
+    /** Écriture d'un fichier de log dans le dossier [debugLogFolderUri] (SAF), pour le diagnostic. */
+    val debugLoggingEnabled: Flow<Boolean> = context.dataStore.data.map { it[DEBUG_LOGGING_ENABLED] ?: false }
+
+    suspend fun setDebugLoggingEnabled(enabled: Boolean) {
+        context.dataStore.edit { it[DEBUG_LOGGING_ENABLED] = enabled }
+    }
+
+    /** URI (arbre SAF, permission persistée par l'appelant) du dossier choisi pour le fichier de log. */
+    val debugLogFolderUri: Flow<String?> = context.dataStore.data.map { it[DEBUG_LOG_FOLDER_URI] }
+
+    suspend fun setDebugLogFolderUri(uri: String?) {
+        context.dataStore.edit { prefs ->
+            if (uri == null) prefs.remove(DEBUG_LOG_FOLDER_URI) else prefs[DEBUG_LOG_FOLDER_URI] = uri
+        }
     }
 }

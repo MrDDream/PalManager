@@ -294,4 +294,8 @@
     <string name="settings_theme_light">Clair</string>
     <string name="settings_theme_dark">Sombre</string>
     <string name="settings_language_header">Langue</string>
+    <string name="settings_debug_header">Debug</string>
+    <string name="settings_debug_description">Écrit un fichier de log des requêtes réseau dans le dossier choisi, pour aider au diagnostic.</string>
+    <string name="settings_debug_no_folder">Aucun dossier sélectionné</string>
+    <string name="settings_debug_choose_folder">Choisir un dossier</string>
 </resources>

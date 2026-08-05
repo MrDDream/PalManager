@@ -294,4 +294,8 @@
     <string name="settings_theme_light">Light</string>
     <string name="settings_theme_dark">Dark</string>
     <string name="settings_language_header">Language</string>
+    <string name="settings_debug_header">Debug</string>
+    <string name="settings_debug_description">Writes a network request log file to the chosen folder, to help with diagnostics.</string>
+    <string name="settings_debug_no_folder">No folder selected</string>
+    <string name="settings_debug_choose_folder">Choose a folder</string>
 </resources>

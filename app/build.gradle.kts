@@ -87,6 +87,7 @@ dependencies {
 
     implementation(libs.androidx.security.crypto)
     implementation(libs.androidx.datastore.preferences)
+    implementation(libs.androidx.documentfile)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

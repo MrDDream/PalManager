@@ -16,6 +16,7 @@ kotlinxSerializationConverter = "1.0.0"
 coilCompose = "2.7.0"
 securityCrypto = "1.1.0-alpha06"
 datastore = "1.1.1"
+documentfile = "1.0.1"
 junit = "4.13.2"
 androidxTestExt = "1.2.1"
 espresso = "3.6.1"
@@ -54,6 +55,7 @@ coil-compose = { group = "io.coil-kt", name = "coil-compose", version.ref = "coi
 
 androidx-security-crypto = { group = "androidx.security", name = "security-crypto", version.ref = "securityCrypto" }
 androidx-datastore-preferences = { group = "androidx.datastore", name = "datastore-preferences", version.ref = "datastore" }
+androidx-documentfile = { group = "androidx.documentfile", name = "documentfile", version.ref = "documentfile" }
 
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidxTestExt" }
