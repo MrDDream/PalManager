@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PalManager — Admin Android pour serveurs Palworld</title>
-<meta name="description" content="Application Android d'administration pour serveurs dédiés Palworld, via l'API REST officielle et PalDefender.">
+<title>PalManager — Android admin app for Palworld servers</title>
+<meta name="description" content="Android administration app for dedicated Palworld servers, via the official REST API and PalDefender.">
 <link rel="alternate" hreflang="fr" href="https://mrddream.github.io/PalManager/">
 <link rel="alternate" hreflang="en" href="https://mrddream.github.io/PalManager/en/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 108 108'%3E%3Cpath fill='%234CD08A' d='M39,66 a15,12 0 1,0 30,0 a15,12 0 1,0 -30,0 Z'/%3E%3Cpath fill='%234CD08A' d='M24,46 a8,10 0 1,0 16,0 a8,10 0 1,0 -16,0 Z'/%3E%3Cpath fill='%234CD08A' d='M36.5,34 a8.5,10.5 0 1,0 17,0 a8.5,10.5 0 1,0 -17,0 Z'/%3E%3Cpath fill='%234CD08A' d='M54.5,34 a8.5,10.5 0 1,0 17,0 a8.5,10.5 0 1,0 -17,0 Z'/%3E%3Cpath fill='%234CD08A' d='M68,46 a8,10 0 1,0 16,0 a8,10 0 1,0 -16,0 Z'/%3E%3C/svg%3E">
@@ -245,10 +245,10 @@
 
 <div class="topbar">
   <div class="wrap">
-    <nav class="lang-switch" aria-label="Langue / Language">
-      <span class="current">FR</span>
+    <nav class="lang-switch" aria-label="Language / Langue">
+      <a href="../index.html">FR</a>
       <span class="sep">·</span>
-      <a href="en/index.html">EN</a>
+      <span class="current">EN</span>
     </nav>
   </div>
 </div>
@@ -264,18 +264,18 @@
     </svg>
     <h1>PalManager</h1>
     <p class="tagline">
-      Pilote ton serveur dédié Palworld depuis ton téléphone — joueurs, inventaires, Pals, guildes,
-      bannissements et plus, via l'API officielle et PalDefender.
+      Run your dedicated Palworld server from your phone — players, inventories, Pals, guilds,
+      bans and more, via the official API and PalDefender.
     </p>
-    <div class="badge">⚠️ Projet non-officiel, sans lien avec Pocketpair</div>
+    <div class="badge">⚠️ Unofficial project, not affiliated with Pocketpair</div>
     <div class="cta-row">
       <a class="btn btn-primary" href="https://github.com/MrDDream/PalManager/releases/latest">
         <svg class="icon" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <path fill-rule="evenodd" d="M7.47 10.78a.75.75 0 001.06 0l3.75-3.75a.75.75 0 00-1.06-1.06L8.75 8.44V1.75a.75.75 0 00-1.5 0v6.69L4.78 5.97a.75.75 0 00-1.06 1.06l3.75 3.75zM3.75 13a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5z"/>
         </svg>
-        Télécharger l'APK
+        Download the APK
       </a>
-      <a class="btn btn-secondary btn-icon" href="https://github.com/MrDDream/PalManager" aria-label="Voir le code sur GitHub" title="Voir le code sur GitHub">
+      <a class="btn btn-secondary btn-icon" href="https://github.com/MrDDream/PalManager" aria-label="View source on GitHub" title="View source on GitHub">
         <svg class="icon" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
         </svg>
@@ -286,38 +286,38 @@
 
 <section>
   <div class="wrap">
-    <h2>Fonctionnalités</h2>
-    <p class="section-sub">Un panel d'admin complet, pas juste un give-item.</p>
+    <h2>Features</h2>
+    <p class="section-sub">A full admin panel, not just a give-item tool.</p>
     <div class="features">
       <div class="feature">
         <span class="emoji">📊</span>
         <h3>Dashboard</h3>
-        <p>Infos serveur, joueurs en ligne, FPS, versions Palworld/PalDefender, sauvegarde, redémarrage/arrêt.</p>
+        <p>Server info, online players, FPS, Palworld/PalDefender versions, save, restart/shutdown.</p>
       </div>
       <div class="feature">
         <span class="emoji">👥</span>
-        <h3>Joueurs connectés</h3>
-        <p>Liste en temps réel, kick/ban, message privé, inventaire/équipe/progression/technologies par joueur.</p>
+        <h3>Connected players</h3>
+        <p>Real-time list, kick/ban, private message, per-player inventory/team/progression/technologies.</p>
       </div>
       <div class="feature">
         <span class="emoji">🎁</span>
         <h3>Give item / Give Pal</h3>
-        <p>Recherche par nom ou image dans un catalogue embarqué (items, Pals, PNJ, technologies), filtres par catégorie/élément/rareté/métier.</p>
+        <p>Search by name or image in a bundled catalog (items, Pals, NPCs, technologies), filters by category/element/rarity/work suitability.</p>
       </div>
       <div class="feature">
         <span class="emoji">🗺️</span>
-        <h3>Carte en direct</h3>
-        <p>Position des joueurs sur la carte des Îles Palpagos.</p>
+        <h3>Live map</h3>
+        <p>Player positions on the Palpagos Islands map.</p>
       </div>
       <div class="feature">
         <span class="emoji">🛡️</span>
-        <h3>Guildes & bannissements</h3>
-        <p>Gestion des guildes, bannissements joueurs et IP.</p>
+        <h3>Guilds & bans</h3>
+        <p>Guild management, player and IP bans.</p>
       </div>
       <div class="feature">
         <span class="emoji">📣</span>
-        <h3>Diffusion & maintenance</h3>
-        <p>Broadcast, alertes, messages, zone danger (reload config, suppression de base).</p>
+        <h3>Broadcast & maintenance</h3>
+        <p>Broadcast, alerts, messages, danger zone (reload config, delete base).</p>
       </div>
     </div>
   </div>
@@ -325,27 +325,27 @@
 
 <section class="alt">
   <div class="wrap">
-    <h2>Aperçu</h2>
-    <p class="section-sub">Captures d'écran réelles de l'application (serveur/joueurs floutés pour la confidentialité).</p>
+    <h2>Preview</h2>
+    <p class="section-sub">Real screenshots of the app (server/players blurred for privacy).</p>
     <div class="shots">
-      <figure><img src="screenshots/home.png" alt="Dashboard" loading="lazy"><figcaption>Dashboard</figcaption></figure>
-      <figure><img src="screenshots/players.png" alt="Joueurs connectés" loading="lazy"><figcaption>Joueurs connectés</figcaption></figure>
-      <figure><img src="screenshots/give_item.png" alt="Donner un item" loading="lazy"><figcaption>Donner un item</figcaption></figure>
-      <figure><img src="screenshots/give_pals.png" alt="Donner un Pal" loading="lazy"><figcaption>Donner un Pal</figcaption></figure>
-      <figure><img src="screenshots/inventory.png" alt="Inventaire d'un joueur" loading="lazy"><figcaption>Inventaire d'un joueur</figcaption></figure>
-      <figure><img src="screenshots/alert.png" alt="Diffusion & maintenance" loading="lazy"><figcaption>Diffusion & maintenance</figcaption></figure>
+      <figure><img src="../screenshots/home.png" alt="Dashboard" loading="lazy"><figcaption>Dashboard</figcaption></figure>
+      <figure><img src="../screenshots/players.png" alt="Connected players" loading="lazy"><figcaption>Connected players</figcaption></figure>
+      <figure><img src="../screenshots/give_item.png" alt="Give an item" loading="lazy"><figcaption>Give an item</figcaption></figure>
+      <figure><img src="../screenshots/give_pals.png" alt="Give a Pal" loading="lazy"><figcaption>Give a Pal</figcaption></figure>
+      <figure><img src="../screenshots/inventory.png" alt="Player inventory" loading="lazy"><figcaption>Player inventory</figcaption></figure>
+      <figure><img src="../screenshots/alert.png" alt="Broadcast & maintenance" loading="lazy"><figcaption>Broadcast & maintenance</figcaption></figure>
     </div>
   </div>
 </section>
 
 <section>
   <div class="wrap">
-    <h2>Prérequis serveur</h2>
+    <h2>Server requirements</h2>
     <ul class="req-list">
-      <li>Un serveur Palworld avec l'<a href="https://docs.palworldgame.com/">API REST officielle</a> activée (<code>RESTAPIEnabled=True</code> dans <code>PalWorldSettings.ini</code>).</li>
-      <li>Le mod <a href="https://github.com/UltimeIT/PalDefender">PalDefender</a> installé et son API REST activée, pour les fonctionnalités que l'API officielle ne couvre pas (give item/Pal, techs, guildes, bans IP...).</li>
+      <li>A Palworld server with the <a href="https://docs.palworldgame.com/">official REST API</a> enabled (<code>RESTAPIEnabled=True</code> in <code>PalWorldSettings.ini</code>).</li>
+      <li>The <a href="https://github.com/UltimeIT/PalDefender">PalDefender</a> mod installed with its REST API enabled, for features the official API doesn't cover (give item/Pal, techs, guilds, IP bans...).</li>
     </ul>
-    <h2 style="margin-top:40px">Stack technique</h2>
+    <h2 style="margin-top:40px">Tech stack</h2>
     <div class="stack-pills">
       <span class="pill">Kotlin</span>
       <span class="pill">Jetpack Compose</span>
@@ -362,14 +362,14 @@
 <footer>
   <div class="wrap">
     <div class="links">
-      <a href="https://github.com/MrDDream/PalManager">Code source</a>
+      <a href="https://github.com/MrDDream/PalManager">Source code</a>
       <a href="https://github.com/MrDDream/PalManager/releases">Releases</a>
       <a href="https://github.com/MrDDream/PalManager/blob/main/README.md">README (EN)</a>
       <a href="https://github.com/MrDDream/PalManager/blob/main/README.fr.md">README (FR)</a>
-      <a href="https://github.com/MrDDream/PalManager/blob/main/LICENSE">Licence MIT</a>
+      <a href="https://github.com/MrDDream/PalManager/blob/main/LICENSE">MIT License</a>
     </div>
-    Les données de jeu (noms/images d'objets et de Pals) proviennent de <a href="https://paldb.cc">paldb.cc</a>
-    et restent la propriété de leurs ayants droit.
+    Game data (item/Pal names and images) comes from <a href="https://paldb.cc">paldb.cc</a>
+    and remains the property of its respective owners.
   </div>
 </footer>
 
