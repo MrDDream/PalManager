@@ -8,8 +8,28 @@
 <link rel="alternate" hreflang="fr" href="https://mrddream.github.io/PalManager/">
 <link rel="alternate" hreflang="en" href="https://mrddream.github.io/PalManager/en/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 108 108'%3E%3Cpath fill='%234CD08A' d='M39,66 a15,12 0 1,0 30,0 a15,12 0 1,0 -30,0 Z'/%3E%3Cpath fill='%234CD08A' d='M24,46 a8,10 0 1,0 16,0 a8,10 0 1,0 -16,0 Z'/%3E%3Cpath fill='%234CD08A' d='M36.5,34 a8.5,10.5 0 1,0 17,0 a8.5,10.5 0 1,0 -17,0 Z'/%3E%3Cpath fill='%234CD08A' d='M54.5,34 a8.5,10.5 0 1,0 17,0 a8.5,10.5 0 1,0 -17,0 Z'/%3E%3Cpath fill='%234CD08A' d='M68,46 a8,10 0 1,0 16,0 a8,10 0 1,0 -16,0 Z'/%3E%3C/svg%3E">
+<script>
+  if (localStorage.getItem('theme') === 'light') {
+    document.documentElement.setAttribute('data-theme', 'light');
+  }
+</script>
 <style>
   :root {
+    --green: #4cd08a;
+    --green-strong: #7fe6b3;
+    --green-soft: #103524;
+    --amber: #e8a33d;
+    --sky: #6fc3e8;
+    --danger: #e8837c;
+    --bg: #0e1512;
+    --surface: #141d19;
+    --surface-alt: #182420;
+    --text: #eaf3ef;
+    --text-muted: #9fb3ab;
+    --border: #263832;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 8px 24px -12px rgba(0, 0, 0, .5);
+  }
+  :root[data-theme="light"] {
     --green: #2fae72;
     --green-strong: #1f7a4e;
     --green-soft: #e6f9f0;
@@ -24,23 +44,6 @@
     --border: #dfe8e3;
     --shadow: 0 1px 2px rgba(20, 40, 30, .06), 0 8px 24px -12px rgba(20, 40, 30, .18);
   }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --green: #4cd08a;
-      --green-strong: #7fe6b3;
-      --green-soft: #103524;
-      --amber: #e8a33d;
-      --sky: #6fc3e8;
-      --danger: #e8837c;
-      --bg: #0e1512;
-      --surface: #141d19;
-      --surface-alt: #182420;
-      --text: #eaf3ef;
-      --text-muted: #9fb3ab;
-      --border: #263832;
-      --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 8px 24px -12px rgba(0, 0, 0, .5);
-    }
-  }
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body {
@@ -53,45 +56,73 @@
   a { color: var(--green); }
   .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
 
-  .topbar {
-    border-bottom: 1px solid var(--border);
-  }
-  .lang-switch {
+  .topbar { border-bottom: 1px solid var(--border); }
+  .topbar-inner {
     display: flex;
-    justify-content: flex-end;
     align-items: center;
-    gap: 8px;
-    padding: 12px 0;
-    font-size: .82rem;
-    font-weight: 600;
-    color: var(--text-muted);
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 9px 0;
   }
-  .lang-switch a { color: var(--text-muted); text-decoration: none; }
-  .lang-switch a:hover { color: var(--green); }
-  .lang-switch .current { color: var(--text); }
-  .lang-switch .sep { color: var(--border); }
+  .lang-switch { display: flex; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+  .lang-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 10px;
+    font-size: .76rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+    color: var(--text-muted);
+    text-decoration: none;
+    background: var(--surface-alt);
+    border: none;
+  }
+  .lang-switch a.lang-btn:hover { color: var(--text); }
+  .lang-switch .lang-btn:first-child { border-right: 1px solid var(--border); }
+  .lang-btn.active { background: var(--green); color: #04180f; }
+  .lang-btn .flag { width: 16px; height: 11px; flex: none; border-radius: 2px; box-shadow: 0 0 0 1px rgba(0, 0, 0, .25); }
+
+  .theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--surface-alt);
+    color: var(--text-muted);
+    cursor: pointer;
+    padding: 0;
+  }
+  .theme-toggle:hover { color: var(--text); }
+  .theme-toggle svg { width: 16px; height: 16px; fill: currentColor; }
+  .theme-toggle .icon-sun { display: none; }
+  :root[data-theme="light"] .theme-toggle .icon-sun { display: block; }
+  :root[data-theme="light"] .theme-toggle .icon-moon { display: none; }
 
   header.hero {
-    padding: 72px 0 56px;
+    padding: 44px 0 34px;
     text-align: center;
     background:
       radial-gradient(60% 50% at 50% 0%, var(--green-soft), transparent 70%);
   }
   .logo {
-    width: clamp(88px, 14vw, 120px);
-    height: clamp(88px, 14vw, 120px);
-    margin-bottom: 20px;
+    width: clamp(80px, 12vw, 108px);
+    height: clamp(80px, 12vw, 108px);
+    margin-bottom: 14px;
   }
   h1 {
-    font-size: clamp(2rem, 5vw, 2.75rem);
-    margin: 0 0 8px;
+    font-size: clamp(1.9rem, 4.6vw, 2.6rem);
+    margin: 0 0 6px;
     letter-spacing: -0.02em;
   }
   .tagline {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     color: var(--text-muted);
-    max-width: 620px;
-    margin: 0 auto 28px;
+    max-width: 600px;
+    margin: 0 auto 16px;
   }
   .badge {
     display: inline-flex;
@@ -104,7 +135,7 @@
     border: 1px solid color-mix(in srgb, var(--amber) 35%, transparent);
     padding: 5px 12px;
     border-radius: 999px;
-    margin-bottom: 28px;
+    margin-bottom: 18px;
   }
   .cta-row {
     display: flex;
@@ -116,7 +147,7 @@
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    padding: 13px 24px;
+    padding: 12px 22px;
     border-radius: 12px;
     font-weight: 600;
     font-size: .95rem;
@@ -136,9 +167,9 @@
     border-color: var(--border);
   }
   .btn-icon {
-    padding: 13px;
-    width: 48px;
-    height: 48px;
+    padding: 12px;
+    width: 46px;
+    height: 46px;
     justify-content: center;
   }
   .btn .icon {
@@ -148,23 +179,23 @@
     fill: currentColor;
   }
 
-  section { padding: 56px 0; }
+  section { padding: 34px 0; }
   section.alt { background: var(--surface-alt); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
   h2 {
-    font-size: 1.6rem;
-    margin: 0 0 8px;
+    font-size: 1.5rem;
+    margin: 0 0 6px;
     letter-spacing: -0.01em;
   }
   .section-sub {
     color: var(--text-muted);
-    margin: 0 0 32px;
+    margin: 0 0 20px;
     max-width: 620px;
   }
 
   .shots {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 16px;
+    gap: 12px;
   }
   .shots figure {
     margin: 0;
@@ -176,7 +207,7 @@
   }
   .shots img { display: block; width: 100%; height: auto; }
   .shots figcaption {
-    padding: 10px 14px;
+    padding: 9px 14px;
     font-size: .85rem;
     color: var(--text-muted);
     border-top: 1px solid var(--border);
@@ -185,13 +216,13 @@
   .features {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 16px;
+    gap: 12px;
   }
   .feature {
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 16px;
-    padding: 20px;
+    padding: 16px;
   }
   .feature h3 {
     margin: 0 0 6px;
@@ -202,7 +233,7 @@
     color: var(--text-muted);
     font-size: .9rem;
   }
-  .feature .emoji { font-size: 1.4rem; margin-bottom: 8px; display: block; }
+  .feature .emoji { font-size: 1.4rem; margin-bottom: 6px; display: block; }
 
   .stack-pills {
     display: flex; flex-wrap: wrap; gap: 8px;
@@ -227,17 +258,17 @@
   }
 
   footer {
-    padding: 40px 0 56px;
+    padding: 26px 0 34px;
     text-align: center;
     color: var(--text-muted);
     font-size: .85rem;
   }
   footer a { color: var(--text-muted); text-decoration: underline; text-underline-offset: 2px; }
-  footer .links { margin-bottom: 12px; display: flex; gap: 18px; justify-content: center; flex-wrap: wrap; }
+  footer .links { margin-bottom: 10px; display: flex; gap: 18px; justify-content: center; flex-wrap: wrap; }
 
   @media (max-width: 640px) {
-    header.hero { padding: 56px 0 40px; }
-    section { padding: 40px 0; }
+    header.hero { padding: 34px 0 26px; }
+    section { padding: 24px 0; }
   }
 </style>
 </head>
@@ -245,11 +276,36 @@
 
 <div class="topbar">
   <div class="wrap">
-    <nav class="lang-switch" aria-label="Langue / Language">
-      <span class="current">FR</span>
-      <span class="sep">·</span>
-      <a href="en/index.html">EN</a>
-    </nav>
+    <div class="topbar-inner">
+      <nav class="lang-switch" aria-label="Langue / Language">
+        <span class="lang-btn active" aria-current="page">
+          <svg class="flag" viewBox="0 0 3 2" aria-hidden="true">
+            <rect width="1" height="2" x="0" fill="#0055A4"/>
+            <rect width="1" height="2" x="1" fill="#FFFFFF"/>
+            <rect width="1" height="2" x="2" fill="#EF4135"/>
+          </svg>
+          FR
+        </span>
+        <a class="lang-btn" href="en/index.html">
+          <svg class="flag" viewBox="0 0 60 30" aria-hidden="true">
+            <rect width="60" height="30" fill="#00247d"/>
+            <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/>
+            <path d="M0,0 L60,30 M60,0 L0,30" stroke="#cf142b" stroke-width="2"/>
+            <path d="M30,0 V30 M0,15 H60" stroke="#fff" stroke-width="10"/>
+            <path d="M30,0 V30 M0,15 H60" stroke="#cf142b" stroke-width="6"/>
+          </svg>
+          EN
+        </a>
+      </nav>
+      <button type="button" id="themeToggle" class="theme-toggle" aria-label="Basculer le thème clair/sombre" title="Basculer le thème clair/sombre">
+        <svg class="icon icon-sun" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path fill-rule="evenodd" d="M8 12a4 4 0 100-8 4 4 0 000 8zm0 1.5a5.5 5.5 0 100-11 5.5 5.5 0 000 11zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13.5a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5a.75.75 0 01.75-.75zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM2.5 8a.75.75 0 01-.75.75H.25a.75.75 0 010-1.5h1.5A.75.75 0 012.5 8zm11.359-5.359a.75.75 0 010 1.061l-1.06 1.06a.75.75 0 11-1.062-1.06l1.061-1.06a.75.75 0 011.06 0zM4.762 11.238a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 01-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm8.476 0a.75.75 0 011.061 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061zM4.762 4.762a.75.75 0 01-1.061 0l-1.06-1.061a.75.75 0 011.06-1.06l1.06 1.06a.75.75 0 010 1.061z"/>
+        </svg>
+        <svg class="icon icon-moon" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M9.598 1.591a.749.749 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786z"/>
+        </svg>
+      </button>
+    </div>
   </div>
 </div>
 
@@ -345,7 +401,7 @@
       <li>Un serveur Palworld avec l'<a href="https://docs.palworldgame.com/">API REST officielle</a> activée (<code>RESTAPIEnabled=True</code> dans <code>PalWorldSettings.ini</code>).</li>
       <li>Le mod <a href="https://github.com/UltimeIT/PalDefender">PalDefender</a> installé et son API REST activée, pour les fonctionnalités que l'API officielle ne couvre pas (give item/Pal, techs, guildes, bans IP...).</li>
     </ul>
-    <h2 style="margin-top:40px">Stack technique</h2>
+    <h2 style="margin-top:28px">Stack technique</h2>
     <div class="stack-pills">
       <span class="pill">Kotlin</span>
       <span class="pill">Jetpack Compose</span>
@@ -372,6 +428,19 @@
     et restent la propriété de leurs ayants droit.
   </div>
 </footer>
+
+<script>
+  document.getElementById('themeToggle').addEventListener('click', function () {
+    var root = document.documentElement;
+    if (root.getAttribute('data-theme') === 'light') {
+      root.removeAttribute('data-theme');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      root.setAttribute('data-theme', 'light');
+      localStorage.setItem('theme', 'light');
+    }
+  });
+</script>
 
 </body>
 </html>
