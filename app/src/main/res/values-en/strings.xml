@@ -10,6 +10,7 @@
     <string name="common_close">Close</string>
     <string name="common_give">Give</string>
     <string name="common_save_action">Save</string>
+    <string name="common_retry">Retry</string>
     <string name="common_search_hint">Search by name or ID</string>
     <string name="common_id_fmt">ID: %1$s</string>
     <string name="common_player_label">Player</string>
@@ -47,6 +48,8 @@
     <!-- Add/edit server -->
     <string name="profile_edit_new_title">New server</string>
     <string name="profile_edit_edit_title">Edit server</string>
+    <string name="profile_edit_general_section">General</string>
+    <string name="profile_edit_preview_placeholder">New server</string>
     <string name="profile_edit_name_label">Profile name</string>
     <string name="profile_edit_icon_label">Icon</string>
     <string name="profile_edit_host_label">Host / IP</string>
@@ -56,6 +59,19 @@
     <string name="profile_edit_port_label">Port</string>
     <string name="profile_edit_admin_password_label">Admin password</string>
     <string name="profile_edit_bearer_token_label">Bearer token</string>
+    <string name="profile_edit_advanced_section">Advanced (SFTP)</string>
+    <string name="profile_edit_sftp_intro">Optional — enables the Logs menu (Palworld/PalDefender/UE4SS) via an SFTP connection to the server (same host as above).</string>
+    <string name="profile_edit_sftp_username_label">SSH username</string>
+    <string name="profile_edit_sftp_password_label">SSH password</string>
+    <string name="profile_edit_sftp_paldefender_log_label">PalDefender log path</string>
+    <string name="profile_edit_sftp_ue4ss_log_label">UE4SS log path</string>
+    <string name="profile_edit_sftp_pal_templates_label">Pal templates path</string>
+    <string name="profile_edit_sftp_pal_templates_support">PalDefender templates folder (one .json file per template)</string>
+    <string name="profile_edit_sftp_browse_cd">Browse</string>
+    <string name="profile_edit_sftp_pick_folder">Use this folder</string>
+    <string name="profile_edit_sftp_go_up">Parent folder</string>
+    <string name="profile_edit_verify_action">Verify</string>
+    <string name="profile_verify_title">Verification result</string>
 
     <!-- Dashboard -->
     <string name="dashboard_title_fallback">Dashboard</string>
@@ -76,6 +92,9 @@
     <string name="dashboard_action_bans">Bans</string>
     <string name="dashboard_action_save">Save the world</string>
     <string name="dashboard_action_broadcast">Broadcast &amp; maintenance</string>
+    <string name="dashboard_action_sftp">SFTP</string>
+    <string name="dashboard_action_logs">Logs</string>
+    <string name="dashboard_action_palcreator">Pal Creator</string>
     <string name="dashboard_danger_header">Danger zone</string>
     <string name="dashboard_action_restart">Restart the server</string>
     <string name="dashboard_action_force_stop">Immediate stop (force)</string>
@@ -116,7 +135,8 @@
     <string name="pal_partner_skill_header">Partner Skill</string>
     <string name="pal_level_label">Level</string>
     <string name="pal_template_dialog_title">Give a Pal template</string>
-    <string name="pal_template_name_label">Template name (e.g. MyPalTemplate)</string>
+    <string name="pal_template_name_label">my_pal_work</string>
+    <string name="pal_template_none_found">No template found</string>
     <string name="pal_given_fmt">%1$s (level %2$d) sent</string>
     <string name="pal_template_given_fmt">Template "%1$s" sent</string>
     <string name="pal_error_template_failed">Failed to send template</string>
@@ -337,4 +357,68 @@
     <string name="settings_debug_description">Writes a network request log file to the chosen folder, to help with diagnostics.</string>
     <string name="settings_debug_no_folder">No folder selected</string>
     <string name="settings_debug_choose_folder">Choose a folder</string>
+
+    <!-- Logs -->
+    <string name="logs_title">Logs</string>
+    <string name="logs_tab_paldefender">PalDefender</string>
+    <string name="logs_tab_ue4ss">UE4SS</string>
+    <string name="logs_not_configured">Configure the SFTP connection in the profile\'s Advanced settings to enable this feature.</string>
+    <string name="logs_open_profile_settings">Open profile settings</string>
+    <string name="logs_truncated_notice">Large file: only the last 512 KB are shown.</string>
+    <string name="logs_host_key_mismatch">The SSH host key has changed since the last connection — this can be expected (server reinstall) or a sign of network interception.</string>
+    <string name="logs_host_key_fmt">Expected: %1$s\nCurrent: %2$s</string>
+    <string name="logs_trust_new_key">Trust the new key</string>
+    <string name="logs_search_hint">Search in the log</string>
+    <string name="logs_search_results_fmt">%1$d line(s) found</string>
+    <string name="logs_empty">Empty log</string>
+    <string name="logs_search_no_results">No results for this search</string>
+
+    <!-- SFTP -->
+    <string name="sftp_upload_cd">Upload</string>
+    <string name="sftp_upload_file">File</string>
+    <string name="sftp_upload_folder">Folder</string>
+    <string name="sftp_folder_uploaded_fmt">Folder "%1$s" uploaded</string>
+    <string name="sftp_folder_upload_failed">Couldn\'t read the selected folder</string>
+    <string name="sftp_upload_name_title">Remote file name</string>
+    <string name="sftp_actions_cd">Actions</string>
+    <string name="sftp_download">Download</string>
+    <string name="sftp_rename">Rename</string>
+    <string name="sftp_copy">Copy</string>
+    <string name="sftp_cut">Cut</string>
+    <string name="sftp_delete">Delete</string>
+    <string name="sftp_paste_cd">Paste</string>
+    <string name="sftp_delete_confirm_title">Delete?</string>
+    <string name="sftp_delete_confirm_message_fmt">Permanently delete "%1$s"? This cannot be undone.</string>
+    <string name="sftp_downloaded_fmt">%1$s downloaded</string>
+    <string name="sftp_uploaded_fmt">%1$s uploaded</string>
+    <string name="sftp_renamed_fmt">%1$s renamed to %2$s</string>
+    <string name="sftp_pasted_fmt">%1$s pasted</string>
+    <string name="sftp_deleted_fmt">%1$s deleted</string>
+    <string name="sftp_op_failed_fmt">Failed for %1$s</string>
+    <string name="sftp_folder_empty">Empty folder</string>
+    <plurals name="sftp_entry_count">
+        <item quantity="one">%1$d item</item>
+        <item quantity="other">%1$d items</item>
+    </plurals>
+
+    <!-- Pal Creator -->
+    <string name="palcreator_title">Pal Creator</string>
+    <string name="palcreator_species_label">Species</string>
+    <string name="palcreator_change_species">Change species</string>
+    <string name="palcreator_gender_group">Gender:</string>
+    <string name="palcreator_type_group">Type:</string>
+    <string name="palcreator_boss_label">Alpha</string>
+    <string name="palcreator_filename_label">File name (e.g. my_pal_work)</string>
+    <string name="palcreator_filename_support">Saved under this name in the server\'s templates folder</string>
+    <string name="palcreator_nickname_label">Nickname (optional)</string>
+    <string name="palcreator_level_label">Level</string>
+    <string name="palcreator_shiny_label">Shiny</string>
+    <string name="palcreator_stat_hp">Health</string>
+    <string name="palcreator_stat_atk">Attack</string>
+    <string name="palcreator_stat_def">Defense</string>
+    <string name="palcreator_stat_work">Craft speed</string>
+    <string name="palcreator_search_skill_label">Add an active skill (max 3)</string>
+    <string name="palcreator_search_passive_label">Add a passive (max 4)</string>
+    <string name="palcreator_save">Save template</string>
+    <string name="palcreator_saved_fmt">Template "%1$s" saved</string>
 </resources>

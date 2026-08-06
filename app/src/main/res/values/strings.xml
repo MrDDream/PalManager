@@ -10,6 +10,7 @@
     <string name="common_close">Fermer</string>
     <string name="common_give">Donner</string>
     <string name="common_save_action">Enregistrer</string>
+    <string name="common_retry">Réessayer</string>
     <string name="common_search_hint">Rechercher par nom ou ID</string>
     <string name="common_id_fmt">ID : %1$s</string>
     <string name="common_player_label">Joueur</string>
@@ -47,6 +48,8 @@
     <!-- Ajout/édition de serveur -->
     <string name="profile_edit_new_title">Nouveau serveur</string>
     <string name="profile_edit_edit_title">Modifier le serveur</string>
+    <string name="profile_edit_general_section">Général</string>
+    <string name="profile_edit_preview_placeholder">Nouveau serveur</string>
     <string name="profile_edit_name_label">Nom du profil</string>
     <string name="profile_edit_icon_label">Icône</string>
     <string name="profile_edit_host_label">Hôte / IP</string>
@@ -56,6 +59,19 @@
     <string name="profile_edit_port_label">Port</string>
     <string name="profile_edit_admin_password_label">Mot de passe admin</string>
     <string name="profile_edit_bearer_token_label">Bearer token</string>
+    <string name="profile_edit_advanced_section">Avancées (SFTP)</string>
+    <string name="profile_edit_sftp_intro">Optionnel — active le menu Logs (Palworld/PalDefender/UE4SS) via une connexion SFTP au serveur (même hôte que ci-dessus).</string>
+    <string name="profile_edit_sftp_username_label">Utilisateur SSH</string>
+    <string name="profile_edit_sftp_password_label">Mot de passe SSH</string>
+    <string name="profile_edit_sftp_paldefender_log_label">Chemin log PalDefender</string>
+    <string name="profile_edit_sftp_ue4ss_log_label">Chemin log UE4SS</string>
+    <string name="profile_edit_sftp_pal_templates_label">Chemin templates Pal</string>
+    <string name="profile_edit_sftp_pal_templates_support">Dossier des templates PalDefender (un fichier .json par modèle)</string>
+    <string name="profile_edit_sftp_browse_cd">Parcourir</string>
+    <string name="profile_edit_sftp_pick_folder">Retenir ce dossier</string>
+    <string name="profile_edit_sftp_go_up">Dossier parent</string>
+    <string name="profile_edit_verify_action">Vérifier</string>
+    <string name="profile_verify_title">Résultat de la vérification</string>
 
     <!-- Dashboard -->
     <string name="dashboard_title_fallback">Dashboard</string>
@@ -76,6 +92,9 @@
     <string name="dashboard_action_bans">Bannissements</string>
     <string name="dashboard_action_save">Sauvegarder le monde</string>
     <string name="dashboard_action_broadcast">Diffusion &amp; maintenance</string>
+    <string name="dashboard_action_sftp">SFTP</string>
+    <string name="dashboard_action_logs">Logs</string>
+    <string name="dashboard_action_palcreator">Créateur de Pal</string>
     <string name="dashboard_danger_header">Zone danger</string>
     <string name="dashboard_action_restart">Redémarrer le serveur</string>
     <string name="dashboard_action_force_stop">Arrêt immédiat (force)</string>
@@ -116,7 +135,8 @@
     <string name="pal_partner_skill_header">Compétence de partenaire</string>
     <string name="pal_level_label">Niveau</string>
     <string name="pal_template_dialog_title">Donner un template Pal</string>
-    <string name="pal_template_name_label">Nom du template (ex: MyPalTemplate)</string>
+    <string name="pal_template_name_label">my_pal_work</string>
+    <string name="pal_template_none_found">Aucun modèle trouvé</string>
     <string name="pal_given_fmt">%1$s (niveau %2$d) envoyé</string>
     <string name="pal_template_given_fmt">Template "%1$s" envoyé</string>
     <string name="pal_error_template_failed">Échec de l\'envoi du template</string>
@@ -337,4 +357,68 @@
     <string name="settings_debug_description">Écrit un fichier de log des requêtes réseau dans le dossier choisi, pour aider au diagnostic.</string>
     <string name="settings_debug_no_folder">Aucun dossier sélectionné</string>
     <string name="settings_debug_choose_folder">Choisir un dossier</string>
+
+    <!-- Logs -->
+    <string name="logs_title">Logs</string>
+    <string name="logs_tab_paldefender">PalDefender</string>
+    <string name="logs_tab_ue4ss">UE4SS</string>
+    <string name="logs_not_configured">Configurez la connexion SFTP dans les paramètres Avancées du profil pour activer cette fonctionnalité.</string>
+    <string name="logs_open_profile_settings">Ouvrir les réglages du profil</string>
+    <string name="logs_truncated_notice">Fichier volumineux : seuls les derniers 512 Ko sont affichés.</string>
+    <string name="logs_host_key_mismatch">La clé de l\'hôte SSH a changé depuis la dernière connexion — cela peut être normal (réinstallation du serveur) ou le signe d\'une interception réseau.</string>
+    <string name="logs_host_key_fmt">Attendue : %1$s\nActuelle : %2$s</string>
+    <string name="logs_trust_new_key">Faire confiance à la nouvelle clé</string>
+    <string name="logs_search_hint">Rechercher dans le log</string>
+    <string name="logs_search_results_fmt">%1$d ligne(s) trouvée(s)</string>
+    <string name="logs_empty">Log vide</string>
+    <string name="logs_search_no_results">Aucun résultat pour cette recherche</string>
+
+    <!-- SFTP -->
+    <string name="sftp_upload_cd">Envoyer</string>
+    <string name="sftp_upload_file">Fichier</string>
+    <string name="sftp_upload_folder">Dossier</string>
+    <string name="sftp_folder_uploaded_fmt">Dossier « %1$s » envoyé</string>
+    <string name="sftp_folder_upload_failed">Impossible de lire le dossier sélectionné</string>
+    <string name="sftp_upload_name_title">Nom du fichier distant</string>
+    <string name="sftp_actions_cd">Actions</string>
+    <string name="sftp_download">Télécharger</string>
+    <string name="sftp_rename">Renommer</string>
+    <string name="sftp_copy">Copier</string>
+    <string name="sftp_cut">Couper</string>
+    <string name="sftp_delete">Supprimer</string>
+    <string name="sftp_paste_cd">Coller</string>
+    <string name="sftp_delete_confirm_title">Supprimer ?</string>
+    <string name="sftp_delete_confirm_message_fmt">Supprimer définitivement « %1$s » ? Cette action est irréversible.</string>
+    <string name="sftp_downloaded_fmt">%1$s téléchargé</string>
+    <string name="sftp_uploaded_fmt">%1$s envoyé</string>
+    <string name="sftp_renamed_fmt">%1$s renommé en %2$s</string>
+    <string name="sftp_pasted_fmt">%1$s collé</string>
+    <string name="sftp_deleted_fmt">%1$s supprimé</string>
+    <string name="sftp_op_failed_fmt">Échec pour %1$s</string>
+    <string name="sftp_folder_empty">Dossier vide</string>
+    <plurals name="sftp_entry_count">
+        <item quantity="one">%1$d élément</item>
+        <item quantity="other">%1$d éléments</item>
+    </plurals>
+
+    <!-- Créateur de Pal -->
+    <string name="palcreator_title">Créateur de Pal</string>
+    <string name="palcreator_species_label">Espèce</string>
+    <string name="palcreator_change_species">Changer d\'espèce</string>
+    <string name="palcreator_gender_group">Sexe :</string>
+    <string name="palcreator_type_group">Type :</string>
+    <string name="palcreator_boss_label">Alpha</string>
+    <string name="palcreator_filename_label">Nom du fichier (ex: my_pal_work)</string>
+    <string name="palcreator_filename_support">Enregistré sous ce nom dans le dossier templates du serveur</string>
+    <string name="palcreator_nickname_label">Surnom (optionnel)</string>
+    <string name="palcreator_level_label">Niveau</string>
+    <string name="palcreator_shiny_label">Chanceux</string>
+    <string name="palcreator_stat_hp">Santé</string>
+    <string name="palcreator_stat_atk">Attaque</string>
+    <string name="palcreator_stat_def">Défense</string>
+    <string name="palcreator_stat_work">Fabrication</string>
+    <string name="palcreator_search_skill_label">Ajouter une compétence active (max 3)</string>
+    <string name="palcreator_search_passive_label">Ajouter un passif (max 4)</string>
+    <string name="palcreator_save">Enregistrer le template</string>
+    <string name="palcreator_saved_fmt">Template « %1$s » enregistré</string>
 </resources>
