@@ -15,6 +15,8 @@ kotlinxSerialization = "1.7.1"
 kotlinxSerializationConverter = "1.0.0"
 coilCompose = "2.7.0"
 securityCrypto = "1.1.0-alpha06"
+sshj = "0.40.0"
+bouncycastle = "1.80.2"
 datastore = "1.1.1"
 documentfile = "1.0.1"
 junit = "4.13.2"
@@ -54,6 +56,8 @@ kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-
 coil-compose = { group = "io.coil-kt", name = "coil-compose", version.ref = "coilCompose" }
 
 androidx-security-crypto = { group = "androidx.security", name = "security-crypto", version.ref = "securityCrypto" }
+sshj = { group = "com.hierynomus", name = "sshj", version.ref = "sshj" }
+bouncycastle = { group = "org.bouncycastle", name = "bcprov-jdk18on", version.ref = "bouncycastle" }
 androidx-datastore-preferences = { group = "androidx.datastore", name = "datastore-preferences", version.ref = "datastore" }
 androidx-documentfile = { group = "androidx.documentfile", name = "documentfile", version.ref = "documentfile" }
 

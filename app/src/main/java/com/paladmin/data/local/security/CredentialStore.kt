@@ -37,10 +37,17 @@ class CredentialStore @Inject constructor(
         prefs.edit().putString(palDefenderKey(profileId), token).apply()
     }
 
+    fun getSftpPassword(profileId: Long): String = prefs.getString(sftpKey(profileId), "") ?: ""
+
+    fun setSftpPassword(profileId: Long, password: String) {
+        prefs.edit().putString(sftpKey(profileId), password).apply()
+    }
+
     fun clear(profileId: Long) {
-        prefs.edit().remove(palworldKey(profileId)).remove(palDefenderKey(profileId)).apply()
+        prefs.edit().remove(palworldKey(profileId)).remove(palDefenderKey(profileId)).remove(sftpKey(profileId)).apply()
     }
 
     private fun palworldKey(profileId: Long) = "palworld_password_$profileId"
     private fun palDefenderKey(profileId: Long) = "paldefender_token_$profileId"
+    private fun sftpKey(profileId: Long) = "sftp_password_$profileId"
 }

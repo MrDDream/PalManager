@@ -23,6 +23,11 @@ interface ServerProfileDao {
     @Update
     suspend fun update(entity: ServerProfileEntity)
 
+    /** Épinglage "confiance au premier usage" de la clé hôte SSH — mis à jour indépendamment du
+     * reste du profil (pas de repassage par CredentialStore, ce n'est pas un secret). */
+    @Query("UPDATE server_profiles SET sftpHostKeyFingerprint = :fingerprint WHERE id = :id")
+    suspend fun updateSftpHostKeyFingerprint(id: Long, fingerprint: String?)
+
     @Delete
     suspend fun delete(entity: ServerProfileEntity)
 }

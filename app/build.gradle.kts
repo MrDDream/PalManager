@@ -16,8 +16,8 @@ android {
         applicationId = "com.paladmin"
         minSdk = 26
         targetSdk = 34
-        versionCode = 3
-        versionName = "0.1.2"
+        versionCode = 4
+        versionName = "0.1.3"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -45,6 +45,9 @@ android {
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
+            // sshj -> BouncyCastle : bcprov/bcpkix/bcutil embarquent chacun le même manifest OSGi
+            // au même chemin (module Java 9 multi-release) -> conflit de fusion sans cette exclusion.
+            excludes += "META-INF/versions/9/OSGI-INF/MANIFEST.MF"
         }
     }
 }
@@ -86,6 +89,8 @@ dependencies {
     implementation(libs.coil.compose)
 
     implementation(libs.androidx.security.crypto)
+    implementation(libs.sshj)
+    implementation(libs.bouncycastle)
     implementation(libs.androidx.datastore.preferences)
     implementation(libs.androidx.documentfile)
 

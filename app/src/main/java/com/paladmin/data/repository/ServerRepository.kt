@@ -26,12 +26,19 @@ class ServerRepository @Inject constructor(
         val id = dao.upsert(entity)
         credentialStore.setPalworldPassword(id, profile.palworldPassword)
         credentialStore.setPalDefenderToken(id, profile.palDefenderToken)
+        credentialStore.setSftpPassword(id, profile.sftpPassword)
         return id
     }
 
     suspend fun deleteProfile(profile: ServerProfile) {
         dao.delete(profile.toEntity())
         credentialStore.clear(profile.id)
+    }
+
+    /** Épinglage "confiance au premier usage" de la clé hôte SSH, indépendant du reste du profil
+     * (appelé depuis l'écran Logs à la connexion, pas depuis le formulaire d'édition). */
+    suspend fun updateSftpHostKeyFingerprint(profileId: Long, fingerprint: String?) {
+        dao.updateSftpHostKeyFingerprint(profileId, fingerprint)
     }
 
     private fun ServerProfileEntity.toDomain(store: CredentialStore) = ServerProfile(
@@ -43,6 +50,13 @@ class ServerRepository @Inject constructor(
         palworldPassword = store.getPalworldPassword(id),
         palDefenderPort = palDefenderPort,
         palDefenderToken = store.getPalDefenderToken(id),
+        sftpPort = sftpPort,
+        sftpUsername = sftpUsername.orEmpty(),
+        sftpPassword = store.getSftpPassword(id),
+        sftpPalDefenderLogPath = sftpPalDefenderLogPath.orEmpty(),
+        sftpUe4ssLogPath = sftpUe4ssLogPath.orEmpty(),
+        sftpPalTemplatesPath = sftpPalTemplatesPath.orEmpty(),
+        sftpHostKeyFingerprint = sftpHostKeyFingerprint,
     )
 
     private fun ServerProfile.toEntity() = ServerProfileEntity(
@@ -58,5 +72,11 @@ class ServerRepository @Inject constructor(
         palworldTrustAllCerts = false,
         palDefenderPort = palDefenderPort,
         palDefenderUseHttps = false,
+        sftpPort = sftpPort,
+        sftpUsername = sftpUsername.ifBlank { null },
+        sftpPalDefenderLogPath = sftpPalDefenderLogPath.ifBlank { null },
+        sftpUe4ssLogPath = sftpUe4ssLogPath.ifBlank { null },
+        sftpPalTemplatesPath = sftpPalTemplatesPath.ifBlank { null },
+        sftpHostKeyFingerprint = sftpHostKeyFingerprint,
     )
 }
