@@ -1,6 +1,6 @@
-<p align="center"><img src="docs/logo.svg" width="88" height="88" alt="PalManager logo"></p>
+<p align="center"><img src="docs/logo.svg" width="110" height="110" alt="PalManager logo"></p>
 
-# PalManager 🐾
+# PalManager
 
 *[Lire en français](README.fr.md)*
 
