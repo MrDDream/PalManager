@@ -1,4 +1,4 @@
-<p align="center"><img src="docs/logo.svg" width="88" height="88" alt="Logo PalManager"></p>
+<p align="center"><img src="docs/hero.png" width="760" alt="PalManager — Écrans Donner un item, Dashboard et Créateur de Pal"></p>
 
 # PalManager
 
@@ -10,8 +10,6 @@ officielle Palworld et l'API REST du mod **[PalDefender](https://github.com/Ulti
 > Projet non-officiel, sans lien avec Pocketpair. Les données de jeu (noms/images d'objets et de
 > Pals) proviennent de [paldb.cc](https://paldb.cc) et restent la propriété de leurs ayants droit —
 > voir [Licence](#licence).
-
-<p align="center"><img src="docs/hero.png" width="760" alt="Écrans Donner un item, Dashboard et Créateur de Pal"></p>
 
 ## Aperçu
 

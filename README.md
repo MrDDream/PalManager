@@ -1,4 +1,4 @@
-<p align="center"><img src="docs/logo.svg" width="88" height="88" alt="PalManager logo"></p>
+<p align="center"><img src="docs/hero.png" width="760" alt="PalManager — Give an item, Dashboard and Pal Creator screens"></p>
 
 # PalManager
 
@@ -10,8 +10,6 @@ REST API and the **[PalDefender](https://github.com/UltimeIT/PalDefender)** mod'
 > Unofficial fan project, not affiliated with Pocketpair. Game data (item/Pal names and images)
 > comes from [paldb.cc](https://paldb.cc) and remains the property of its rightful owners — see
 > [License](#license).
-
-<p align="center"><img src="docs/hero.png" width="760" alt="Give an item, Dashboard and Pal Creator screens"></p>
 
 ## Screenshots
 
