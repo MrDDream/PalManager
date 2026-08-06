@@ -11,6 +11,8 @@ officielle Palworld et l'API REST du mod **[PalDefender](https://github.com/Ulti
 > Pals) proviennent de [paldb.cc](https://paldb.cc) et restent la propriété de leurs ayants droit —
 > voir [Licence](#licence).
 
+<p align="center"><img src="docs/hero.png" width="760" alt="Écrans Donner un item, Dashboard et Créateur de Pal"></p>
+
 ## Aperçu
 
 <table>

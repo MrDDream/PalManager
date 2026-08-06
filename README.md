@@ -11,6 +11,8 @@ REST API and the **[PalDefender](https://github.com/UltimeIT/PalDefender)** mod'
 > comes from [paldb.cc](https://paldb.cc) and remains the property of its rightful owners — see
 > [License](#license).
 
+<p align="center"><img src="docs/hero.png" width="760" alt="Give an item, Dashboard and Pal Creator screens"></p>
+
 ## Screenshots
 
 <table>
