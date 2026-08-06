@@ -1,7 +1,5 @@
 <p align="center"><img src="docs/wordmark.png" width="480" alt="PalManager — Tools to manage your server"></p>
 
-# PalManager
-
 *[Lire en français](README.fr.md)*
 
 Android admin app for dedicated **Palworld** servers, driven through the official Palworld
