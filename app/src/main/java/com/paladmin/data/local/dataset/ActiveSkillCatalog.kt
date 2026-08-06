@@ -24,6 +24,8 @@ class ActiveSkillCatalog @Inject constructor(
 
     suspend fun get(id: String): ActiveSkillDatasetEntry? = byId()[id]
 
+    suspend fun all(): List<ActiveSkillDatasetEntry> = byId().values.toList()
+
     private suspend fun byId(): Map<String, ActiveSkillDatasetEntry> {
         cache?.let { return it }
         return mutex.withLock {

@@ -1,6 +1,7 @@
 package com.paladmin.ui.components
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
@@ -74,15 +75,17 @@ fun PalInfoDialog(pal: PalInfo, onDismiss: () -> Unit) {
 }
 
 /** Libellé de catégorie hors du cadre, cadre de fond réservé au seul contenu — pour distinguer
- * visuellement le titre de bloc (IV, Âme, compétences...) de ses valeurs. */
+ * visuellement le titre de bloc (IV, Âme, compétences...) de ses valeurs. Public : même rendu
+ * réutilisé par le Créateur de Pal pour une cohérence visuelle affichage/création. */
 @Composable
-private fun PalInfoSection(label: String, content: @Composable ColumnScope.() -> Unit) {
+fun PalInfoSection(label: String, content: @Composable ColumnScope.() -> Unit) {
     Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
         Text(label, style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.onSurfaceVariant)
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .background(MaterialTheme.colorScheme.surfaceVariant, RoundedCornerShape(8.dp))
+                .background(MaterialTheme.colorScheme.surfaceVariant, RoundedCornerShape(10.dp))
+                .border(1.dp, MaterialTheme.colorScheme.outlineVariant, RoundedCornerShape(10.dp))
                 .padding(10.dp),
             content = content,
         )

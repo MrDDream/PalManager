@@ -24,6 +24,8 @@ class PassiveSkillCatalog @Inject constructor(
 
     suspend fun get(id: String): PassiveDatasetEntry? = byId()[id]
 
+    suspend fun all(): List<PassiveDatasetEntry> = byId().values.toList()
+
     private suspend fun byId(): Map<String, PassiveDatasetEntry> {
         cache?.let { return it }
         return mutex.withLock {
