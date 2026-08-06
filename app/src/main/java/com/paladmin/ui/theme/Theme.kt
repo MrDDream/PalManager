@@ -2,7 +2,9 @@ package com.paladmin.ui.theme
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Shapes
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.dynamicDarkColorScheme
 import androidx.compose.material3.dynamicLightColorScheme
@@ -10,6 +12,17 @@ import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.unit.dp
+
+// Shapes par défaut de M3 (ex. extraSmall = 4dp pour OutlinedTextField) sont trop discrètes et
+// rendent les champs/cartes visuellement carrés — arrondis explicitement augmentés ici.
+private val PalAdminShapes = Shapes(
+    extraSmall = RoundedCornerShape(10.dp),
+    small = RoundedCornerShape(12.dp),
+    medium = RoundedCornerShape(16.dp),
+    large = RoundedCornerShape(20.dp),
+    extraLarge = RoundedCornerShape(28.dp),
+)
 
 private val DarkColors = darkColorScheme(
     primary = PalGreen,
@@ -79,6 +92,7 @@ fun PalAdminTheme(
     MaterialTheme(
         colorScheme = colorScheme,
         typography = PalAdminTypography,
+        shapes = PalAdminShapes,
         content = content,
     )
 }
