@@ -49,6 +49,21 @@ officielle Palworld et l'API REST du mod **[PalDefender](https://github.com/Ulti
   les problèmes de connexion.
 - Thème clair/sombre, interface FR/EN (appliquée aussi aux données de jeu).
 
+### Boîte à outils SFTP (optionnelle)
+
+Renseignez des identifiants SSH/SFTP sur un profil serveur pour débloquer :
+
+- **Logs** : visionneuse de logs PalDefender/UE4SS avec recherche et sévérité en couleur.
+- **SFTP** : parcourir/upload (fichier seul ou dossier entier)/télécharger/renommer/copier/
+  couper/coller/supprimer sur le système de fichiers du serveur, avec épinglage de la clé hôte
+  à la première connexion (TOFU).
+- **Créateur de Pal** : construire un fichier Pal Template PalDefender (espèce, sexe, niveau,
+  chanceux/alpha, IV, Âme de Pal, compétences actives, passifs) depuis un formulaire et
+  l'enregistrer directement dans le dossier templates du serveur — plus de JSON à écrire à la main.
+- **Vérifier** : un bouton sur l'écran d'ajout/modification de serveur qui teste en un clic que
+  l'API Palworld, l'API PalDefender et le SFTP (si configuré) sont bien joignables avec les
+  identifiants tout juste saisis.
+
 ## Stack technique
 
 Kotlin + Jetpack Compose (Material 3), MVVM, Hilt, Room, Retrofit/OkHttp + kotlinx.serialization,

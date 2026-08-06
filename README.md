@@ -48,6 +48,19 @@ REST API and the **[PalDefender](https://github.com/UltimeIT/PalDefender)** mod'
   help diagnose connectivity issues.
 - Light/dark theme, FR/EN interface (consistently applied to in-game data too).
 
+### SFTP toolkit (optional)
+
+Configure SSH/SFTP credentials on a server profile to unlock:
+
+- **Logs**: PalDefender/UE4SS log viewer with search and colored severity.
+- **SFTP**: browse/upload (single file or whole folder)/download/rename/copy/cut/paste/delete on
+  the server's filesystem, with trust-on-first-use host key pinning.
+- **Pal Creator**: build a PalDefender Pal Template file (species, gender, level, shiny/alpha,
+  IVs, Pal Souls, active skills, passives) from a form and save it straight to the server's
+  template folder — no manual JSON editing.
+- **Verify**: a one-tap check on the Add/Edit server screen that the Palworld API, PalDefender
+  API, and SFTP (if configured) are all reachable with the credentials you just typed in.
+
 ## Tech stack
 
 Kotlin + Jetpack Compose (Material 3), MVVM, Hilt, Room, Retrofit/OkHttp + kotlinx.serialization,
