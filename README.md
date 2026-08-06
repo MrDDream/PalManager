@@ -26,6 +26,11 @@ REST API and the **[PalDefender](https://github.com/UltimeIT/PalDefender)** mod'
 </tr>
 <tr>
 <td align="center"><b>Add a server</b><br><img src="docs/screenshots/add_server.png" width="230"></td>
+<td align="center"><b>Pal Creator</b><br><img src="docs/screenshots/pal_creator.png" width="230"></td>
+<td align="center"><b>SFTP file manager</b><br><img src="docs/screenshots/sftp.png" width="230"></td>
+</tr>
+<tr>
+<td align="center"><b>Logs</b><br><img src="docs/screenshots/logs.png" width="230"></td>
 </tr>
 </table>
 

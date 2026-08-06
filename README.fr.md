@@ -26,6 +26,11 @@ officielle Palworld et l'API REST du mod **[PalDefender](https://github.com/Ulti
 </tr>
 <tr>
 <td align="center"><b>Ajout d'un serveur</b><br><img src="docs/screenshots/add_server.png" width="230"></td>
+<td align="center"><b>Créateur de Pal</b><br><img src="docs/screenshots/pal_creator.png" width="230"></td>
+<td align="center"><b>Gestionnaire SFTP</b><br><img src="docs/screenshots/sftp.png" width="230"></td>
+</tr>
+<tr>
+<td align="center"><b>Logs</b><br><img src="docs/screenshots/logs.png" width="230"></td>
 </tr>
 </table>
 
