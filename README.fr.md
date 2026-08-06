@@ -1,4 +1,4 @@
-<p align="center"><img src="docs/logo.svg" width="110" height="110" alt="Logo PalManager"></p>
+<p align="center"><img src="docs/wordmark.png" width="480" alt="PalManager — Tools to manage your server"></p>
 
 # PalManager 
 
