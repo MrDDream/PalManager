@@ -1,7 +1,5 @@
 <p align="center"><img src="docs/wordmark.png" width="480" alt="PalManager — Tools to manage your server"></p>
 
-# PalManager 
-
 *[Read in English](README.md)*
 
 Application Android d'administration pour serveurs dédiés **Palworld**, pilotée via l'API REST
