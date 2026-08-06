@@ -26,11 +26,15 @@ import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
+import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.ExposedDropdownMenuBox
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.MenuAnchorType
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
@@ -102,7 +106,10 @@ fun PalPickerScreen(
                     }
                 },
                 actions = {
-                    OutlinedButton(onClick = { showTemplateDialog = true }, modifier = Modifier.padding(end = 8.dp)) {
+                    OutlinedButton(
+                        onClick = { showTemplateDialog = true; viewModel.loadTemplates() },
+                        modifier = Modifier.padding(end = 8.dp),
+                    ) {
                         Text(stringResource(R.string.palpicker_template_button))
                     }
                 },
@@ -215,8 +222,14 @@ fun PalPickerScreen(
     }
 
     if (showTemplateDialog) {
+        val isSftpConfigured by viewModel.isSftpConfigured.collectAsState()
+        val templates by viewModel.templates.collectAsState()
+        val templatesLoading by viewModel.templatesLoading.collectAsState()
         GivePalTemplateDialog(
             players = players,
+            isSftpConfigured = isSftpConfigured,
+            templates = templates,
+            templatesLoading = templatesLoading,
             onDismiss = { showTemplateDialog = false },
             onConfirm = { templateName, playerIdentifier ->
                 viewModel.givePalTemplate(templateName, playerIdentifier)
@@ -438,6 +451,9 @@ private fun PartnerSkillBlock(skill: PalPartnerSkillDto, modifier: Modifier = Mo
 @Composable
 private fun GivePalTemplateDialog(
     players: List<PalworldPlayer>,
+    isSftpConfigured: Boolean,
+    templates: List<String>,
+    templatesLoading: Boolean,
     onDismiss: () -> Unit,
     onConfirm: (templateName: String, playerIdentifier: String) -> Unit,
 ) {
@@ -449,12 +465,21 @@ private fun GivePalTemplateDialog(
         title = { Text(stringResource(R.string.pal_template_dialog_title)) },
         text = {
             Column {
-                OutlinedTextField(
+                TemplateNameField(
                     value = templateName,
                     onValueChange = { templateName = it },
-                    label = { Text(stringResource(R.string.pal_template_name_label)) },
+                    templates = templates,
+                    isLoading = isSftpConfigured && templatesLoading,
                     modifier = Modifier.fillMaxWidth(),
                 )
+                if (isSftpConfigured && !templatesLoading && templates.isEmpty()) {
+                    Text(
+                        stringResource(R.string.pal_template_none_found),
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        modifier = Modifier.padding(top = 4.dp),
+                    )
+                }
                 PlayerSearchField(
                     players = players,
                     selectedPlayer = selectedPlayer,
@@ -475,4 +500,49 @@ private fun GivePalTemplateDialog(
             OutlinedButton(onClick = onDismiss) { Text(stringResource(R.string.common_cancel)) }
         },
     )
+}
+
+/** Recherche-comme-tu-tapes façon [PlayerSearchField] plutôt qu'un nuage de chips (illisible et non
+ * scrollable dans un dialogue au-delà d'une poignée de templates — vu jusqu'à 50 sur un vrai
+ * serveur) : la liste se réduit en tapant, le menu défile tout seul si elle reste longue. Repli sur
+ * un simple champ texte si le SFTP n'est pas configuré (pas de liste à proposer). */
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun TemplateNameField(
+    value: String,
+    onValueChange: (String) -> Unit,
+    templates: List<String>,
+    isLoading: Boolean,
+    modifier: Modifier = Modifier,
+) {
+    if (templates.isEmpty()) {
+        OutlinedTextField(
+            value = value,
+            onValueChange = onValueChange,
+            label = { Text(stringResource(R.string.pal_template_name_label)) },
+            trailingIcon = { if (isLoading) CircularProgressIndicator(modifier = Modifier.size(20.dp)) },
+            modifier = modifier,
+        )
+        return
+    }
+
+    var expanded by remember { mutableStateOf(false) }
+    val results = remember(templates, value) {
+        if (value.isBlank()) templates else templates.filter { it.contains(value, ignoreCase = true) }
+    }
+
+    ExposedDropdownMenuBox(expanded = expanded && results.isNotEmpty(), onExpandedChange = { expanded = it }, modifier = modifier) {
+        OutlinedTextField(
+            value = value,
+            onValueChange = { onValueChange(it); expanded = true },
+            label = { Text(stringResource(R.string.pal_template_name_label)) },
+            singleLine = true,
+            modifier = Modifier.fillMaxWidth().menuAnchor(MenuAnchorType.PrimaryEditable),
+        )
+        ExposedDropdownMenu(expanded = expanded && results.isNotEmpty(), onDismissRequest = { expanded = false }) {
+            results.forEach { name ->
+                DropdownMenuItem(text = { Text(name) }, onClick = { onValueChange(name); expanded = false })
+            }
+        }
+    }
 }

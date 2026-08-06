@@ -13,7 +13,10 @@ import com.paladmin.ui.guilds.GuildsScreen
 import com.paladmin.ui.humanpicker.HumanPickerScreen
 import com.paladmin.ui.itempicker.ItemPickerScreen
 import com.paladmin.ui.livemap.LiveMapScreen
+import com.paladmin.ui.logs.LogsScreen
+import com.paladmin.ui.palcreator.PalCreatorScreen
 import com.paladmin.ui.palpicker.PalPickerScreen
+import com.paladmin.ui.sftp.SftpScreen
 import com.paladmin.ui.players.PlayersScreen
 import com.paladmin.ui.profiles.AddEditProfileScreen
 import com.paladmin.ui.profiles.ServerProfileListScreen
@@ -70,6 +73,9 @@ fun PalAdminNavHost(navController: NavHostController) {
                 onOpenBroadcast = { navController.navigate(NavRoutes.broadcast(profileId)) },
                 onOpenLiveMap = { navController.navigate(NavRoutes.liveMap(profileId)) },
                 onOpenHumanPicker = { navController.navigate(NavRoutes.humanPicker(profileId)) },
+                onOpenLogs = { navController.navigate(NavRoutes.logs(profileId)) },
+                onOpenSftp = { navController.navigate(NavRoutes.sftp(profileId)) },
+                onOpenPalCreator = { navController.navigate(NavRoutes.palCreator(profileId)) },
             )
         }
         composable(
@@ -126,6 +132,36 @@ fun PalAdminNavHost(navController: NavHostController) {
             arguments = listOf(navArgument("profileId") { type = NavType.StringType }),
         ) {
             HumanPickerScreen(onBack = { navController.popBackStack() })
+        }
+        composable(
+            route = NavRoutes.LOGS,
+            arguments = listOf(navArgument("profileId") { type = NavType.StringType }),
+        ) { backStackEntry ->
+            val profileId = checkNotNull(backStackEntry.arguments?.getString("profileId")).toLong()
+            LogsScreen(
+                onBack = { navController.popBackStack() },
+                onOpenEditProfile = { navController.navigate(NavRoutes.addEditProfile(profileId)) },
+            )
+        }
+        composable(
+            route = NavRoutes.SFTP,
+            arguments = listOf(navArgument("profileId") { type = NavType.StringType }),
+        ) { backStackEntry ->
+            val profileId = checkNotNull(backStackEntry.arguments?.getString("profileId")).toLong()
+            SftpScreen(
+                onBack = { navController.popBackStack() },
+                onOpenEditProfile = { navController.navigate(NavRoutes.addEditProfile(profileId)) },
+            )
+        }
+        composable(
+            route = NavRoutes.PAL_CREATOR,
+            arguments = listOf(navArgument("profileId") { type = NavType.StringType }),
+        ) { backStackEntry ->
+            val profileId = checkNotNull(backStackEntry.arguments?.getString("profileId")).toLong()
+            PalCreatorScreen(
+                onBack = { navController.popBackStack() },
+                onOpenEditProfile = { navController.navigate(NavRoutes.addEditProfile(profileId)) },
+            )
         }
     }
 }

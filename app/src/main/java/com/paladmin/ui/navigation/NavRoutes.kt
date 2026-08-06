@@ -14,6 +14,9 @@ object NavRoutes {
     const val BROADCAST = "dashboard/{profileId}/broadcast"
     const val LIVE_MAP = "dashboard/{profileId}/livemap?focusPoints={focusPoints}"
     const val HUMAN_PICKER = "dashboard/{profileId}/humans"
+    const val LOGS = "dashboard/{profileId}/logs"
+    const val SFTP = "dashboard/{profileId}/sftp"
+    const val PAL_CREATOR = "dashboard/{profileId}/palcreator"
 
     fun addEditProfile(profileId: Long? = null) = "profiles/edit?profileId=${profileId ?: -1}"
     fun dashboard(profileId: Long) = "dashboard/$profileId"
@@ -28,4 +31,7 @@ object NavRoutes {
     fun liveMap(profileId: Long, focusPoints: List<Pair<Double, Double>> = emptyList()) =
         "dashboard/$profileId/livemap?focusPoints=${focusPoints.joinToString(";") { (x, y) -> "$x,$y" }}"
     fun humanPicker(profileId: Long) = "dashboard/$profileId/humans"
+    fun logs(profileId: Long) = "dashboard/$profileId/logs"
+    fun sftp(profileId: Long) = "dashboard/$profileId/sftp"
+    fun palCreator(profileId: Long) = "dashboard/$profileId/palcreator"
 }

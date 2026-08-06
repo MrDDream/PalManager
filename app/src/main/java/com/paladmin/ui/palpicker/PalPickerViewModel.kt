@@ -13,8 +13,12 @@ import com.paladmin.data.remote.paldefender.GivePalTemplateRequest
 import com.paladmin.data.remote.paldefender.PalDefenderClientFactory
 import com.paladmin.data.remote.palworld.PalworldClientFactory
 import com.paladmin.data.remote.palworld.PalworldPlayer
+import com.paladmin.data.model.ServerProfile
+import com.paladmin.data.model.SftpLogDefaults
 import com.paladmin.data.repository.PalRepository
 import com.paladmin.data.repository.ServerRepository
+import com.paladmin.data.sftp.SftpLogClient
+import com.paladmin.data.sftp.TofuResult
 import com.paladmin.util.describe
 import com.paladmin.util.requireSuccess
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -45,10 +49,21 @@ class PalPickerViewModel @Inject constructor(
     private val serverRepository: ServerRepository,
     private val palworldClientFactory: PalworldClientFactory,
     private val palDefenderClientFactory: PalDefenderClientFactory,
+    private val sftpLogClient: SftpLogClient,
     savedStateHandle: SavedStateHandle,
 ) : ViewModel() {
 
     private val profileId: Long = checkNotNull(savedStateHandle.get<String>("profileId")).toLong()
+
+    private val _profile = MutableStateFlow<ServerProfile?>(null)
+    val isSftpConfigured: StateFlow<Boolean> = _profile.map { it?.isSftpConfigured == true }
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), false)
+
+    private val _templates = MutableStateFlow<List<String>>(emptyList())
+    val templates: StateFlow<List<String>> = _templates.asStateFlow()
+
+    private val _templatesLoading = MutableStateFlow(false)
+    val templatesLoading: StateFlow<Boolean> = _templatesLoading.asStateFlow()
 
     private val _query = MutableStateFlow("")
     val query: StateFlow<String> = _query.asStateFlow()
@@ -86,6 +101,7 @@ class PalPickerViewModel @Inject constructor(
 
     init {
         loadPlayers()
+        viewModelScope.launch { _profile.value = serverRepository.getProfile(profileId) }
     }
 
     fun onQueryChange(value: String) {
@@ -124,6 +140,38 @@ class PalPickerViewModel @Inject constructor(
             }.onFailure { error ->
                 _statusMessage.value = error.describe(context.getString(R.string.item_error_send_failed))
             }
+        }
+    }
+
+    /** Convenience uniquement : silencieux en cas d'échec (mismatch de clé hôte inclus), la saisie
+     * manuelle du nom de modèle reste toujours disponible dans le dialogue — la vraie gestion
+     * sécurisée (épinglage, erreurs détaillées) est le rôle de l'écran SFTP dédié. */
+    fun loadTemplates() {
+        val profile = _profile.value ?: return
+        if (!profile.isSftpConfigured) return
+        _templatesLoading.value = true
+        viewModelScope.launch {
+            val result = sftpLogClient.listDirectorySecure(
+                host = profile.host,
+                port = profile.sftpPort,
+                username = profile.sftpUsername,
+                password = profile.sftpPassword,
+                path = profile.sftpPalTemplatesPath.ifBlank { SftpLogDefaults.PAL_TEMPLATES_PATH },
+                knownHostKeyFingerprint = profile.sftpHostKeyFingerprint,
+            )
+            if (result is TofuResult.Success) {
+                if (profile.sftpHostKeyFingerprint != result.hostKeyFingerprint) {
+                    serverRepository.updateSftpHostKeyFingerprint(profileId, result.hostKeyFingerprint)
+                    _profile.value = profile.copy(sftpHostKeyFingerprint = result.hostKeyFingerprint)
+                }
+                _templates.value = result.value
+                    .filter { !it.isDirectory && it.name.endsWith(".json", ignoreCase = true) }
+                    .map { it.name.removeSuffix(".json") }
+                    .sorted()
+            } else {
+                _templates.value = emptyList()
+            }
+            _templatesLoading.value = false
         }
     }
 

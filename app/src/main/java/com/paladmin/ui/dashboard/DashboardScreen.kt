@@ -13,9 +13,11 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.AutoAwesome
 import androidx.compose.material.icons.filled.Block
 import androidx.compose.material.icons.filled.Campaign
 import androidx.compose.material.icons.filled.ChevronRight
+import androidx.compose.material.icons.filled.Description
 import androidx.compose.material.icons.filled.Dns
 import androidx.compose.material.icons.filled.Face
 import androidx.compose.material.icons.filled.Groups
@@ -27,6 +29,7 @@ import androidx.compose.material.icons.filled.RestartAlt
 import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material.icons.filled.Save
 import androidx.compose.material.icons.filled.Stop
+import androidx.compose.material.icons.filled.Storage
 import androidx.compose.material.icons.filled.Warning
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
@@ -76,6 +79,9 @@ fun DashboardScreen(
     onOpenBroadcast: () -> Unit,
     onOpenLiveMap: () -> Unit,
     onOpenHumanPicker: () -> Unit,
+    onOpenLogs: () -> Unit,
+    onOpenSftp: () -> Unit,
+    onOpenPalCreator: () -> Unit,
     viewModel: DashboardViewModel = hiltViewModel(),
 ) {
     val state by viewModel.state.collectAsState()
@@ -187,19 +193,29 @@ fun DashboardScreen(
                         HorizontalDivider()
                         ActionRow(Icons.Filled.Map, stringResource(R.string.dashboard_action_livemap), onClick = onOpenLiveMap)
                         HorizontalDivider()
-                        ActionRow(Icons.Filled.Inventory2, stringResource(R.string.dashboard_action_give_item), onClick = onOpenItemPicker)
+                        ActionRow(Icons.Filled.Groups, stringResource(R.string.dashboard_action_guilds), onClick = onOpenGuilds)
                         HorizontalDivider()
-                        ActionRow(Icons.Filled.Pets, stringResource(R.string.dashboard_action_give_pal), onClick = onOpenPalPicker)
+                        ActionRow(Icons.Filled.Inventory2, stringResource(R.string.dashboard_action_give_item), onClick = onOpenItemPicker)
                         HorizontalDivider()
                         ActionRow(Icons.Filled.Face, stringResource(R.string.dashboard_action_give_human), onClick = onOpenHumanPicker)
                         HorizontalDivider()
-                        ActionRow(Icons.Filled.Groups, stringResource(R.string.dashboard_action_guilds), onClick = onOpenGuilds)
+                        ActionRow(Icons.Filled.Pets, stringResource(R.string.dashboard_action_give_pal), onClick = onOpenPalPicker)
+                        if (state.profile?.isSftpConfigured == true) {
+                            HorizontalDivider()
+                            ActionRow(Icons.Filled.AutoAwesome, stringResource(R.string.dashboard_action_palcreator), onClick = onOpenPalCreator)
+                        }
                         HorizontalDivider()
                         ActionRow(Icons.Filled.Block, stringResource(R.string.dashboard_action_bans), onClick = onOpenBans)
                         HorizontalDivider()
-                        ActionRow(Icons.Filled.Save, stringResource(R.string.dashboard_action_save), onClick = { showSaveConfirm = true })
+                        ActionRow(Icons.Filled.Campaign, stringResource(R.string.dashboard_action_broadcast), onClick = onOpenBroadcast)
                         HorizontalDivider()
-                        ActionRow(Icons.Filled.Campaign, stringResource(R.string.dashboard_action_broadcast), onClick = onOpenBroadcast, showChevron = true)
+                        ActionRow(Icons.Filled.Save, stringResource(R.string.dashboard_action_save), onClick = { showSaveConfirm = true })
+                        if (state.profile?.isSftpConfigured == true) {
+                            HorizontalDivider()
+                            ActionRow(Icons.Filled.Description, stringResource(R.string.dashboard_action_logs), onClick = onOpenLogs)
+                            HorizontalDivider()
+                            ActionRow(Icons.Filled.Storage, stringResource(R.string.dashboard_action_sftp), onClick = onOpenSftp)
+                        }
                     }
                 }
             }
