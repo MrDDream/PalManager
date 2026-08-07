@@ -32,6 +32,6 @@ interface ItemDao {
     @Query("SELECT DISTINCT category FROM items ORDER BY category")
     fun observeCategories(): Flow<List<String>>
 
-    @Query("SELECT * FROM items WHERE id = :id")
+    @Query("SELECT * FROM items WHERE id = :id COLLATE NOCASE")
     suspend fun getById(id: String): ItemEntity?
 }

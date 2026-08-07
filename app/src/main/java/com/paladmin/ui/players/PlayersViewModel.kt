@@ -196,7 +196,9 @@ class PlayersViewModel @Inject constructor(
                     slots.map {
                         val itemEntry = itemRepository.getById(it.itemId)
                         val itemName = itemEntry?.let { entry -> pickLocalizedName(entry.nameFr, entry.nameEn, language) } ?: it.itemId
-                        InventoryGridItem(imagePath = "file:///android_asset/images/items/${it.itemId}.webp", label = itemName, quantity = it.count)
+                        val imagePath = itemEntry?.image?.let { image -> "file:///android_asset/images/items/$image" }
+                            ?: "file:///android_asset/images/items/${it.itemId}.webp"
+                        InventoryGridItem(imagePath = imagePath, label = itemName, quantity = it.count)
                     },
                 )
             }
