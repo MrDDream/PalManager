@@ -156,6 +156,7 @@ data class PlayerPalInstance(
     @SerialName("PalID") val palId: String = "",
     @SerialName("Nickname") val nickname: String = "",
     @SerialName("Level") val level: Int = 0,
+    @SerialName("Exp") val exp: Long = 0,
     @SerialName("Gender") val gender: String = "",
     @SerialName("Shiny") val shiny: Boolean = false,
     @SerialName("FriendshipPoints") val friendshipPoints: Int = 0,
@@ -172,8 +173,13 @@ data class PlayerPalInstance(
     @SerialName("PalSouls") val palSouls: PalSoulRanks? = null,
 )
 
+/** Palbox : mêmes champs Pal que Team (schéma partagé confirmé par la doc PalDefender), juste
+ * une position (page/slot) au lieu d'un index d'équipe — non exposés ici, pas utiles à l'affichage. */
 @Serializable
-data class PlayerPalsGroup(@SerialName("Team") val team: Map<String, PlayerPalInstance> = emptyMap())
+data class PlayerPalsGroup(
+    @SerialName("Team") val team: Map<String, PlayerPalInstance> = emptyMap(),
+    @SerialName("Palbox") val palbox: Map<String, PlayerPalInstance> = emptyMap(),
+)
 
 @Serializable
 data class PlayerPalsMeta(

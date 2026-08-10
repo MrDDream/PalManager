@@ -1,6 +1,7 @@
 package com.paladmin.ui.palpicker
 
 import androidx.annotation.StringRes
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
@@ -74,4 +75,17 @@ object PalLabels {
     )
 
     fun rarityTier(rarity: Int): RarityTier = RARITY_TIERS.find { rarity in it.min..it.max } ?: RARITY_TIERS.last()
+
+    /** Rang de passif PalJSON (-3 à 5 observés) : rouge = négatif, gris = classique (rang 1),
+     * jaune/or = Épique (rangs 2-3), bleu brillant = Légendaire (rang 4 et 5 — les "_3"/max d'une
+     * famille de boost comme MoveSpeed_up_3 sont déjà rang 4, pas seulement les exclusifs
+     * Arbre-Monde). null = rang inconnu (repli hors catalogue), couleur neutre. */
+    @Composable
+    fun passiveRankColor(rank: Int?): Color = when {
+        rank == null -> MaterialTheme.colorScheme.onSurfaceVariant
+        rank < 0 -> MaterialTheme.colorScheme.error
+        rank <= 1 -> Color(0xFF94A3B8)
+        rank in 2..3 -> Color(0xFFF59E0B)
+        else -> Color(0xFF3B82F6)
+    }
 }

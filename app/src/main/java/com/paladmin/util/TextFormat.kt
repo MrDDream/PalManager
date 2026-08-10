@@ -6,6 +6,15 @@ import com.paladmin.data.local.dataset.ActiveSkillCatalog
 import com.paladmin.data.local.dataset.PassiveSkillCatalog
 import com.paladmin.data.local.prefs.AppLanguage
 import com.paladmin.data.repository.ItemRepository
+import com.paladmin.ui.components.ActiveSkillDisplay
+import com.paladmin.ui.components.PassiveDisplay
+import java.util.Locale
+
+/** Grand nombre lisible façon jeu (ex. 45859908 -> "45 859 908") — espace comme séparateur de
+ * milliers quel que soit le paramètre régional de l'appareil, plus sûr à lire qu'une abréviation
+ * (K/M) pour des compteurs de progression où la valeur exacte compte. */
+fun formatThousands(value: Long): String = String.format(Locale.getDefault(), "%,d", value).replace(',', ' ')
+fun formatThousands(value: Int): String = formatThousands(value.toLong())
 
 /** Les noms de dataset (items/pals/humains/compétences) sont stockés en FR+EN — ce choix respecte
  * la langue de l'app (réglages) plutôt que de toujours privilégier le FR, avec repli sur l'autre
@@ -32,6 +41,18 @@ fun basePalImageId(palId: String): String {
     return withoutBossPrefix.removeSuffix("_otomo")
 }
 
+/** Les descriptions de passifs PalJSON enchaînent plusieurs effets sans séparateur clair côté FR
+ * (l'anglais utilise "·", pas systématiquement traduit) — ex. "Vol de vie +5.0 % Restauration
+ * automatique des PV des Pals +100.0 % Attaque +15.0 %". On découpe sur "·" quand présent, sinon
+ * juste avant chaque nouvelle clause capitalisée qui suit un "%" (chaque effet de ce dataset se
+ * termine par un pourcentage, sauf éventuellement le dernier). */
+private val EFFECT_SPLIT_FALLBACK = Regex("(?<=%)\\s+(?=[A-ZÀ-Ý])")
+
+fun splitPassiveEffects(description: String): List<String> {
+    val raw = if ('·' in description) description.split('·') else description.split(EFFECT_SPLIT_FALLBACK)
+    return raw.map { it.trim() }.filter { it.isNotEmpty() }
+}
+
 /** Les items du catalogue nomment ces libellés "Implant : X", "Fruit Terra : X", "X Skill Fruit: Y"...
  * — le nom utile est toujours ce qui suit le dernier ":". Générique, pas de liste de préfixes à
  * maintenir à la main. */
@@ -41,17 +62,24 @@ private fun stripCatalogPrefix(name: String): String = name.substringAfterLast('
  * (ex. "Deffence_down2") et les variantes "ElementBoost_*_PAL", absents du catalogue d'implants
  * d'items.json. Repli sur ce dernier (implants "Implant : X" / "Implant unique : X") puis sur l'id
  * humanisé si un passif venait à manquer des deux catalogues. */
-suspend fun resolvePalPassiveName(
+suspend fun resolvePalPassive(
     passiveSkillCatalog: PassiveSkillCatalog,
     itemRepository: ItemRepository,
     rawId: String,
     language: AppLanguage,
-): String {
-    passiveSkillCatalog.get(rawId)?.let { entry -> return pickLocalizedName(entry.nameFr, entry.nameEn, language) }
+): PassiveDisplay {
+    passiveSkillCatalog.get(rawId)?.let { entry ->
+        val description = pickLocalizedName(entry.descriptionFr, entry.description, language)
+        return PassiveDisplay(
+            name = pickLocalizedName(entry.nameFr, entry.nameEn, language),
+            rank = entry.rank,
+            descriptionLines = if (description.isBlank()) emptyList() else splitPassiveEffects(description),
+        )
+    }
     val entry = itemRepository.getById("PalPassiveSkillChange_$rawId")
         ?: itemRepository.getById("PalPassiveSkillChange_Consumable_$rawId")
     val name = entry?.let { pickLocalizedName(it.nameFr, it.nameEn, language) }
-    return name?.let(::stripCatalogPrefix) ?: prettifyId(rawId)
+    return PassiveDisplay(name = name?.let(::stripCatalogPrefix) ?: prettifyId(rawId))
 }
 
 /** L'id brut d'une compétence active/apprise renvoyé par l'API (ex. "SolarBeam") est son EPalWazaID —
@@ -59,16 +87,23 @@ suspend fun resolvePalPassiveName(
  * les compétences exclusives à un Pal sans Fruit correspondant. Repli sur le Fruit de compétence qui
  * l'enseigne (SkillCard_X, items.json) si absent de ce catalogue — vérifié utile : un id humanisé
  * naïvement donnerait à tort "Solar Beam" alors que le vrai nom est "Solar Blast" ("Rayon Solaire"). */
-suspend fun resolvePalSkillName(
+suspend fun resolvePalSkill(
     activeSkillCatalog: ActiveSkillCatalog,
     itemRepository: ItemRepository,
     rawId: String,
     language: AppLanguage,
-): String {
-    activeSkillCatalog.get(rawId)?.let { entry -> return pickLocalizedName(entry.nameFr, entry.nameEn, language) }
+): ActiveSkillDisplay {
+    activeSkillCatalog.get(rawId)?.let { entry ->
+        return ActiveSkillDisplay(
+            name = pickLocalizedName(entry.nameFr, entry.nameEn, language),
+            element = entry.element.ifBlank { null },
+            power = entry.power,
+            cooldown = entry.cooldown,
+        )
+    }
     val entry = itemRepository.getById("SkillCard_$rawId")
     val name = entry?.let { pickLocalizedName(it.nameFr, it.nameEn, language) }
-    return name?.let(::stripCatalogPrefix) ?: prettifyId(rawId)
+    return ActiveSkillDisplay(name = name?.let(::stripCatalogPrefix) ?: prettifyId(rawId))
 }
 
 /** "Male"/"Female" bruts de l'API PalDefender — traduits pour l'affichage, repli sur la valeur

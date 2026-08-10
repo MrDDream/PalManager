@@ -15,6 +15,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImagePainter
@@ -52,12 +54,14 @@ fun InventoryTile(item: InventoryGridItem, onClick: () -> Unit) {
 }
 
 /** Image avec repli sur une icône générique si le fichier n'existe pas côté assets (id d'item/Pal
- * non résolu — variantes, ids obsolètes...) : mieux vaut un symbole visible qu'un vide silencieux. */
+ * non résolu — variantes, ids obsolètes...) : mieux vaut un symbole visible qu'un vide silencieux.
+ * tint : pour les icônes monochromes (ex. chevrons de rang de passif) à colorer dynamiquement. */
 @Composable
-fun FallbackAsyncImage(model: String, modifier: Modifier = Modifier) {
+fun FallbackAsyncImage(model: String, modifier: Modifier = Modifier, tint: Color? = null) {
     SubcomposeAsyncImage(
         model = model,
         contentDescription = null,
+        colorFilter = tint?.let { ColorFilter.tint(it) },
         modifier = modifier,
     ) {
         when (painter.state) {
