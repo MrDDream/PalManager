@@ -3,690 +3,920 @@
     "id": "Alien",
     "name_fr": "Organisme Inconnu",
     "name_en": "Otherworldly Cells",
-    "rank": 1
+    "rank": 1,
+    "description": "Attack +10% · Fire damage reduction +15% · Lightning damage reduction +15%",
+    "description_fr": "Attaque +10.0 % Réduction des dégâts de type Feu de 15.0 % Réduction des dégâts de type Foudre de 15.0 %"
   },
   {
     "id": "AutoHPRegeneRate_Passive",
     "name_fr": "Ange Médecin",
     "name_en": "Healing Coach",
-    "rank": 3
+    "rank": 3,
+    "description": "Player Auto Health Regeneration Rate +5%",
+    "description_fr": "Player Auto Health Regeneration Rate +5%"
   },
   {
     "id": "CoolTimeReduction_Down_1",
     "name_fr": "Tranquille",
     "name_en": "Easygoing",
-    "rank": -1
+    "rank": -1,
+    "description": "Active skill cooldown extension -15%",
+    "description_fr": "Extension du temps de recharge des compétences actives -15.0 %"
   },
   {
     "id": "CoolTimeReduction_Up_1",
     "name_fr": "Sérénité",
     "name_en": "Serenity",
-    "rank": 3
+    "rank": 3,
+    "description": "Active skill cooldown reduction +30% · Attack +10%",
+    "description_fr": "Réduction du temps de recharge des compétences actives 30.0 % Attaque +10.0 %"
   },
   {
     "id": "CoolTimeReduction_Up_2",
     "name_fr": "Impatient",
     "name_en": "Impatient",
-    "rank": 1
+    "rank": 1,
+    "description": "Active skill cooldown reduction +15%",
+    "description_fr": "Réduction du temps de recharge des compétences actives 15.0 %"
   },
   {
     "id": "CraftSpeed_down1",
     "name_fr": "Maladroit",
     "name_en": "Clumsy",
-    "rank": -1
+    "rank": -1,
+    "description": "Work Speed -10%",
+    "description_fr": "Work Speed -10%"
   },
   {
     "id": "CraftSpeed_down2",
     "name_fr": "Négligent",
     "name_en": "Slacker",
-    "rank": -3
+    "rank": -3,
+    "description": "Work Speed -30%",
+    "description_fr": "Work Speed -30%"
   },
   {
     "id": "CraftSpeed_up1",
     "name_fr": "Sérieux",
     "name_en": "Serious",
-    "rank": 1
+    "rank": 1,
+    "description": "Work Speed +20%",
+    "description_fr": "Work Speed +20%"
   },
   {
     "id": "CraftSpeed_up2",
     "name_fr": "Appliqué",
     "name_en": "Artisan",
-    "rank": 3
+    "rank": 3,
+    "description": "Work Speed +50%",
+    "description_fr": "Work Speed +50%"
   },
   {
     "id": "CraftSpeed_up3",
     "name_fr": "Maîtrise Exceptionnelle",
     "name_en": "Remarkable Craftsmanship",
-    "rank": 4
+    "rank": 4,
+    "description": "Work Speed +75%",
+    "description_fr": "Work Speed +75%"
   },
   {
     "id": "Deffence_down1",
     "name_fr": "Vulnérable aux Coups",
     "name_en": "Downtrodden",
-    "rank": -1
+    "rank": -1,
+    "description": "Defense -10%",
+    "description_fr": "Defense -10%"
   },
   {
     "id": "Deffence_down2",
     "name_fr": "Os fragiles",
     "name_en": "Brittle",
-    "rank": -3
+    "rank": -3,
+    "description": "Defense -20%",
+    "description_fr": "Defense -20%"
   },
   {
     "id": "Deffence_up1",
     "name_fr": "Peau dure",
     "name_en": "Hard Skin",
-    "rank": 1
+    "rank": 1,
+    "description": "Defense +10%",
+    "description_fr": "Defense +10%"
   },
   {
     "id": "Deffence_up2",
     "name_fr": "Corps Robuste",
     "name_en": "Burly Body",
-    "rank": 3
+    "rank": 3,
+    "description": "Defense +20% · Immune to Flinch",
+    "description_fr": "Défense +20.0 % Immunité au recul"
   },
   {
     "id": "Deffence_up2_2",
     "name_fr": "Poids Lourd",
     "name_en": "Heavyweight",
-    "rank": 2
+    "rank": 2,
+    "description": "Defense +20% · Immune to Knockback",
+    "description_fr": "Défense +20.0 % Immunité aux projections"
   },
   {
     "id": "Deffence_up3",
     "name_fr": "Corps Adamantin",
     "name_en": "Diamond Body",
-    "rank": 4
+    "rank": 4,
+    "description": "Defense +30% · Immune to Flinch · Immune to Knockback",
+    "description_fr": "Défense +30.0 % Immunité au recul Immunité aux projections"
   },
   {
     "id": "ElementBoost_Aqua_1_PAL",
     "name_fr": "Hydrophile",
     "name_en": "Hydromaniac",
-    "rank": 1
+    "rank": 1,
+    "description": "+10% increase in Water attack damage.",
+    "description_fr": "Les dégâts de type Eau augmentent de 10.0 %."
   },
   {
     "id": "ElementBoost_Aqua_2_PAL",
     "name_fr": "Seigneur des Mers",
     "name_en": "Lord of the Sea",
-    "rank": 3
+    "rank": 3,
+    "description": "+30% increase in Water attack damage.",
+    "description_fr": "+30% increase in Water attack damage."
   },
   {
     "id": "ElementBoost_Dark_1_PAL",
     "name_fr": "Voile des Ténèbres",
     "name_en": "Veil of Darkness",
-    "rank": 1
+    "rank": 1,
+    "description": "+10% increase in Dark attack damage.",
+    "description_fr": "Les dégâts de type Ténèbres augmentent de 10.0 %."
   },
   {
     "id": "ElementBoost_Dark_2_PAL",
     "name_fr": "Seigneur des Enfers",
     "name_en": "Lord of the Underworld",
-    "rank": 3
+    "rank": 3,
+    "description": "+30% increase in Dark attack damage.",
+    "description_fr": "+30% increase in Dark attack damage."
   },
   {
     "id": "ElementBoost_Dragon_1_PAL",
     "name_fr": "Sang de Dragon",
     "name_en": "Blood of the Dragon",
-    "rank": 1
+    "rank": 1,
+    "description": "+10% increase in Dragon attack damage.",
+    "description_fr": "Les dégâts de type Dragon augmentent de 10.0 %."
   },
   {
     "id": "ElementBoost_Dragon_2_PAL",
     "name_fr": "Dragon Divin",
     "name_en": "Divine Dragon",
-    "rank": 3
+    "rank": 3,
+    "description": "+30% increase in Dragon attack damage.",
+    "description_fr": "+30% increase in Dragon attack damage."
   },
   {
     "id": "ElementBoost_Earth_1_PAL",
     "name_fr": "Force Tellurique",
     "name_en": "Power of Gaia",
-    "rank": 1
+    "rank": 1,
+    "description": "+10% increase in Earth attack damage.",
+    "description_fr": "Les dégâts de type Terre augmentent de 10.0 %."
   },
   {
     "id": "ElementBoost_Earth_2_PAL",
     "name_fr": "Empereur Terrestre",
     "name_en": "Earth Emperor",
-    "rank": 3
+    "rank": 3,
+    "description": "+30% increase in Earth attack damage.",
+    "description_fr": "+30% increase in Earth attack damage."
   },
   {
     "id": "ElementBoost_Fire_1_PAL",
     "name_fr": "Pyromane",
     "name_en": "Pyromaniac",
-    "rank": 1
+    "rank": 1,
+    "description": "+10% increase in Fire attack damage.",
+    "description_fr": "Les dégâts de type Feu augmentent de 10.0 %."
   },
   {
     "id": "ElementBoost_Fire_2_PAL",
     "name_fr": "Empereur Enflammé",
     "name_en": "Flame Emperor",
-    "rank": 3
+    "rank": 3,
+    "description": "+30% increase in Fire attack damage.",
+    "description_fr": "+30% increase in Fire attack damage."
   },
   {
     "id": "ElementBoost_Ice_1_PAL",
     "name_fr": "Sang Froid",
     "name_en": "Coldblooded",
-    "rank": 1
+    "rank": 1,
+    "description": "+10% increase in Ice attack damage.",
+    "description_fr": "Les dégâts de type Glace augmentent de 10.0 %."
   },
   {
     "id": "ElementBoost_Ice_2_PAL",
     "name_fr": "Empereur Glacial",
     "name_en": "Ice Emperor",
-    "rank": 3
+    "rank": 3,
+    "description": "+30% increase in Ice attack damage.",
+    "description_fr": "+30% increase in Ice attack damage."
   },
   {
     "id": "ElementBoost_Leaf_1_PAL",
     "name_fr": "Fragrance Boisée",
     "name_en": "Fragrant Foliage",
-    "rank": 1
+    "rank": 1,
+    "description": "+10% increase in Grass attack damage.",
+    "description_fr": "Les dégâts de type Plante augmentent de 10.0 %."
   },
   {
     "id": "ElementBoost_Leaf_2_PAL",
     "name_fr": "Divinité de la Forêt",
     "name_en": "Spirit Emperor",
-    "rank": 3
+    "rank": 3,
+    "description": "+30% increase in Grass attack damage.",
+    "description_fr": "+30% increase in Grass attack damage."
   },
   {
     "id": "ElementBoost_Normal_1_PAL",
     "name_fr": "Esprit Zen",
     "name_en": "Spirit of Zen",
-    "rank": 1
+    "rank": 1,
+    "description": "+10% increase in Neutral attack damage.",
+    "description_fr": "Les dégâts Non Élémentaires augmentent de 10.0 %."
   },
   {
     "id": "ElementBoost_Normal_2_PAL",
     "name_fr": "Empereur Céleste",
     "name_en": "Celestial Emperor",
-    "rank": 3
+    "rank": 3,
+    "description": "+30% increase in Neutral attack damage.",
+    "description_fr": "+30% increase in Neutral attack damage."
   },
   {
     "id": "ElementBoost_Thunder_1_PAL",
     "name_fr": "Condensateur",
     "name_en": "Capacitor",
-    "rank": 1
+    "rank": 1,
+    "description": "+10% increase in Lightning attack damage.",
+    "description_fr": "Les dégâts de type Foudre augmentent de 10.0 %."
   },
   {
     "id": "ElementBoost_Thunder_2_PAL",
     "name_fr": "Seigneur des Tempêtes",
     "name_en": "Lord of Lightning",
-    "rank": 3
+    "rank": 3,
+    "description": "+30% increase in Lightning attack damage.",
+    "description_fr": "+30% increase in Lightning attack damage."
   },
   {
     "id": "ElementResist_Aqua_1_PAL",
     "name_fr": "Imperméabilité",
     "name_en": "Waterproof",
-    "rank": 1
+    "rank": 1,
+    "description": "+10% decrease in incoming Water damage.",
+    "description_fr": "Les dégâts de type Eau sont réduits de 10.0 %."
   },
   {
     "id": "ElementResist_Dark_1_PAL",
     "name_fr": "Lumineux",
     "name_en": "Cheery",
-    "rank": 1
+    "rank": 1,
+    "description": "+10% decrease in incoming Dark damage.",
+    "description_fr": "Les dégâts de type Ténèbres sont réduits de 10.0 %."
   },
   {
     "id": "ElementResist_Dragon_1_PAL",
     "name_fr": "Tueur de Dragons",
     "name_en": "Dragonkiller",
-    "rank": 1
+    "rank": 1,
+    "description": "+10% decrease in incoming Dragon damage.",
+    "description_fr": "Les dégâts de type Dragon sont réduits de 10.0 %."
   },
   {
     "id": "ElementResist_Earth_1_PAL",
     "name_fr": "Parasismique",
     "name_en": "Earthquake Resistant",
-    "rank": 1
+    "rank": 1,
+    "description": "+10% decrease in incoming Earth damage.",
+    "description_fr": "Les dégâts de type Terre sont réduits de 10.0 %."
   },
   {
     "id": "ElementResist_Fire_1_PAL",
     "name_fr": "Bronzage Naturel",
     "name_en": "Suntan Lover",
-    "rank": 1
+    "rank": 1,
+    "description": "+10% decrease in incoming Fire damage.",
+    "description_fr": "Les dégâts de type Feu sont réduits de 10.0 %."
   },
   {
     "id": "ElementResist_Ice_1_PAL",
     "name_fr": "Sang Chaud",
     "name_en": "Heated Body",
-    "rank": 1
+    "rank": 1,
+    "description": "+10% decrease in incoming Ice damage.",
+    "description_fr": "Les dégâts de type Glace sont réduits de 10.0 %."
   },
   {
     "id": "ElementResist_Leaf_1_PAL",
     "name_fr": "Protection Végétale",
     "name_en": "Botanical Barrier",
-    "rank": 1
+    "rank": 1,
+    "description": "+10% decrease in incoming Grass damage.",
+    "description_fr": "Les dégâts de type Plante sont réduits de 10.0 %."
   },
   {
     "id": "ElementResist_Normal_1_PAL",
     "name_fr": "Anormal",
     "name_en": "Abnormal",
-    "rank": 1
+    "rank": 1,
+    "description": "+10% decrease in incoming Neutral damage.",
+    "description_fr": "Les dégâts Non Élémentaires sont réduits de 10.0 %."
   },
   {
     "id": "ElementResist_Thunder_1_PAL",
     "name_fr": "Isolant",
     "name_en": "Insulated Body",
-    "rank": 1
+    "rank": 1,
+    "description": "+10% decrease in incoming Lightning damage.",
+    "description_fr": "Les dégâts de type Foudre sont réduits de 10.0 %."
   },
   {
     "id": "EternalFlame",
     "name_fr": "Feu Éternel",
     "name_en": "Eternal Flame",
-    "rank": 4
+    "rank": 4,
+    "description": "+30% increase to Fire attack damage. · +30% increase to Lightning attack damage.",
+    "description_fr": "+30% increase to Fire attack damage. · +30% increase to Lightning attack damage."
   },
   {
     "id": "Invader",
     "name_fr": "Envahisseur",
     "name_en": "Invader",
-    "rank": 4
+    "rank": 4,
+    "description": "+30% increase in Dark attack damage. · +30% increase in Dragon attack damage.",
+    "description_fr": "+30% increase in Dark attack damage. · +30% increase in Dragon attack damage."
   },
   {
     "id": "Legend",
     "name_fr": "Légende",
     "name_en": "Legend",
-    "rank": 4
+    "rank": 4,
+    "description": "Attack +20% · Defense +20% · Movement Speed increases +20%",
+    "description_fr": "Attaque +20.0 % Défense +20.0 % Vitesse de déplacement +20.0 %"
   },
   {
     "id": "MiniNushi",
     "name_fr": "Caïd",
     "name_en": "Whopper",
-    "rank": 3
+    "rank": 3,
+    "description": "+5% increase to Water attack damage · +5% increase to Ice attack damage · +5% increase to defense.",
+    "description_fr": "+5% increase to Water attack damage · +5% increase to Ice attack damage · +5% increase to defense."
   },
   {
     "id": "MoveSpeed_up_1",
     "name_fr": "Vif",
     "name_en": "Nimble",
-    "rank": 1
+    "rank": 1,
+    "description": "+10% increase to movement speed.",
+    "description_fr": "La vitesse de déplacement augmente de 10.0 %."
   },
   {
     "id": "MoveSpeed_up_2",
     "name_fr": "Coursier",
     "name_en": "Runner",
-    "rank": 3
+    "rank": 3,
+    "description": "+20% increase to movement speed.",
+    "description_fr": "La vitesse de déplacement augmente de 20.0 %."
   },
   {
     "id": "MoveSpeed_up_3",
     "name_fr": "Sprinteur",
     "name_en": "Swift",
-    "rank": 4
+    "rank": 4,
+    "description": "+30% increase to movement speed.",
+    "description_fr": "La vitesse de déplacement augmente de 30.0 %."
   },
   {
     "id": "MutationPal_Babysitter",
     "name_fr": "Baby-sitter",
     "name_en": "Babysitter",
-    "rank": 4
+    "rank": 4,
+    "description": "While at a base, increases egg production speed by +30% and incubation speed by +30% for Pals assigned to a Breeding Farm.",
+    "description_fr": "Dans la base, vitesse de production d'œufs des Pals affectés au ranch : +30.0 % ; vitesse d'éclosion : +30.0 %"
   },
   {
     "id": "MutationPal_ExplosionResist",
     "name_fr": "Blindage",
     "name_en": "Heavily Armored",
-    "rank": 4
+    "rank": 4,
+    "description": "Immune to Explosion Damage",
+    "description_fr": "Immunité aux dégâts explosifs"
   },
   {
     "id": "MutationPal_Immortal",
     "name_fr": "Immortel",
     "name_en": "Immortality",
-    "rank": 4
+    "rank": 4,
+    "description": "Life Steal +5% · Pal Auto Health Regeneration Rate +100% · Attack +15%",
+    "description_fr": "Vol de vie +5.0 % Restauration automatique des PV des Pals +100.0 % Attaque +15.0 %"
   },
   {
     "id": "MutationPal_Mutant",
     "name_fr": "Anomalie",
     "name_en": "Idiosyncratic",
-    "rank": 4
+    "rank": 4,
+    "description": "Pal and Player Auto Health Regeneration Rate +50% · Defense +25% · Immune to Poison Damage · Immune to Burn Damage",
+    "description_fr": "Pal and Player Auto Health Regeneration Rate +50% · Defense +25% · Immune to Poison Damage · Immune to Burn Damage"
   },
   {
     "id": "NightOwl",
     "name_fr": "Oiseau de Nuit",
     "name_en": "Night Owl",
-    "rank": -1
+    "rank": -1,
+    "description": "Tends to nap through the day, due to being nocturnal.",
+    "description_fr": "Fait constamment des siestes, sans doute pour récupérer de son activité nocturne."
   },
   {
     "id": "Nocturnal",
     "name_fr": "Nocturne",
     "name_en": "Insomnia",
-    "rank": 1
+    "rank": 1,
+    "description": "Does not sleep and continues to work even at night.",
+    "description_fr": "Ne dort pas et continue à travailler la nuit."
   },
   {
     "id": "NonKilling",
     "name_fr": "Pitié",
     "name_en": "Mercy Hit",
-    "rank": -1
+    "rank": -1,
+    "description": "Pacifist. · Will not reduce the target's Health below 1.",
+    "description_fr": "Frappe sans tuer. Impossible de réduire la santé de la cible à moins de 1 PV."
   },
   {
     "id": "Noukin",
     "name_fr": "Impulsif",
     "name_en": "Musclehead",
-    "rank": 2
+    "rank": 2,
+    "description": "Attack +30% · Work Speed -50%",
+    "description_fr": "Attack +30% · Work Speed -50%"
   },
   {
     "id": "Nushi",
     "name_fr": "Trophée des Flots",
     "name_en": "Lunker",
-    "rank": 4
+    "rank": 4,
+    "description": "+20% increase to Water attack damage · +20% increase to Ice attack damage · +20% increase to defense.",
+    "description_fr": "Les dégâts de type Eau augmentent de 20.0 %. Les dégâts de type Glace augmentent de 20.0 %. Défense +20.0 %"
   },
   {
     "id": "PAL_ALLAttack_down1",
     "name_fr": "Lâche",
     "name_en": "Coward",
-    "rank": -1
+    "rank": -1,
+    "description": "Attack -10%",
+    "description_fr": "Attack -10%"
   },
   {
     "id": "PAL_ALLAttack_down2",
     "name_fr": "Pacifiste",
     "name_en": "Pacifist",
-    "rank": -3
+    "rank": -3,
+    "description": "Attack -20%",
+    "description_fr": "Attack -20%"
   },
   {
     "id": "PAL_ALLAttack_up1",
     "name_fr": "Brave",
     "name_en": "Brave",
-    "rank": 1
+    "rank": 1,
+    "description": "Attack +10%",
+    "description_fr": "Attack +10%"
   },
   {
     "id": "PAL_ALLAttack_up2",
     "name_fr": "Féroce",
     "name_en": "Ferocious",
-    "rank": 3
+    "rank": 3,
+    "description": "Attack +20%",
+    "description_fr": "Attack +20%"
   },
   {
     "id": "PAL_ALLAttack_up3",
     "name_fr": "Colère Divine",
     "name_en": "Demon God",
-    "rank": 4
+    "rank": 4,
+    "description": "Attack +30% · Defense +5%",
+    "description_fr": "Attack +30% · Defense +5%"
   },
   {
     "id": "PAL_CorporateSlave",
     "name_fr": "Soumis",
     "name_en": "Work Slave",
-    "rank": 1
+    "rank": 1,
+    "description": "Work Speed +30% · Attack -30%",
+    "description_fr": "Work Speed +30% · Attack -30%"
   },
   {
     "id": "PAL_FullStomach_Down_1",
     "name_fr": "Frugal",
     "name_en": "Dainty Eater",
-    "rank": 1
+    "rank": 1,
+    "description": "Hunger decreases +10.0% slower.",
+    "description_fr": "Le degré de satiété diminue plus lentement +10.0 %"
   },
   {
     "id": "PAL_FullStomach_Down_2",
     "name_fr": "Nutritionniste",
     "name_en": "Diet Lover",
-    "rank": 3
+    "rank": 3,
+    "description": "Hunger decreases +15.0% slower.",
+    "description_fr": "Le degré de satiété diminue plus lentement +15.0 %"
   },
   {
     "id": "PAL_FullStomach_Down_3",
     "name_fr": "Maîtrise de la Faim",
     "name_en": "Mastery of Fasting",
-    "rank": 4
+    "rank": 4,
+    "description": "Hunger decreases +20.0% slower.",
+    "description_fr": "Le degré de satiété diminue plus lentement +20.0 %"
   },
   {
     "id": "PAL_FullStomach_Up_1",
     "name_fr": "Glouton",
     "name_en": "Glutton",
-    "rank": -1
+    "rank": -1,
+    "description": "Hunger decreases +10.0% faster.",
+    "description_fr": "Le degré de satiété diminue rapidement +10.0 %"
   },
   {
     "id": "PAL_FullStomach_Up_2",
     "name_fr": "Estomac sans Fond",
     "name_en": "Bottomless Stomach",
-    "rank": -2
+    "rank": -2,
+    "description": "Hunger decreases +15.0% faster.",
+    "description_fr": "Le degré de satiété diminue rapidement +15.0 %"
   },
   {
     "id": "PAL_Sanity_Down_1",
     "name_fr": "Optimiste",
     "name_en": "Positive Thinker",
-    "rank": 1
+    "rank": 1,
+    "description": "SAN drops +10.0% slower.",
+    "description_fr": "Les points MEN diminuent plus lentement +10.0 %"
   },
   {
     "id": "PAL_Sanity_Down_2",
     "name_fr": "Acharné",
     "name_en": "Workaholic",
-    "rank": 3
+    "rank": 3,
+    "description": "SAN drops +15.0% slower.",
+    "description_fr": "Les points MEN diminuent plus lentement +15.0 %"
   },
   {
     "id": "PAL_Sanity_Down_3",
     "name_fr": "Inébranlable",
     "name_en": "Heart of the Immovable King",
-    "rank": 4
+    "rank": 4,
+    "description": "SAN drops +20.0% slower.",
+    "description_fr": "Les points MEN diminuent plus lentement +20.0 %"
   },
   {
     "id": "PAL_Sanity_Up_1",
     "name_fr": "Mentalement Instable",
     "name_en": "Unstable",
-    "rank": -1
+    "rank": -1,
+    "description": "SAN drops +10.0% faster.",
+    "description_fr": "Les points MEN diminuent rapidement +10.0 %"
   },
   {
     "id": "PAL_Sanity_Up_2",
     "name_fr": "Soif de Destruction",
     "name_en": "Destructive",
-    "rank": -2
+    "rank": -2,
+    "description": "SAN drops +15.0% faster.",
+    "description_fr": "Les points MEN diminuent rapidement +15.0 %"
   },
   {
     "id": "PAL_conceited",
     "name_fr": "Vaniteux",
     "name_en": "Conceited",
-    "rank": 1
+    "rank": 1,
+    "description": "Work Speed +10% · Defense -10%",
+    "description_fr": "Work Speed +10% · Defense -10%"
   },
   {
     "id": "PAL_masochist",
     "name_fr": "Masochiste",
     "name_en": "Masochist",
-    "rank": 1
+    "rank": 1,
+    "description": "Defense +15% · Attack -15%",
+    "description_fr": "Defense +15% · Attack -15%"
   },
   {
     "id": "PAL_oraora",
     "name_fr": "Rentre-Dedans",
     "name_en": "Aggressive",
-    "rank": 1
+    "rank": 1,
+    "description": "Attack +10% · Defense -10%",
+    "description_fr": "Attack +10% · Defense -10%"
   },
   {
     "id": "PAL_rude",
     "name_fr": "Trouble-Fête",
     "name_en": "Hooligan",
-    "rank": 1
+    "rank": 1,
+    "description": "Attack +15% · Work Speed -10%",
+    "description_fr": "Attack +15% · Work Speed -10%"
   },
   {
     "id": "PAL_sadist",
     "name_fr": "Sadique",
     "name_en": "Sadist",
-    "rank": 1
+    "rank": 1,
+    "description": "Attack +15% · Defense -15%",
+    "description_fr": "Attack +15% · Defense -15%"
   },
   {
     "id": "PlayerSP_DecreaseRate_Passive",
     "name_fr": "Guide de l'effort",
     "name_en": "Wellness Watcher",
-    "rank": 3
+    "rank": 3,
+    "description": "Player Stamina Consumption -5.0%",
+    "description_fr": "Player Stamina Consumption -5.0%"
   },
   {
     "id": "Rare",
     "name_fr": "Chanceux",
     "name_en": "Lucky",
-    "rank": 4
+    "rank": 4,
+    "description": "Attack +15% · Defense +15% · Work Speed +20%",
+    "description_fr": "Attack +15% · Defense +15% · Work Speed +20%"
   },
   {
     "id": "ReloadSpeedUp_Passive",
     "name_fr": "Instructeur de Tir",
     "name_en": "Reload Master",
-    "rank": 3
+    "rank": 3,
+    "description": "Player Reload Speed +4%",
+    "description_fr": "Player Reload Speed +4%"
   },
   {
     "id": "RideJumpCount_Increase1",
     "name_fr": "Légèreté",
     "name_en": "Lightfooted",
-    "rank": 4
+    "rank": 4,
+    "description": "Mounted Jump Count +1",
+    "description_fr": "Nombre de sauts en monture +1"
   },
   {
     "id": "RideJumpCount_Increase2",
     "name_fr": "Marche Céleste",
     "name_en": "Skymarcher",
-    "rank": 4
+    "rank": 4,
+    "description": "Mounted Jump Count +2",
+    "description_fr": "Nombre de sauts en monture +2"
   },
   {
     "id": "SalePrice_Down_1",
     "name_fr": "Miteux",
     "name_en": "Shabby",
-    "rank": -1
+    "rank": -1,
+    "description": "Decrease the value of items when sold by -10%",
+    "description_fr": "Montant de vente - : -10.0 %"
   },
   {
     "id": "SalePrice_Up_1",
     "name_fr": "Noble",
     "name_en": "Noble",
-    "rank": 3
+    "rank": 3,
+    "description": "Increases the value of items when sold by +5%",
+    "description_fr": "Montant des ventes + : 5.0 %"
   },
   {
     "id": "SalePrice_Up_2",
     "name_fr": "Belle Fourrure",
     "name_en": "Fine Furs",
-    "rank": 1
+    "rank": 1,
+    "description": "Increases the value of items when sold by +3%",
+    "description_fr": "Montant des ventes + : 3.0 %"
   },
   {
     "id": "Salvation",
     "name_fr": "Sauveur",
     "name_en": "Savior",
-    "rank": 4
+    "rank": 4,
+    "description": "+30% increase in Neutral attack damage. · +30% increase in Grass attack damage.",
+    "description_fr": "+30% increase in Neutral attack damage. · +30% increase in Grass attack damage."
   },
   {
     "id": "SelfDeathAddItemDrop_up_2",
     "name_fr": "Généreux",
     "name_en": "Service-Minded",
-    "rank": 3
+    "rank": 3,
+    "description": "Your Dropped Items + +50%",
+    "description_fr": "Objets obtenus +50.0 %"
   },
   {
     "id": "SelfDeathAddItemDrop_up_3",
     "name_fr": "Grand Prince",
     "name_en": "Lavish Hospitality",
-    "rank": 4
+    "rank": 4,
+    "description": "Your Dropped Items + +100%",
+    "description_fr": "Objets obtenus +100.0 %"
   },
   {
     "id": "Stamina_Down_1",
     "name_fr": "Reclus",
     "name_en": "Sickly",
-    "rank": -1
+    "rank": -1,
+    "description": "Max Stamina -25% · *This effect is only valid for rideable pals.",
+    "description_fr": "Endurance maximale -25.0 % (Pals montures uniquement)"
   },
   {
     "id": "Stamina_Up_1",
     "name_fr": "Infatigable",
     "name_en": "Infinite Stamina",
-    "rank": 3
+    "rank": 3,
+    "description": "Max stamina +50% · *This effect is only valid for rideable pals.",
+    "description_fr": "Endurance maximale + 50.0 % (Pals montures uniquement)"
   },
   {
     "id": "Stamina_Up_2",
     "name_fr": "Force de la Nature",
     "name_en": "Fit as a Fiddle",
-    "rank": 1
+    "rank": 1,
+    "description": "Max stamina +25% · *This effect is only valid for rideable pals.",
+    "description_fr": "Endurance maximale + 25.0 % (Pals montures uniquement)"
   },
   {
     "id": "Stamina_Up_3",
     "name_fr": "Vigueur Éternelle",
     "name_en": "Eternal Engine",
-    "rank": 4
+    "rank": 4,
+    "description": "Max stamina +75% · *This effect is only valid for rideable pals.",
+    "description_fr": "Endurance maximale + 75.0 % (Pals montures uniquement)"
   },
   {
     "id": "SwimSpeed_up_1",
     "name_fr": "Nage Fluide",
     "name_en": "Sleek Stroke",
-    "rank": 1
+    "rank": 1,
+    "description": "+30% increase movement speed on water.",
+    "description_fr": "La vitesse de déplacement augmente de 30.0 % sur l'eau."
   },
   {
     "id": "SwimSpeed_up_2",
     "name_fr": "Coursier Marin",
     "name_en": "Ace Swimmer",
-    "rank": 3
+    "rank": 3,
+    "description": "+40% increase movement speed on water.",
+    "description_fr": "+40% increase movement speed on water."
   },
   {
     "id": "SwimSpeed_up_3",
     "name_fr": "Roi des Vagues",
     "name_en": "King of the Waves",
-    "rank": 4
+    "rank": 4,
+    "description": "+50% increase movement speed on water.",
+    "description_fr": "+50% increase movement speed on water."
   },
   {
     "id": "Test_PalEgg_HatchingSpeed_Up",
     "name_fr": "Philanthrope",
     "name_en": "Philanthropist",
-    "rank": 3
+    "rank": 3,
+    "description": "When assigned to a Breeding Farm, breeding speed is increased by +100%.",
+    "description_fr": "Lorsqu'il est affecté à un Élevage, la vitesse de production des œufs augmente de 100.0 %."
   },
   {
     "id": "TrainerATK_UP_1",
     "name_fr": "Chef d'Assaut",
     "name_en": "Vanguard",
-    "rank": 3
+    "rank": 3,
+    "description": "+10% increase in Player Attack.",
+    "description_fr": "L'attaque du joueur augmente de 10.0 %."
   },
   {
     "id": "TrainerDEF_UP_1",
     "name_fr": "Stratège de Forteresse",
     "name_en": "Stronghold Strategist",
-    "rank": 3
+    "rank": 3,
+    "description": "+10% increase in Player Defense.",
+    "description_fr": "La défense du joueur augmente de 10.0 %."
   },
   {
     "id": "TrainerLogging_up1",
     "name_fr": "Chef d'Abattage",
     "name_en": "Logging Foreman",
-    "rank": 3
+    "rank": 3,
+    "description": "+25% increase in Player Logging Efficiency.",
+    "description_fr": "La capacité d'abattage du joueur augmente de 25.0 %."
   },
   {
     "id": "TrainerMining_up1",
     "name_fr": "Chef d'Extraction",
     "name_en": "Mine Foreman",
-    "rank": 3
+    "rank": 3,
+    "description": "+25% increase in Player Mining Efficiency.",
+    "description_fr": "La capacité d'extraction du joueur augmente de 25.0 %."
   },
   {
     "id": "TrainerWorkSpeed_UP_1",
     "name_fr": "Motivateur",
     "name_en": "Motivational Leader",
-    "rank": 3
+    "rank": 3,
+    "description": "+25% increase in Player Work Speed.",
+    "description_fr": "La productivité du joueur augmente de 25.0 %."
   },
   {
     "id": "Vampire",
     "name_fr": "Vampire",
     "name_en": "Vampiric",
-    "rank": 4
+    "rank": 4,
+    "description": "Absorbs a portion of the damage dealt to restore HP. · Does not sleep at night and continues to work.",
+    "description_fr": "Absorbe une partie des dégâts infligés pour restaurer ses PV. Ne dort pas et continue à travailler la nuit."
   },
   {
     "id": "Witch",
     "name_fr": "Sorcière",
     "name_en": "Siren of the Void",
-    "rank": 4
+    "rank": 4,
+    "description": "+30% increase in Dark attack damage. · +30% increase in Ice attack damage.",
+    "description_fr": "+30% increase in Dark attack damage. · +30% increase in Ice attack damage."
   },
   {
     "id": "WorkSuitabilityAddRank_MonsterFarm_1",
     "name_fr": "Apprenti Éleveur",
     "name_en": "Farmhand",
-    "rank": 3
+    "rank": 3,
+    "description": "Ranching's work suitability +1",
+    "description_fr": "Exploitation : Capacité de travail +1"
   },
   {
     "id": "WorkSuitabilityAddRank_MonsterFarm_2",
     "name_fr": "Maître Éleveur",
     "name_en": "Ranch Master",
-    "rank": 4
+    "rank": 4,
+    "description": "Ranching's work suitability +2",
+    "description_fr": "Exploitation : Capacité de travail +2"
   },
   {
     "id": "WorldTree_ATK",
     "name_fr": "Lame du Jugement",
     "name_en": "Twin-Edged Holy Blade",
-    "rank": 5
+    "rank": 5,
+    "description": "Attack +50% · Defense -30% · World Tree resources will not vanish when approached.",
+    "description_fr": "Attaque +50.0 % Défense -30.0 % Permet de récolter les arbres et rochers de l'Arbre-Monde sans les faire disparaître."
   },
   {
     "id": "WorldTree_ATK_DEF",
     "name_fr": "Dieu de la Destruction",
     "name_en": "God of Destruction",
-    "rank": 5
+    "rank": 5,
+    "description": "Attack +40% · Defense +20% · Max Health -50% · World Tree resources will not vanish when approached.",
+    "description_fr": "Attaque +40.0 % Défense +20.0 % PV max -50.0 % Permet de récolter les arbres et rochers de l'Arbre-Monde sans les faire disparaître."
   },
   {
     "id": "WorldTree_CraftSpeed",
     "name_fr": "Main du Démon",
     "name_en": "Demon’s Hand",
-    "rank": 5
+    "rank": 5,
+    "description": "Work Speed +90% · SAN dreceases +15.0% faster · World Tree harvestables won't vanish when approached.",
+    "description_fr": "Vitesse de travail +90.0 % Chute des points MEN accélérée +15 % Permet de récolter les arbres et rochers de l'Arbre-Monde sans les faire disparaître."
   },
   {
     "id": "WorldTree_DEF",
     "name_fr": "Rempart Sacré",
     "name_en": "Sanctified Meat Shield",
-    "rank": 5
+    "rank": 5,
+    "description": "Defense +50% · Attack -30% · World Tree resources will not vanish when approached.",
+    "description_fr": "Défense +50.0 % Attaque -30.0 % Permet de récolter les arbres et rochers de l'Arbre-Monde sans les faire disparaître."
   },
   {
     "id": "WorldTree_FullStomach",
     "name_fr": "Berceau Divin",
     "name_en": "World Tree Seedbed",
-    "rank": 5
+    "rank": 5,
+    "description": "Decrease Hunger depletion rate by +50.0% · HP -20% · World Tree resources will not vanish when approached.",
+    "description_fr": "Chute du degré de satiété ralentie +50 % PV -20.0 % Permet de récolter les arbres et rochers de l'Arbre-Monde sans les faire disparaître."
   },
   {
     "id": "WorldTree_MoveSpeed",
     "name_fr": "Traverse-Mondes",
     "name_en": "Dimensional Leap",
-    "rank": 5
+    "rank": 5,
+    "description": "Movement Speed +50% · Increases Hunger depletion rate by +15.0% · World Tree resources will not vanish when approached.",
+    "description_fr": "Vitesse de déplacement augmentée +50.0 % Chute du degré de satiété accélérée +15 % Permet de récolter les arbres et rochers de l'Arbre-Monde sans les faire disparaître."
   },
   {
     "id": "WorldTree_Sanity",
     "name_fr": "Sage Immortel",
     "name_en": "Hermit Sage",
-    "rank": 5
+    "rank": 5,
+    "description": "SAN depletion rate -50.0% · Work Speed -20% · World Tree resources will not vanish when approached.",
+    "description_fr": "Chute des points MEN ralentie +50 % Vitesse de travail -20.0 % Permet de récolter les arbres et rochers de l'Arbre-Monde sans les faire disparaître."
   }
 ]

@@ -84,21 +84,30 @@ data class TechnologyDatasetEntry(
 )
 
 /** Reflète tools/import_paljson_skills.py (source github.com/MrDDream/PalJSON/data/skills.js — id =
- * EPalWazaID, le même identifiant que ActiveSkills/LearntSkills côté PalDefender). */
+ * EPalWazaID, le même identifiant que ActiveSkills/LearntSkills côté PalDefender). element = même
+ * valeur que PalLabels.ELEMENTS (icône dans assets/images/elements/), power/cooldown affichés tels
+ * quels (pas de traduction, ce sont des nombres). */
 @Serializable
 data class ActiveSkillDatasetEntry(
     val id: String,
     @SerialName("name_fr") val nameFr: String,
     @SerialName("name_en") val nameEn: String,
+    val element: String = "",
+    val power: Int = 0,
+    val cooldown: Int = 0,
 )
 
 /** Reflète tools/import_paljson_skills.py (source github.com/MrDDream/PalJSON/data/passives.js —
  * id = le même identifiant que Passives côté PalDefender ; couvre aussi les passifs négatifs
- * "_downN" et les variantes "ElementBoost_*_PAL", absents du catalogue d'implants d'items.json). */
+ * "_downN" et les variantes "ElementBoost_*_PAL", absents du catalogue d'implants d'items.json).
+ * description_fr replie sur la description EN côté script d'import si PalJSON n'a pas de FR pour
+ * cette entrée — jamais vide si description ne l'est pas. */
 @Serializable
 data class PassiveDatasetEntry(
     val id: String,
     @SerialName("name_fr") val nameFr: String,
     @SerialName("name_en") val nameEn: String,
     val rank: Int = 0,
+    val description: String = "",
+    @SerialName("description_fr") val descriptionFr: String = "",
 )

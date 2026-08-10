@@ -1623,7 +1623,7 @@
         "probability": 2
       }
     ],
-    "image": "",
+    "image": "BOSS_Believer_CrossBow.webp",
     "workSuitabilities": [
       {
         "job": "Handcraft",
@@ -1690,7 +1690,7 @@
         "probability": 2
       }
     ],
-    "image": "",
+    "image": "BOSS_Believer_Fat_GiantClub.webp",
     "workSuitabilities": [
       {
         "job": "Handcraft",
@@ -1747,7 +1747,7 @@
         "probability": 100
       }
     ],
-    "image": "",
+    "image": "BOSS_DarkTrader.webp",
     "workSuitabilities": [
       {
         "job": "Handcraft",
@@ -1800,7 +1800,7 @@
         "probability": 40
       }
     ],
-    "image": "",
+    "image": "BOSS_Female_DesertPeople.webp",
     "workSuitabilities": [
       {
         "job": "Seeding",
@@ -1864,7 +1864,7 @@
         "probability": 100
       }
     ],
-    "image": "",
+    "image": "BOSS_Female_People.webp",
     "workSuitabilities": [
       {
         "job": "EmitFlame",
@@ -1924,7 +1924,7 @@
         "probability": 100
       }
     ],
-    "image": "",
+    "image": "BOSS_Female_People02.webp",
     "workSuitabilities": [
       {
         "job": "Seeding",
@@ -1981,7 +1981,7 @@
         "probability": 40
       }
     ],
-    "image": "",
+    "image": "BOSS_Female_People03.webp",
     "workSuitabilities": [
       {
         "job": "Seeding",
@@ -2038,7 +2038,7 @@
         "probability": 40
       }
     ],
-    "image": "",
+    "image": "BOSS_Female_Soldier.webp",
     "workSuitabilities": [
       {
         "job": "Handcraft",
@@ -2087,7 +2087,7 @@
         "probability": 40
       }
     ],
-    "image": "",
+    "image": "BOSS_Female_Soldier02.webp",
     "workSuitabilities": [
       {
         "job": "EmitFlame",
@@ -2151,7 +2151,7 @@
         "probability": 100
       }
     ],
-    "image": "",
+    "image": "BOSS_Female_Soldier03.webp",
     "workSuitabilities": [
       {
         "job": "EmitFlame",
@@ -2204,7 +2204,7 @@
         "probability": 40
       }
     ],
-    "image": "",
+    "image": "BOSS_Female_Soldier04.webp",
     "workSuitabilities": [
       {
         "job": "Handcraft",
@@ -2264,7 +2264,7 @@
         "probability": 20
       }
     ],
-    "image": "",
+    "image": "BOSS_FireCult_FlameThrower.webp",
     "workSuitabilities": [
       {
         "job": "EmitFlame",
@@ -2331,7 +2331,7 @@
         "probability": 100
       }
     ],
-    "image": "",
+    "image": "BOSS_Hunter_Fat_GatlingGun.webp",
     "workSuitabilities": [
       {
         "job": "Handcraft",
@@ -2465,7 +2465,7 @@
         "probability": 100
       }
     ],
-    "image": "",
+    "image": "BOSS_Hunter_Rifle.webp",
     "workSuitabilities": [
       {
         "job": "Handcraft",
@@ -2521,7 +2521,7 @@
         "probability": 10
       }
     ],
-    "image": "",
+    "image": "BOSS_Male_DesertPeople.webp",
     "workSuitabilities": [
       {
         "job": "Seeding",
@@ -2581,7 +2581,7 @@
         "probability": 1
       }
     ],
-    "image": "",
+    "image": "BOSS_Male_NinjaElite.webp",
     "workSuitabilities": [
       {
         "job": "Handcraft",
@@ -2641,7 +2641,7 @@
         "probability": 100
       }
     ],
-    "image": "",
+    "image": "BOSS_Male_People.webp",
     "workSuitabilities": [
       {
         "job": "EmitFlame",
@@ -2705,7 +2705,7 @@
         "probability": 50
       }
     ],
-    "image": "",
+    "image": "BOSS_Male_People02.webp",
     "workSuitabilities": [
       {
         "job": "Seeding",
@@ -2762,7 +2762,7 @@
         "probability": 40
       }
     ],
-    "image": "",
+    "image": "BOSS_Male_People03.webp",
     "workSuitabilities": [
       {
         "job": "Seeding",
@@ -2826,7 +2826,7 @@
         "probability": 100
       }
     ],
-    "image": "",
+    "image": "BOSS_Male_People2.webp",
     "workSuitabilities": [
       {
         "job": "EmitFlame",
@@ -2883,7 +2883,7 @@
         "probability": 40
       }
     ],
-    "image": "",
+    "image": "BOSS_Male_Soldier.webp",
     "workSuitabilities": [
       {
         "job": "Handcraft",
@@ -2936,7 +2936,7 @@
         "probability": 40
       }
     ],
-    "image": "",
+    "image": "BOSS_Male_Soldier02.webp",
     "workSuitabilities": [
       {
         "job": "EmitFlame",
@@ -2996,7 +2996,7 @@
         "probability": 100
       }
     ],
-    "image": "",
+    "image": "BOSS_Male_Soldier03.webp",
     "workSuitabilities": [
       {
         "job": "Seeding",
@@ -3056,7 +3056,7 @@
         "probability": 100
       }
     ],
-    "image": "",
+    "image": "BOSS_Male_Soldier04.webp",
     "workSuitabilities": [
       {
         "job": "Handcraft",
@@ -3105,7 +3105,7 @@
         "probability": 40
       }
     ],
-    "image": "",
+    "image": "BOSS_Male_Trader01.webp",
     "workSuitabilities": [
       {
         "job": "Watering",
@@ -3158,7 +3158,7 @@
         "probability": 40
       }
     ],
-    "image": "",
+    "image": "BOSS_Male_Trader02.webp",
     "workSuitabilities": [
       {
         "job": "Watering",
@@ -3211,7 +3211,7 @@
         "probability": 40
       }
     ],
-    "image": "",
+    "image": "BOSS_Male_Trader03.webp",
     "workSuitabilities": [
       {
         "job": "Watering",
@@ -3268,7 +3268,7 @@
         "probability": 2
       }
     ],
-    "image": "",
+    "image": "BOSS_Ninja.webp",
     "workSuitabilities": [
       {
         "job": "Handcraft",
@@ -3328,7 +3328,7 @@
         "probability": 100
       }
     ],
-    "image": "",
+    "image": "BOSS_Police_Rifle.webp",
     "workSuitabilities": [
       {
         "job": "Handcraft",
@@ -3381,7 +3381,7 @@
         "probability": 40
       }
     ],
-    "image": "",
+    "image": "BOSS_Police_old.webp",
     "workSuitabilities": [
       {
         "job": "Handcraft",
@@ -3445,7 +3445,7 @@
         "probability": 10
       }
     ],
-    "image": "",
+    "image": "BOSS_Scientist_LaserRifle.webp",
     "workSuitabilities": [
       {
         "job": "Handcraft",
@@ -3498,7 +3498,7 @@
         "probability": 2
       }
     ],
-    "image": "",
+    "image": "BOSS_Viking.webp",
     "workSuitabilities": [
       {
         "job": "Handcraft",
@@ -3558,7 +3558,7 @@
         "probability": 40
       }
     ],
-    "image": "",
+    "image": "BOSS_VikingElite.webp",
     "workSuitabilities": [
       {
         "job": "Handcraft",
