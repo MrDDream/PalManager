@@ -29,8 +29,8 @@ import com.paladmin.util.basePalImageId
 import com.paladmin.util.describe
 import com.paladmin.util.pickLocalizedName
 import com.paladmin.util.prettifyId
-import com.paladmin.util.resolvePalPassiveName
-import com.paladmin.util.resolvePalSkillName
+import com.paladmin.util.resolvePalPassive
+import com.paladmin.util.resolvePalSkill
 import com.paladmin.util.translatePalGender
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
@@ -251,11 +251,14 @@ class GuildsViewModel @Inject constructor(
                     speciesName = speciesName,
                     nickname = pal.nickname,
                     level = pal.level,
+                    genderRaw = pal.gender,
                     gender = translatePalGender(context, pal.gender),
                     shiny = pal.shiny,
+                    isBoss = pal.palId.startsWith("boss_", ignoreCase = true),
                     workerSick = pal.workerSick,
-                    activeSkills = pal.activeSkills.map { resolvePalSkillName(activeSkillCatalog, itemRepository, it, language) },
-                    passives = pal.passives.map { resolvePalPassiveName(passiveSkillCatalog, itemRepository, it, language) },
+                    element = palEntry?.element1,
+                    activeSkills = pal.activeSkills.map { resolvePalSkill(activeSkillCatalog, itemRepository, it, language) },
+                    passives = pal.passives.map { resolvePalPassive(passiveSkillCatalog, itemRepository, it, language) },
                 )
             }
             PalGroup(label = label, pals = pals)

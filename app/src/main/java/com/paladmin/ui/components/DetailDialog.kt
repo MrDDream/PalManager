@@ -26,6 +26,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.paladmin.R
 
@@ -84,6 +85,27 @@ fun DetailDialog(
                                     Text(row.text, modifier = Modifier.padding(start = 8.dp))
                                 }
                                 is DetailRow.Plain -> Text(row.text, modifier = Modifier.padding(vertical = 2.dp))
+                                is DetailRow.Stats -> FlowRow(
+                                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                                    verticalArrangement = Arrangement.spacedBy(8.dp),
+                                    modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp),
+                                ) {
+                                    row.items.forEach { (label, value) ->
+                                        Column(
+                                            modifier = Modifier
+                                                .fillMaxWidth(0.46f)
+                                                .background(MaterialTheme.colorScheme.surfaceVariant, RoundedCornerShape(10.dp))
+                                                .padding(horizontal = 12.dp, vertical = 8.dp),
+                                        ) {
+                                            Text(
+                                                label,
+                                                style = MaterialTheme.typography.labelSmall,
+                                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                            )
+                                            Text(value, style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
+                                        }
+                                    }
+                                }
                                 is DetailRow.Grid -> FlowRow(
                                     horizontalArrangement = Arrangement.spacedBy(6.dp),
                                     verticalArrangement = Arrangement.spacedBy(6.dp),

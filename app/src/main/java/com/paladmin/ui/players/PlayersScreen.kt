@@ -10,6 +10,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.Message
 import androidx.compose.material.icons.filled.Block
+import androidx.compose.material.icons.filled.Inventory
 import androidx.compose.material.icons.filled.Inventory2
 import androidx.compose.material.icons.filled.Logout
 import androidx.compose.material.icons.filled.MoreVert
@@ -146,6 +147,11 @@ fun PlayersScreen(
                                     text = { Text(stringResource(R.string.players_action_team)) },
                                     leadingIcon = { Icon(Icons.Filled.Pets, contentDescription = null) },
                                     onClick = { viewModel.openTeam(player); menuFor = null },
+                                )
+                                DropdownMenuItem(
+                                    text = { Text(stringResource(R.string.players_action_palbox)) },
+                                    leadingIcon = { Icon(Icons.Filled.Inventory, contentDescription = null) },
+                                    onClick = { viewModel.openPalbox(player); menuFor = null },
                                 )
                                 DropdownMenuItem(
                                     text = { Text(stringResource(R.string.players_action_progression)) },

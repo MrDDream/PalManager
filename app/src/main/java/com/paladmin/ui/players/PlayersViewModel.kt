@@ -2,10 +2,11 @@ package com.paladmin.ui.players
 
 import com.paladmin.util.basePalImageId
 import com.paladmin.util.describe
+import com.paladmin.util.formatThousands
 import com.paladmin.util.pickLocalizedName
 import com.paladmin.util.requireSuccess
-import com.paladmin.util.resolvePalPassiveName
-import com.paladmin.util.resolvePalSkillName
+import com.paladmin.util.resolvePalPassive
+import com.paladmin.util.resolvePalSkill
 import com.paladmin.util.translatePalGender
 
 import android.content.Context
@@ -22,12 +23,14 @@ import com.paladmin.data.local.prefs.AppPreferences
 import com.paladmin.data.remote.paldefender.PalDefenderClientFactory
 import com.paladmin.data.remote.paldefender.PlayerItemsResponse
 import com.paladmin.data.remote.paldefender.PlayerMessageRequest
+import com.paladmin.data.remote.paldefender.PlayerPalInstance
 import com.paladmin.data.remote.paldefender.PlayerPalsResponse
 import com.paladmin.data.remote.paldefender.PlayerProgressionResponse
 import com.paladmin.data.remote.paldefender.TechsResponse
 import com.paladmin.data.remote.palworld.KickBanRequest
 import com.paladmin.data.remote.palworld.PalworldClientFactory
 import com.paladmin.data.remote.palworld.PalworldPlayer
+import com.paladmin.data.repository.HumanRepository
 import com.paladmin.data.repository.ItemRepository
 import com.paladmin.data.repository.PalRepository
 import com.paladmin.data.repository.ServerRepository
@@ -78,6 +81,7 @@ class PlayersViewModel @Inject constructor(
     private val passiveSkillCatalog: PassiveSkillCatalog,
     private val itemRepository: ItemRepository,
     private val palRepository: PalRepository,
+    private val humanRepository: HumanRepository,
     private val appPreferences: AppPreferences,
     savedStateHandle: SavedStateHandle,
 ) : ViewModel() {
@@ -159,13 +163,25 @@ class PlayersViewModel @Inject constructor(
         _detail.value = null
     }
 
-    fun openTeam(player: PalworldPlayer) {
-        _palGrid.value = PalGridUiState(title = context.getString(R.string.player_detail_title_fmt, context.getString(R.string.player_detail_team), player.name))
+    fun openTeam(player: PalworldPlayer) = openPalGrid(player, R.string.player_detail_team) { it.pals.team.values }
+
+    fun openPalbox(player: PalworldPlayer) = openPalGrid(player, R.string.player_detail_palbox, searchable = true) { it.pals.palbox.values }
+
+    private fun openPalGrid(
+        player: PalworldPlayer,
+        @StringRes titleRes: Int,
+        searchable: Boolean = false,
+        pals: (PlayerPalsResponse) -> Collection<PlayerPalInstance>,
+    ) {
+        _palGrid.value = PalGridUiState(
+            title = context.getString(R.string.player_detail_title_fmt, context.getString(titleRes), player.name),
+            searchable = searchable,
+        )
         viewModelScope.launch {
             val profile = serverRepository.getProfile(profileId) ?: return@launch
             val api = palDefenderClientFactory.create(profile)
             val language = appPreferences.language.first()
-            runCatching { formatTeamPals(api.getPals(player.userId), language) }
+            runCatching { formatPals(pals(api.getPals(player.userId)), language) }
                 .onSuccess { groups -> _palGrid.value = _palGrid.value?.copy(isLoading = false, groups = groups) }
                 .onFailure { error ->
                     _palGrid.value = _palGrid.value?.copy(isLoading = false, error = error.describe(context.getString(R.string.players_error_detail_load_failed)))
@@ -206,23 +222,34 @@ class PlayersViewModel @Inject constructor(
         return rows.ifEmpty { listOf(DetailRow.Plain(context.getString(R.string.inventory_empty))) }
     }
 
-    private suspend fun formatTeamPals(response: PlayerPalsResponse, language: AppLanguage): List<PalGroup> {
-        val team = response.pals.team.values
-        val infos = team.map { pal ->
-            val entry = palRepository.getById(basePalImageId(pal.palId))
-            val speciesName = entry?.let { pickLocalizedName(it.nameFr, it.nameEn, language) } ?: pal.palId
-            val imagePath = entry?.image?.let { "file:///android_asset/images/pals/$it" }
-                ?: "file:///android_asset/images/pals/${basePalImageId(pal.palId)}.webp"
+    private suspend fun formatPals(pals: Collection<PlayerPalInstance>, language: AppLanguage): List<PalGroup> {
+        val infos = pals.map { pal ->
+            // PalID sert aussi aux PNJ humains asservis comme ouvriers (humans.json, ex.
+            // "Male_Trader01_v25") — on tente Pal d'abord, puis Humain, comme pour les camps de guilde.
+            val palEntry = palRepository.getById(basePalImageId(pal.palId))
+            val (speciesName, imagePath) = if (palEntry != null) {
+                pickLocalizedName(palEntry.nameFr, palEntry.nameEn, language) to "file:///android_asset/images/pals/${palEntry.image}"
+            } else {
+                val humanEntry = humanRepository.getById(pal.palId)
+                val name = humanEntry?.let { pickLocalizedName(it.nameFr, it.nameEn, language) } ?: pal.palId
+                val image = humanEntry?.image?.let { "file:///android_asset/images/humans/$it" }
+                    ?: "file:///android_asset/images/humans/${pal.palId}.webp"
+                name to image
+            }
             PalInfo(
                 imagePath = imagePath,
                 speciesName = speciesName,
                 nickname = pal.nickname,
                 level = pal.level,
+                genderRaw = pal.gender,
                 gender = translatePalGender(context, pal.gender),
                 shiny = pal.shiny,
+                isBoss = pal.palId.startsWith("boss_", ignoreCase = true),
                 workerSick = pal.workerSick,
-                activeSkills = pal.activeSkills.map { resolvePalSkillName(activeSkillCatalog, itemRepository, it, language) },
-                passives = pal.passives.map { resolvePalPassiveName(passiveSkillCatalog, itemRepository, it, language) },
+                element = palEntry?.element1,
+                exp = pal.exp,
+                activeSkills = pal.activeSkills.map { resolvePalSkill(activeSkillCatalog, itemRepository, it, language) },
+                passives = pal.passives.map { resolvePalPassive(passiveSkillCatalog, itemRepository, it, language) },
                 iv = pal.ivs?.let { PalIvInfo(it.health, maxOf(it.attackMelee, it.attackShot), it.defense) },
                 soul = pal.palSouls?.let { PalSoulInfo(it.health, it.attack, it.defense, it.craftSpeed) },
             )
@@ -235,47 +262,65 @@ class PlayersViewModel @Inject constructor(
         val bosses = progression.bosses
         val captures = progression.captures
         val activities = progression.activities
+
+        fun stat(@StringRes labelRes: Int, value: Int) = context.getString(labelRes) to formatThousands(value)
+
         val rows = mutableListOf<DetailRow>()
 
-        rows += DetailRow.Plain(context.getString(R.string.progression_level_fmt, progression.player.level))
-        rows += DetailRow.Plain(context.getString(R.string.progression_exp_fmt, progression.player.exp))
-        rows += DetailRow.Plain(context.getString(R.string.progression_unused_points_fmt, progression.player.unusedStatusPoints))
+        rows += DetailRow.Stats(
+            listOfNotNull(
+                stat(R.string.progression_label_level, progression.player.level),
+                context.getString(R.string.progression_label_exp) to formatThousands(progression.player.exp),
+                stat(R.string.progression_label_unused_points, progression.player.unusedStatusPoints),
+            ),
+        )
 
         rows += DetailRow.Section(context.getString(R.string.progression_section_currencies))
-        rows += DetailRow.Plain(context.getString(R.string.progression_tech_points_fmt, progression.currencies.technologyPoints))
-        rows += DetailRow.Plain(context.getString(R.string.progression_ancient_tech_points_fmt, progression.currencies.ancientTechnologyPoints))
-        if (progression.currencies.relics.isNotEmpty()) {
-            rows += DetailRow.Plain(context.getString(R.string.progression_relics_fmt, progression.currencies.relics.values.sum()))
-        }
+        rows += DetailRow.Stats(
+            listOfNotNull(
+                stat(R.string.progression_label_tech_points, progression.currencies.technologyPoints),
+                stat(R.string.progression_label_ancient_tech_points, progression.currencies.ancientTechnologyPoints),
+                progression.currencies.relics.takeIf { it.isNotEmpty() }
+                    ?.let { stat(R.string.progression_label_relics, it.values.sum()) },
+            ),
+        )
 
         rows += DetailRow.Section(context.getString(R.string.progression_section_bosses))
-        rows += DetailRow.Plain(context.getString(R.string.progression_boss_total_fmt, bosses.totalBossDefeatCount))
-        rows += DetailRow.Plain(context.getString(R.string.progression_predator_fmt, bosses.predatorDefeatCount))
-        rows += DetailRow.Plain(context.getString(R.string.progression_tower_boss_fmt, bosses.towerBossDefeatCounts.values.sum()))
-        rows += DetailRow.Plain(context.getString(R.string.progression_raid_boss_fmt, bosses.raidBossDefeatCounts.values.sum()))
-        rows += DetailRow.Plain(context.getString(R.string.progression_normal_boss_fmt, bosses.normalBossDefeatFlags.values.count { it }))
+        rows += DetailRow.Stats(
+            listOf(
+                stat(R.string.progression_label_boss_total, bosses.totalBossDefeatCount),
+                stat(R.string.progression_label_predator, bosses.predatorDefeatCount),
+                stat(R.string.progression_label_tower_boss, bosses.towerBossDefeatCounts.values.sum()),
+                stat(R.string.progression_label_raid_boss, bosses.raidBossDefeatCounts.values.sum()),
+                stat(R.string.progression_label_normal_boss, bosses.normalBossDefeatFlags.values.count { it }),
+            ),
+        )
 
         rows += DetailRow.Section(context.getString(R.string.progression_section_captures))
-        rows += DetailRow.Plain(context.getString(R.string.progression_tribe_capture_fmt, captures.tribeCaptureCount))
-        rows += DetailRow.Plain(context.getString(R.string.progression_pal_capture_fmt, captures.palCaptureCounts.values.sum()))
-        rows += DetailRow.Plain(context.getString(R.string.progression_pal_capture_bonus_fmt, captures.palCaptureBonusCounts.values.sum()))
-        rows += DetailRow.Plain(context.getString(R.string.progression_pal_butcher_fmt, captures.palButcherCounts.values.sum()))
+        rows += DetailRow.Stats(
+            listOf(
+                stat(R.string.progression_label_tribe_capture, captures.tribeCaptureCount),
+                stat(R.string.progression_label_pal_capture, captures.palCaptureCounts.values.sum()),
+                stat(R.string.progression_label_pal_capture_bonus, captures.palCaptureBonusCounts.values.sum()),
+                stat(R.string.progression_label_pal_butcher, captures.palButcherCounts.values.sum()),
+            ),
+        )
 
         rows += DetailRow.Section(context.getString(R.string.progression_section_activities))
-        rows += DetailRow.Plain(context.getString(R.string.progression_craft_fmt, activities.craftItemCounts.values.sum()))
-        rows += DetailRow.Plain(context.getString(R.string.progression_normal_dungeon_fmt, activities.normalDungeonClearCount))
-        rows += DetailRow.Plain(context.getString(R.string.progression_fixed_dungeon_fmt, activities.fixedDungeonClearCount))
-        rows += DetailRow.Plain(context.getString(R.string.progression_oilrig_fmt, activities.oilrigClearCount))
-        rows += DetailRow.Plain(context.getString(R.string.progression_pal_rankup_fmt, activities.palRankUpCounts.values.sum()))
-        rows += DetailRow.Plain(context.getString(R.string.progression_arena_fmt, activities.arenaSoloClearCounts.values.sum()))
-        rows += DetailRow.Plain(context.getString(R.string.progression_npc_talk_fmt, activities.npcTalkCounts.values.sum()))
-        rows += DetailRow.Plain(context.getString(R.string.progression_fishing_fmt, activities.fishingCounts.values.sum()))
-        rows += DetailRow.Plain(context.getString(R.string.progression_treasure_fmt, activities.foundTreasureCount))
-        rows += DetailRow.Plain(context.getString(R.string.progression_camp_conquered_fmt, activities.campConqueredCount))
-        rows += DetailRow.Plain(
-            context.getString(
-                R.string.progression_first_fishing_fmt,
-                context.getString(if (activities.firstFishingComplete) R.string.common_yes else R.string.common_no),
+        rows += DetailRow.Stats(
+            listOf(
+                stat(R.string.progression_label_craft, activities.craftItemCounts.values.sum()),
+                stat(R.string.progression_label_normal_dungeon, activities.normalDungeonClearCount),
+                stat(R.string.progression_label_fixed_dungeon, activities.fixedDungeonClearCount),
+                stat(R.string.progression_label_oilrig, activities.oilrigClearCount),
+                stat(R.string.progression_label_pal_rankup, activities.palRankUpCounts.values.sum()),
+                stat(R.string.progression_label_arena, activities.arenaSoloClearCounts.values.sum()),
+                stat(R.string.progression_label_npc_talk, activities.npcTalkCounts.values.sum()),
+                stat(R.string.progression_label_fishing, activities.fishingCounts.values.sum()),
+                stat(R.string.progression_label_treasure, activities.foundTreasureCount),
+                stat(R.string.progression_label_camp_conquered, activities.campConqueredCount),
+                context.getString(R.string.progression_label_first_fishing) to
+                    context.getString(if (activities.firstFishingComplete) R.string.common_yes else R.string.common_no),
             ),
         )
 
