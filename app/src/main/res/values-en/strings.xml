@@ -204,6 +204,7 @@
     <string name="techs_level_fmt">Level %1$d</string>
     <string name="common_yes">Yes</string>
     <string name="common_no">No</string>
+    <string name="progression_section_player">Player</string>
     <string name="progression_section_currencies">Currencies</string>
     <string name="progression_section_bosses">Bosses</string>
     <string name="progression_section_captures">Captures</string>
@@ -264,21 +265,14 @@
     <string name="guild_chest_empty">Empty chest</string>
     <string name="guild_chest_slots_fmt">%1$d/%2$d slots used</string>
     <string name="guild_expeditions_unavailable">Expeditions unavailable</string>
-    <string name="guild_expeditions_finished_fmt">Finished expeditions: %1$d</string>
-    <string name="guild_expeditions_released_fmt">Unlocked missions: %1$d/%2$d</string>
+    <string name="guild_expeditions_section_title">Statistics</string>
+    <string name="guild_expeditions_finished_label">Finished expeditions</string>
+    <string name="guild_expeditions_missions_title">Missions</string>
     <string name="guild_lab_unavailable">Laboratory unavailable</string>
     <string name="guild_lab_current_fmt">Current research: %1$s</string>
     <string name="guild_lab_no_research">No research in progress</string>
-    <string name="guild_lab_progress_fmt">%1$s — %2$d%%</string>
-    <string name="guild_lab_category_handiwork">Handiwork</string>
-    <string name="guild_lab_category_kindling">Kindling</string>
-    <string name="guild_lab_category_watering">Watering</string>
-    <string name="guild_lab_category_planting">Planting</string>
-    <string name="guild_lab_category_electricity">Electricity</string>
-    <string name="guild_lab_category_lumbering">Lumbering</string>
-    <string name="guild_lab_category_mining">Mining</string>
-    <string name="guild_lab_category_cooling">Cooling</string>
-    <string name="guild_lab_category_medicine">Medicine Production</string>
+    <string name="guild_lab_completed_label">Completed</string>
+    <string name="guild_lab_in_progress_label">In progress</string>
     <string name="guild_lab_category_other">Other</string>
 
     <!-- Bans -->

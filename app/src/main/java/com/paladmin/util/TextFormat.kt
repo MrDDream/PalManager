@@ -31,14 +31,25 @@ fun pickLocalizedName(nameFr: String, nameEn: String, language: AppLanguage): St
 fun prettifyId(id: String): String =
     id.replace('_', ' ').replace(Regex("(?<=[a-z0-9])(?=[A-Z])"), " ").trim()
 
-/** Les Pals Boss/Alpha ont un PalID préfixé "BOSS_" (ex. "BOSS_Foxcicle", parfois "Boss_" en
- * minuscules selon la source API) qui ne correspond à aucune entrée du dataset (id de base sans
- * préfixe) — on le retire pour résoudre nom/icône. Certains boss invoqués via compétence de
- * partenaire (ex. "BOSS_KingWhale_otomo" pour Panthalus) portent en plus un suffixe d'instance
- * "_otomo" ("compagnon" en japonais) absent du dataset — on le retire aussi. */
+/** Préfixes connus qui ne correspondent à aucune entrée du dataset (id de base sans préfixe) :
+ * "BOSS_"/"Boss_" pour les Pals Boss/Alpha (ex. "BOSS_Foxcicle"), "GYM_" pour les Pals possédés
+ * par les dresseurs des arènes de Gymnase (ex. "GYM_ElecPanda_Otomo" -> Grizzbolt). Comparaison
+ * insensible à la casse : la casse du préfixe varie selon la source API. */
+private val KNOWN_PAL_ID_PREFIXES = listOf("boss_", "gym_")
+
+/** Les Pals invoqués via compétence de partenaire (ex. "BOSS_KingWhale_otomo" pour Panthalus,
+ * "GYM_ElecPanda_Otomo" pour un dresseur d'arène) portent en plus un suffixe d'instance "_otomo"
+ * ("compagnon" en japonais, casse variable selon la source) absent du dataset — on le retire aussi. */
 fun basePalImageId(palId: String): String {
-    val withoutBossPrefix = if (palId.startsWith("boss_", ignoreCase = true)) palId.substring(5) else palId
-    return withoutBossPrefix.removeSuffix("_otomo")
+    val withoutPrefix = KNOWN_PAL_ID_PREFIXES
+        .firstOrNull { palId.startsWith(it, ignoreCase = true) }
+        ?.let { palId.substring(it.length) }
+        ?: palId
+    return if (withoutPrefix.endsWith("_otomo", ignoreCase = true)) {
+        withoutPrefix.substring(0, withoutPrefix.length - "_otomo".length)
+    } else {
+        withoutPrefix
+    }
 }
 
 /** Les descriptions de passifs PalJSON enchaînent plusieurs effets sans séparateur clair côté FR

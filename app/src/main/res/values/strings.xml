@@ -204,6 +204,7 @@
     <string name="techs_level_fmt">Niveau %1$d</string>
     <string name="common_yes">Oui</string>
     <string name="common_no">Non</string>
+    <string name="progression_section_player">Joueur</string>
     <string name="progression_section_currencies">Monnaies</string>
     <string name="progression_section_bosses">Boss</string>
     <string name="progression_section_captures">Captures</string>
@@ -264,21 +265,14 @@
     <string name="guild_chest_empty">Coffre vide</string>
     <string name="guild_chest_slots_fmt">%1$d/%2$d emplacements utilisés</string>
     <string name="guild_expeditions_unavailable">Expéditions indisponibles</string>
-    <string name="guild_expeditions_finished_fmt">Expéditions terminées : %1$d</string>
-    <string name="guild_expeditions_released_fmt">Missions débloquées : %1$d/%2$d</string>
+    <string name="guild_expeditions_section_title">Statistiques</string>
+    <string name="guild_expeditions_finished_label">Expéditions terminées</string>
+    <string name="guild_expeditions_missions_title">Missions</string>
     <string name="guild_lab_unavailable">Laboratoire indisponible</string>
     <string name="guild_lab_current_fmt">Recherche en cours : %1$s</string>
     <string name="guild_lab_no_research">Aucune recherche en cours</string>
-    <string name="guild_lab_progress_fmt">%1$s — %2$d%%</string>
-    <string name="guild_lab_category_handiwork">Artisanat</string>
-    <string name="guild_lab_category_kindling">Allumage</string>
-    <string name="guild_lab_category_watering">Arrosage</string>
-    <string name="guild_lab_category_planting">Plantation</string>
-    <string name="guild_lab_category_electricity">Électricité</string>
-    <string name="guild_lab_category_lumbering">Bûcheronnage</string>
-    <string name="guild_lab_category_mining">Minage</string>
-    <string name="guild_lab_category_cooling">Réfrigération</string>
-    <string name="guild_lab_category_medicine">Production de médicaments</string>
+    <string name="guild_lab_completed_label">Terminées</string>
+    <string name="guild_lab_in_progress_label">En cours</string>
     <string name="guild_lab_category_other">Autres</string>
 
     <!-- Bannissements -->

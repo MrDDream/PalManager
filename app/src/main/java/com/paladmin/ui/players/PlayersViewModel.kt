@@ -11,6 +11,13 @@ import com.paladmin.util.translatePalGender
 
 import android.content.Context
 import androidx.annotation.StringRes
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Construction
+import androidx.compose.material.icons.filled.Diamond
+import androidx.compose.material.icons.filled.Pets
+import androidx.compose.material.icons.filled.TrendingUp
+import androidx.compose.material.icons.filled.Warning
+import androidx.compose.ui.graphics.Color
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -34,6 +41,10 @@ import com.paladmin.data.repository.HumanRepository
 import com.paladmin.data.repository.ItemRepository
 import com.paladmin.data.repository.PalRepository
 import com.paladmin.data.repository.ServerRepository
+import com.paladmin.ui.theme.PalAmber
+import com.paladmin.ui.theme.PalDanger
+import com.paladmin.ui.theme.PalGreen
+import com.paladmin.ui.theme.PalSky
 import com.paladmin.ui.components.DetailRow
 import com.paladmin.ui.components.InventoryGridItem
 import com.paladmin.ui.components.PalGridUiState
@@ -49,6 +60,16 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 import javax.inject.Inject
+
+/** Fond des technologies "ancienne"/boss (débloquées via des points de technologie ancienne
+ * plutôt que normaux) — même violet que le palier Épique des passifs, pour rester dans la
+ * palette déjà établie plutôt qu'inventer une nouvelle teinte. */
+private val ANCIENT_TECH_TINT = Color(0xFFA855F7).copy(alpha = 0.22f)
+
+/** Section "Activités" de la progression joueur — même violet que le fond des technologies
+ * ancienne/boss, pour compléter la palette vert/ambre/rouge/bleu déjà utilisée sur les 4 autres
+ * catégories de la fiche. */
+private val ACTIVITIES_ACCENT = Color(0xFFA855F7)
 
 data class PlayersUiState(
     val isLoading: Boolean = true,
@@ -267,15 +288,17 @@ class PlayersViewModel @Inject constructor(
 
         val rows = mutableListOf<DetailRow>()
 
+        rows += DetailRow.Section(context.getString(R.string.progression_section_player), Icons.Filled.TrendingUp, PalGreen)
         rows += DetailRow.Stats(
             listOfNotNull(
                 stat(R.string.progression_label_level, progression.player.level),
                 context.getString(R.string.progression_label_exp) to formatThousands(progression.player.exp),
                 stat(R.string.progression_label_unused_points, progression.player.unusedStatusPoints),
             ),
+            accent = PalGreen,
         )
 
-        rows += DetailRow.Section(context.getString(R.string.progression_section_currencies))
+        rows += DetailRow.Section(context.getString(R.string.progression_section_currencies), Icons.Filled.Diamond, PalAmber)
         rows += DetailRow.Stats(
             listOfNotNull(
                 stat(R.string.progression_label_tech_points, progression.currencies.technologyPoints),
@@ -283,9 +306,10 @@ class PlayersViewModel @Inject constructor(
                 progression.currencies.relics.takeIf { it.isNotEmpty() }
                     ?.let { stat(R.string.progression_label_relics, it.values.sum()) },
             ),
+            accent = PalAmber,
         )
 
-        rows += DetailRow.Section(context.getString(R.string.progression_section_bosses))
+        rows += DetailRow.Section(context.getString(R.string.progression_section_bosses), Icons.Filled.Warning, PalDanger)
         rows += DetailRow.Stats(
             listOf(
                 stat(R.string.progression_label_boss_total, bosses.totalBossDefeatCount),
@@ -294,9 +318,10 @@ class PlayersViewModel @Inject constructor(
                 stat(R.string.progression_label_raid_boss, bosses.raidBossDefeatCounts.values.sum()),
                 stat(R.string.progression_label_normal_boss, bosses.normalBossDefeatFlags.values.count { it }),
             ),
+            accent = PalDanger,
         )
 
-        rows += DetailRow.Section(context.getString(R.string.progression_section_captures))
+        rows += DetailRow.Section(context.getString(R.string.progression_section_captures), Icons.Filled.Pets, PalSky)
         rows += DetailRow.Stats(
             listOf(
                 stat(R.string.progression_label_tribe_capture, captures.tribeCaptureCount),
@@ -304,9 +329,10 @@ class PlayersViewModel @Inject constructor(
                 stat(R.string.progression_label_pal_capture_bonus, captures.palCaptureBonusCounts.values.sum()),
                 stat(R.string.progression_label_pal_butcher, captures.palButcherCounts.values.sum()),
             ),
+            accent = PalSky,
         )
 
-        rows += DetailRow.Section(context.getString(R.string.progression_section_activities))
+        rows += DetailRow.Section(context.getString(R.string.progression_section_activities), Icons.Filled.Construction, ACTIVITIES_ACCENT)
         rows += DetailRow.Stats(
             listOf(
                 stat(R.string.progression_label_craft, activities.craftItemCounts.values.sum()),
@@ -322,6 +348,7 @@ class PlayersViewModel @Inject constructor(
                 context.getString(R.string.progression_label_first_fishing) to
                     context.getString(if (activities.firstFishingComplete) R.string.common_yes else R.string.common_no),
             ),
+            accent = ACTIVITIES_ACCENT,
         )
 
         return rows
@@ -331,14 +358,22 @@ class PlayersViewModel @Inject constructor(
         val header = context.getString(R.string.techs_unlocked_fmt, response.meta.unlockedCount, response.meta.totalCount)
         val rows = mutableListOf<DetailRow>(DetailRow.Plain(header))
 
-        val resolved = response.techs.unlocked.mapNotNull { id -> technologyCatalog.get(id) }
-        resolved.groupBy { it.level }.toSortedMap().forEach { (level, techs) ->
+        // Comparaison insensible à la casse : certains ids de techno.json sont en MAJUSCULES tel
+        // que scrapés sur paldb.cc (ex. "PALBOX") alors que l'API PalDefender renvoie une casse
+        // différente pour ce même id (ex. "Palbox") — un Set.contains strict ratait ces entrées et
+        // les affichait verrouillées (rouge) alors qu'elles étaient bien débloquées en jeu.
+        val unlocked = response.techs.unlocked.mapTo(mutableSetOf()) { it.uppercase() }
+        technologyCatalog.all().groupBy { it.level }.toSortedMap().forEach { (level, techs) ->
             rows += DetailRow.Section(context.getString(R.string.techs_level_fmt, level))
             rows += DetailRow.Grid(
-                techs.map {
+                techs.sortedBy { it.isAncient }.map {
+                    val isUnlocked = it.id.uppercase() in unlocked
                     InventoryGridItem(
                         imagePath = "file:///android_asset/images/technologies/${it.image}",
                         label = pickLocalizedName(it.nameFr, it.nameEn, language).ifBlank { it.id },
+                        dimmed = !isUnlocked,
+                        borderColor = if (isUnlocked) PalGreen else PalDanger,
+                        tintBackground = if (it.isAncient) ANCIENT_TECH_TINT else null,
                     )
                 },
             )
