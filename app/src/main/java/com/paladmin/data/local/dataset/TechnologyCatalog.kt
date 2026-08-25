@@ -23,6 +23,8 @@ class TechnologyCatalog @Inject constructor(
 
     suspend fun get(id: String): TechnologyDatasetEntry? = byId()[id]
 
+    suspend fun all(): List<TechnologyDatasetEntry> = byId().values.toList()
+
     private suspend fun byId(): Map<String, TechnologyDatasetEntry> {
         cache?.let { return it }
         return mutex.withLock {

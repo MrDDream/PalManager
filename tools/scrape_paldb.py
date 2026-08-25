@@ -350,7 +350,10 @@ def scrape_human_details(humans: list[dict]) -> None:
 
 _TECH_TOKEN = re.compile(
     r'<div class="d-flex justify-content-center align-items-center" style="width:32px;"><div>(\d+)</div></div>'
-    r'|background-image: url\(([^)]+)\);" data-hover="\?s=Technology/([^"]+)">\s*'
+    # "BossTechnology" marque les technologies débloquées via un boss / des points de technologie
+    # ancienne (ex. Kit de construction flottante) plutôt que les points de technologie normaux —
+    # distinctes visuellement en jeu (violet), absent du scrape avant.
+    r'|class="d-inline-block hoverTech\s*(BossTechnology)?\s*" style="background-image: url\(([^)]+)\);" data-hover="\?s=Technology/([^"]+)">\s*'
     r'<div class="hoverTechCost badge">(\d+)</div>\s*'
     r'<div class="hoverTechHeader">([^<]+)</div>\s*'
     r'<div class="hoverTechFooter">([^<]+)</div>',
@@ -370,12 +373,14 @@ def scrape_technologies() -> list[dict]:
         if match.group(1):
             current_level = int(match.group(1))
             continue
-        icon_url, tech_id, cost, category, name = match.group(2), match.group(3), match.group(4), match.group(5), match.group(6)
+        is_ancient = match.group(2) is not None
+        icon_url, tech_id, cost, category, name = match.group(3), match.group(4), match.group(5), match.group(6), match.group(7)
         entries[tech_id] = {
             "id": tech_id,
             "level": current_level,
             "cost": int(cost),
             "category": category,
+            "is_ancient": is_ancient,
             "name_fr": clean_text(name),
             "name_en": "",
             "icon_url": icon_url,

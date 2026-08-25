@@ -78,6 +78,10 @@ data class TechnologyDatasetEntry(
     val level: Int,
     val cost: Int,
     val category: String,
+    /** Débloquée via un boss / des points de technologie ancienne plutôt que des points de
+     * technologie normaux (ex. Kit de construction flottante, Lanterne de taille améliorée) —
+     * classe CSS "BossTechnology" sur paldb.cc, distincte en jeu (violet). */
+    @SerialName("is_ancient") val isAncient: Boolean = false,
     @SerialName("name_fr") val nameFr: String,
     @SerialName("name_en") val nameEn: String,
     val image: String,

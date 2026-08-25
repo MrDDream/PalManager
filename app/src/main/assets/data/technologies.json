@@ -6,7 +6,8 @@
     "category": "Objets",
     "name_fr": "Batte en bois",
     "name_en": "",
-    "image": "Battle_MeleeWeapon_Bat.webp"
+    "image": "Battle_MeleeWeapon_Bat.webp",
+    "is_ancient": false
   },
   {
     "id": "HandTorch",
@@ -15,7 +16,8 @@
     "category": "Objets",
     "name_fr": "Torche à porter",
     "name_en": "",
-    "image": "HandTorch.webp"
+    "image": "HandTorch.webp",
+    "is_ancient": false
   },
   {
     "id": "Product_Axe_Grade_01",
@@ -24,7 +26,8 @@
     "category": "Objets",
     "name_fr": "Hache en pierre",
     "name_en": "",
-    "image": "Product_Axe_Grade_01.webp"
+    "image": "Product_Axe_Grade_01.webp",
+    "is_ancient": false
   },
   {
     "id": "Product_Pickaxe_Grade_01",
@@ -33,7 +36,8 @@
     "category": "Objets",
     "name_fr": "Pioche en pierre",
     "name_en": "",
-    "image": "Product_Pickaxe_Grade_01.webp"
+    "image": "Product_Pickaxe_Grade_01.webp",
+    "is_ancient": false
   },
   {
     "id": "Workbench",
@@ -42,7 +46,8 @@
     "category": "Structures",
     "name_fr": "Établi de fortune",
     "name_en": "",
-    "image": "Workbench.webp"
+    "image": "Workbench.webp",
+    "is_ancient": false
   },
   {
     "id": "Infra_ItemChest_Grade_01",
@@ -51,7 +56,8 @@
     "category": "Structures",
     "name_fr": "Coffre en bois",
     "name_en": "",
-    "image": "Infra_ItemChest_Grade_01.webp"
+    "image": "Infra_ItemChest_Grade_01.webp",
+    "is_ancient": false
   },
   {
     "id": "PALBOX",
@@ -60,7 +66,8 @@
     "category": "Structures",
     "name_fr": "Boîte à Pal",
     "name_en": "",
-    "image": "PALBOX.webp"
+    "image": "PALBOX.webp",
+    "is_ancient": false
   },
   {
     "id": "Product_Cooking_Grade_01",
@@ -69,7 +76,8 @@
     "category": "Structures",
     "name_fr": "Feu de camp",
     "name_en": "",
-    "image": "Product_Cooking_Grade_01.webp"
+    "image": "Product_Cooking_Grade_01.webp",
+    "is_ancient": false
   },
   {
     "id": "RepairBench",
@@ -78,7 +86,8 @@
     "category": "Structures",
     "name_fr": "Banc de réparation",
     "name_en": "",
-    "image": "RepairBench.webp"
+    "image": "RepairBench.webp",
+    "is_ancient": false
   },
   {
     "id": "SkinChange",
@@ -87,7 +96,8 @@
     "category": "Structures",
     "name_fr": "Dispositif d'habillage pour Pals",
     "name_en": "",
-    "image": "SkinChange.webp"
+    "image": "SkinChange.webp",
+    "is_ancient": false
   },
   {
     "id": "Special_PalSphere_Grade_01",
@@ -96,7 +106,8 @@
     "category": "Objets",
     "name_fr": "Sphère de Pal",
     "name_en": "",
-    "image": "Special_PalSphere_Grade_01.webp"
+    "image": "Special_PalSphere_Grade_01.webp",
+    "is_ancient": false
   },
   {
     "id": "Wooden_houseset",
@@ -105,7 +116,8 @@
     "category": "Structures",
     "name_fr": "Structures en bois",
     "name_en": "",
-    "image": "Wooden_houseset.webp"
+    "image": "Wooden_houseset.webp",
+    "is_ancient": false
   },
   {
     "id": "Arrow",
@@ -114,7 +126,8 @@
     "category": "Objets",
     "name_fr": "Flèche",
     "name_en": "",
-    "image": "Arrow.webp"
+    "image": "Arrow.webp",
+    "is_ancient": false
   },
   {
     "id": "Battle_RangeWeapon_Bow1",
@@ -123,7 +136,8 @@
     "category": "Objets",
     "name_fr": "Vieil arc",
     "name_en": "",
-    "image": "Battle_RangeWeapon_Bow1.webp"
+    "image": "Battle_RangeWeapon_Bow1.webp",
+    "is_ancient": false
   },
   {
     "id": "GlobalPalStorage",
@@ -132,7 +146,8 @@
     "category": "Structures",
     "name_fr": "Boîte à Pals globale",
     "name_en": "",
-    "image": "GlobalPalStorage.webp"
+    "image": "GlobalPalStorage.webp",
+    "is_ancient": false
   },
   {
     "id": "Infra_PalBed_Grade_01",
@@ -141,7 +156,8 @@
     "category": "Structures",
     "name_fr": "Lit pour Pal en paille",
     "name_en": "",
-    "image": "Infra_PalBed_Grade_01.webp"
+    "image": "Infra_PalBed_Grade_01.webp",
+    "is_ancient": false
   },
   {
     "id": "Infra_PlayerBed_Grade_01",
@@ -150,7 +166,8 @@
     "category": "Structures",
     "name_fr": "Lit de fortune",
     "name_en": "",
-    "image": "Infra_PlayerBed_Grade_01.webp"
+    "image": "Infra_PlayerBed_Grade_01.webp",
+    "is_ancient": false
   },
   {
     "id": "Spear",
@@ -159,7 +176,8 @@
     "category": "Objets",
     "name_fr": "Lance en pierre",
     "name_en": "",
-    "image": "Spear.webp"
+    "image": "Spear.webp",
+    "is_ancient": false
   },
   {
     "id": "Battle_Armor_Grade_01_Cloth",
@@ -168,7 +186,8 @@
     "category": "Objets",
     "name_fr": "Vêtement en tissu",
     "name_en": "",
-    "image": "Battle_Armor_Grade_01_Cloth.webp"
+    "image": "Battle_Armor_Grade_01_Cloth.webp",
+    "is_ancient": false
   },
   {
     "id": "Battle_Cloth",
@@ -177,7 +196,8 @@
     "category": "Objets",
     "name_fr": "Tissu",
     "name_en": "",
-    "image": "Battle_Cloth.webp"
+    "image": "Battle_Cloth.webp",
+    "is_ancient": false
   },
   {
     "id": "PalFoodBox",
@@ -186,7 +206,8 @@
     "category": "Structures",
     "name_fr": "Boîte à nourriture",
     "name_en": "",
-    "image": "PalFoodBox.webp"
+    "image": "PalFoodBox.webp",
+    "is_ancient": false
   },
   {
     "id": "Shield_01",
@@ -195,7 +216,8 @@
     "category": "Objets",
     "name_fr": "Bouclier normal",
     "name_en": "",
-    "image": "Shield_01.webp"
+    "image": "Shield_01.webp",
+    "is_ancient": false
   },
   {
     "id": "Battle_Glider_Grade_01",
@@ -204,7 +226,8 @@
     "category": "Objets",
     "name_fr": "Parachute normal",
     "name_en": "",
-    "image": "Battle_Glider_Grade_01.webp"
+    "image": "Battle_Glider_Grade_01.webp",
+    "is_ancient": false
   },
   {
     "id": "FurnitureSet_1",
@@ -213,7 +236,8 @@
     "category": "Structures",
     "name_fr": "Ensemble de meubles pour salon en bois",
     "name_en": "",
-    "image": "FurnitureSet_1.webp"
+    "image": "FurnitureSet_1.webp",
+    "is_ancient": false
   },
   {
     "id": "FurnitureSet_2",
@@ -222,7 +246,8 @@
     "category": "Structures",
     "name_fr": "Ensemble de meubles de rangement pour bar en bois",
     "name_en": "",
-    "image": "FurnitureSet_2.webp"
+    "image": "FurnitureSet_2.webp",
+    "is_ancient": false
   },
   {
     "id": "FurnitureSet_3",
@@ -231,7 +256,8 @@
     "category": "Structures",
     "name_fr": "Ensemble de meubles pour bar en bois",
     "name_en": "",
-    "image": "FurnitureSet_3.webp"
+    "image": "FurnitureSet_3.webp",
+    "is_ancient": false
   },
   {
     "id": "MonsterFarm",
@@ -240,7 +266,8 @@
     "category": "Structures",
     "name_fr": "Ferme",
     "name_en": "",
-    "image": "MonsterFarm.webp"
+    "image": "MonsterFarm.webp",
+    "is_ancient": false
   },
   {
     "id": "Product_Farm_Berries",
@@ -249,7 +276,8 @@
     "category": "Structures",
     "name_fr": "Plantation de baies",
     "name_en": "",
-    "image": "Product_Farm_Berries.webp"
+    "image": "Product_Farm_Berries.webp",
+    "is_ancient": false
   },
   {
     "id": "Arrow_Fire",
@@ -258,7 +286,8 @@
     "category": "Objets",
     "name_fr": "Flèche de feu",
     "name_en": "",
-    "image": "Arrow_Fire.webp"
+    "image": "Arrow_Fire.webp",
+    "is_ancient": false
   },
   {
     "id": "FurnitureSet_9",
@@ -267,7 +296,8 @@
     "category": "Structures",
     "name_fr": "Ensemble de plantes décoratives",
     "name_en": "",
-    "image": "FurnitureSet_9.webp"
+    "image": "FurnitureSet_9.webp",
+    "is_ancient": false
   },
   {
     "id": "Product_WorkBench_SkillUnlock",
@@ -276,7 +306,8 @@
     "category": "Structures",
     "name_fr": "Établi pour équipement de Pal",
     "name_en": "",
-    "image": "Product_WorkBench_SkillUnlock.webp"
+    "image": "Product_WorkBench_SkillUnlock.webp",
+    "is_ancient": false
   },
   {
     "id": "Signboard",
@@ -285,7 +316,8 @@
     "category": "Structures",
     "name_fr": "Pancarte",
     "name_en": "",
-    "image": "Signboard.webp"
+    "image": "Signboard.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_Boar",
@@ -294,7 +326,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Rushoar",
     "name_en": "",
-    "image": "SkillUnlock_Boar.webp"
+    "image": "SkillUnlock_Boar.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_Kitsunebi",
@@ -303,7 +336,8 @@
     "category": "Objets",
     "name_fr": "Harnais pour Foxparks",
     "name_en": "",
-    "image": "SkillUnlock_Kitsunebi.webp"
+    "image": "SkillUnlock_Kitsunebi.webp",
+    "is_ancient": false
   },
   {
     "id": "Torch",
@@ -312,7 +346,8 @@
     "category": "Structures",
     "name_fr": "Torche à poser",
     "name_en": "",
-    "image": "Torch.webp"
+    "image": "Torch.webp",
+    "is_ancient": false
   },
   {
     "id": "WallSignboard",
@@ -321,7 +356,8 @@
     "category": "Structures",
     "name_fr": "Pancarte murale",
     "name_en": "",
-    "image": "WallSignboard.webp"
+    "image": "WallSignboard.webp",
+    "is_ancient": false
   },
   {
     "id": "BaseCampBattleDirector",
@@ -330,7 +366,8 @@
     "category": "Structures",
     "name_fr": "Alarme",
     "name_en": "",
-    "image": "BaseCampBattleDirector.webp"
+    "image": "BaseCampBattleDirector.webp",
+    "is_ancient": false
   },
   {
     "id": "BaseCampWorkHard",
@@ -339,7 +376,8 @@
     "category": "Structures",
     "name_fr": "Plateforme de surveillance",
     "name_en": "",
-    "image": "BaseCampWorkHard.webp"
+    "image": "BaseCampWorkHard.webp",
+    "is_ancient": false
   },
   {
     "id": "Battle_MeleeWeapon_Bat2",
@@ -348,7 +386,8 @@
     "category": "Objets",
     "name_fr": "Batte",
     "name_en": "",
-    "image": "Battle_MeleeWeapon_Bat2.webp"
+    "image": "Battle_MeleeWeapon_Bat2.webp",
+    "is_ancient": false
   },
   {
     "id": "DefenseWait",
@@ -357,7 +396,8 @@
     "category": "Structures",
     "name_fr": "Sac de sable",
     "name_en": "",
-    "image": "DefenseWait.webp"
+    "image": "DefenseWait.webp",
+    "is_ancient": false
   },
   {
     "id": "FurnitureSet_4",
@@ -366,7 +406,8 @@
     "category": "Structures",
     "name_fr": "Ensemble de plantes décoratives murales",
     "name_en": "",
-    "image": "FurnitureSet_4.webp"
+    "image": "FurnitureSet_4.webp",
+    "is_ancient": false
   },
   {
     "id": "Product_StationDeforest",
@@ -375,7 +416,8 @@
     "category": "Structures",
     "name_fr": "Scierie",
     "name_en": "",
-    "image": "Product_StationDeforest.webp"
+    "image": "Product_StationDeforest.webp",
+    "is_ancient": false
   },
   {
     "id": "Product_StonePit",
@@ -384,7 +426,8 @@
     "category": "Structures",
     "name_fr": "Carrière",
     "name_en": "",
-    "image": "Product_StonePit.webp"
+    "image": "Product_StonePit.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_Alpaca",
@@ -393,7 +436,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Melpaca",
     "name_en": "",
-    "image": "SkillUnlock_Alpaca.webp"
+    "image": "SkillUnlock_Alpaca.webp",
+    "is_ancient": false
   },
   {
     "id": "Arrow_Poison",
@@ -402,7 +446,8 @@
     "category": "Objets",
     "name_fr": "Flèche empoisonnée",
     "name_en": "",
-    "image": "Arrow_Poison.webp"
+    "image": "Arrow_Poison.webp",
+    "is_ancient": false
   },
   {
     "id": "Crusher",
@@ -411,7 +456,8 @@
     "category": "Structures",
     "name_fr": "Concasseur",
     "name_en": "",
-    "image": "Crusher.webp"
+    "image": "Crusher.webp",
+    "is_ancient": false
   },
   {
     "id": "DefenseWall_Wood",
@@ -420,7 +466,8 @@
     "category": "Structures",
     "name_fr": "Rempart en bois",
     "name_en": "",
-    "image": "DefenseWall_Wood.webp"
+    "image": "DefenseWall_Wood.webp",
+    "is_ancient": false
   },
   {
     "id": "FurnitureSet_28",
@@ -429,7 +476,8 @@
     "category": "Structures",
     "name_fr": "Ensemble de cheminées",
     "name_en": "",
-    "image": "FurnitureSet_28.webp"
+    "image": "FurnitureSet_28.webp",
+    "is_ancient": false
   },
   {
     "id": "Trap_Noose",
@@ -438,7 +486,8 @@
     "category": "Structures",
     "name_fr": "Piège suspendu",
     "name_en": "",
-    "image": "Trap_Noose.webp"
+    "image": "Trap_Noose.webp",
+    "is_ancient": false
   },
   {
     "id": "Wood_Gate",
@@ -447,7 +496,8 @@
     "category": "Structures",
     "name_fr": "Portail en bois",
     "name_en": "",
-    "image": "Wood_Gate.webp"
+    "image": "Wood_Gate.webp",
+    "is_ancient": false
   },
   {
     "id": "AutoMealPouch_Tier1",
@@ -456,7 +506,8 @@
     "category": "Objets",
     "name_fr": "Petit sac de nourriture",
     "name_en": "",
-    "image": "AutoMealPouch_Tier1.webp"
+    "image": "AutoMealPouch_Tier1.webp",
+    "is_ancient": false
   },
   {
     "id": "Battle_Armor_Grade_01_Cloth_Cold",
@@ -465,7 +516,8 @@
     "category": "Objets",
     "name_fr": "Tenue toundra",
     "name_en": "",
-    "image": "Battle_Armor_Grade_01_Cloth_Cold.webp"
+    "image": "Battle_Armor_Grade_01_Cloth_Cold.webp",
+    "is_ancient": false
   },
   {
     "id": "Battle_Armor_Grade_01_Cloth_Heat",
@@ -474,7 +526,8 @@
     "category": "Objets",
     "name_fr": "Tenue tropicale",
     "name_en": "",
-    "image": "Battle_Armor_Grade_01_Cloth_Heat.webp"
+    "image": "Battle_Armor_Grade_01_Cloth_Heat.webp",
+    "is_ancient": false
   },
   {
     "id": "BuildableGoddessStatue",
@@ -483,7 +536,8 @@
     "category": "Structures",
     "name_fr": "Statue de puissance",
     "name_en": "",
-    "image": "BuildableGoddessStatue.webp"
+    "image": "BuildableGoddessStatue.webp",
+    "is_ancient": false
   },
   {
     "id": "FurnitureSet_17",
@@ -492,7 +546,8 @@
     "category": "Structures",
     "name_fr": "Ensemble de tapis",
     "name_en": "",
-    "image": "FurnitureSet_17.webp"
+    "image": "FurnitureSet_17.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_Garm",
@@ -501,7 +556,8 @@
     "category": "Objets",
     "name_fr": "Harnais à selle pour Direhowl",
     "name_en": "",
-    "image": "SkillUnlock_Garm.webp"
+    "image": "SkillUnlock_Garm.webp",
+    "is_ancient": false
   },
   {
     "id": "Spa",
@@ -510,7 +566,8 @@
     "category": "Structures",
     "name_fr": "Source chaude",
     "name_en": "",
-    "image": "Spa.webp"
+    "image": "Spa.webp",
+    "is_ancient": false
   },
   {
     "id": "Battle_Helm_Grade_02_Fur",
@@ -519,7 +576,8 @@
     "category": "Objets",
     "name_fr": "Barrette à plumes",
     "name_en": "",
-    "image": "Battle_Helm_Grade_02_Fur.webp"
+    "image": "Battle_Helm_Grade_02_Fur.webp",
+    "is_ancient": false
   },
   {
     "id": "Battle_RangeWeapon_Bow3",
@@ -528,7 +586,8 @@
     "category": "Objets",
     "name_fr": "Arc triple",
     "name_en": "",
-    "image": "Battle_RangeWeapon_Bow3.webp"
+    "image": "Battle_RangeWeapon_Bow3.webp",
+    "is_ancient": false
   },
   {
     "id": "FurnitureSet_21",
@@ -537,7 +596,8 @@
     "category": "Structures",
     "name_fr": "Ensemble de rangements anciens",
     "name_en": "",
-    "image": "FurnitureSet_21.webp"
+    "image": "FurnitureSet_21.webp",
+    "is_ancient": false
   },
   {
     "id": "Infra_MachineParts",
@@ -546,7 +606,8 @@
     "category": "Objets",
     "name_fr": "Clou",
     "name_en": "",
-    "image": "Infra_MachineParts.webp"
+    "image": "Infra_MachineParts.webp",
+    "is_ancient": false
   },
   {
     "id": "Product_Ingot_Grade_01_Copper",
@@ -555,7 +616,8 @@
     "category": "Structures",
     "name_fr": "Fournaise de fortune",
     "name_en": "",
-    "image": "Product_Ingot_Grade_01_Copper.webp"
+    "image": "Product_Ingot_Grade_01_Copper.webp",
+    "is_ancient": false
   },
   {
     "id": "Special_HatchingPalEgg",
@@ -564,7 +626,8 @@
     "category": "Structures",
     "name_fr": "Incubateur",
     "name_en": "",
-    "image": "Special_HatchingPalEgg.webp"
+    "image": "Special_HatchingPalEgg.webp",
+    "is_ancient": true
   },
   {
     "id": "Trap_LegHold",
@@ -573,7 +636,8 @@
     "category": "Structures",
     "name_fr": "Piège (petit)",
     "name_en": "",
-    "image": "Trap_LegHold.webp"
+    "image": "Trap_LegHold.webp",
+    "is_ancient": false
   },
   {
     "id": "Wooden_ladder",
@@ -582,7 +646,8 @@
     "category": "Structures",
     "name_fr": "Échelle",
     "name_en": "",
-    "image": "Wooden_ladder.webp"
+    "image": "Wooden_ladder.webp",
+    "is_ancient": false
   },
   {
     "id": "FurnitureSet_19",
@@ -591,7 +656,8 @@
     "category": "Structures",
     "name_fr": "Ensemble de chaises anciennes",
     "name_en": "",
-    "image": "FurnitureSet_19.webp"
+    "image": "FurnitureSet_19.webp",
+    "is_ancient": false
   },
   {
     "id": "HunterFlagSet",
@@ -600,7 +666,8 @@
     "category": "Structures",
     "name_fr": "Ensemble de Drapeaux des Syndicats",
     "name_en": "",
-    "image": "HunterFlagSet.webp"
+    "image": "HunterFlagSet.webp",
+    "is_ancient": false
   },
   {
     "id": "Product_Axe_Grade_02",
@@ -609,7 +676,8 @@
     "category": "Objets",
     "name_fr": "Hache en métal",
     "name_en": "",
-    "image": "Product_Axe_Grade_02.webp"
+    "image": "Product_Axe_Grade_02.webp",
+    "is_ancient": false
   },
   {
     "id": "Product_Factory_Hard_Grade_01",
@@ -618,7 +686,8 @@
     "category": "Structures",
     "name_fr": "Établi de qualité",
     "name_en": "",
-    "image": "Product_Factory_Hard_Grade_01.webp"
+    "image": "Product_Factory_Hard_Grade_01.webp",
+    "is_ancient": false
   },
   {
     "id": "Product_Pickaxe_Grade_02",
@@ -627,7 +696,8 @@
     "category": "Objets",
     "name_fr": "Pioche en métal",
     "name_en": "",
-    "image": "Product_Pickaxe_Grade_02.webp"
+    "image": "Product_Pickaxe_Grade_02.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_Carbunclo",
@@ -636,7 +706,8 @@
     "category": "Objets",
     "name_fr": "Pistolet-mitrailleur pour Lifmunk",
     "name_en": "",
-    "image": "SkillUnlock_Carbunclo.webp"
+    "image": "SkillUnlock_Carbunclo.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_WeaselDragon",
@@ -645,7 +716,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Chillet",
     "name_en": "",
-    "image": "SkillUnlock_WeaselDragon.webp"
+    "image": "SkillUnlock_WeaselDragon.webp",
+    "is_ancient": false
   },
   {
     "id": "Battle_Armor_Grade_02_Fur",
@@ -654,7 +726,8 @@
     "category": "Objets",
     "name_fr": "Armure en cuir",
     "name_en": "",
-    "image": "Battle_Armor_Grade_02_Fur.webp"
+    "image": "Battle_Armor_Grade_02_Fur.webp",
+    "is_ancient": false
   },
   {
     "id": "FurnitureTree_Green",
@@ -663,7 +736,8 @@
     "category": "Structures",
     "name_fr": "Ensemble d'arbres décoratifs",
     "name_en": "",
-    "image": "FurnitureTree_Green.webp"
+    "image": "FurnitureTree_Green.webp",
+    "is_ancient": false
   },
   {
     "id": "GrapplingGun",
@@ -672,7 +746,8 @@
     "category": "Objets",
     "name_fr": "Pistolet-grappin",
     "name_en": "",
-    "image": "GrapplingGun.webp"
+    "image": "GrapplingGun.webp",
+    "is_ancient": true
   },
   {
     "id": "MeatCutterKnife",
@@ -681,7 +756,8 @@
     "category": "Objets",
     "name_fr": "Couteau de boucher",
     "name_en": "",
-    "image": "MeatCutterKnife.webp"
+    "image": "MeatCutterKnife.webp",
+    "is_ancient": false
   },
   {
     "id": "Product_Medicine_Grade_01",
@@ -690,7 +766,8 @@
     "category": "Structures",
     "name_fr": "Table pharmaceutique archaïque",
     "name_en": "",
-    "image": "Product_Medicine_Grade_01.webp"
+    "image": "Product_Medicine_Grade_01.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_Deer",
@@ -699,7 +776,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Eikthyrdeer",
     "name_en": "",
-    "image": "SkillUnlock_Deer.webp"
+    "image": "SkillUnlock_Deer.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_Monkey",
@@ -708,7 +786,8 @@
     "category": "Objets",
     "name_fr": "Fusil d'assaut pour Tanzee",
     "name_en": "",
-    "image": "SkillUnlock_Monkey.webp"
+    "image": "SkillUnlock_Monkey.webp",
+    "is_ancient": false
   },
   {
     "id": "TableCircular",
@@ -717,7 +796,8 @@
     "category": "Structures",
     "name_fr": "Ensemble de tables rangées",
     "name_en": "",
-    "image": "TableCircular.webp"
+    "image": "TableCircular.webp",
+    "is_ancient": false
   },
   {
     "id": "Battle_RangeWeapon_BowGun",
@@ -726,7 +806,8 @@
     "category": "Objets",
     "name_fr": "Arbalète",
     "name_en": "",
-    "image": "Battle_RangeWeapon_BowGun.webp"
+    "image": "Battle_RangeWeapon_BowGun.webp",
+    "is_ancient": false
   },
   {
     "id": "CoolerBox",
@@ -735,7 +816,8 @@
     "category": "Structures",
     "name_fr": "Glacière",
     "name_en": "",
-    "image": "CoolerBox.webp"
+    "image": "CoolerBox.webp",
+    "is_ancient": false
   },
   {
     "id": "DamagedScarecrow",
@@ -744,7 +826,8 @@
     "category": "Structures",
     "name_fr": "Mannequin martyr",
     "name_en": "",
-    "image": "DamagedScarecrow.webp"
+    "image": "DamagedScarecrow.webp",
+    "is_ancient": false
   },
   {
     "id": "FurnitureSet_22",
@@ -753,7 +836,8 @@
     "category": "Structures",
     "name_fr": "Ensemble d'armoires anciennes",
     "name_en": "",
-    "image": "FurnitureSet_22.webp"
+    "image": "FurnitureSet_22.webp",
+    "is_ancient": false
   },
   {
     "id": "Infra_ItemChest_Grade_02",
@@ -762,7 +846,8 @@
     "category": "Structures",
     "name_fr": "Coffre en métal",
     "name_en": "",
-    "image": "Infra_ItemChest_Grade_02.webp"
+    "image": "Infra_ItemChest_Grade_02.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_Monkey_Fire",
@@ -771,7 +856,8 @@
     "category": "Objets",
     "name_fr": "Fusil d'assaut pour Tanzee Ignis",
     "name_en": "",
-    "image": "SkillUnlock_Monkey_Fire.webp"
+    "image": "SkillUnlock_Monkey_Fire.webp",
+    "is_ancient": false
   },
   {
     "id": "Spear_2",
@@ -780,7 +866,8 @@
     "category": "Objets",
     "name_fr": "Lance en métal",
     "name_en": "",
-    "image": "Spear_2.webp"
+    "image": "Spear_2.webp",
+    "is_ancient": false
   },
   {
     "id": "AutoMealPouch_Tier2",
@@ -789,7 +876,8 @@
     "category": "Objets",
     "name_fr": "Sac de nourriture",
     "name_en": "",
-    "image": "AutoMealPouch_Tier2.webp"
+    "image": "AutoMealPouch_Tier2.webp",
+    "is_ancient": false
   },
   {
     "id": "FurnitureSet_24",
@@ -798,7 +886,8 @@
     "category": "Structures",
     "name_fr": "Ensemble de bureaux anciens",
     "name_en": "",
-    "image": "FurnitureSet_24.webp"
+    "image": "FurnitureSet_24.webp",
+    "is_ancient": false
   },
   {
     "id": "FurnitureTree_Red",
@@ -807,7 +896,8 @@
     "category": "Structures",
     "name_fr": "Ensemble d'arbres décoratifs à feuilles rouges",
     "name_en": "",
-    "image": "FurnitureTree_Red.webp"
+    "image": "FurnitureTree_Red.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_Kirin",
@@ -816,7 +906,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Univolt",
     "name_en": "",
-    "image": "SkillUnlock_Kirin.webp"
+    "image": "SkillUnlock_Kirin.webp",
+    "is_ancient": false
   },
   {
     "id": "Special_PalRankUp",
@@ -825,7 +916,8 @@
     "category": "Structures",
     "name_fr": "Capsule d'enrichissement pour Pal",
     "name_en": "",
-    "image": "Special_PalRankUp.webp"
+    "image": "Special_PalRankUp.webp",
+    "is_ancient": true
   },
   {
     "id": "Special_PalSphere_Grade_02",
@@ -834,7 +926,8 @@
     "category": "Objets",
     "name_fr": "Méga Sphère",
     "name_en": "",
-    "image": "Special_PalSphere_Grade_02.webp"
+    "image": "Special_PalSphere_Grade_02.webp",
+    "is_ancient": false
   },
   {
     "id": "Special_SphereFactory_Black_Grade_01",
@@ -843,7 +936,8 @@
     "category": "Structures",
     "name_fr": "Établi pour sphères",
     "name_en": "",
-    "image": "Special_SphereFactory_Black_Grade_01.webp"
+    "image": "Special_SphereFactory_Black_Grade_01.webp",
+    "is_ancient": false
   },
   {
     "id": "WallTorch",
@@ -852,7 +946,8 @@
     "category": "Structures",
     "name_fr": "Torche murale",
     "name_en": "",
-    "image": "WallTorch.webp"
+    "image": "WallTorch.webp",
+    "is_ancient": false
   },
   {
     "id": "DisplayCharacter",
@@ -861,7 +956,8 @@
     "category": "Structures",
     "name_fr": "Cage d'observation",
     "name_en": "",
-    "image": "DisplayCharacter.webp"
+    "image": "DisplayCharacter.webp",
+    "is_ancient": false
   },
   {
     "id": "FishingSet1",
@@ -870,7 +966,8 @@
     "category": "Objets",
     "name_fr": "Ensemble de Pêche Basique",
     "name_en": "",
-    "image": "FishingSet1.webp"
+    "image": "FishingSet1.webp",
+    "is_ancient": false
   },
   {
     "id": "FlourMill",
@@ -879,7 +976,8 @@
     "category": "Structures",
     "name_fr": "Broyeur",
     "name_en": "",
-    "image": "FlourMill.webp"
+    "image": "FlourMill.webp",
+    "is_ancient": false
   },
   {
     "id": "Lantern",
@@ -888,7 +986,8 @@
     "category": "Objets",
     "name_fr": "Lanterne de taille",
     "name_en": "",
-    "image": "Lantern.webp"
+    "image": "Lantern.webp",
+    "is_ancient": true
   },
   {
     "id": "Processed_Wood",
@@ -897,7 +996,8 @@
     "category": "Objets",
     "name_fr": "Planche de bois",
     "name_en": "",
-    "image": "Processed_Wood.webp"
+    "image": "Processed_Wood.webp",
+    "is_ancient": false
   },
   {
     "id": "Product_Farm_wheat",
@@ -906,7 +1006,8 @@
     "category": "Structures",
     "name_fr": "Plantation de blé",
     "name_en": "",
-    "image": "Product_Farm_wheat.webp"
+    "image": "Product_Farm_wheat.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_FlameBuffalo",
@@ -915,7 +1016,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Arsox",
     "name_en": "",
-    "image": "SkillUnlock_FlameBuffalo.webp"
+    "image": "SkillUnlock_FlameBuffalo.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_HawkBird",
@@ -924,7 +1026,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Nitewing",
     "name_en": "",
-    "image": "SkillUnlock_HawkBird.webp"
+    "image": "SkillUnlock_HawkBird.webp",
+    "is_ancient": false
   },
   {
     "id": "Battle_Armor_Grade_02_Fur_Heat",
@@ -933,7 +1036,8 @@
     "category": "Objets",
     "name_fr": "Armure en cuir anti-chaleur",
     "name_en": "",
-    "image": "Battle_Armor_Grade_02_Fur_Heat.webp"
+    "image": "Battle_Armor_Grade_02_Fur_Heat.webp",
+    "is_ancient": false
   },
   {
     "id": "FurnitureSet_16",
@@ -942,7 +1046,8 @@
     "category": "Structures",
     "name_fr": "Ensemble de miroirs anciens",
     "name_en": "",
-    "image": "FurnitureSet_16.webp"
+    "image": "FurnitureSet_16.webp",
+    "is_ancient": false
   },
   {
     "id": "FurnitureSet_20",
@@ -951,7 +1056,8 @@
     "category": "Structures",
     "name_fr": "Ensemble de baignoires anciennes",
     "name_en": "",
-    "image": "FurnitureSet_20.webp"
+    "image": "FurnitureSet_20.webp",
+    "is_ancient": false
   },
   {
     "id": "FurnitureTree_Yellow",
@@ -960,7 +1066,8 @@
     "category": "Structures",
     "name_fr": "Ensemble d'arbres décoratifs à feuilles jaunes",
     "name_en": "",
-    "image": "FurnitureTree_Yellow.webp"
+    "image": "FurnitureTree_Yellow.webp",
+    "is_ancient": false
   },
   {
     "id": "Shield_02",
@@ -969,7 +1076,8 @@
     "category": "Objets",
     "name_fr": "Méga bouclier",
     "name_en": "",
-    "image": "Shield_02.webp"
+    "image": "Shield_02.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_Serpent",
@@ -978,7 +1086,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Surfent",
     "name_en": "",
-    "image": "SkillUnlock_Serpent.webp"
+    "image": "SkillUnlock_Serpent.webp",
+    "is_ancient": false
   },
   {
     "id": "Unlock_Picking_Tier1",
@@ -987,7 +1096,8 @@
     "category": "Objets",
     "name_fr": "Outil de crochetage basique",
     "name_en": "",
-    "image": "Unlock_Picking_Tier1.webp"
+    "image": "Unlock_Picking_Tier1.webp",
+    "is_ancient": true
   },
   {
     "id": "BronzeSword",
@@ -996,7 +1106,8 @@
     "category": "Objets",
     "name_fr": "Épée grossière",
     "name_en": "",
-    "image": "BronzeSword.webp"
+    "image": "BronzeSword.webp",
+    "is_ancient": false
   },
   {
     "id": "FurnitureSet_15",
@@ -1005,7 +1116,8 @@
     "category": "Structures",
     "name_fr": "Ensemble de meubles pour piano",
     "name_en": "",
-    "image": "FurnitureSet_15.webp"
+    "image": "FurnitureSet_15.webp",
+    "is_ancient": false
   },
   {
     "id": "FurnitureSet_30",
@@ -1014,7 +1126,8 @@
     "category": "Structures",
     "name_fr": "Ensemble d'étagères en métal",
     "name_en": "",
-    "image": "FurnitureSet_30.webp"
+    "image": "FurnitureSet_30.webp",
+    "is_ancient": false
   },
   {
     "id": "GrapplingGun2",
@@ -1023,7 +1136,8 @@
     "category": "Objets",
     "name_fr": "Méga pistolet-grappin",
     "name_en": "",
-    "image": "GrapplingGun2.webp"
+    "image": "GrapplingGun2.webp",
+    "is_ancient": true
   },
   {
     "id": "Headstone",
@@ -1032,7 +1146,8 @@
     "category": "Structures",
     "name_fr": "Pierre tombale",
     "name_en": "",
-    "image": "Headstone.webp"
+    "image": "Headstone.webp",
+    "is_ancient": false
   },
   {
     "id": "Heater",
@@ -1041,7 +1156,8 @@
     "category": "Structures",
     "name_fr": "Chauffage à flammes",
     "name_en": "",
-    "image": "Heater.webp"
+    "image": "Heater.webp",
+    "is_ancient": false
   },
   {
     "id": "Product_Cooking_Grade_02",
@@ -1050,7 +1166,8 @@
     "category": "Structures",
     "name_fr": "Marmite",
     "name_en": "",
-    "image": "Product_Cooking_Grade_02.webp"
+    "image": "Product_Cooking_Grade_02.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_Penguin",
@@ -1059,7 +1176,8 @@
     "category": "Objets",
     "name_fr": "Lance-Roquettes pour Pengullet",
     "name_en": "",
-    "image": "SkillUnlock_Penguin.webp"
+    "image": "SkillUnlock_Penguin.webp",
+    "is_ancient": false
   },
   {
     "id": "Accessory_Nonkilling",
@@ -1068,7 +1186,8 @@
     "category": "Objets",
     "name_fr": "Bague de pitié",
     "name_en": "",
-    "image": "Accessory_Nonkilling.webp"
+    "image": "Accessory_Nonkilling.webp",
+    "is_ancient": true
   },
   {
     "id": "Battle_Armor_Grade_02_Fur_Cold",
@@ -1077,7 +1196,8 @@
     "category": "Objets",
     "name_fr": "Armure en cuir anti-froid",
     "name_en": "",
-    "image": "Battle_Armor_Grade_02_Fur_Cold.webp"
+    "image": "Battle_Armor_Grade_02_Fur_Cold.webp",
+    "is_ancient": false
   },
   {
     "id": "Battle_Glider_Grade_02",
@@ -1086,7 +1206,8 @@
     "category": "Objets",
     "name_fr": "Méga planeur",
     "name_en": "",
-    "image": "Battle_Glider_Grade_02.webp"
+    "image": "Battle_Glider_Grade_02.webp",
+    "is_ancient": false
   },
   {
     "id": "Cooler",
@@ -1095,7 +1216,8 @@
     "category": "Structures",
     "name_fr": "Climatiseur à glace",
     "name_en": "",
-    "image": "Cooler.webp"
+    "image": "Cooler.webp",
+    "is_ancient": false
   },
   {
     "id": "FurnitureSet_25",
@@ -1104,7 +1226,8 @@
     "category": "Structures",
     "name_fr": "Ensemble de toilettes",
     "name_en": "",
-    "image": "FurnitureSet_25.webp"
+    "image": "FurnitureSet_25.webp",
+    "is_ancient": false
   },
   {
     "id": "FurnitureSet_32",
@@ -1113,7 +1236,8 @@
     "category": "Structures",
     "name_fr": "Ensemble de meubles anciens haut de gamme",
     "name_en": "",
-    "image": "FurnitureSet_32.webp"
+    "image": "FurnitureSet_32.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_ColorfulBird",
@@ -1122,7 +1246,8 @@
     "category": "Objets",
     "name_fr": "Gants pour Tocotoco",
     "name_en": "",
-    "image": "SkillUnlock_ColorfulBird.webp"
+    "image": "SkillUnlock_ColorfulBird.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_Penguin_Electric",
@@ -1131,7 +1256,8 @@
     "category": "Objets",
     "name_fr": "Lance-fusées pour Pengullet Lux",
     "name_en": "",
-    "image": "SkillUnlock_Penguin_Electric.webp"
+    "image": "SkillUnlock_Penguin_Electric.webp",
+    "is_ancient": false
   },
   {
     "id": "BreedFarm",
@@ -1140,7 +1266,8 @@
     "category": "Structures",
     "name_fr": "Ranch",
     "name_en": "",
-    "image": "BreedFarm.webp"
+    "image": "BreedFarm.webp",
+    "is_ancient": true
   },
   {
     "id": "Cement",
@@ -1149,7 +1276,8 @@
     "category": "Objets",
     "name_fr": "Ciment",
     "name_en": "",
-    "image": "Cement.webp"
+    "image": "Cement.webp",
+    "is_ancient": false
   },
   {
     "id": "DefenseWall",
@@ -1158,7 +1286,8 @@
     "category": "Structures",
     "name_fr": "Rempart",
     "name_en": "",
-    "image": "DefenseWall.webp"
+    "image": "DefenseWall.webp",
+    "is_ancient": false
   },
   {
     "id": "Lab",
@@ -1167,7 +1296,8 @@
     "category": "Structures",
     "name_fr": "Centre de recherche sur le travail des Pals",
     "name_en": "",
-    "image": "Lab.webp"
+    "image": "Lab.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_NaughtyCat",
@@ -1176,7 +1306,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Grintale",
     "name_en": "",
-    "image": "SkillUnlock_NaughtyCat.webp"
+    "image": "SkillUnlock_NaughtyCat.webp",
+    "is_ancient": false
   },
   {
     "id": "SphereModule_Heavy",
@@ -1185,7 +1316,8 @@
     "category": "Objets",
     "name_fr": "Module poids lourd",
     "name_en": "",
-    "image": "SphereModule_Heavy.webp"
+    "image": "SphereModule_Heavy.webp",
+    "is_ancient": false
   },
   {
     "id": "Stone_Gate",
@@ -1194,7 +1326,8 @@
     "category": "Structures",
     "name_fr": "Portail en pierre",
     "name_en": "",
-    "image": "Stone_Gate.webp"
+    "image": "Stone_Gate.webp",
+    "is_ancient": false
   },
   {
     "id": "Stone_houseset",
@@ -1203,7 +1336,8 @@
     "category": "Structures",
     "name_fr": "Structures en pierre",
     "name_en": "",
-    "image": "Stone_houseset.webp"
+    "image": "Stone_houseset.webp",
+    "is_ancient": false
   },
   {
     "id": "BelieverFlagSet",
@@ -1212,7 +1346,8 @@
     "category": "Structures",
     "name_fr": "Ensemble de Drapeaux de la Ligue pour la Protection des Pals",
     "name_en": "",
-    "image": "BelieverFlagSet.webp"
+    "image": "BelieverFlagSet.webp",
+    "is_ancient": false
   },
   {
     "id": "DimensionPalStorage",
@@ -1221,7 +1356,8 @@
     "category": "Structures",
     "name_fr": "Stockage de Pals dimensionnel",
     "name_en": "",
-    "image": "DimensionPalStorage.webp"
+    "image": "DimensionPalStorage.webp",
+    "is_ancient": true
   },
   {
     "id": "FurnitureSet_18",
@@ -1230,7 +1366,8 @@
     "category": "Structures",
     "name_fr": "Ensemble de canapés anciens",
     "name_en": "",
-    "image": "FurnitureSet_18.webp"
+    "image": "FurnitureSet_18.webp",
+    "is_ancient": false
   },
   {
     "id": "Product_WeaponFactory_Dirty_Grade_01",
@@ -1239,7 +1376,8 @@
     "category": "Structures",
     "name_fr": "Établi pour armes",
     "name_en": "",
-    "image": "Product_WeaponFactory_Dirty_Grade_01.webp"
+    "image": "Product_WeaponFactory_Dirty_Grade_01.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_FairyDragon",
@@ -1248,7 +1386,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Elphidran",
     "name_en": "",
-    "image": "SkillUnlock_FairyDragon.webp"
+    "image": "SkillUnlock_FairyDragon.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_MopKing",
@@ -1257,7 +1396,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Sweepa",
     "name_en": "",
-    "image": "SkillUnlock_MopKing.webp"
+    "image": "SkillUnlock_MopKing.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_PurpleSpider",
@@ -1266,7 +1406,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Tarantriss",
     "name_en": "",
-    "image": "SkillUnlock_PurpleSpider.webp"
+    "image": "SkillUnlock_PurpleSpider.webp",
+    "is_ancient": false
   },
   {
     "id": "Special_PalSphere_Grade_03",
@@ -1275,7 +1416,8 @@
     "category": "Objets",
     "name_fr": "Giga Sphère",
     "name_en": "",
-    "image": "Special_PalSphere_Grade_03.webp"
+    "image": "Special_PalSphere_Grade_03.webp",
+    "is_ancient": false
   },
   {
     "id": "ToolBoxV1",
@@ -1284,7 +1426,8 @@
     "category": "Structures",
     "name_fr": "Grosse caisse à outils",
     "name_en": "",
-    "image": "ToolBoxV1.webp"
+    "image": "ToolBoxV1.webp",
+    "is_ancient": false
   },
   {
     "id": "Battle_GunPowder_Grade_02",
@@ -1293,7 +1436,8 @@
     "category": "Objets",
     "name_fr": "Poudre à canon",
     "name_en": "",
-    "image": "Battle_GunPowder_Grade_02.webp"
+    "image": "Battle_GunPowder_Grade_02.webp",
+    "is_ancient": false
   },
   {
     "id": "Musket",
@@ -1302,7 +1446,8 @@
     "category": "Objets",
     "name_fr": "Fusil à mousquet",
     "name_en": "",
-    "image": "Musket.webp"
+    "image": "Musket.webp",
+    "is_ancient": false
   },
   {
     "id": "OlympicCauldron",
@@ -1311,7 +1456,8 @@
     "category": "Structures",
     "name_fr": "Marmite",
     "name_en": "",
-    "image": "OlympicCauldron.webp"
+    "image": "OlympicCauldron.webp",
+    "is_ancient": false
   },
   {
     "id": "Product_Farm_tomato",
@@ -1320,7 +1466,8 @@
     "category": "Structures",
     "name_fr": "Plantation de tomates",
     "name_en": "",
-    "image": "Product_Farm_tomato.webp"
+    "image": "Product_Farm_tomato.webp",
+    "is_ancient": false
   },
   {
     "id": "RoughBullet",
@@ -1329,7 +1476,8 @@
     "category": "Objets",
     "name_fr": "Munitions bas de gamme",
     "name_en": "",
-    "image": "RoughBullet.webp"
+    "image": "RoughBullet.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_BirdDragon",
@@ -1338,7 +1486,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Vanwyrm",
     "name_en": "",
-    "image": "SkillUnlock_BirdDragon.webp"
+    "image": "SkillUnlock_BirdDragon.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_Deer_Ground",
@@ -1347,7 +1496,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Eikthyrdeer Terra",
     "name_en": "",
-    "image": "SkillUnlock_Deer_Ground.webp"
+    "image": "SkillUnlock_Deer_Ground.webp",
+    "is_ancient": false
   },
   {
     "id": "TableDresser01_Stone",
@@ -1356,7 +1506,8 @@
     "category": "Structures",
     "name_fr": "Buffet ancien",
     "name_en": "",
-    "image": "TableDresser01_Stone.webp"
+    "image": "TableDresser01_Stone.webp",
+    "is_ancient": true
   },
   {
     "id": "Trap_LegHold_Big",
@@ -1365,7 +1516,8 @@
     "category": "Structures",
     "name_fr": "Piège (grand)",
     "name_en": "",
-    "image": "Trap_LegHold_Big.webp"
+    "image": "Trap_LegHold_Big.webp",
+    "is_ancient": false
   },
   {
     "id": "ElecBaton",
@@ -1374,7 +1526,8 @@
     "category": "Objets",
     "name_fr": "Matraque électrique",
     "name_en": "",
-    "image": "ElecBaton.webp"
+    "image": "ElecBaton.webp",
+    "is_ancient": false
   },
   {
     "id": "Expedition",
@@ -1383,7 +1536,8 @@
     "category": "Structures",
     "name_fr": "Poste d'expédition pour Pals",
     "name_en": "",
-    "image": "Expedition.webp"
+    "image": "Expedition.webp",
+    "is_ancient": false
   },
   {
     "id": "FishingBait_2",
@@ -1392,7 +1546,8 @@
     "category": "Objets",
     "name_fr": "Appât haut de gamme",
     "name_en": "",
-    "image": "FishingBait_2.webp"
+    "image": "FishingBait_2.webp",
+    "is_ancient": false
   },
   {
     "id": "FurnitureSet_13",
@@ -1401,7 +1556,8 @@
     "category": "Structures",
     "name_fr": "Ensemble de chaises et bureaux en métal",
     "name_en": "",
-    "image": "FurnitureSet_13.webp"
+    "image": "FurnitureSet_13.webp",
+    "is_ancient": false
   },
   {
     "id": "FurnitureSet_23",
@@ -1410,7 +1566,8 @@
     "category": "Structures",
     "name_fr": "Ensemble d'horloges",
     "name_en": "",
-    "image": "FurnitureSet_23.webp"
+    "image": "FurnitureSet_23.webp",
+    "is_ancient": false
   },
   {
     "id": "Homeward",
@@ -1419,7 +1576,8 @@
     "category": "Objets",
     "name_fr": "Nuage d'orage",
     "name_en": "",
-    "image": "Homeward.webp"
+    "image": "Homeward.webp",
+    "is_ancient": true
   },
   {
     "id": "ItemBooth",
@@ -1428,7 +1586,8 @@
     "category": "Structures",
     "name_fr": "Marché aux puces (Objets)",
     "name_en": "",
-    "image": "ItemBooth.webp"
+    "image": "ItemBooth.webp",
+    "is_ancient": false
   },
   {
     "id": "PalBooth",
@@ -1437,7 +1596,8 @@
     "category": "Structures",
     "name_fr": "Marché aux puces (Pals)",
     "name_en": "",
-    "image": "PalBooth.webp"
+    "image": "PalBooth.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_BirdDragon_Ice",
@@ -1446,7 +1606,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Vanwyrm Cryst",
     "name_en": "",
-    "image": "SkillUnlock_BirdDragon_Ice.webp"
+    "image": "SkillUnlock_BirdDragon_Ice.webp",
+    "is_ancient": false
   },
   {
     "id": "AutoMealPouch_Tier3",
@@ -1455,7 +1616,8 @@
     "category": "Objets",
     "name_fr": "Grand sac de nourriture",
     "name_en": "",
-    "image": "AutoMealPouch_Tier3.webp"
+    "image": "AutoMealPouch_Tier3.webp",
+    "is_ancient": false
   },
   {
     "id": "Battle_Armor_Grade_03_Copper",
@@ -1464,7 +1626,8 @@
     "category": "Objets",
     "name_fr": "Armure en métal",
     "name_en": "",
-    "image": "Battle_Armor_Grade_03_Copper.webp"
+    "image": "Battle_Armor_Grade_03_Copper.webp",
+    "is_ancient": false
   },
   {
     "id": "Battle_Helm_Grade_03_Copper",
@@ -1473,7 +1636,8 @@
     "category": "Objets",
     "name_fr": "Heaume en métal",
     "name_en": "",
-    "image": "Battle_Helm_Grade_03_Copper.webp"
+    "image": "Battle_Helm_Grade_03_Copper.webp",
+    "is_ancient": false
   },
   {
     "id": "Fountain",
@@ -1482,7 +1646,8 @@
     "category": "Structures",
     "name_fr": "Fontaine",
     "name_en": "",
-    "image": "Fountain.webp"
+    "image": "Fountain.webp",
+    "is_ancient": false
   },
   {
     "id": "FurnitureSet_6",
@@ -1491,7 +1656,8 @@
     "category": "Structures",
     "name_fr": "Ensemble de boîtes",
     "name_en": "",
-    "image": "FurnitureSet_6.webp"
+    "image": "FurnitureSet_6.webp",
+    "is_ancient": false
   },
   {
     "id": "FurnitureTree_Bamboo",
@@ -1500,7 +1666,8 @@
     "category": "Structures",
     "name_fr": "Ensemble de bambous décoratifs",
     "name_en": "",
-    "image": "FurnitureTree_Bamboo.webp"
+    "image": "FurnitureTree_Bamboo.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_KingAlpaca",
@@ -1509,7 +1676,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Kingpaca",
     "name_en": "",
-    "image": "SkillUnlock_KingAlpaca.webp"
+    "image": "SkillUnlock_KingAlpaca.webp",
+    "is_ancient": false
   },
   {
     "id": "SphereModule_Curve",
@@ -1518,7 +1686,8 @@
     "category": "Objets",
     "name_fr": "Module courbe",
     "name_en": "",
-    "image": "SphereModule_Curve.webp"
+    "image": "SphereModule_Curve.webp",
+    "is_ancient": false
   },
   {
     "id": "Clinic",
@@ -1527,7 +1696,8 @@
     "category": "Structures",
     "name_fr": "Clinique",
     "name_en": "",
-    "image": "Clinic.webp"
+    "image": "Clinic.webp",
+    "is_ancient": false
   },
   {
     "id": "FlowerBed",
@@ -1536,7 +1706,8 @@
     "category": "Structures",
     "name_fr": "Parterre",
     "name_en": "",
-    "image": "FlowerBed.webp"
+    "image": "FlowerBed.webp",
+    "is_ancient": false
   },
   {
     "id": "Infra_PalBed_Grade_02",
@@ -1545,7 +1716,8 @@
     "category": "Structures",
     "name_fr": "Lit pour Pal moelleux",
     "name_en": "",
-    "image": "Infra_PalBed_Grade_02.webp"
+    "image": "Infra_PalBed_Grade_02.webp",
+    "is_ancient": false
   },
   {
     "id": "MakeshiftHandgun",
@@ -1554,7 +1726,8 @@
     "category": "Objets",
     "name_fr": "Pistolet rouillé",
     "name_en": "",
-    "image": "MakeshiftHandgun.webp"
+    "image": "MakeshiftHandgun.webp",
+    "is_ancient": false
   },
   {
     "id": "PalMedicineBox",
@@ -1563,7 +1736,8 @@
     "category": "Structures",
     "name_fr": "Étagère à remèdes",
     "name_en": "",
-    "image": "PalMedicineBox.webp"
+    "image": "PalMedicineBox.webp",
+    "is_ancient": false
   },
   {
     "id": "Product_CopperPit",
@@ -1572,7 +1746,8 @@
     "category": "Structures",
     "name_fr": "Carrière de cuivre",
     "name_en": "",
-    "image": "Product_CopperPit.webp"
+    "image": "Product_CopperPit.webp",
+    "is_ancient": true
   },
   {
     "id": "SkillUnlock_BlueDragon",
@@ -1581,7 +1756,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Azurobe",
     "name_en": "",
-    "image": "SkillUnlock_BlueDragon.webp"
+    "image": "SkillUnlock_BlueDragon.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_FlowerDinosaur",
@@ -1590,7 +1766,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Dinossom",
     "name_en": "",
-    "image": "SkillUnlock_FlowerDinosaur.webp"
+    "image": "SkillUnlock_FlowerDinosaur.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_Kitsunebi_Ice",
@@ -1599,7 +1776,8 @@
     "category": "Objets",
     "name_fr": "Harnais pour Foxparks Cryst",
     "name_en": "",
-    "image": "SkillUnlock_Kitsunebi_Ice.webp"
+    "image": "SkillUnlock_Kitsunebi_Ice.webp",
+    "is_ancient": false
   },
   {
     "id": "Battle_Armor_Grade_03_Copper_Heat",
@@ -1608,7 +1786,8 @@
     "category": "Objets",
     "name_fr": "Armure en métal anti-chaleur",
     "name_en": "",
-    "image": "Battle_Armor_Grade_03_Copper_Heat.webp"
+    "image": "Battle_Armor_Grade_03_Copper_Heat.webp",
+    "is_ancient": false
   },
   {
     "id": "FragGrenade",
@@ -1617,7 +1796,8 @@
     "category": "Objets",
     "name_fr": "Grenade à fragmentation",
     "name_en": "",
-    "image": "FragGrenade.webp"
+    "image": "FragGrenade.webp",
+    "is_ancient": false
   },
   {
     "id": "PalDopingShot",
@@ -1626,7 +1806,8 @@
     "category": "Objets",
     "name_fr": "Pistolet dopant",
     "name_en": "",
-    "image": "PalDopingShot.webp"
+    "image": "PalDopingShot.webp",
+    "is_ancient": false
   },
   {
     "id": "PalDopingShotBullet",
@@ -1635,7 +1816,8 @@
     "category": "Objets",
     "name_fr": "Balles de pistolet dopant",
     "name_en": "",
-    "image": "PalDopingShotBullet.webp"
+    "image": "PalDopingShotBullet.webp",
+    "is_ancient": false
   },
   {
     "id": "Product_Farm_Lettuce",
@@ -1644,7 +1826,8 @@
     "category": "Structures",
     "name_fr": "Plantation de laitue",
     "name_en": "",
-    "image": "Product_Farm_Lettuce.webp"
+    "image": "Product_Farm_Lettuce.webp",
+    "is_ancient": false
   },
   {
     "id": "Silo",
@@ -1653,7 +1836,8 @@
     "category": "Structures",
     "name_fr": "Silo",
     "name_en": "",
-    "image": "Silo.webp"
+    "image": "Silo.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_HadesBird",
@@ -1662,7 +1846,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Helzephyr",
     "name_en": "",
-    "image": "SkillUnlock_HadesBird.webp"
+    "image": "SkillUnlock_HadesBird.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_Serpent_Ground",
@@ -1671,7 +1856,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Surfent Terra",
     "name_en": "",
-    "image": "SkillUnlock_Serpent_Ground.webp"
+    "image": "SkillUnlock_Serpent_Ground.webp",
+    "is_ancient": false
   },
   {
     "id": "Unlock_Picking_Tier2",
@@ -1680,7 +1866,8 @@
     "category": "Objets",
     "name_fr": "Outil de crochetage avancé",
     "name_en": "",
-    "image": "Unlock_Picking_Tier2.webp"
+    "image": "Unlock_Picking_Tier2.webp",
+    "is_ancient": true
   },
   {
     "id": "Battle_Defense_BowGun",
@@ -1689,7 +1876,8 @@
     "category": "Structures",
     "name_fr": "Arbalète montée",
     "name_en": "",
-    "image": "Battle_Defense_BowGun.webp"
+    "image": "Battle_Defense_BowGun.webp",
+    "is_ancient": false
   },
   {
     "id": "Battle_RangeWeapon_SphereLauncher_Once",
@@ -1698,7 +1886,8 @@
     "category": "Objets",
     "name_fr": "Lance-sphères à un coup",
     "name_en": "",
-    "image": "Battle_RangeWeapon_SphereLauncher_Once.webp"
+    "image": "Battle_RangeWeapon_SphereLauncher_Once.webp",
+    "is_ancient": true
   },
   {
     "id": "FurnitureSet_29",
@@ -1707,7 +1896,8 @@
     "category": "Structures",
     "name_fr": "Ensemble de lampes anciennes",
     "name_en": "",
-    "image": "FurnitureSet_29.webp"
+    "image": "FurnitureSet_29.webp",
+    "is_ancient": false
   },
   {
     "id": "Infra_ElectricGenerator_Grade_01",
@@ -1716,7 +1906,8 @@
     "category": "Structures",
     "name_fr": "Générateur",
     "name_en": "",
-    "image": "Infra_ElectricGenerator_Grade_01.webp"
+    "image": "Infra_ElectricGenerator_Grade_01.webp",
+    "is_ancient": false
   },
   {
     "id": "Lamp",
@@ -1725,7 +1916,8 @@
     "category": "Structures",
     "name_fr": "Lampadaire",
     "name_en": "",
-    "image": "Lamp.webp"
+    "image": "Lamp.webp",
+    "is_ancient": false
   },
   {
     "id": "MakeshiftSubmachineGun",
@@ -1734,7 +1926,8 @@
     "category": "Objets",
     "name_fr": "Pistolet-mitrailleur usé",
     "name_en": "",
-    "image": "MakeshiftSubmachineGun.webp"
+    "image": "MakeshiftSubmachineGun.webp",
+    "is_ancient": false
   },
   {
     "id": "ManualElectricGenerator",
@@ -1743,7 +1936,8 @@
     "category": "Structures",
     "name_fr": "Générateur manuel",
     "name_en": "",
-    "image": "ManualElectricGenerator.webp"
+    "image": "ManualElectricGenerator.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_FengyunDeeper",
@@ -1752,7 +1946,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Fenglope",
     "name_en": "",
-    "image": "SkillUnlock_FengyunDeeper.webp"
+    "image": "SkillUnlock_FengyunDeeper.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_IceSeal",
@@ -1761,7 +1956,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Polapup",
     "name_en": "",
-    "image": "SkillUnlock_IceSeal.webp"
+    "image": "SkillUnlock_IceSeal.webp",
+    "is_ancient": false
   },
   {
     "id": "AdditionalInventory_001",
@@ -1770,7 +1966,8 @@
     "category": "Objets",
     "name_fr": "Petite sacoche d'extension",
     "name_en": "",
-    "image": "AdditionalInventory_001.webp"
+    "image": "AdditionalInventory_001.webp",
+    "is_ancient": false
   },
   {
     "id": "Battle_Armor_Grade_03_Copper_Cold",
@@ -1779,7 +1976,8 @@
     "category": "Objets",
     "name_fr": "Armure en métal anti-froid",
     "name_en": "",
-    "image": "Battle_Armor_Grade_03_Copper_Cold.webp"
+    "image": "Battle_Armor_Grade_03_Copper_Cold.webp",
+    "is_ancient": false
   },
   {
     "id": "CeilingLamp",
@@ -1788,7 +1986,8 @@
     "category": "Structures",
     "name_fr": "Plafonnier",
     "name_en": "",
-    "image": "CeilingLamp.webp"
+    "image": "CeilingLamp.webp",
+    "is_ancient": false
   },
   {
     "id": "FragGrenade_Elec",
@@ -1797,7 +1996,8 @@
     "category": "Objets",
     "name_fr": "Grenade fulgura",
     "name_en": "",
-    "image": "FragGrenade_Elec.webp"
+    "image": "FragGrenade_Elec.webp",
+    "is_ancient": false
   },
   {
     "id": "FurnitureTree_Tropical",
@@ -1806,7 +2006,8 @@
     "category": "Structures",
     "name_fr": "Ensemble d'arbres décoratifs tropicaux",
     "name_en": "",
-    "image": "FurnitureTree_Tropical.webp"
+    "image": "FurnitureTree_Tropical.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_BlueDragon_Ice",
@@ -1815,7 +2016,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Azurobe Cryst",
     "name_en": "",
-    "image": "SkillUnlock_BlueDragon_Ice.webp"
+    "image": "SkillUnlock_BlueDragon_Ice.webp",
+    "is_ancient": false
   },
   {
     "id": "Special_PalSphere_Grade_04",
@@ -1824,7 +2026,8 @@
     "category": "Objets",
     "name_fr": "Hyper Sphère",
     "name_en": "",
-    "image": "Special_PalSphere_Grade_04.webp"
+    "image": "Special_PalSphere_Grade_04.webp",
+    "is_ancient": false
   },
   {
     "id": "Special_SphereFactory_Black_Grade_02",
@@ -1833,7 +2036,8 @@
     "category": "Structures",
     "name_fr": "Chaîne de production de sphères",
     "name_en": "",
-    "image": "Special_SphereFactory_Black_Grade_02.webp"
+    "image": "Special_SphereFactory_Black_Grade_02.webp",
+    "is_ancient": false
   },
   {
     "id": "UnlockEquipmentSlot_Weapon_01",
@@ -1842,7 +2046,8 @@
     "category": "Objets",
     "name_fr": "Étui d'arme supplémentaire",
     "name_en": "",
-    "image": "UnlockEquipmentSlot_Weapon_01.webp"
+    "image": "UnlockEquipmentSlot_Weapon_01.webp",
+    "is_ancient": true
   },
   {
     "id": "Accessory_JumpPower_Increase",
@@ -1851,7 +2056,8 @@
     "category": "Objets",
     "name_fr": "Ceinture anti-gravité",
     "name_en": "",
-    "image": "Accessory_JumpPower_Increase.webp"
+    "image": "Accessory_JumpPower_Increase.webp",
+    "is_ancient": true
   },
   {
     "id": "BaseCampWorkHard02",
@@ -1860,7 +2066,8 @@
     "category": "Structures",
     "name_fr": "Poste de surveillance amélioré",
     "name_en": "",
-    "image": "BaseCampWorkHard02.webp"
+    "image": "BaseCampWorkHard02.webp",
+    "is_ancient": false
   },
   {
     "id": "Battle_RangeWeapon_HandGun",
@@ -1869,7 +2076,8 @@
     "category": "Objets",
     "name_fr": "Pistolet",
     "name_en": "",
-    "image": "Battle_RangeWeapon_HandGun.webp"
+    "image": "Battle_RangeWeapon_HandGun.webp",
+    "is_ancient": false
   },
   {
     "id": "FireCultFlagSet",
@@ -1878,7 +2086,8 @@
     "category": "Structures",
     "name_fr": "Ensemble de Drapeaux de la Confrérie",
     "name_en": "",
-    "image": "FireCultFlagSet.webp"
+    "image": "FireCultFlagSet.webp",
+    "is_ancient": false
   },
   {
     "id": "HandgunBullet",
@@ -1887,7 +2096,8 @@
     "category": "Objets",
     "name_fr": "Balles de pistolet",
     "name_en": "",
-    "image": "HandgunBullet.webp"
+    "image": "HandgunBullet.webp",
+    "is_ancient": false
   },
   {
     "id": "Infra_PlayerBed_Grade_02",
@@ -1896,7 +2106,8 @@
     "category": "Structures",
     "name_fr": "Lit de qualité",
     "name_en": "",
-    "image": "Infra_PlayerBed_Grade_02.webp"
+    "image": "Infra_PlayerBed_Grade_02.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_FeatherOstrich",
@@ -1905,7 +2116,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Dazemu",
     "name_en": "",
-    "image": "SkillUnlock_FeatherOstrich.webp"
+    "image": "SkillUnlock_FeatherOstrich.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_GrassMammoth",
@@ -1914,7 +2126,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Mammorest",
     "name_en": "",
-    "image": "SkillUnlock_GrassMammoth.webp"
+    "image": "SkillUnlock_GrassMammoth.webp",
+    "is_ancient": false
   },
   {
     "id": "Stump",
@@ -1923,7 +2136,8 @@
     "category": "Structures",
     "name_fr": "Souche et hache",
     "name_en": "",
-    "image": "Stump.webp"
+    "image": "Stump.webp",
+    "is_ancient": false
   },
   {
     "id": "Battle_MeleeWeapon_Sword",
@@ -1932,7 +2146,8 @@
     "category": "Objets",
     "name_fr": "Épée",
     "name_en": "",
-    "image": "Battle_MeleeWeapon_Sword.webp"
+    "image": "Battle_MeleeWeapon_Sword.webp",
+    "is_ancient": false
   },
   {
     "id": "FishingRod_02_1",
@@ -1941,7 +2156,8 @@
     "category": "Objets",
     "name_fr": "Canne à pêche standard (Cattiva)",
     "name_en": "",
-    "image": "FishingRod_02_1.webp"
+    "image": "FishingRod_02_1.webp",
+    "is_ancient": false
   },
   {
     "id": "FragGrenade_Ice",
@@ -1950,7 +2166,8 @@
     "category": "Objets",
     "name_fr": "Grenade glacia",
     "name_en": "",
-    "image": "FragGrenade_Ice.webp"
+    "image": "FragGrenade_Ice.webp",
+    "is_ancient": false
   },
   {
     "id": "Lantern_High",
@@ -1959,7 +2176,8 @@
     "category": "Objets",
     "name_fr": "Lanterne de taille améliorée",
     "name_en": "",
-    "image": "Lantern_High.webp"
+    "image": "Lantern_High.webp",
+    "is_ancient": true
   },
   {
     "id": "Product_Factory_Hard_Grade_02",
@@ -1968,7 +2186,8 @@
     "category": "Structures",
     "name_fr": "Chaîne de production",
     "name_en": "",
-    "image": "Product_Factory_Hard_Grade_02.webp"
+    "image": "Product_Factory_Hard_Grade_02.webp",
+    "is_ancient": false
   },
   {
     "id": "Product_Farm_Potato",
@@ -1977,7 +2196,8 @@
     "category": "Structures",
     "name_fr": "Plantation de pommes de terre",
     "name_en": "",
-    "image": "Product_Farm_Potato.webp"
+    "image": "Product_Farm_Potato.webp",
+    "is_ancient": false
   },
   {
     "id": "Shield_03",
@@ -1986,7 +2206,8 @@
     "category": "Objets",
     "name_fr": "Giga bouclier",
     "name_en": "",
-    "image": "Shield_03.webp"
+    "image": "Shield_03.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_FireKirin",
@@ -1995,7 +2216,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Pyrin",
     "name_en": "",
-    "image": "SkillUnlock_FireKirin.webp"
+    "image": "SkillUnlock_FireKirin.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_ThunderBird",
@@ -2004,7 +2226,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Beakon",
     "name_en": "",
-    "image": "SkillUnlock_ThunderBird.webp"
+    "image": "SkillUnlock_ThunderBird.webp",
+    "is_ancient": false
   },
   {
     "id": "Cake02",
@@ -2013,7 +2236,8 @@
     "category": "Objets",
     "name_fr": "Gâteau aux champignons",
     "name_en": "",
-    "image": "Cake02.webp"
+    "image": "Cake02.webp",
+    "is_ancient": false
   },
   {
     "id": "DefenseWall_Metal",
@@ -2022,7 +2246,8 @@
     "category": "Structures",
     "name_fr": "Rempart en métal",
     "name_en": "",
-    "image": "DefenseWall_Metal.webp"
+    "image": "DefenseWall_Metal.webp",
+    "is_ancient": false
   },
   {
     "id": "MakeshiftShotgun",
@@ -2031,7 +2256,8 @@
     "category": "Objets",
     "name_fr": "Fusil à pompe usé",
     "name_en": "",
-    "image": "MakeshiftShotgun.webp"
+    "image": "MakeshiftShotgun.webp",
+    "is_ancient": false
   },
   {
     "id": "Metal_Gate",
@@ -2040,7 +2266,8 @@
     "category": "Structures",
     "name_fr": "Portail en fer",
     "name_en": "",
-    "image": "Metal_Gate.webp"
+    "image": "Metal_Gate.webp",
+    "is_ancient": false
   },
   {
     "id": "Metal_houseset",
@@ -2049,7 +2276,8 @@
     "category": "Structures",
     "name_fr": "Structures en métal",
     "name_en": "",
-    "image": "Metal_houseset.webp"
+    "image": "Metal_houseset.webp",
+    "is_ancient": false
   },
   {
     "id": "MiningTool",
@@ -2058,7 +2286,8 @@
     "category": "Structures",
     "name_fr": "Pioche et casque",
     "name_en": "",
-    "image": "MiningTool.webp"
+    "image": "MiningTool.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_ThunderDog",
@@ -2067,7 +2296,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Rayhound",
     "name_en": "",
-    "image": "SkillUnlock_ThunderDog.webp"
+    "image": "SkillUnlock_ThunderDog.webp",
+    "is_ancient": false
   },
   {
     "id": "Trap_MineAttack",
@@ -2076,7 +2306,8 @@
     "category": "Structures",
     "name_fr": "Mine",
     "name_en": "",
-    "image": "Trap_MineAttack.webp"
+    "image": "Trap_MineAttack.webp",
+    "is_ancient": false
   },
   {
     "id": "YakushimaBlade",
@@ -2085,7 +2316,8 @@
     "category": "Objets",
     "name_fr": "Épée Arc-en-ciel",
     "name_en": "",
-    "image": "YakushimaBlade.webp"
+    "image": "YakushimaBlade.webp",
+    "is_ancient": true
   },
   {
     "id": "Bio_Coolant",
@@ -2094,7 +2326,8 @@
     "category": "Objets",
     "name_fr": "Réfrigérant cryogénique",
     "name_en": "",
-    "image": "Bio_Coolant.webp"
+    "image": "Bio_Coolant.webp",
+    "is_ancient": false
   },
   {
     "id": "FishingPond1",
@@ -2103,7 +2336,8 @@
     "category": "Structures",
     "name_fr": "Bassin de pêche",
     "name_en": "",
-    "image": "FishingPond1.webp"
+    "image": "FishingPond1.webp",
+    "is_ancient": false
   },
   {
     "id": "FragGrenade_Fire",
@@ -2112,7 +2346,8 @@
     "category": "Objets",
     "name_fr": "Grenade flamma",
     "name_en": "",
-    "image": "FragGrenade_Fire.webp"
+    "image": "FragGrenade_Fire.webp",
+    "is_ancient": false
   },
   {
     "id": "GrapplingGun3",
@@ -2121,7 +2356,8 @@
     "category": "Objets",
     "name_fr": "Giga pistolet-grappin",
     "name_en": "",
-    "image": "GrapplingGun3.webp"
+    "image": "GrapplingGun3.webp",
+    "is_ancient": true
   },
   {
     "id": "MakeshiftAssaultRifle",
@@ -2130,7 +2366,8 @@
     "category": "Objets",
     "name_fr": "Fusil d'assaut usé",
     "name_en": "",
-    "image": "MakeshiftAssaultRifle.webp"
+    "image": "MakeshiftAssaultRifle.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_GhostAnglerfish",
@@ -2139,7 +2376,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Ghangler",
     "name_en": "",
-    "image": "SkillUnlock_GhostAnglerfish.webp"
+    "image": "SkillUnlock_GhostAnglerfish.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_IceDeer",
@@ -2148,7 +2386,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Reindrix",
     "name_en": "",
-    "image": "SkillUnlock_IceDeer.webp"
+    "image": "SkillUnlock_IceDeer.webp",
+    "is_ancient": false
   },
   {
     "id": "Spa2",
@@ -2157,7 +2396,8 @@
     "category": "Structures",
     "name_fr": "Source chaude réputée",
     "name_en": "",
-    "image": "Spa2.webp"
+    "image": "Spa2.webp",
+    "is_ancient": false
   },
   {
     "id": "SphereModule_Sniper",
@@ -2166,7 +2406,8 @@
     "category": "Objets",
     "name_fr": "Module sniper",
     "name_en": "",
-    "image": "SphereModule_Sniper.webp"
+    "image": "SphereModule_Sniper.webp",
+    "is_ancient": false
   },
   {
     "id": "BaseCampWorkerExtraStation",
@@ -2175,7 +2416,8 @@
     "category": "Structures",
     "name_fr": "Terminal de Gestion de Boîte à Pals",
     "name_en": "",
-    "image": "BaseCampWorkerExtraStation.webp"
+    "image": "BaseCampWorkerExtraStation.webp",
+    "is_ancient": false
   },
   {
     "id": "Cauldron",
@@ -2184,7 +2426,8 @@
     "category": "Structures",
     "name_fr": "Chaudron de sorcière",
     "name_en": "",
-    "image": "Cauldron.webp"
+    "image": "Cauldron.webp",
+    "is_ancient": false
   },
   {
     "id": "OctaviaSet01",
@@ -2193,7 +2436,8 @@
     "category": "Objets",
     "name_fr": "Ensemble Collaboration ULTRAKILL 1",
     "name_en": "",
-    "image": "OctaviaSet01.webp"
+    "image": "OctaviaSet01.webp",
+    "is_ancient": true
   },
   {
     "id": "PalHealingGrenade",
@@ -2202,7 +2446,8 @@
     "category": "Objets",
     "name_fr": "Grenade de régénération de Pal",
     "name_en": "",
-    "image": "PalHealingGrenade.webp"
+    "image": "PalHealingGrenade.webp",
+    "is_ancient": false
   },
   {
     "id": "Product_Farm_Carrot",
@@ -2211,7 +2456,8 @@
     "category": "Structures",
     "name_fr": "Plantation de carottes",
     "name_en": "",
-    "image": "Product_Farm_Carrot.webp"
+    "image": "Product_Farm_Carrot.webp",
+    "is_ancient": false
   },
   {
     "id": "Product_WeaponFactory_Dirty_Grade_02",
@@ -2220,7 +2466,8 @@
     "category": "Structures",
     "name_fr": "Chaîne de production d'armes",
     "name_en": "",
-    "image": "Product_WeaponFactory_Dirty_Grade_02.webp"
+    "image": "Product_WeaponFactory_Dirty_Grade_02.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_FairyDragon_Water",
@@ -2229,7 +2476,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Elphidran Aqua",
     "name_en": "",
-    "image": "SkillUnlock_FairyDragon_Water.webp"
+    "image": "SkillUnlock_FairyDragon_Water.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_GrassPanda",
@@ -2238,7 +2486,8 @@
     "category": "Objets",
     "name_fr": "Lance-grenades pour Mossanda",
     "name_en": "",
-    "image": "SkillUnlock_GrassPanda.webp"
+    "image": "SkillUnlock_GrassPanda.webp",
+    "is_ancient": false
   },
   {
     "id": "Altar",
@@ -2247,7 +2496,8 @@
     "category": "Structures",
     "name_fr": "Autel d'appel",
     "name_en": "",
-    "image": "Altar.webp"
+    "image": "Altar.webp",
+    "is_ancient": true
   },
   {
     "id": "Battle_RangeWeapon_OldRevolver",
@@ -2256,7 +2506,8 @@
     "category": "Objets",
     "name_fr": "Vieux revolver",
     "name_en": "",
-    "image": "Battle_RangeWeapon_OldRevolver.webp"
+    "image": "Battle_RangeWeapon_OldRevolver.webp",
+    "is_ancient": false
   },
   {
     "id": "FragGrenade_Water",
@@ -2265,7 +2516,8 @@
     "category": "Objets",
     "name_fr": "Grenade aqua",
     "name_en": "",
-    "image": "FragGrenade_Water.webp"
+    "image": "FragGrenade_Water.webp",
+    "is_ancient": false
   },
   {
     "id": "Polymer",
@@ -2274,7 +2526,8 @@
     "category": "Objets",
     "name_fr": "Polymère",
     "name_en": "",
-    "image": "Polymer.webp"
+    "image": "Polymer.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_Manticore",
@@ -2283,7 +2536,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Blazehowl",
     "name_en": "",
-    "image": "SkillUnlock_Manticore.webp"
+    "image": "SkillUnlock_Manticore.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_RedArmorBird",
@@ -2292,7 +2546,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Ragnahawk",
     "name_en": "",
-    "image": "SkillUnlock_RedArmorBird.webp"
+    "image": "SkillUnlock_RedArmorBird.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_SakuraSaurus",
@@ -2301,7 +2556,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Broncherry",
     "name_en": "",
-    "image": "SkillUnlock_SakuraSaurus.webp"
+    "image": "SkillUnlock_SakuraSaurus.webp",
+    "is_ancient": false
   },
   {
     "id": "Snowman",
@@ -2310,7 +2566,8 @@
     "category": "Structures",
     "name_fr": "Bonhomme de neige",
     "name_en": "",
-    "image": "Snowman.webp"
+    "image": "Snowman.webp",
+    "is_ancient": false
   },
   {
     "id": "Trap_MineElecShock",
@@ -2319,7 +2576,8 @@
     "category": "Structures",
     "name_fr": "Mine électrique",
     "name_en": "",
-    "image": "Trap_MineElecShock.webp"
+    "image": "Trap_MineElecShock.webp",
+    "is_ancient": false
   },
   {
     "id": "Accessory_TalentChecker",
@@ -2328,7 +2586,8 @@
     "category": "Objets",
     "name_fr": "Lunettes de clairvoyance",
     "name_en": "",
-    "image": "Accessory_TalentChecker.webp"
+    "image": "Accessory_TalentChecker.webp",
+    "is_ancient": true
   },
   {
     "id": "FurnitureSet_5",
@@ -2337,7 +2596,8 @@
     "category": "Structures",
     "name_fr": "Ensemble de tonneaux",
     "name_en": "",
-    "image": "FurnitureSet_5.webp"
+    "image": "FurnitureSet_5.webp",
+    "is_ancient": false
   },
   {
     "id": "Product_Axe_Grade_03",
@@ -2346,7 +2606,8 @@
     "category": "Objets",
     "name_fr": "Hache en métal raffiné",
     "name_en": "",
-    "image": "Product_Axe_Grade_03.webp"
+    "image": "Product_Axe_Grade_03.webp",
+    "is_ancient": false
   },
   {
     "id": "Product_Ingot_Grade_02_Iron",
@@ -2355,7 +2616,8 @@
     "category": "Structures",
     "name_fr": "Fournaise améliorée",
     "name_en": "",
-    "image": "Product_Ingot_Grade_02_Iron.webp"
+    "image": "Product_Ingot_Grade_02_Iron.webp",
+    "is_ancient": false
   },
   {
     "id": "Product_Pickaxe_Grade_03",
@@ -2364,7 +2626,8 @@
     "category": "Objets",
     "name_fr": "Pioche en métal raffiné",
     "name_en": "",
-    "image": "Product_Pickaxe_Grade_03.webp"
+    "image": "Product_Pickaxe_Grade_03.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_FireKirin_Dark",
@@ -2373,7 +2636,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Pyrin Noct",
     "name_en": "",
-    "image": "SkillUnlock_FireKirin_Dark.webp"
+    "image": "SkillUnlock_FireKirin_Dark.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_FlowerDinosaur_Electric",
@@ -2382,7 +2646,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Dinossom Lux",
     "name_en": "",
-    "image": "SkillUnlock_FlowerDinosaur_Electric.webp"
+    "image": "SkillUnlock_FlowerDinosaur_Electric.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_GrassPanda_Electric",
@@ -2391,7 +2656,8 @@
     "category": "Objets",
     "name_fr": "Lance-grenades pour Mossanda Lux",
     "name_en": "",
-    "image": "SkillUnlock_GrassPanda_Electric.webp"
+    "image": "SkillUnlock_GrassPanda_Electric.webp",
+    "is_ancient": false
   },
   {
     "id": "Spear_3",
@@ -2400,7 +2666,8 @@
     "category": "Objets",
     "name_fr": "Lance en métal raffiné",
     "name_en": "",
-    "image": "Spear_3.webp"
+    "image": "Spear_3.webp",
+    "is_ancient": false
   },
   {
     "id": "Accessory_AirDash1",
@@ -2409,7 +2676,8 @@
     "category": "Objets",
     "name_fr": "Bottes de ruée aérienne",
     "name_en": "",
-    "image": "Accessory_AirDash1.webp"
+    "image": "Accessory_AirDash1.webp",
+    "is_ancient": true
   },
   {
     "id": "CarbonFiber",
@@ -2418,7 +2686,8 @@
     "category": "Objets",
     "name_fr": "Fibre de carbone",
     "name_en": "",
-    "image": "CarbonFiber.webp"
+    "image": "CarbonFiber.webp",
+    "is_ancient": false
   },
   {
     "id": "FragGrenade_Leaf",
@@ -2427,7 +2696,8 @@
     "category": "Objets",
     "name_fr": "Grenade herba",
     "name_en": "",
-    "image": "FragGrenade_Leaf.webp"
+    "image": "FragGrenade_Leaf.webp",
+    "is_ancient": false
   },
   {
     "id": "FurnitureSet_14",
@@ -2436,7 +2706,8 @@
     "category": "Structures",
     "name_fr": "Ensemble de tables en bois de fer",
     "name_en": "",
-    "image": "FurnitureSet_14.webp"
+    "image": "FurnitureSet_14.webp",
+    "is_ancient": false
   },
   {
     "id": "Infra_ElectronicCircuit",
@@ -2445,7 +2716,8 @@
     "category": "Objets",
     "name_fr": "Circuit imprimé",
     "name_en": "",
-    "image": "Infra_ElectronicCircuit.webp"
+    "image": "Infra_ElectronicCircuit.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_Manticore_Dark",
@@ -2454,7 +2726,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Blazehowl Noct",
     "name_en": "",
-    "image": "SkillUnlock_Manticore_Dark.webp"
+    "image": "SkillUnlock_Manticore_Dark.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_TropicalOstrich",
@@ -2463,7 +2736,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Palumba",
     "name_en": "",
-    "image": "SkillUnlock_TropicalOstrich.webp"
+    "image": "SkillUnlock_TropicalOstrich.webp",
+    "is_ancient": false
   },
   {
     "id": "Special_PalSphere_Grade_05",
@@ -2472,7 +2746,8 @@
     "category": "Objets",
     "name_fr": "Ultra Sphère",
     "name_en": "",
-    "image": "Special_PalSphere_Grade_05.webp"
+    "image": "Special_PalSphere_Grade_05.webp",
+    "is_ancient": false
   },
   {
     "id": "Special_SphereFactory_Black_Grade_03",
@@ -2481,7 +2756,8 @@
     "category": "Structures",
     "name_fr": "Chaîne de production de sphères II",
     "name_en": "",
-    "image": "Special_SphereFactory_Black_Grade_03.webp"
+    "image": "Special_SphereFactory_Black_Grade_03.webp",
+    "is_ancient": false
   },
   {
     "id": "AutoMealPouch_Tier4",
@@ -2490,7 +2766,8 @@
     "category": "Objets",
     "name_fr": "Énorme sac de nourriture",
     "name_en": "",
-    "image": "AutoMealPouch_Tier4.webp"
+    "image": "AutoMealPouch_Tier4.webp",
+    "is_ancient": false
   },
   {
     "id": "Battle_RangeWeapon_Rifle",
@@ -2499,7 +2776,8 @@
     "category": "Objets",
     "name_fr": "Fusil à un coup",
     "name_en": "",
-    "image": "Battle_RangeWeapon_Rifle.webp"
+    "image": "Battle_RangeWeapon_Rifle.webp",
+    "is_ancient": false
   },
   {
     "id": "Cloth2",
@@ -2508,7 +2786,8 @@
     "category": "Objets",
     "name_fr": "Tissu de qualité",
     "name_en": "",
-    "image": "Cloth2.webp"
+    "image": "Cloth2.webp",
+    "is_ancient": false
   },
   {
     "id": "MedicalPalBed_04",
@@ -2517,7 +2796,8 @@
     "category": "Structures",
     "name_fr": "Grand lit pour Pal",
     "name_en": "",
-    "image": "MedicalPalBed_04.webp"
+    "image": "MedicalPalBed_04.webp",
+    "is_ancient": false
   },
   {
     "id": "Product_Farm_Onion",
@@ -2526,7 +2806,8 @@
     "category": "Structures",
     "name_fr": "Plantation d'oignons",
     "name_en": "",
-    "image": "Product_Farm_Onion.webp"
+    "image": "Product_Farm_Onion.webp",
+    "is_ancient": false
   },
   {
     "id": "RifleBullet",
@@ -2535,7 +2816,8 @@
     "category": "Objets",
     "name_fr": "Balles de fusil",
     "name_en": "",
-    "image": "RifleBullet.webp"
+    "image": "RifleBullet.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_Plesiosaur",
@@ -2544,7 +2826,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Braloha",
     "name_en": "",
-    "image": "SkillUnlock_Plesiosaur.webp"
+    "image": "SkillUnlock_Plesiosaur.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_VolcanoDragon",
@@ -2553,7 +2836,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Moldron",
     "name_en": "",
-    "image": "SkillUnlock_VolcanoDragon.webp"
+    "image": "SkillUnlock_VolcanoDragon.webp",
+    "is_ancient": false
   },
   {
     "id": "Special_ElectricHatchingPalEgg",
@@ -2562,7 +2846,8 @@
     "category": "Structures",
     "name_fr": "Incubateur électrique",
     "name_en": "",
-    "image": "Special_ElectricHatchingPalEgg.webp"
+    "image": "Special_ElectricHatchingPalEgg.webp",
+    "is_ancient": true
   },
   {
     "id": "Battle_Armor_Grade_03_Iron",
@@ -2571,7 +2856,8 @@
     "category": "Objets",
     "name_fr": "Armure en métal raffiné",
     "name_en": "",
-    "image": "Battle_Armor_Grade_03_Iron.webp"
+    "image": "Battle_Armor_Grade_03_Iron.webp",
+    "is_ancient": false
   },
   {
     "id": "Battle_Helm_Grade_04_Iron",
@@ -2580,7 +2866,8 @@
     "category": "Objets",
     "name_fr": "Heaume en métal raffiné",
     "name_en": "",
-    "image": "Battle_Helm_Grade_04_Iron.webp"
+    "image": "Battle_Helm_Grade_04_Iron.webp",
+    "is_ancient": false
   },
   {
     "id": "Battle_RangeWeapon_SubmachineGun",
@@ -2589,7 +2876,8 @@
     "category": "Objets",
     "name_fr": "Pistolet-mitrailleur",
     "name_en": "",
-    "image": "Battle_RangeWeapon_SubmachineGun.webp"
+    "image": "Battle_RangeWeapon_SubmachineGun.webp",
+    "is_ancient": false
   },
   {
     "id": "Corrosive_Solvent",
@@ -2598,7 +2886,8 @@
     "category": "Objets",
     "name_fr": "Solvant corrosif",
     "name_en": "",
-    "image": "Corrosive_Solvent.webp"
+    "image": "Corrosive_Solvent.webp",
+    "is_ancient": false
   },
   {
     "id": "EnergyStorage_Electric",
@@ -2607,7 +2896,8 @@
     "category": "Structures",
     "name_fr": "Condensateur",
     "name_en": "",
-    "image": "EnergyStorage_Electric.webp"
+    "image": "EnergyStorage_Electric.webp",
+    "is_ancient": false
   },
   {
     "id": "FurnitureSet_31",
@@ -2616,7 +2906,8 @@
     "category": "Structures",
     "name_fr": "Ensemble de mobilier d'extérieur",
     "name_en": "",
-    "image": "FurnitureSet_31.webp"
+    "image": "FurnitureSet_31.webp",
+    "is_ancient": false
   },
   {
     "id": "FurnitureTree_Desert",
@@ -2625,7 +2916,8 @@
     "category": "Structures",
     "name_fr": "Ensemble d'arbres décoratifs désertiques",
     "name_en": "",
-    "image": "FurnitureTree_Desert.webp"
+    "image": "FurnitureTree_Desert.webp",
+    "is_ancient": false
   },
   {
     "id": "Product_CoalPit",
@@ -2634,7 +2926,8 @@
     "category": "Structures",
     "name_fr": "Mine de charbon",
     "name_en": "",
-    "image": "Product_CoalPit.webp"
+    "image": "Product_CoalPit.webp",
+    "is_ancient": true
   },
   {
     "id": "SkillUnlock_GhostBeast",
@@ -2643,7 +2936,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Maraith",
     "name_en": "",
-    "image": "SkillUnlock_GhostBeast.webp"
+    "image": "SkillUnlock_GhostBeast.webp",
+    "is_ancient": false
   },
   {
     "id": "Battle_RangeWeapon_SphereLauncher",
@@ -2652,7 +2946,8 @@
     "category": "Objets",
     "name_fr": "Lance-sphères à diffusion",
     "name_en": "",
-    "image": "Battle_RangeWeapon_SphereLauncher.webp"
+    "image": "Battle_RangeWeapon_SphereLauncher.webp",
+    "is_ancient": true
   },
   {
     "id": "FishingBait_3",
@@ -2661,7 +2956,8 @@
     "category": "Objets",
     "name_fr": "Appât de luxe",
     "name_en": "",
-    "image": "FishingBait_3.webp"
+    "image": "FishingBait_3.webp",
+    "is_ancient": false
   },
   {
     "id": "FragGrenade_Ground",
@@ -2670,7 +2966,8 @@
     "category": "Objets",
     "name_fr": "Grenade terra",
     "name_en": "",
-    "image": "FragGrenade_Ground.webp"
+    "image": "FragGrenade_Ground.webp",
+    "is_ancient": false
   },
   {
     "id": "FurnitureSet_7",
@@ -2679,7 +2976,8 @@
     "category": "Structures",
     "name_fr": "Ensemble de chaises à revêtement en cuir",
     "name_en": "",
-    "image": "FurnitureSet_7.webp"
+    "image": "FurnitureSet_7.webp",
+    "is_ancient": false
   },
   {
     "id": "Launcher_Meteor",
@@ -2688,7 +2986,8 @@
     "category": "Objets",
     "name_fr": "Lance-météorites",
     "name_en": "",
-    "image": "Launcher_Meteor.webp"
+    "image": "Launcher_Meteor.webp",
+    "is_ancient": false
   },
   {
     "id": "OperatingTable",
@@ -2697,7 +2996,8 @@
     "category": "Structures",
     "name_fr": "Table d'opération pour Pals",
     "name_en": "",
-    "image": "OperatingTable.webp"
+    "image": "OperatingTable.webp",
+    "is_ancient": false
   },
   {
     "id": "Refrigerator",
@@ -2706,7 +3006,8 @@
     "category": "Structures",
     "name_fr": "Réfrigérateur",
     "name_en": "",
-    "image": "Refrigerator.webp"
+    "image": "Refrigerator.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_SkyDragon",
@@ -2715,7 +3016,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Quivern",
     "name_en": "",
-    "image": "SkillUnlock_SkyDragon.webp"
+    "image": "SkillUnlock_SkyDragon.webp",
+    "is_ancient": false
   },
   {
     "id": "Trap_MineFreeze",
@@ -2724,7 +3026,8 @@
     "category": "Structures",
     "name_fr": "Mine gelée",
     "name_en": "",
-    "image": "Trap_MineFreeze.webp"
+    "image": "Trap_MineFreeze.webp",
+    "is_ancient": false
   },
   {
     "id": "Battle_RangeWeapon_ShotGun",
@@ -2733,7 +3036,8 @@
     "category": "Objets",
     "name_fr": "Fusil à double canon",
     "name_en": "",
-    "image": "Battle_RangeWeapon_ShotGun.webp"
+    "image": "Battle_RangeWeapon_ShotGun.webp",
+    "is_ancient": false
   },
   {
     "id": "Infra_ItemChest_Grade_03",
@@ -2742,7 +3046,8 @@
     "category": "Structures",
     "name_fr": "Coffre en métal raffiné",
     "name_en": "",
-    "image": "Infra_ItemChest_Grade_03.webp"
+    "image": "Infra_ItemChest_Grade_03.webp",
+    "is_ancient": false
   },
   {
     "id": "PoliceFlagSet",
@@ -2751,7 +3056,8 @@
     "category": "Structures",
     "name_fr": "Ensemble de Drapeaux de la Milice",
     "name_en": "",
-    "image": "PoliceFlagSet.webp"
+    "image": "PoliceFlagSet.webp",
+    "is_ancient": false
   },
   {
     "id": "Product_CopperPit_2",
@@ -2760,7 +3066,8 @@
     "category": "Structures",
     "name_fr": "Carrière de cuivre II",
     "name_en": "",
-    "image": "Product_CopperPit_2.webp"
+    "image": "Product_CopperPit_2.webp",
+    "is_ancient": true
   },
   {
     "id": "ShotGunBullet",
@@ -2769,7 +3076,8 @@
     "category": "Objets",
     "name_fr": "Cartouches de fusil à pompe",
     "name_en": "",
-    "image": "ShotGunBullet.webp"
+    "image": "ShotGunBullet.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_BlackMetalDragon",
@@ -2778,7 +3086,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Astegon",
     "name_en": "",
-    "image": "SkillUnlock_BlackMetalDragon.webp"
+    "image": "SkillUnlock_BlackMetalDragon.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_MushroomDragon",
@@ -2787,7 +3096,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Shroomer",
     "name_en": "",
-    "image": "SkillUnlock_MushroomDragon.webp"
+    "image": "SkillUnlock_MushroomDragon.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_MushroomDragon_Dark",
@@ -2796,7 +3106,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Shroomer Noct",
     "name_en": "",
-    "image": "SkillUnlock_MushroomDragon_Dark.webp"
+    "image": "SkillUnlock_MushroomDragon_Dark.webp",
+    "is_ancient": false
   },
   {
     "id": "SphereModule_Curve2",
@@ -2805,7 +3116,8 @@
     "category": "Objets",
     "name_fr": "Module glisseur",
     "name_en": "",
-    "image": "SphereModule_Curve2.webp"
+    "image": "SphereModule_Curve2.webp",
+    "is_ancient": false
   },
   {
     "id": "Accessory_JumpCount_Increase1",
@@ -2814,7 +3126,8 @@
     "category": "Objets",
     "name_fr": "Bottes de double saut",
     "name_en": "",
-    "image": "Accessory_JumpCount_Increase1.webp"
+    "image": "Accessory_JumpCount_Increase1.webp",
+    "is_ancient": true
   },
   {
     "id": "Bat3",
@@ -2823,7 +3136,8 @@
     "category": "Objets",
     "name_fr": "Batte en métal",
     "name_en": "",
-    "image": "Bat3.webp"
+    "image": "Bat3.webp",
+    "is_ancient": false
   },
   {
     "id": "Battle_Armor_Grade_03_Iron_Heat",
@@ -2832,7 +3146,8 @@
     "category": "Objets",
     "name_fr": "Armure en métal raffiné anti-chaleur",
     "name_en": "",
-    "image": "Battle_Armor_Grade_03_Iron_Heat.webp"
+    "image": "Battle_Armor_Grade_03_Iron_Heat.webp",
+    "is_ancient": false
   },
   {
     "id": "Battle_Defense_MachineGun",
@@ -2841,7 +3156,8 @@
     "category": "Structures",
     "name_fr": "Mitrailleuse montée",
     "name_en": "",
-    "image": "Battle_Defense_MachineGun.webp"
+    "image": "Battle_Defense_MachineGun.webp",
+    "is_ancient": false
   },
   {
     "id": "Battle_Glider_Grade_03",
@@ -2850,7 +3166,8 @@
     "category": "Objets",
     "name_fr": "Giga planeur",
     "name_en": "",
-    "image": "Battle_Glider_Grade_03.webp"
+    "image": "Battle_Glider_Grade_03.webp",
+    "is_ancient": false
   },
   {
     "id": "FragGrenade_Dark",
@@ -2859,7 +3176,8 @@
     "category": "Objets",
     "name_fr": "Grenade tenebra",
     "name_en": "",
-    "image": "FragGrenade_Dark.webp"
+    "image": "FragGrenade_Dark.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_ElecPanda",
@@ -2868,7 +3186,8 @@
     "category": "Objets",
     "name_fr": "Minigun pour Grizzbolt",
     "name_en": "",
-    "image": "SkillUnlock_ElecPanda.webp"
+    "image": "SkillUnlock_ElecPanda.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_Umihebi",
@@ -2877,7 +3196,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Jormuntide",
     "name_en": "",
-    "image": "SkillUnlock_Umihebi.webp"
+    "image": "SkillUnlock_Umihebi.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_WeaselDragon_Fire",
@@ -2886,7 +3206,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Chillet Ignis",
     "name_en": "",
-    "image": "SkillUnlock_WeaselDragon_Fire.webp"
+    "image": "SkillUnlock_WeaselDragon_Fire.webp",
+    "is_ancient": false
   },
   {
     "id": "Battle_Armor_Grade_03_Iron_Cold",
@@ -2895,7 +3216,8 @@
     "category": "Objets",
     "name_fr": "Armure en métal raffiné anti-froid",
     "name_en": "",
-    "image": "Battle_Armor_Grade_03_Iron_Cold.webp"
+    "image": "Battle_Armor_Grade_03_Iron_Cold.webp",
+    "is_ancient": false
   },
   {
     "id": "Battle_RangeWeapon_SemiAutoRifle",
@@ -2904,7 +3226,8 @@
     "category": "Objets",
     "name_fr": "Fusil semi-automatique",
     "name_en": "",
-    "image": "Battle_RangeWeapon_SemiAutoRifle.webp"
+    "image": "Battle_RangeWeapon_SemiAutoRifle.webp",
+    "is_ancient": false
   },
   {
     "id": "ElectricHeater",
@@ -2913,7 +3236,8 @@
     "category": "Structures",
     "name_fr": "Chauffage électrique",
     "name_en": "",
-    "image": "ElectricHeater.webp"
+    "image": "ElectricHeater.webp",
+    "is_ancient": false
   },
   {
     "id": "GuildChest",
@@ -2922,7 +3246,8 @@
     "category": "Structures",
     "name_fr": "Coffre de guilde",
     "name_en": "",
-    "image": "GuildChest.webp"
+    "image": "GuildChest.webp",
+    "is_ancient": true
   },
   {
     "id": "Product_Cooking_Grade_03",
@@ -2931,7 +3256,8 @@
     "category": "Structures",
     "name_fr": "Cuisine électrique",
     "name_en": "",
-    "image": "Product_Cooking_Grade_03.webp"
+    "image": "Product_Cooking_Grade_03.webp",
+    "is_ancient": false
   },
   {
     "id": "SanityDecrease1",
@@ -2940,7 +3266,8 @@
     "category": "Structures",
     "name_fr": "Dispositif de vague α",
     "name_en": "",
-    "image": "SanityDecrease1.webp"
+    "image": "SanityDecrease1.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_GrassMammoth_Ice",
@@ -2949,7 +3276,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Mammorest Cryst",
     "name_en": "",
-    "image": "SkillUnlock_GrassMammoth_Ice.webp"
+    "image": "SkillUnlock_GrassMammoth_Ice.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_GuardianDog",
@@ -2958,7 +3286,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Yakumo",
     "name_en": "",
-    "image": "SkillUnlock_GuardianDog.webp"
+    "image": "SkillUnlock_GuardianDog.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_WhiteAlienDragon",
@@ -2967,7 +3296,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Xenogard",
     "name_en": "",
-    "image": "SkillUnlock_WhiteAlienDragon.webp"
+    "image": "SkillUnlock_WhiteAlienDragon.webp",
+    "is_ancient": false
   },
   {
     "id": "Battle_RangeWeapon_CompoundBow",
@@ -2976,7 +3306,8 @@
     "category": "Objets",
     "name_fr": "Arc composite",
     "name_en": "",
-    "image": "Battle_RangeWeapon_CompoundBow.webp"
+    "image": "Battle_RangeWeapon_CompoundBow.webp",
+    "is_ancient": false
   },
   {
     "id": "ElectricCooler",
@@ -2985,7 +3316,8 @@
     "category": "Structures",
     "name_fr": "Climatiseur électrique",
     "name_en": "",
-    "image": "ElectricCooler.webp"
+    "image": "ElectricCooler.webp",
+    "is_ancient": false
   },
   {
     "id": "FragGrenade_Dragon",
@@ -2994,7 +3326,8 @@
     "category": "Objets",
     "name_fr": "Grenade draco",
     "name_en": "",
-    "image": "FragGrenade_Dragon.webp"
+    "image": "FragGrenade_Dragon.webp",
+    "is_ancient": false
   },
   {
     "id": "Product_Factory_Hard_Grade_03",
@@ -3003,7 +3336,8 @@
     "category": "Structures",
     "name_fr": "Chaîne de production II",
     "name_en": "",
-    "image": "Product_Factory_Hard_Grade_03.webp"
+    "image": "Product_Factory_Hard_Grade_03.webp",
+    "is_ancient": false
   },
   {
     "id": "ReinforcedArrow",
@@ -3012,7 +3346,8 @@
     "category": "Objets",
     "name_fr": "Flèche renforcée",
     "name_en": "",
-    "image": "ReinforcedArrow.webp"
+    "image": "ReinforcedArrow.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_GhostAnglerfish_Fire",
@@ -3021,7 +3356,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Ghangler Ignis",
     "name_en": "",
-    "image": "SkillUnlock_GhostAnglerfish_Fire.webp"
+    "image": "SkillUnlock_GhostAnglerfish_Fire.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_IceNarwhal",
@@ -3030,7 +3366,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Whalaska",
     "name_en": "",
-    "image": "SkillUnlock_IceNarwhal.webp"
+    "image": "SkillUnlock_IceNarwhal.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_VolcanicMonster",
@@ -3039,7 +3376,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Reptyro",
     "name_en": "",
-    "image": "SkillUnlock_VolcanicMonster.webp"
+    "image": "SkillUnlock_VolcanicMonster.webp",
+    "is_ancient": false
   },
   {
     "id": "AdditionalInventory_002",
@@ -3048,7 +3386,8 @@
     "category": "Objets",
     "name_fr": "Sacoche d'extension",
     "name_en": "",
-    "image": "AdditionalInventory_002.webp"
+    "image": "AdditionalInventory_002.webp",
+    "is_ancient": false
   },
   {
     "id": "Battle_RangeWeapon_ShotGun_Multi",
@@ -3057,7 +3396,8 @@
     "category": "Objets",
     "name_fr": "Fusil à pompe",
     "name_en": "",
-    "image": "Battle_RangeWeapon_ShotGun_Multi.webp"
+    "image": "Battle_RangeWeapon_ShotGun_Multi.webp",
+    "is_ancient": false
   },
   {
     "id": "HighGrade_Processed_Wood",
@@ -3066,7 +3406,8 @@
     "category": "Objets",
     "name_fr": "Planche de bois raffiné",
     "name_en": "",
-    "image": "HighGrade_Processed_Wood.webp"
+    "image": "HighGrade_Processed_Wood.webp",
+    "is_ancient": false
   },
   {
     "id": "Product_Medicine_Grade_02",
@@ -3075,7 +3416,8 @@
     "category": "Structures",
     "name_fr": "Table pharmaceutique électrique",
     "name_en": "",
-    "image": "Product_Medicine_Grade_02.webp"
+    "image": "Product_Medicine_Grade_02.webp",
+    "is_ancient": false
   },
   {
     "id": "Product_StationDeforest2",
@@ -3084,7 +3426,8 @@
     "category": "Structures",
     "name_fr": "Scierie II",
     "name_en": "",
-    "image": "Product_StationDeforest2.webp"
+    "image": "Product_StationDeforest2.webp",
+    "is_ancient": true
   },
   {
     "id": "Shield_04",
@@ -3093,7 +3436,8 @@
     "category": "Objets",
     "name_fr": "Hyper bouclier",
     "name_en": "",
-    "image": "Shield_04.webp"
+    "image": "Shield_04.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_Suzaku",
@@ -3102,7 +3446,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Suzaku",
     "name_en": "",
-    "image": "SkillUnlock_Suzaku.webp"
+    "image": "SkillUnlock_Suzaku.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_VolcanicMonster_Ice",
@@ -3111,7 +3456,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Reptyro Cryst",
     "name_en": "",
-    "image": "SkillUnlock_VolcanicMonster_Ice.webp"
+    "image": "SkillUnlock_VolcanicMonster_Ice.webp",
+    "is_ancient": false
   },
   {
     "id": "Battle_MeleeWeapon_Axe_Steal",
@@ -3120,7 +3466,8 @@
     "category": "Objets",
     "name_fr": "Hache en paluminium",
     "name_en": "",
-    "image": "Battle_MeleeWeapon_Axe_Steal.webp"
+    "image": "Battle_MeleeWeapon_Axe_Steal.webp",
+    "is_ancient": false
   },
   {
     "id": "Battle_MeleeWeapon_Pickaxe_Steal",
@@ -3129,7 +3476,8 @@
     "category": "Objets",
     "name_fr": "Pioche en paluminium",
     "name_en": "",
-    "image": "Battle_MeleeWeapon_Pickaxe_Steal.webp"
+    "image": "Battle_MeleeWeapon_Pickaxe_Steal.webp",
+    "is_ancient": false
   },
   {
     "id": "Bio_Battery",
@@ -3138,7 +3486,8 @@
     "category": "Objets",
     "name_fr": "Bio-batterie",
     "name_en": "",
-    "image": "Bio_Battery.webp"
+    "image": "Bio_Battery.webp",
+    "is_ancient": false
   },
   {
     "id": "Katana",
@@ -3147,7 +3496,8 @@
     "category": "Objets",
     "name_fr": "Katana",
     "name_en": "",
-    "image": "Katana.webp"
+    "image": "Katana.webp",
+    "is_ancient": false
   },
   {
     "id": "Product_Ingot_Grade_03_Steal",
@@ -3156,7 +3506,8 @@
     "category": "Structures",
     "name_fr": "Fournaise électrique",
     "name_en": "",
-    "image": "Product_Ingot_Grade_03_Steal.webp"
+    "image": "Product_Ingot_Grade_03_Steal.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_SakuraSaurus_Water",
@@ -3165,7 +3516,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Broncherry Aqua",
     "name_en": "",
-    "image": "SkillUnlock_SakuraSaurus_Water.webp"
+    "image": "SkillUnlock_SakuraSaurus_Water.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_Suzaku_Water",
@@ -3174,7 +3526,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Suzaku Aqua",
     "name_en": "",
-    "image": "SkillUnlock_Suzaku_Water.webp"
+    "image": "SkillUnlock_Suzaku_Water.webp",
+    "is_ancient": false
   },
   {
     "id": "Special_PalSphere_Grade_06",
@@ -3183,7 +3536,8 @@
     "category": "Objets",
     "name_fr": "Sphère Légendaire",
     "name_en": "",
-    "image": "Special_PalSphere_Grade_06.webp"
+    "image": "Special_PalSphere_Grade_06.webp",
+    "is_ancient": false
   },
   {
     "id": "AssaultRifleBullet",
@@ -3192,7 +3546,8 @@
     "category": "Objets",
     "name_fr": "Balles de fusil d'assaut",
     "name_en": "",
-    "image": "AssaultRifleBullet.webp"
+    "image": "AssaultRifleBullet.webp",
+    "is_ancient": false
   },
   {
     "id": "Battle_RangeWeapon_AssaultRifle",
@@ -3201,7 +3556,8 @@
     "category": "Objets",
     "name_fr": "Fusil d'assaut",
     "name_en": "",
-    "image": "Battle_RangeWeapon_AssaultRifle.webp"
+    "image": "Battle_RangeWeapon_AssaultRifle.webp",
+    "is_ancient": false
   },
   {
     "id": "CompositeDesk",
@@ -3210,7 +3566,8 @@
     "category": "Structures",
     "name_fr": "Table de dessin",
     "name_en": "",
-    "image": "CompositeDesk.webp"
+    "image": "CompositeDesk.webp",
+    "is_ancient": false
   },
   {
     "id": "DecalGunSet",
@@ -3219,7 +3576,8 @@
     "category": "Objets",
     "name_fr": "Ensemble d'armes décalco",
     "name_en": "",
-    "image": "DecalGunSet.webp"
+    "image": "DecalGunSet.webp",
+    "is_ancient": true
   },
   {
     "id": "FishingRod_03_1",
@@ -3228,7 +3586,8 @@
     "category": "Objets",
     "name_fr": "Canne à pêche avancée (Pengullet)",
     "name_en": "",
-    "image": "FishingRod_03_1.webp"
+    "image": "FishingRod_03_1.webp",
+    "is_ancient": false
   },
   {
     "id": "Glass_houseset",
@@ -3237,7 +3596,8 @@
     "category": "Structures",
     "name_fr": "Structures en verre",
     "name_en": "",
-    "image": "Glass_houseset.webp"
+    "image": "Glass_houseset.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_LazyDragon",
@@ -3246,7 +3606,8 @@
     "category": "Objets",
     "name_fr": "Lance-missiles pour Relaxaurus",
     "name_en": "",
-    "image": "SkillUnlock_LazyDragon.webp"
+    "image": "SkillUnlock_LazyDragon.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_SkyDragon_Grass",
@@ -3255,7 +3616,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Quivern Botan",
     "name_en": "",
-    "image": "SkillUnlock_SkyDragon_Grass.webp"
+    "image": "SkillUnlock_SkyDragon_Grass.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_Yeti",
@@ -3264,7 +3626,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Wumpo",
     "name_en": "",
-    "image": "SkillUnlock_Yeti.webp"
+    "image": "SkillUnlock_Yeti.webp",
+    "is_ancient": false
   },
   {
     "id": "Battle_Armor_Grade_04_Steal",
@@ -3273,7 +3636,8 @@
     "category": "Objets",
     "name_fr": "Armure en paluminium",
     "name_en": "",
-    "image": "Battle_Armor_Grade_04_Steal.webp"
+    "image": "Battle_Armor_Grade_04_Steal.webp",
+    "is_ancient": false
   },
   {
     "id": "Battle_Helm_Grade_05_Steal",
@@ -3282,7 +3646,8 @@
     "category": "Objets",
     "name_fr": "Heaume en paluminium",
     "name_en": "",
-    "image": "Battle_Helm_Grade_05_Steal.webp"
+    "image": "Battle_Helm_Grade_05_Steal.webp",
+    "is_ancient": false
   },
   {
     "id": "FurnitureSet_26",
@@ -3291,7 +3656,8 @@
     "category": "Structures",
     "name_fr": "Ensemble de meubles de divertissement",
     "name_en": "",
-    "image": "FurnitureSet_26.webp"
+    "image": "FurnitureSet_26.webp",
+    "is_ancient": false
   },
   {
     "id": "FurnitureSet_27",
@@ -3300,7 +3666,8 @@
     "category": "Structures",
     "name_fr": "Ensemble de réverbères",
     "name_en": "",
-    "image": "FurnitureSet_27.webp"
+    "image": "FurnitureSet_27.webp",
+    "is_ancient": false
   },
   {
     "id": "LargeLamp",
@@ -3309,7 +3676,8 @@
     "category": "Structures",
     "name_fr": "Lampadaire (grand)",
     "name_en": "",
-    "image": "LargeLamp.webp"
+    "image": "LargeLamp.webp",
+    "is_ancient": false
   },
   {
     "id": "Product_SulfurPit",
@@ -3318,7 +3686,8 @@
     "category": "Structures",
     "name_fr": "Mine de soufre",
     "name_en": "",
-    "image": "Product_SulfurPit.webp"
+    "image": "Product_SulfurPit.webp",
+    "is_ancient": true
   },
   {
     "id": "SkillUnlock_KingAlpaca_Ice",
@@ -3327,7 +3696,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Kingpaca Cryst",
     "name_en": "",
-    "image": "SkillUnlock_KingAlpaca_Ice.webp"
+    "image": "SkillUnlock_KingAlpaca_Ice.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_KingBahamut",
@@ -3336,7 +3706,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Blazamut",
     "name_en": "",
-    "image": "SkillUnlock_KingBahamut.webp"
+    "image": "SkillUnlock_KingBahamut.webp",
+    "is_ancient": false
   },
   {
     "id": "WorkSpeedIncrease1",
@@ -3345,7 +3716,8 @@
     "category": "Structures",
     "name_fr": "Dispositif de vague β",
     "name_en": "",
-    "image": "WorkSpeedIncrease1.webp"
+    "image": "WorkSpeedIncrease1.webp",
+    "is_ancient": false
   },
   {
     "id": "AutoMealPouch_Tier5",
@@ -3354,7 +3726,8 @@
     "category": "Objets",
     "name_fr": "Sac de nourriture ultime",
     "name_en": "",
-    "image": "AutoMealPouch_Tier5.webp"
+    "image": "AutoMealPouch_Tier5.webp",
+    "is_ancient": false
   },
   {
     "id": "Battle_RangeWeapon_SemiAutoShotgun",
@@ -3363,7 +3736,8 @@
     "category": "Objets",
     "name_fr": "Fusil à pompe semi-automatique",
     "name_en": "",
-    "image": "Battle_RangeWeapon_SemiAutoShotgun.webp"
+    "image": "Battle_RangeWeapon_SemiAutoShotgun.webp",
+    "is_ancient": false
   },
   {
     "id": "Cake03",
@@ -3372,7 +3746,8 @@
     "category": "Objets",
     "name_fr": "Gâteau aux légumes",
     "name_en": "",
-    "image": "Cake03.webp"
+    "image": "Cake03.webp",
+    "is_ancient": false
   },
   {
     "id": "FurnitureSet_8",
@@ -3381,7 +3756,8 @@
     "category": "Structures",
     "name_fr": "Ensemble de panneaux « Sortie de secours »",
     "name_en": "",
-    "image": "FurnitureSet_8.webp"
+    "image": "FurnitureSet_8.webp",
+    "is_ancient": false
   },
   {
     "id": "LargeCeilingLamp",
@@ -3390,7 +3766,8 @@
     "category": "Structures",
     "name_fr": "Plafonnier (grand)",
     "name_en": "",
-    "image": "LargeCeilingLamp.webp"
+    "image": "LargeCeilingLamp.webp",
+    "is_ancient": false
   },
   {
     "id": "Product_WeaponFactory_Dirty_Grade_03",
@@ -3399,7 +3776,8 @@
     "category": "Structures",
     "name_fr": "Chaîne de production d'armes II",
     "name_en": "",
-    "image": "Product_WeaponFactory_Dirty_Grade_03.webp"
+    "image": "Product_WeaponFactory_Dirty_Grade_03.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_BlackGriffon",
@@ -3408,7 +3786,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Shadowbeak",
     "name_en": "",
-    "image": "SkillUnlock_BlackGriffon.webp"
+    "image": "SkillUnlock_BlackGriffon.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_HadesBird_Electric",
@@ -3417,7 +3796,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Helzephyr Lux",
     "name_en": "",
-    "image": "SkillUnlock_HadesBird_Electric.webp"
+    "image": "SkillUnlock_HadesBird_Electric.webp",
+    "is_ancient": false
   },
   {
     "id": "Battle_Armor_Grade_04_Steal_Heat",
@@ -3426,7 +3806,8 @@
     "category": "Objets",
     "name_fr": "Armure en paluminium anti-chaleur",
     "name_en": "",
-    "image": "Battle_Armor_Grade_04_Steal_Heat.webp"
+    "image": "Battle_Armor_Grade_04_Steal_Heat.webp",
+    "is_ancient": false
   },
   {
     "id": "FurnitureSet_11",
@@ -3435,7 +3816,8 @@
     "category": "Structures",
     "name_fr": "Ensemble de signalisation routière",
     "name_en": "",
-    "image": "FurnitureSet_11.webp"
+    "image": "FurnitureSet_11.webp",
+    "is_ancient": false
   },
   {
     "id": "MultiHatchingPalEgg",
@@ -3444,7 +3826,8 @@
     "category": "Structures",
     "name_fr": "Incubateur géant",
     "name_en": "",
-    "image": "MultiHatchingPalEgg.webp"
+    "image": "MultiHatchingPalEgg.webp",
+    "is_ancient": true
   },
   {
     "id": "SkillUnlock_CubeTurtle",
@@ -3453,7 +3836,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Tetroise",
     "name_en": "",
-    "image": "SkillUnlock_CubeTurtle.webp"
+    "image": "SkillUnlock_CubeTurtle.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_GrassGolem",
@@ -3462,7 +3846,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Dualith",
     "name_en": "",
-    "image": "SkillUnlock_GrassGolem.webp"
+    "image": "SkillUnlock_GrassGolem.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_LazyDragon_Electric",
@@ -3471,7 +3856,8 @@
     "category": "Objets",
     "name_fr": "Lance-missiles pour Relaxaurus Lux",
     "name_en": "",
-    "image": "SkillUnlock_LazyDragon_Electric.webp"
+    "image": "SkillUnlock_LazyDragon_Electric.webp",
+    "is_ancient": false
   },
   {
     "id": "SphereModule_Sniper2",
@@ -3480,7 +3866,8 @@
     "category": "Objets",
     "name_fr": "Module sniper II",
     "name_en": "",
-    "image": "SphereModule_Sniper2.webp"
+    "image": "SphereModule_Sniper2.webp",
+    "is_ancient": false
   },
   {
     "id": "TransmissionTower",
@@ -3489,7 +3876,8 @@
     "category": "Structures",
     "name_fr": "Poteau électrique",
     "name_en": "",
-    "image": "TransmissionTower.webp"
+    "image": "TransmissionTower.webp",
+    "is_ancient": false
   },
   {
     "id": "BaseCampItemDispenser",
@@ -3498,7 +3886,8 @@
     "category": "Structures",
     "name_fr": "Extracteur d'objets",
     "name_en": "",
-    "image": "BaseCampItemDispenser.webp"
+    "image": "BaseCampItemDispenser.webp",
+    "is_ancient": false
   },
   {
     "id": "FurnitureSet_10",
@@ -3507,7 +3896,8 @@
     "category": "Structures",
     "name_fr": "Ensemble de barricades",
     "name_en": "",
-    "image": "FurnitureSet_10.webp"
+    "image": "FurnitureSet_10.webp",
+    "is_ancient": false
   },
   {
     "id": "FurnitureSet_12",
@@ -3516,7 +3906,8 @@
     "category": "Structures",
     "name_fr": "Ensemble de signaux routiers",
     "name_en": "",
-    "image": "FurnitureSet_12.webp"
+    "image": "FurnitureSet_12.webp",
+    "is_ancient": false
   },
   {
     "id": "FurnitureTree_Snow",
@@ -3525,7 +3916,8 @@
     "category": "Structures",
     "name_fr": "Ensemble d'arbres décoratifs enneigés",
     "name_en": "",
-    "image": "FurnitureTree_Snow.webp"
+    "image": "FurnitureTree_Snow.webp",
+    "is_ancient": false
   },
   {
     "id": "GrapplingGun4",
@@ -3534,7 +3926,8 @@
     "category": "Objets",
     "name_fr": "Hyper pistolet-grappin",
     "name_en": "",
-    "image": "GrapplingGun4.webp"
+    "image": "GrapplingGun4.webp",
+    "is_ancient": true
   },
   {
     "id": "HugeKitchen",
@@ -3543,7 +3936,8 @@
     "category": "Structures",
     "name_fr": "Grande cuisine",
     "name_en": "",
-    "image": "HugeKitchen.webp"
+    "image": "HugeKitchen.webp",
+    "is_ancient": false
   },
   {
     "id": "JapaneseStyle_houseset",
@@ -3552,7 +3946,8 @@
     "category": "Structures",
     "name_fr": "Structures de style japonais",
     "name_en": "",
-    "image": "JapaneseStyle_houseset.webp"
+    "image": "JapaneseStyle_houseset.webp",
+    "is_ancient": false
   },
   {
     "id": "Battle_Armor_Grade_04_Steal_Cold",
@@ -3561,7 +3956,8 @@
     "category": "Objets",
     "name_fr": "Armure en paluminium anti-froid",
     "name_en": "",
-    "image": "Battle_Armor_Grade_04_Steal_Cold.webp"
+    "image": "Battle_Armor_Grade_04_Steal_Cold.webp",
+    "is_ancient": false
   },
   {
     "id": "Battle_Defense_Missile",
@@ -3570,7 +3966,8 @@
     "category": "Structures",
     "name_fr": "Lance-missiles monté",
     "name_en": "",
-    "image": "Battle_Defense_Missile.webp"
+    "image": "Battle_Defense_Missile.webp",
+    "is_ancient": false
   },
   {
     "id": "Computer",
@@ -3579,7 +3976,8 @@
     "category": "Objets",
     "name_fr": "Ordinateur",
     "name_en": "",
-    "image": "Computer.webp"
+    "image": "Computer.webp",
+    "is_ancient": false
   },
   {
     "id": "ElectricGenerator_Large",
@@ -3588,7 +3986,8 @@
     "category": "Structures",
     "name_fr": "Grand générateur",
     "name_en": "",
-    "image": "ElectricGenerator_Large.webp"
+    "image": "ElectricGenerator_Large.webp",
+    "is_ancient": true
   },
   {
     "id": "OilPump",
@@ -3597,7 +3996,8 @@
     "category": "Structures",
     "name_fr": "Pompe à pétrole brut",
     "name_en": "",
-    "image": "OilPump.webp"
+    "image": "OilPump.webp",
+    "is_ancient": false
   },
   {
     "id": "Plastic",
@@ -3606,7 +4006,8 @@
     "category": "Objets",
     "name_fr": "Plastacier",
     "name_en": "",
-    "image": "Plastic.webp"
+    "image": "Plastic.webp",
+    "is_ancient": false
   },
   {
     "id": "ScientistFlagSet",
@@ -3615,7 +4016,8 @@
     "category": "Structures",
     "name_fr": "Ensemble de Drapeaux de l'Unité de Recherche",
     "name_en": "",
-    "image": "ScientistFlagSet.webp"
+    "image": "ScientistFlagSet.webp",
+    "is_ancient": false
   },
   {
     "id": "Battle_Armor_Grade_05_Plastic",
@@ -3624,7 +4026,8 @@
     "category": "Objets",
     "name_fr": "Armure en plastacier",
     "name_en": "",
-    "image": "Battle_Armor_Grade_05_Plastic.webp"
+    "image": "Battle_Armor_Grade_05_Plastic.webp",
+    "is_ancient": false
   },
   {
     "id": "Battle_Helm_Grade_06_Plastic",
@@ -3633,7 +4036,8 @@
     "category": "Objets",
     "name_fr": "Casque en plastacier",
     "name_en": "",
-    "image": "Battle_Helm_Grade_06_Plastic.webp"
+    "image": "Battle_Helm_Grade_06_Plastic.webp",
+    "is_ancient": false
   },
   {
     "id": "Battle_RangeWeapon_LaserRifle",
@@ -3642,7 +4046,8 @@
     "category": "Objets",
     "name_fr": "Fusil laser",
     "name_en": "",
-    "image": "Battle_RangeWeapon_LaserRifle.webp"
+    "image": "Battle_RangeWeapon_LaserRifle.webp",
+    "is_ancient": false
   },
   {
     "id": "CoolerPalFoodBox",
@@ -3651,7 +4056,8 @@
     "category": "Structures",
     "name_fr": "Boîte à nourriture réfrigérée",
     "name_en": "",
-    "image": "CoolerPalFoodBox.webp"
+    "image": "CoolerPalFoodBox.webp",
+    "is_ancient": false
   },
   {
     "id": "LaserBullet",
@@ -3660,7 +4066,8 @@
     "category": "Objets",
     "name_fr": "Cartouche d'énergie",
     "name_en": "",
-    "image": "LaserBullet.webp"
+    "image": "LaserBullet.webp",
+    "is_ancient": false
   },
   {
     "id": "OilPump02",
@@ -3669,7 +4076,8 @@
     "category": "Structures",
     "name_fr": "Pompe à pétrole brut haute pression",
     "name_en": "",
-    "image": "OilPump02.webp"
+    "image": "OilPump02.webp",
+    "is_ancient": true
   },
   {
     "id": "SkillUnlock_Yeti_Grass",
@@ -3678,7 +4086,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Wumpo Botan",
     "name_en": "",
-    "image": "SkillUnlock_Yeti_Grass.webp"
+    "image": "SkillUnlock_Yeti_Grass.webp",
+    "is_ancient": false
   },
   {
     "id": "Special_PalSphere_Grade_07",
@@ -3687,7 +4096,8 @@
     "category": "Objets",
     "name_fr": "Sphère Ultime",
     "name_en": "",
-    "image": "Special_PalSphere_Grade_07.webp"
+    "image": "Special_PalSphere_Grade_07.webp",
+    "is_ancient": false
   },
   {
     "id": "Battle_Glider_Grade_04",
@@ -3696,7 +4106,8 @@
     "category": "Objets",
     "name_fr": "Hyper planeur",
     "name_en": "",
-    "image": "Battle_Glider_Grade_04.webp"
+    "image": "Battle_Glider_Grade_04.webp",
+    "is_ancient": false
   },
   {
     "id": "Battle_RangeWeapon_FlameThrower",
@@ -3705,7 +4116,8 @@
     "category": "Objets",
     "name_fr": "Lance-flammes",
     "name_en": "",
-    "image": "Battle_RangeWeapon_FlameThrower.webp"
+    "image": "Battle_RangeWeapon_FlameThrower.webp",
+    "is_ancient": false
   },
   {
     "id": "FishingBait_3_A",
@@ -3714,7 +4126,8 @@
     "category": "Objets",
     "name_fr": "Appât séduisant",
     "name_en": "",
-    "image": "FishingBait_3_A.webp"
+    "image": "FishingBait_3_A.webp",
+    "is_ancient": false
   },
   {
     "id": "FlamethrowerBullet",
@@ -3723,7 +4136,8 @@
     "category": "Objets",
     "name_fr": "Combustible pour lance-flammes",
     "name_en": "",
-    "image": "FlamethrowerBullet.webp"
+    "image": "FlamethrowerBullet.webp",
+    "is_ancient": false
   },
   {
     "id": "Product_QuartzPit",
@@ -3732,7 +4146,8 @@
     "category": "Structures",
     "name_fr": "Carrière de quartz pur",
     "name_en": "",
-    "image": "Product_QuartzPit.webp"
+    "image": "Product_QuartzPit.webp",
+    "is_ancient": true
   },
   {
     "id": "SkillUnlock_BadCatgirl",
@@ -3741,7 +4156,8 @@
     "category": "Objets",
     "name_fr": "Fusil à pompe de Nyafia",
     "name_en": "",
-    "image": "SkillUnlock_BadCatgirl.webp"
+    "image": "SkillUnlock_BadCatgirl.webp",
+    "is_ancient": false
   },
   {
     "id": "AdditionalInventory_003",
@@ -3750,7 +4166,8 @@
     "category": "Objets",
     "name_fr": "Grande sacoche d'extension",
     "name_en": "",
-    "image": "AdditionalInventory_003.webp"
+    "image": "AdditionalInventory_003.webp",
+    "is_ancient": false
   },
   {
     "id": "Battle_Armor_Grade_05_Plastic_Heat",
@@ -3759,7 +4176,8 @@
     "category": "Objets",
     "name_fr": "Armure en plastacier anti-chaleur",
     "name_en": "",
-    "image": "Battle_Armor_Grade_05_Plastic_Heat.webp"
+    "image": "Battle_Armor_Grade_05_Plastic_Heat.webp",
+    "is_ancient": false
   },
   {
     "id": "Battle_RangeWeapon_GrenadeLauncher",
@@ -3768,7 +4186,8 @@
     "category": "Objets",
     "name_fr": "Lance-grenades",
     "name_en": "",
-    "image": "Battle_RangeWeapon_GrenadeLauncher.webp"
+    "image": "Battle_RangeWeapon_GrenadeLauncher.webp",
+    "is_ancient": false
   },
   {
     "id": "FragGrenade_Super",
@@ -3777,7 +4196,8 @@
     "category": "Objets",
     "name_fr": "Grenade à fragmentation améliorée",
     "name_en": "",
-    "image": "FragGrenade_Super.webp"
+    "image": "FragGrenade_Super.webp",
+    "is_ancient": false
   },
   {
     "id": "GrenadeBullet",
@@ -3786,7 +4206,8 @@
     "category": "Objets",
     "name_fr": "Grenade",
     "name_en": "",
-    "image": "GrenadeBullet.webp"
+    "image": "GrenadeBullet.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_MoonQueen",
@@ -3795,7 +4216,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Selyne",
     "name_en": "",
-    "image": "SkillUnlock_MoonQueen.webp"
+    "image": "SkillUnlock_MoonQueen.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_SumoDog",
@@ -3804,7 +4226,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Bulldosu",
     "name_en": "",
-    "image": "SkillUnlock_SumoDog.webp"
+    "image": "SkillUnlock_SumoDog.webp",
+    "is_ancient": false
   },
   {
     "id": "Unlock_Picking_Tier3",
@@ -3813,7 +4236,8 @@
     "category": "Objets",
     "name_fr": "Outil de crochetage professionnel",
     "name_en": "",
-    "image": "Unlock_Picking_Tier3.webp"
+    "image": "Unlock_Picking_Tier3.webp",
+    "is_ancient": true
   },
   {
     "id": "Battle_Armor_Grade_05_Plastic_Cold",
@@ -3822,7 +4246,8 @@
     "category": "Objets",
     "name_fr": "Armure en plastacier anti-froid",
     "name_en": "",
-    "image": "Battle_Armor_Grade_05_Plastic_Cold.webp"
+    "image": "Battle_Armor_Grade_05_Plastic_Cold.webp",
+    "is_ancient": false
   },
   {
     "id": "Battle_RangeWeapon_GatlingGun",
@@ -3831,7 +4256,8 @@
     "category": "Objets",
     "name_fr": "Gatling",
     "name_en": "",
-    "image": "Battle_RangeWeapon_GatlingGun.webp"
+    "image": "Battle_RangeWeapon_GatlingGun.webp",
+    "is_ancient": false
   },
   {
     "id": "GatlingBullet",
@@ -3840,7 +4266,8 @@
     "category": "Objets",
     "name_fr": "Munitions de gatling",
     "name_en": "",
-    "image": "GatlingBullet.webp"
+    "image": "GatlingBullet.webp",
+    "is_ancient": false
   },
   {
     "id": "IceCrusher",
@@ -3849,7 +4276,8 @@
     "category": "Structures",
     "name_fr": "Broyeur à glace",
     "name_en": "",
-    "image": "IceCrusher.webp"
+    "image": "IceCrusher.webp",
+    "is_ancient": false
   },
   {
     "id": "LaserMiningTool",
@@ -3858,7 +4286,8 @@
     "category": "Objets",
     "name_fr": "Découpeur multi-plasma",
     "name_en": "",
-    "image": "LaserMiningTool.webp"
+    "image": "LaserMiningTool.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_GoldenHorse",
@@ -3867,7 +4296,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Gildane",
     "name_en": "",
-    "image": "SkillUnlock_GoldenHorse.webp"
+    "image": "SkillUnlock_GoldenHorse.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_WhiteDeer",
@@ -3876,7 +4306,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Celesdir",
     "name_en": "",
-    "image": "SkillUnlock_WhiteDeer.webp"
+    "image": "SkillUnlock_WhiteDeer.webp",
+    "is_ancient": false
   },
   {
     "id": "UnlockEquipmentSlot_Weapon_02",
@@ -3885,7 +4316,8 @@
     "category": "Objets",
     "name_fr": "Étui d'arme supplémentaire 2",
     "name_en": "",
-    "image": "UnlockEquipmentSlot_Weapon_02.webp"
+    "image": "UnlockEquipmentSlot_Weapon_02.webp",
+    "is_ancient": true
   },
   {
     "id": "Battle_Armor_Grade_05_Plastic_Weight",
@@ -3894,7 +4326,8 @@
     "category": "Objets",
     "name_fr": "Armure en plastacier légère",
     "name_en": "",
-    "image": "Battle_Armor_Grade_05_Plastic_Weight.webp"
+    "image": "Battle_Armor_Grade_05_Plastic_Weight.webp",
+    "is_ancient": false
   },
   {
     "id": "Battle_RangeWeapon_HomingSphereLauncher",
@@ -3903,7 +4336,8 @@
     "category": "Objets",
     "name_fr": "Lance-sphères à tête chercheuse",
     "name_en": "",
-    "image": "Battle_RangeWeapon_HomingSphereLauncher.webp"
+    "image": "Battle_RangeWeapon_HomingSphereLauncher.webp",
+    "is_ancient": true
   },
   {
     "id": "FurnitureSet_Japanese",
@@ -3912,7 +4346,8 @@
     "category": "Structures",
     "name_fr": "Ensemble de meubles japonais",
     "name_en": "",
-    "image": "FurnitureSet_Japanese.webp"
+    "image": "FurnitureSet_Japanese.webp",
+    "is_ancient": false
   },
   {
     "id": "NinjaFlagSet",
@@ -3921,7 +4356,8 @@
     "category": "Structures",
     "name_fr": "Ensemble de Drapeaux des Fleurs Lunaires",
     "name_en": "",
-    "image": "NinjaFlagSet.webp"
+    "image": "NinjaFlagSet.webp",
+    "is_ancient": false
   },
   {
     "id": "Shield_05",
@@ -3930,7 +4366,8 @@
     "category": "Objets",
     "name_fr": "Ultra bouclier",
     "name_en": "",
-    "image": "Shield_05.webp"
+    "image": "Shield_05.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_IceSeal_Ground",
@@ -3939,7 +4376,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Polapup Terra",
     "name_en": "",
-    "image": "SkillUnlock_IceSeal_Ground.webp"
+    "image": "SkillUnlock_IceSeal_Ground.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_KingBahamut_Dragon",
@@ -3948,7 +4386,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Blazamut Ryu",
     "name_en": "",
-    "image": "SkillUnlock_KingBahamut_Dragon.webp"
+    "image": "SkillUnlock_KingBahamut_Dragon.webp",
+    "is_ancient": false
   },
   {
     "id": "Spear_ForestBoss",
@@ -3957,7 +4396,8 @@
     "category": "Objets",
     "name_fr": "Lance de Lily",
     "name_en": "",
-    "image": "Spear_ForestBoss.webp"
+    "image": "Spear_ForestBoss.webp",
+    "is_ancient": false
   },
   {
     "id": "Battle_RangeWeapon_GuidedMissileLauncher",
@@ -3966,7 +4406,8 @@
     "category": "Objets",
     "name_fr": "Lance-missiles",
     "name_en": "",
-    "image": "Battle_RangeWeapon_GuidedMissileLauncher.webp"
+    "image": "Battle_RangeWeapon_GuidedMissileLauncher.webp",
+    "is_ancient": false
   },
   {
     "id": "DismantlingConveyor",
@@ -3975,7 +4416,8 @@
     "category": "Structures",
     "name_fr": "Destructeur de Pals",
     "name_en": "",
-    "image": "DismantlingConveyor.webp"
+    "image": "DismantlingConveyor.webp",
+    "is_ancient": false
   },
   {
     "id": "FurnitureTree_Cherry",
@@ -3984,7 +4426,8 @@
     "category": "Structures",
     "name_fr": "Ensemble de cerisiers décoratifs",
     "name_en": "",
-    "image": "FurnitureTree_Cherry.webp"
+    "image": "FurnitureTree_Cherry.webp",
+    "is_ancient": false
   },
   {
     "id": "MedicalPalBed_05",
@@ -3993,7 +4436,8 @@
     "category": "Structures",
     "name_fr": "Capsule pour Pal avancée",
     "name_en": "",
-    "image": "MedicalPalBed_05.webp"
+    "image": "MedicalPalBed_05.webp",
+    "is_ancient": false
   },
   {
     "id": "MissileBullet",
@@ -4002,7 +4446,8 @@
     "category": "Objets",
     "name_fr": "Missile",
     "name_en": "",
-    "image": "MissileBullet.webp"
+    "image": "MissileBullet.webp",
+    "is_ancient": false
   },
   {
     "id": "OctaviaSet02",
@@ -4011,7 +4456,8 @@
     "category": "Objets",
     "name_fr": "Ensemble Collaboration ULTRAKILL 2",
     "name_en": "",
-    "image": "OctaviaSet02.webp"
+    "image": "OctaviaSet02.webp",
+    "is_ancient": true
   },
   {
     "id": "AdditionalInventory_004",
@@ -4020,7 +4466,8 @@
     "category": "Objets",
     "name_fr": "Énorme sacoche d'extension",
     "name_en": "",
-    "image": "AdditionalInventory_004.webp"
+    "image": "AdditionalInventory_004.webp",
+    "is_ancient": false
   },
   {
     "id": "BeamSword",
@@ -4029,7 +4476,8 @@
     "category": "Objets",
     "name_fr": "Épée rayonnante",
     "name_en": "",
-    "image": "BeamSword.webp"
+    "image": "BeamSword.webp",
+    "is_ancient": false
   },
   {
     "id": "SFArrow",
@@ -4038,7 +4486,8 @@
     "category": "Objets",
     "name_fr": "Flèche avancée",
     "name_en": "",
-    "image": "SFArrow.webp"
+    "image": "SFArrow.webp",
+    "is_ancient": false
   },
   {
     "id": "SFBow",
@@ -4047,7 +4496,8 @@
     "category": "Objets",
     "name_fr": "Arc avancé",
     "name_en": "",
-    "image": "SFBow.webp"
+    "image": "SFBow.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_AmaterasuWolf",
@@ -4056,7 +4506,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Kitsun",
     "name_en": "",
-    "image": "SkillUnlock_AmaterasuWolf.webp"
+    "image": "SkillUnlock_AmaterasuWolf.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_FengyunDeeper_Electric",
@@ -4065,7 +4516,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Fenglope Lux",
     "name_en": "",
-    "image": "SkillUnlock_FengyunDeeper_Electric.webp"
+    "image": "SkillUnlock_FengyunDeeper_Electric.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_NightBlueHorse",
@@ -4074,7 +4526,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Starryon",
     "name_en": "",
-    "image": "SkillUnlock_NightBlueHorse.webp"
+    "image": "SkillUnlock_NightBlueHorse.webp",
+    "is_ancient": false
   },
   {
     "id": "BlastFurnace4",
@@ -4083,7 +4536,8 @@
     "category": "Structures",
     "name_fr": "fr_Text",
     "name_en": "",
-    "image": "BlastFurnace4.webp"
+    "image": "BlastFurnace4.webp",
+    "is_ancient": false
   },
   {
     "id": "MetalDetector",
@@ -4092,7 +4546,8 @@
     "category": "Objets",
     "name_fr": "Détecteur de métaux",
     "name_en": "",
-    "image": "MetalDetector.webp"
+    "image": "MetalDetector.webp",
+    "is_ancient": false
   },
   {
     "id": "MultiElectricHatchingPalEgg",
@@ -4101,7 +4556,8 @@
     "category": "Structures",
     "name_fr": "Grand incubateur électrique",
     "name_en": "",
-    "image": "MultiElectricHatchingPalEgg.webp"
+    "image": "MultiElectricHatchingPalEgg.webp",
+    "is_ancient": true
   },
   {
     "id": "PalSphere_Exotic",
@@ -4110,7 +4566,8 @@
     "category": "Objets",
     "name_fr": "Sphère Exotique",
     "name_en": "",
-    "image": "PalSphere_Exotic.webp"
+    "image": "PalSphere_Exotic.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_BlackPuppy",
@@ -4119,7 +4576,8 @@
     "category": "Objets",
     "name_fr": "Harnais pour Smokie",
     "name_en": "",
-    "image": "SkillUnlock_BlackPuppy.webp"
+    "image": "SkillUnlock_BlackPuppy.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_BlueThunderHorse",
@@ -4128,7 +4586,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Azurmane",
     "name_en": "",
-    "image": "SkillUnlock_BlueThunderHorse.webp"
+    "image": "SkillUnlock_BlueThunderHorse.webp",
+    "is_ancient": false
   },
   {
     "id": "SphereFactory_Black_04",
@@ -4137,7 +4596,8 @@
     "category": "Structures",
     "name_fr": "Chaîne de production de sphères avancée",
     "name_en": "",
-    "image": "SphereFactory_Black_04.webp"
+    "image": "SphereFactory_Black_04.webp",
+    "is_ancient": false
   },
   {
     "id": "StainlessSteel",
@@ -4146,7 +4606,8 @@
     "category": "Objets",
     "name_fr": "Hexolite",
     "name_en": "",
-    "image": "StainlessSteel.webp"
+    "image": "StainlessSteel.webp",
+    "is_ancient": false
   },
   {
     "id": "ItemChest_04",
@@ -4155,7 +4616,8 @@
     "category": "Structures",
     "name_fr": "Coffre avancé",
     "name_en": "",
-    "image": "ItemChest_04.webp"
+    "image": "ItemChest_04.webp",
+    "is_ancient": false
   },
   {
     "id": "LaserGatlingBullet",
@@ -4164,7 +4626,8 @@
     "category": "Objets",
     "name_fr": "Cartouche de gatling laser",
     "name_en": "",
-    "image": "LaserGatlingBullet.webp"
+    "image": "LaserGatlingBullet.webp",
+    "is_ancient": false
   },
   {
     "id": "LaserGatlingGun",
@@ -4173,7 +4636,8 @@
     "category": "Objets",
     "name_fr": "Gatling laser",
     "name_en": "",
-    "image": "LaserGatlingGun.webp"
+    "image": "LaserGatlingGun.webp",
+    "is_ancient": false
   },
   {
     "id": "SFArmor",
@@ -4182,7 +4646,8 @@
     "category": "Objets",
     "name_fr": "Armure en hexolite",
     "name_en": "",
-    "image": "SFArmor.webp"
+    "image": "SFArmor.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_AmaterasuWolf_Dark",
@@ -4191,7 +4656,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Kitsun Noct",
     "name_en": "",
-    "image": "SkillUnlock_AmaterasuWolf_Dark.webp"
+    "image": "SkillUnlock_AmaterasuWolf_Dark.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_Umihebi_Fire",
@@ -4200,7 +4666,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Jormuntide Ignis",
     "name_en": "",
-    "image": "SkillUnlock_Umihebi_Fire.webp"
+    "image": "SkillUnlock_Umihebi_Fire.webp",
+    "is_ancient": false
   },
   {
     "id": "Thermal_Core",
@@ -4209,7 +4676,8 @@
     "category": "Objets",
     "name_fr": "Cœur brûlant",
     "name_en": "",
-    "image": "Thermal_Core.webp"
+    "image": "Thermal_Core.webp",
+    "is_ancient": false
   },
   {
     "id": "Cake04",
@@ -4218,7 +4686,8 @@
     "category": "Objets",
     "name_fr": "Gâteau aux légumes raffiné",
     "name_en": "",
-    "image": "Cake04.webp"
+    "image": "Cake04.webp",
+    "is_ancient": false
   },
   {
     "id": "DarkIslandFlagSet",
@@ -4227,7 +4696,8 @@
     "category": "Structures",
     "name_fr": "Ensemble de drapeaux du Paradis Déchu",
     "name_en": "",
-    "image": "DarkIslandFlagSet.webp"
+    "image": "DarkIslandFlagSet.webp",
+    "is_ancient": false
   },
   {
     "id": "SFHelmet",
@@ -4236,7 +4706,8 @@
     "category": "Objets",
     "name_fr": "Casque en hexolite",
     "name_en": "",
-    "image": "SFHelmet.webp"
+    "image": "SFHelmet.webp",
+    "is_ancient": false
   },
   {
     "id": "Shield_SF",
@@ -4245,7 +4716,8 @@
     "category": "Objets",
     "name_fr": "Ultime bouclier",
     "name_en": "",
-    "image": "Shield_SF.webp"
+    "image": "Shield_SF.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_Horus",
@@ -4254,7 +4726,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Faleris",
     "name_en": "",
-    "image": "SkillUnlock_Horus.webp"
+    "image": "SkillUnlock_Horus.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_Horus_Water",
@@ -4263,7 +4736,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Faleris Aqua",
     "name_en": "",
-    "image": "SkillUnlock_Horus_Water.webp"
+    "image": "SkillUnlock_Horus_Water.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_WhiteShieldDragon",
@@ -4272,7 +4746,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Silvegis",
     "name_en": "",
-    "image": "SkillUnlock_WhiteShieldDragon.webp"
+    "image": "SkillUnlock_WhiteShieldDragon.webp",
+    "is_ancient": false
   },
   {
     "id": "Accessory_AirDash2",
@@ -4281,7 +4756,8 @@
     "category": "Objets",
     "name_fr": "Bottes de double ruée aérienne",
     "name_en": "",
-    "image": "Accessory_AirDash2.webp"
+    "image": "Accessory_AirDash2.webp",
+    "is_ancient": true
   },
   {
     "id": "EnergyLauncherBullet",
@@ -4290,7 +4766,8 @@
     "category": "Objets",
     "name_fr": "Cartouche de plasma",
     "name_en": "",
-    "image": "EnergyLauncherBullet.webp"
+    "image": "EnergyLauncherBullet.webp",
+    "is_ancient": false
   },
   {
     "id": "EnergyRocketLauncher",
@@ -4299,7 +4776,8 @@
     "category": "Objets",
     "name_fr": "Canon à plasma",
     "name_en": "",
-    "image": "EnergyRocketLauncher.webp"
+    "image": "EnergyRocketLauncher.webp",
+    "is_ancient": false
   },
   {
     "id": "MedicineFacility_03",
@@ -4308,7 +4786,8 @@
     "category": "Structures",
     "name_fr": "fr_Text",
     "name_en": "",
-    "image": "MedicineFacility_03.webp"
+    "image": "MedicineFacility_03.webp",
+    "is_ancient": false
   },
   {
     "id": "PalRevive",
@@ -4317,7 +4796,8 @@
     "category": "Objets",
     "name_fr": "Potion de résurrection",
     "name_en": "",
-    "image": "PalRevive.webp"
+    "image": "PalRevive.webp",
+    "is_ancient": false
   },
   {
     "id": "Potion_Extreme",
@@ -4326,7 +4806,8 @@
     "category": "Objets",
     "name_fr": "Potion suprême",
     "name_en": "",
-    "image": "Potion_Extreme.webp"
+    "image": "Potion_Extreme.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_BlackCentaur",
@@ -4335,7 +4816,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Necromus",
     "name_en": "",
-    "image": "SkillUnlock_BlackCentaur.webp"
+    "image": "SkillUnlock_BlackCentaur.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_SaintCentaur",
@@ -4344,7 +4826,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Paladius",
     "name_en": "",
-    "image": "SkillUnlock_SaintCentaur.webp"
+    "image": "SkillUnlock_SaintCentaur.webp",
+    "is_ancient": false
   },
   {
     "id": "CrystalPit",
@@ -4353,7 +4836,8 @@
     "category": "Structures",
     "name_fr": "Mine d’hexoquartz",
     "name_en": "",
-    "image": "CrystalPit.webp"
+    "image": "CrystalPit.webp",
+    "is_ancient": true
   },
   {
     "id": "Factory_Hard_04",
@@ -4362,7 +4846,8 @@
     "category": "Structures",
     "name_fr": "Chaîne de production avancée",
     "name_en": "",
-    "image": "Factory_Hard_04.webp"
+    "image": "Factory_Hard_04.webp",
+    "is_ancient": false
   },
   {
     "id": "ManganeseIngot",
@@ -4371,7 +4856,8 @@
     "category": "Objets",
     "name_fr": "Lingot de korallium",
     "name_en": "",
-    "image": "ManganeseIngot.webp"
+    "image": "ManganeseIngot.webp",
+    "is_ancient": false
   },
   {
     "id": "SF_houseset",
@@ -4380,7 +4866,8 @@
     "category": "Structures",
     "name_fr": "Structures de Style Futuriste",
     "name_en": "",
-    "image": "SF_houseset.webp"
+    "image": "SF_houseset.webp",
+    "is_ancient": false
   },
   {
     "id": "Salvage_TreasureBoxKey02",
@@ -4389,7 +4876,8 @@
     "category": "Objets",
     "name_fr": "Aimant de pêche puissant",
     "name_en": "",
-    "image": "Salvage_TreasureBoxKey02.webp"
+    "image": "Salvage_TreasureBoxKey02.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_IceHorse",
@@ -4398,7 +4886,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Frostallion",
     "name_en": "",
-    "image": "SkillUnlock_IceHorse.webp"
+    "image": "SkillUnlock_IceHorse.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_IceHorse_Dark",
@@ -4407,7 +4896,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Frostallion Noct",
     "name_en": "",
-    "image": "SkillUnlock_IceHorse_Dark.webp"
+    "image": "SkillUnlock_IceHorse_Dark.webp",
+    "is_ancient": false
   },
   {
     "id": "EnergyShotgun",
@@ -4416,7 +4906,8 @@
     "category": "Objets",
     "name_fr": "Fusil à pompe énergétique",
     "name_en": "",
-    "image": "EnergyShotgun.webp"
+    "image": "EnergyShotgun.webp",
+    "is_ancient": false
   },
   {
     "id": "EnergyShotgunBullet",
@@ -4425,7 +4916,8 @@
     "category": "Objets",
     "name_fr": "Cartouches de fusil à pompe énergétique",
     "name_en": "",
-    "image": "EnergyShotgunBullet.webp"
+    "image": "EnergyShotgunBullet.webp",
+    "is_ancient": false
   },
   {
     "id": "GrapplingGun5",
@@ -4434,7 +4926,8 @@
     "category": "Objets",
     "name_fr": "Ultra pistolet-grappin",
     "name_en": "",
-    "image": "GrapplingGun5.webp"
+    "image": "GrapplingGun5.webp",
+    "is_ancient": true
   },
   {
     "id": "PalDopingShot_2",
@@ -4443,7 +4936,8 @@
     "category": "Objets",
     "name_fr": "Méga pistolet dopant",
     "name_en": "",
-    "image": "PalDopingShot_2.webp"
+    "image": "PalDopingShot_2.webp",
+    "is_ancient": false
   },
   {
     "id": "SFArmorHeat",
@@ -4452,7 +4946,8 @@
     "category": "Objets",
     "name_fr": "Armure en hexolite anti-chaleur",
     "name_en": "",
-    "image": "SFArmorHeat.webp"
+    "image": "SFArmorHeat.webp",
+    "is_ancient": false
   },
   {
     "id": "WeaponFactory_Dirty_04",
@@ -4461,7 +4956,8 @@
     "category": "Structures",
     "name_fr": "Chaîne de production d’armes avancée",
     "name_en": "",
-    "image": "WeaponFactory_Dirty_04.webp"
+    "image": "WeaponFactory_Dirty_04.webp",
+    "is_ancient": false
   },
   {
     "id": "IceHorseStatue",
@@ -4470,7 +4966,8 @@
     "category": "Structures",
     "name_fr": "Statue de Frostallion",
     "name_en": "",
-    "image": "IceHorseStatue.webp"
+    "image": "IceHorseStatue.webp",
+    "is_ancient": false
   },
   {
     "id": "OverheatRifle",
@@ -4479,7 +4976,8 @@
     "category": "Objets",
     "name_fr": "Fusil à surchauffe",
     "name_en": "",
-    "image": "OverheatRifle.webp"
+    "image": "OverheatRifle.webp",
+    "is_ancient": false
   },
   {
     "id": "OverheatRifleBullet",
@@ -4488,7 +4986,8 @@
     "category": "Objets",
     "name_fr": "Balles de fusil à surchauffe",
     "name_en": "",
-    "image": "OverheatRifleBullet.webp"
+    "image": "OverheatRifleBullet.webp",
+    "is_ancient": false
   },
   {
     "id": "SFArmorCold",
@@ -4497,7 +4996,8 @@
     "category": "Objets",
     "name_fr": "Armure en hexolite anti-froid",
     "name_en": "",
-    "image": "SFArmorCold.webp"
+    "image": "SFArmorCold.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_Kirin_Ice",
@@ -4506,7 +5006,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Univolt Cryst",
     "name_en": "",
-    "image": "SkillUnlock_Kirin_Ice.webp"
+    "image": "SkillUnlock_Kirin_Ice.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_PoseidonOrca",
@@ -4515,7 +5016,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Neptilius",
     "name_en": "",
-    "image": "SkillUnlock_PoseidonOrca.webp"
+    "image": "SkillUnlock_PoseidonOrca.webp",
+    "is_ancient": false
   },
   {
     "id": "Spa3",
@@ -4524,7 +5026,8 @@
     "category": "Structures",
     "name_fr": "Onsen",
     "name_en": "",
-    "image": "Spa3.webp"
+    "image": "Spa3.webp",
+    "is_ancient": false
   },
   {
     "id": "Accessory_AirDash3",
@@ -4533,7 +5036,8 @@
     "category": "Objets",
     "name_fr": "Bottes de triple ruée aérienne",
     "name_en": "",
-    "image": "Accessory_AirDash3.webp"
+    "image": "Accessory_AirDash3.webp",
+    "is_ancient": true
   },
   {
     "id": "Battle_RangeWeapon_RocketLauncher",
@@ -4542,7 +5046,8 @@
     "category": "Objets",
     "name_fr": "Lance-fusées",
     "name_en": "",
-    "image": "Battle_RangeWeapon_RocketLauncher.webp"
+    "image": "Battle_RangeWeapon_RocketLauncher.webp",
+    "is_ancient": false
   },
   {
     "id": "ChargeLaserRifle",
@@ -4551,7 +5056,8 @@
     "category": "Objets",
     "name_fr": "Fusil chargé",
     "name_en": "",
-    "image": "ChargeLaserRifle.webp"
+    "image": "ChargeLaserRifle.webp",
+    "is_ancient": false
   },
   {
     "id": "ChargeLaserRifleBullet",
@@ -4560,7 +5066,8 @@
     "category": "Objets",
     "name_fr": "Balles de fusil chargé",
     "name_en": "",
-    "image": "ChargeLaserRifleBullet.webp"
+    "image": "ChargeLaserRifleBullet.webp",
+    "is_ancient": false
   },
   {
     "id": "LauncherBullet",
@@ -4569,7 +5076,8 @@
     "category": "Objets",
     "name_fr": "Munitions de roquette",
     "name_en": "",
-    "image": "LauncherBullet.webp"
+    "image": "LauncherBullet.webp",
+    "is_ancient": false
   },
   {
     "id": "SFArmorWeight",
@@ -4578,7 +5086,8 @@
     "category": "Objets",
     "name_fr": "Armure en hexolite légère",
     "name_en": "",
-    "image": "SFArmorWeight.webp"
+    "image": "SFArmorWeight.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_KingSunfish",
@@ -4587,7 +5096,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Solmora",
     "name_en": "",
-    "image": "SkillUnlock_KingSunfish.webp"
+    "image": "SkillUnlock_KingSunfish.webp",
+    "is_ancient": false
   },
   {
     "id": "AncientBlastFurnace",
@@ -4596,7 +5106,8 @@
     "category": "Structures",
     "name_fr": "Four antique",
     "name_en": "",
-    "image": "AncientBlastFurnace.webp"
+    "image": "AncientBlastFurnace.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_DarkMechaDragon",
@@ -4605,7 +5116,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Xenolord",
     "name_en": "",
-    "image": "SkillUnlock_DarkMechaDragon.webp"
+    "image": "SkillUnlock_DarkMechaDragon.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_KingSunfish_Thunder",
@@ -4614,7 +5126,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Solmora Lux",
     "name_en": "",
-    "image": "SkillUnlock_KingSunfish_Thunder.webp"
+    "image": "SkillUnlock_KingSunfish_Thunder.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_ThunderFluffyBird",
@@ -4623,7 +5136,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Dynamoff",
     "name_en": "",
-    "image": "SkillUnlock_ThunderFluffyBird.webp"
+    "image": "SkillUnlock_ThunderFluffyBird.webp",
+    "is_ancient": false
   },
   {
     "id": "SkyislandIngot",
@@ -4632,16 +5146,18 @@
     "category": "Objets",
     "name_fr": "Lingot de soralite",
     "name_en": "",
-    "image": "SkyislandIngot.webp"
+    "image": "SkyislandIngot.webp",
+    "is_ancient": false
   },
   {
     "id": "WaterBuildKit",
-    "level": 66,
+    "level": 23,
     "cost": 4,
     "category": "Objets",
     "name_fr": "Kit de construction flottante",
     "name_en": "",
-    "image": "WaterBuildKit.webp"
+    "image": "WaterBuildKit.webp",
+    "is_ancient": true
   },
   {
     "id": "AIcore",
@@ -4650,7 +5166,8 @@
     "category": "Objets",
     "name_fr": "Noyau IA",
     "name_en": "",
-    "image": "AIcore.webp"
+    "image": "AIcore.webp",
+    "is_ancient": false
   },
   {
     "id": "AncientWorkBench",
@@ -4659,7 +5176,8 @@
     "category": "Structures",
     "name_fr": "Établi antique",
     "name_en": "",
-    "image": "AncientWorkBench.webp"
+    "image": "AncientWorkBench.webp",
+    "is_ancient": false
   },
   {
     "id": "Ancient_Houseset",
@@ -4668,7 +5186,8 @@
     "category": "Structures",
     "name_fr": "Structures antique",
     "name_en": "",
-    "image": "Ancient_Houseset.webp"
+    "image": "Ancient_Houseset.webp",
+    "is_ancient": false
   },
   {
     "id": "PalSphere_Ancient_1",
@@ -4677,7 +5196,8 @@
     "category": "Objets",
     "name_fr": "Sphère Astrale",
     "name_en": "",
-    "image": "PalSphere_Ancient_1.webp"
+    "image": "PalSphere_Ancient_1.webp",
+    "is_ancient": false
   },
   {
     "id": "SkyBow",
@@ -4686,7 +5206,8 @@
     "category": "Objets",
     "name_fr": "Arc astral",
     "name_en": "",
-    "image": "SkyBow.webp"
+    "image": "SkyBow.webp",
+    "is_ancient": false
   },
   {
     "id": "SkyBowArrow",
@@ -4695,7 +5216,8 @@
     "category": "Objets",
     "name_fr": "Flèches d’arc astral",
     "name_en": "",
-    "image": "SkyBowArrow.webp"
+    "image": "SkyBowArrow.webp",
+    "is_ancient": false
   },
   {
     "id": "AncientArmor",
@@ -4704,7 +5226,8 @@
     "category": "Objets",
     "name_fr": "Armure antique",
     "name_en": "",
-    "image": "AncientArmor.webp"
+    "image": "AncientArmor.webp",
+    "is_ancient": false
   },
   {
     "id": "AncientHelmet",
@@ -4713,7 +5236,8 @@
     "category": "Objets",
     "name_fr": "Casque antique",
     "name_en": "",
-    "image": "AncientHelmet.webp"
+    "image": "AncientHelmet.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_GhostDragon",
@@ -4722,7 +5246,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Eidrolon",
     "name_en": "",
-    "image": "SkillUnlock_GhostDragon.webp"
+    "image": "SkillUnlock_GhostDragon.webp",
+    "is_ancient": false
   },
   {
     "id": "SkySubmachineGun",
@@ -4731,7 +5256,8 @@
     "category": "Objets",
     "name_fr": "Pistolet-mitrailleur astral",
     "name_en": "",
-    "image": "SkySubmachineGun.webp"
+    "image": "SkySubmachineGun.webp",
+    "is_ancient": false
   },
   {
     "id": "SkySubmachineGunBullet",
@@ -4740,7 +5266,8 @@
     "category": "Objets",
     "name_fr": "Balles de pistolet-mitrailleur astral",
     "name_en": "",
-    "image": "SkySubmachineGunBullet.webp"
+    "image": "SkySubmachineGunBullet.webp",
+    "is_ancient": false
   },
   {
     "id": "Spear_ForestBoss2",
@@ -4749,7 +5276,8 @@
     "category": "Objets",
     "name_fr": "Lance de Lily améliorée",
     "name_en": "",
-    "image": "Spear_ForestBoss2.webp"
+    "image": "Spear_ForestBoss2.webp",
+    "is_ancient": false
   },
   {
     "id": "FishingPond2",
@@ -4758,7 +5286,8 @@
     "category": "Structures",
     "name_fr": "Grand bassin de pêche",
     "name_en": "",
-    "image": "FishingPond2.webp"
+    "image": "FishingPond2.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_GrassGolem_Dark",
@@ -4767,7 +5296,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Dualith Noct",
     "name_en": "",
-    "image": "SkillUnlock_GrassGolem_Dark.webp"
+    "image": "SkillUnlock_GrassGolem_Dark.webp",
+    "is_ancient": false
   },
   {
     "id": "SkyShotgun",
@@ -4776,7 +5306,8 @@
     "category": "Objets",
     "name_fr": "Fusil à pompe astral",
     "name_en": "",
-    "image": "SkyShotgun.webp"
+    "image": "SkyShotgun.webp",
+    "is_ancient": false
   },
   {
     "id": "SkyShotgunBullet",
@@ -4785,7 +5316,8 @@
     "category": "Objets",
     "name_fr": "Cartouches de fusil à pompe astral",
     "name_en": "",
-    "image": "SkyShotgunBullet.webp"
+    "image": "SkyShotgunBullet.webp",
+    "is_ancient": false
   },
   {
     "id": "SphereModule_Homing",
@@ -4794,7 +5326,8 @@
     "category": "Objets",
     "name_fr": "Module tête chercheuse",
     "name_en": "",
-    "image": "SphereModule_Homing.webp"
+    "image": "SphereModule_Homing.webp",
+    "is_ancient": false
   },
   {
     "id": "Accessory_JumpCount_Increase2",
@@ -4803,7 +5336,8 @@
     "category": "Objets",
     "name_fr": "Bottes de triple saut",
     "name_en": "",
-    "image": "Accessory_JumpCount_Increase2.webp"
+    "image": "Accessory_JumpCount_Increase2.webp",
+    "is_ancient": true
   },
   {
     "id": "AncientCookingStove",
@@ -4812,7 +5346,8 @@
     "category": "Structures",
     "name_fr": "Cuisine antique",
     "name_en": "",
-    "image": "AncientCookingStove.webp"
+    "image": "AncientCookingStove.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_LegendDeer",
@@ -4821,7 +5356,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Hartalis",
     "name_en": "",
-    "image": "SkillUnlock_LegendDeer.webp"
+    "image": "SkillUnlock_LegendDeer.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_VolcanoDragon_Ice",
@@ -4830,7 +5366,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Moldron Cryst",
     "name_en": "",
-    "image": "SkillUnlock_VolcanoDragon_Ice.webp"
+    "image": "SkillUnlock_VolcanoDragon_Ice.webp",
+    "is_ancient": false
   },
   {
     "id": "SkyAssaultRifle",
@@ -4839,7 +5376,8 @@
     "category": "Objets",
     "name_fr": "Fusil d’assaut astral",
     "name_en": "",
-    "image": "SkyAssaultRifle.webp"
+    "image": "SkyAssaultRifle.webp",
+    "is_ancient": false
   },
   {
     "id": "SkyAssaultRifleBullet",
@@ -4848,7 +5386,8 @@
     "category": "Objets",
     "name_fr": "Cartouches de fusil d’assaut astral",
     "name_en": "",
-    "image": "SkyAssaultRifleBullet.webp"
+    "image": "SkyAssaultRifleBullet.webp",
+    "is_ancient": false
   },
   {
     "id": "BaseCampWorkHard03",
@@ -4857,7 +5396,8 @@
     "category": "Structures",
     "name_fr": "Poste de surveillance antique",
     "name_en": "",
-    "image": "BaseCampWorkHard03.webp"
+    "image": "BaseCampWorkHard03.webp",
+    "is_ancient": false
   },
   {
     "id": "Farm_SkillFruits",
@@ -4866,7 +5406,8 @@
     "category": "Structures",
     "name_fr": "Plantation de Fruits de Maîtrise",
     "name_en": "",
-    "image": "Farm_SkillFruits.webp"
+    "image": "Farm_SkillFruits.webp",
+    "is_ancient": false
   },
   {
     "id": "Shield_07",
@@ -4875,7 +5416,8 @@
     "category": "Objets",
     "name_fr": "Bouclier antique",
     "name_en": "",
-    "image": "Shield_07.webp"
+    "image": "Shield_07.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_IceNarwhal_Fire",
@@ -4884,7 +5426,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Whalaska Ignis",
     "name_en": "",
-    "image": "SkillUnlock_IceNarwhal_Fire.webp"
+    "image": "SkillUnlock_IceNarwhal_Fire.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_ThunderBird_Ice",
@@ -4893,7 +5436,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Beakon Cryst",
     "name_en": "",
-    "image": "SkillUnlock_ThunderBird_Ice.webp"
+    "image": "SkillUnlock_ThunderBird_Ice.webp",
+    "is_ancient": false
   },
   {
     "id": "SkyIslandFlagSet",
@@ -4902,7 +5446,8 @@
     "category": "Structures",
     "name_fr": "Ensemble de drapeaux de l'Alliance Azurée",
     "name_en": "",
-    "image": "SkyIslandFlagSet.webp"
+    "image": "SkyIslandFlagSet.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_LotusDragon",
@@ -4911,7 +5456,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Ophydia",
     "name_en": "",
-    "image": "SkillUnlock_LotusDragon.webp"
+    "image": "SkillUnlock_LotusDragon.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_ThiefBird",
@@ -4920,7 +5466,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Roujay",
     "name_en": "",
-    "image": "SkillUnlock_ThiefBird.webp"
+    "image": "SkillUnlock_ThiefBird.webp",
+    "is_ancient": false
   },
   {
     "id": "SkyGrenadeLauncher",
@@ -4929,7 +5476,8 @@
     "category": "Objets",
     "name_fr": "Lance-grenades astral",
     "name_en": "",
-    "image": "SkyGrenadeLauncher.webp"
+    "image": "SkyGrenadeLauncher.webp",
+    "is_ancient": false
   },
   {
     "id": "SkyGrenadeLauncherBullet",
@@ -4938,7 +5486,8 @@
     "category": "Objets",
     "name_fr": "Munitions de lance-grenades astral",
     "name_en": "",
-    "image": "SkyGrenadeLauncherBullet.webp"
+    "image": "SkyGrenadeLauncherBullet.webp",
+    "is_ancient": false
   },
   {
     "id": "SkyIslandOrePit",
@@ -4947,7 +5496,8 @@
     "category": "Structures",
     "name_fr": "Carrière de soralite",
     "name_en": "",
-    "image": "SkyIslandOrePit.webp"
+    "image": "SkyIslandOrePit.webp",
+    "is_ancient": true
   },
   {
     "id": "Ancient_Clinic",
@@ -4956,7 +5506,8 @@
     "category": "Structures",
     "name_fr": "Clinique antique",
     "name_en": "",
-    "image": "Ancient_Clinic.webp"
+    "image": "Ancient_Clinic.webp",
+    "is_ancient": false
   },
   {
     "id": "Ancient_MedicalPalBed",
@@ -4965,7 +5516,8 @@
     "category": "Structures",
     "name_fr": "Lit antique pour Pal",
     "name_en": "",
-    "image": "Ancient_MedicalPalBed.webp"
+    "image": "Ancient_MedicalPalBed.webp",
+    "is_ancient": false
   },
   {
     "id": "Factory_Money",
@@ -4974,7 +5526,8 @@
     "category": "Structures",
     "name_fr": "Usine de fabrication de pièces d'or",
     "name_en": "",
-    "image": "Factory_Money.webp"
+    "image": "Factory_Money.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_SnowTigerBeastman",
@@ -4983,7 +5536,8 @@
     "category": "Objets",
     "name_fr": "Marteau de Bastigor",
     "name_en": "",
-    "image": "SkillUnlock_SnowTigerBeastman.webp"
+    "image": "SkillUnlock_SnowTigerBeastman.webp",
+    "is_ancient": false
   },
   {
     "id": "SkyBeamSword",
@@ -4992,7 +5546,8 @@
     "category": "Objets",
     "name_fr": "Épée laser",
     "name_en": "",
-    "image": "SkyBeamSword.webp"
+    "image": "SkyBeamSword.webp",
+    "is_ancient": false
   },
   {
     "id": "AncientRelicRecycler",
@@ -5001,7 +5556,8 @@
     "category": "Structures",
     "name_fr": "Recycleur de reliques antique",
     "name_en": "",
-    "image": "AncientRelicRecycler.webp"
+    "image": "AncientRelicRecycler.webp",
+    "is_ancient": false
   },
   {
     "id": "Cake05",
@@ -5010,7 +5566,8 @@
     "category": "Objets",
     "name_fr": "Gâteau spécial",
     "name_en": "",
-    "image": "Cake05.webp"
+    "image": "Cake05.webp",
+    "is_ancient": false
   },
   {
     "id": "PalSphere_Ancient_2",
@@ -5019,7 +5576,8 @@
     "category": "Objets",
     "name_fr": "Sphère Antique",
     "name_en": "",
-    "image": "PalSphere_Ancient_2.webp"
+    "image": "PalSphere_Ancient_2.webp",
+    "is_ancient": false
   },
   {
     "id": "WorldTreeIngot",
@@ -5028,7 +5586,8 @@
     "category": "Objets",
     "name_fr": "Lingot de paloxite",
     "name_en": "",
-    "image": "WorldTreeIngot.webp"
+    "image": "WorldTreeIngot.webp",
+    "is_ancient": false
   },
   {
     "id": "AncientArmorHeat",
@@ -5037,7 +5596,8 @@
     "category": "Objets",
     "name_fr": "Armure antique anti-chaleur",
     "name_en": "",
-    "image": "AncientArmorHeat.webp"
+    "image": "AncientArmorHeat.webp",
+    "is_ancient": false
   },
   {
     "id": "AncientElectricGenerator",
@@ -5046,7 +5606,8 @@
     "category": "Structures",
     "name_fr": "Générateur antique",
     "name_en": "",
-    "image": "AncientElectricGenerator.webp"
+    "image": "AncientElectricGenerator.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_CubeTurtle_Neutral",
@@ -5055,7 +5616,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Tetroise Primo",
     "name_en": "",
-    "image": "SkillUnlock_CubeTurtle_Neutral.webp"
+    "image": "SkillUnlock_CubeTurtle_Neutral.webp",
+    "is_ancient": false
   },
   {
     "id": "WidePenetrateShotgun",
@@ -5064,7 +5626,8 @@
     "category": "Objets",
     "name_fr": "Disperseur à faisceau",
     "name_en": "",
-    "image": "WidePenetrateShotgun.webp"
+    "image": "WidePenetrateShotgun.webp",
+    "is_ancient": false
   },
   {
     "id": "WidePenetrateShotgunBullet",
@@ -5073,7 +5636,8 @@
     "category": "Objets",
     "name_fr": "Munitions de disperseur à faisceau",
     "name_en": "",
-    "image": "WidePenetrateShotgunBullet.webp"
+    "image": "WidePenetrateShotgunBullet.webp",
+    "is_ancient": false
   },
   {
     "id": "Accessory_ExplosionResist",
@@ -5082,7 +5646,8 @@
     "category": "Objets",
     "name_fr": "Sous-vêtement anti-explosion",
     "name_en": "",
-    "image": "Accessory_ExplosionResist.webp"
+    "image": "Accessory_ExplosionResist.webp",
+    "is_ancient": false
   },
   {
     "id": "Ancient_Spa",
@@ -5091,7 +5656,8 @@
     "category": "Structures",
     "name_fr": "Source chaude antique",
     "name_en": "",
-    "image": "Ancient_Spa.webp"
+    "image": "Ancient_Spa.webp",
+    "is_ancient": false
   },
   {
     "id": "GasMask",
@@ -5100,7 +5666,8 @@
     "category": "Objets",
     "name_fr": "Masque anti-corrosion",
     "name_en": "",
-    "image": "GasMask.webp"
+    "image": "GasMask.webp",
+    "is_ancient": false
   },
   {
     "id": "MultiElectricHatchingPalEggWithBreed",
@@ -5109,7 +5676,8 @@
     "category": "Structures",
     "name_fr": "Incubateur antique",
     "name_en": "",
-    "image": "MultiElectricHatchingPalEggWithBreed.webp"
+    "image": "MultiElectricHatchingPalEggWithBreed.webp",
+    "is_ancient": true
   },
   {
     "id": "SkillUnlock_GhostDragon_Fire",
@@ -5118,7 +5686,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Eidrolon Ignis",
     "name_en": "",
-    "image": "SkillUnlock_GhostDragon_Fire.webp"
+    "image": "SkillUnlock_GhostDragon_Fire.webp",
+    "is_ancient": false
   },
   {
     "id": "AncientArmorCold",
@@ -5127,7 +5696,8 @@
     "category": "Objets",
     "name_fr": "Armure antique anti-froid",
     "name_en": "",
-    "image": "AncientArmorCold.webp"
+    "image": "AncientArmorCold.webp",
+    "is_ancient": false
   },
   {
     "id": "DroneLauncher",
@@ -5136,7 +5706,8 @@
     "category": "Objets",
     "name_fr": "Lance-drones",
     "name_en": "",
-    "image": "DroneLauncher.webp"
+    "image": "DroneLauncher.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_BlueSkyDragon",
@@ -5145,7 +5716,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Shaolong",
     "name_en": "",
-    "image": "SkillUnlock_BlueSkyDragon.webp"
+    "image": "SkillUnlock_BlueSkyDragon.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_NightBlueHorse_Neutral",
@@ -5154,7 +5726,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Starryon Primo",
     "name_en": "",
-    "image": "SkillUnlock_NightBlueHorse_Neutral.webp"
+    "image": "SkillUnlock_NightBlueHorse_Neutral.webp",
+    "is_ancient": false
   },
   {
     "id": "AncientFarmBlock",
@@ -5163,7 +5736,8 @@
     "category": "Structures",
     "name_fr": "Plantation antique",
     "name_en": "",
-    "image": "AncientFarmBlock.webp"
+    "image": "AncientFarmBlock.webp",
+    "is_ancient": false
   },
   {
     "id": "AncientMultiProduct",
@@ -5172,7 +5746,8 @@
     "category": "Structures",
     "name_fr": "Synthétiseur de matière antique",
     "name_en": "",
-    "image": "AncientMultiProduct.webp"
+    "image": "AncientMultiProduct.webp",
+    "is_ancient": false
   },
   {
     "id": "ElectricArcAssaultRifle",
@@ -5181,7 +5756,8 @@
     "category": "Objets",
     "name_fr": "Fusil à plasma",
     "name_en": "",
-    "image": "ElectricArcAssaultRifle.webp"
+    "image": "ElectricArcAssaultRifle.webp",
+    "is_ancient": false
   },
   {
     "id": "ElectricArcAssaultRifleBullet",
@@ -5190,7 +5766,8 @@
     "category": "Objets",
     "name_fr": "Munitions de fusil à plasma",
     "name_en": "",
-    "image": "ElectricArcAssaultRifleBullet.webp"
+    "image": "ElectricArcAssaultRifleBullet.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_WhiteDeer_Dark",
@@ -5199,7 +5776,8 @@
     "category": "Objets",
     "name_fr": "Selle pour Celesdir Noct",
     "name_en": "",
-    "image": "SkillUnlock_WhiteDeer_Dark.webp"
+    "image": "SkillUnlock_WhiteDeer_Dark.webp",
+    "is_ancient": false
   },
   {
     "id": "AncientArmorWeight",
@@ -5208,7 +5786,8 @@
     "category": "Objets",
     "name_fr": "Armure antique légère",
     "name_en": "",
-    "image": "AncientArmorWeight.webp"
+    "image": "AncientArmorWeight.webp",
+    "is_ancient": false
   },
   {
     "id": "JetDragonStatue",
@@ -5217,7 +5796,8 @@
     "category": "Structures",
     "name_fr": "Statue de Jetragon",
     "name_en": "",
-    "image": "JetDragonStatue.webp"
+    "image": "JetDragonStatue.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_DomeArmorDragon",
@@ -5226,16 +5806,18 @@
     "category": "Objets",
     "name_fr": "Selle pour Aegidron",
     "name_en": "",
-    "image": "SkillUnlock_DomeArmorDragon.webp"
+    "image": "SkillUnlock_DomeArmorDragon.webp",
+    "is_ancient": false
   },
   {
     "id": "SkillUnlock_JetDragon",
-    "level": 79,
+    "level": 70,
     "cost": 5,
     "category": "Objets",
     "name_fr": "Lance-missiles pour Jetragon",
     "name_en": "",
-    "image": "SkillUnlock_JetDragon.webp"
+    "image": "SkillUnlock_JetDragon.webp",
+    "is_ancient": false
   },
   {
     "id": "Supplement",
@@ -5244,7 +5826,8 @@
     "category": "Objets",
     "name_fr": "Tonique nutritif",
     "name_en": "",
-    "image": "Supplement.webp"
+    "image": "Supplement.webp",
+    "is_ancient": false
   },
   {
     "id": "BeamLauncher",
@@ -5253,7 +5836,8 @@
     "category": "Objets",
     "name_fr": "Canon à impulsion",
     "name_en": "",
-    "image": "BeamLauncher.webp"
+    "image": "BeamLauncher.webp",
+    "is_ancient": false
   },
   {
     "id": "BeamLauncherBullet",
@@ -5262,7 +5846,8 @@
     "category": "Objets",
     "name_fr": "Munitions de canon à impulsion",
     "name_en": "",
-    "image": "BeamLauncherBullet.webp"
+    "image": "BeamLauncherBullet.webp",
+    "is_ancient": false
   },
   {
     "id": "WingGlider",
@@ -5271,7 +5856,8 @@
     "category": "Objets",
     "name_fr": "Ailes dorsales",
     "name_en": "",
-    "image": "WingGlider.webp"
+    "image": "WingGlider.webp",
+    "is_ancient": true
   },
   {
     "id": "WingGlider_Fuel",
@@ -5280,6 +5866,7 @@
     "category": "Objets",
     "name_fr": "Cellule ailée",
     "name_en": "",
-    "image": "WingGlider_Fuel.webp"
+    "image": "WingGlider_Fuel.webp",
+    "is_ancient": false
   }
 ]
