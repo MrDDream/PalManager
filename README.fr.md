@@ -104,7 +104,7 @@ Ajoute des identifiants SSH/SFTP à un profil de serveur pour débloquer :
 </tr>
 </table>
 
-D'autres écrans (alimentation, paramètres, thème clair…) sur le [site](https://mrddream.github.io/PalManager/).
+La feuille Alimentation et le thème clair sont sur le [site](https://mrddream.github.io/PalManager/).
 
 ## 📥 Installation
 

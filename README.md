@@ -103,7 +103,7 @@ Add SSH/SFTP credentials to a server profile to unlock:
 </tr>
 </table>
 
-More screens (power, settings, light theme…) on the [website](https://mrddream.github.io/PalManager/en/).
+The power sheet and the light theme are on the [website](https://mrddream.github.io/PalManager/en/).
 
 ## 📥 Install
 
