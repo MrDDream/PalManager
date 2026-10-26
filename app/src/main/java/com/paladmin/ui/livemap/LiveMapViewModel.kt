@@ -10,18 +10,24 @@ import com.paladmin.data.repository.ServerRepository
 import com.paladmin.util.describe
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
-import kotlinx.coroutines.delay
+import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withTimeoutOrNull
 import javax.inject.Inject
+import kotlin.math.roundToInt
 
 data class LiveMapPlayer(
     val name: String,
     val level: Int,
     val xPercent: Float,
     val yPercent: Float,
+    /** Ping en ms tel que renvoyé par l'API REST (0 si inconnu). */
+    val ping: Int = 0,
+    /** Identifiant stable (couleur du marqueur) ; repli sur le nom. */
+    val userId: String = "",
 )
 
 data class LiveMapBaseMarker(
@@ -63,6 +69,8 @@ class LiveMapViewModel @Inject constructor(
             LiveMapBaseMarker(left, top, onTree)
         }
 
+    private val refreshRequests = Channel<Unit>(Channel.CONFLATED)
+
     private val _state = MutableStateFlow(LiveMapUiState(focusMarkers = focusMarkers))
     val state: StateFlow<LiveMapUiState> = _state.asStateFlow()
 
@@ -82,10 +90,10 @@ class LiveMapViewModel @Inject constructor(
                         players.forEach { player ->
                             if (isOnWorldTree(player.locationX, player.locationY)) {
                                 val (left, top) = worldTreeToScreenPercent(player.locationX, player.locationY)
-                                tree += LiveMapPlayer(player.name, player.level, left, top)
+                                tree += LiveMapPlayer(player.name, player.level, left, top, player.ping.roundToInt(), player.userId)
                             } else {
                                 val (left, top) = worldToScreenPercent(player.locationX, player.locationY)
-                                world += LiveMapPlayer(player.name, player.level, left, top)
+                                world += LiveMapPlayer(player.name, player.level, left, top, player.ping.roundToInt(), player.userId)
                             }
                         }
                         _state.value = _state.value.copy(
@@ -101,8 +109,14 @@ class LiveMapViewModel @Inject constructor(
                             errorMessage = error.describe(context.getString(R.string.livemap_error_connection)),
                         )
                     }
-                delay(POLL_INTERVAL_MS)
+                // Attend le prochain tick, ou une demande de rafraîchissement immédiat (bouton).
+                withTimeoutOrNull(POLL_INTERVAL_MS) { refreshRequests.receive() }
             }
         }
+    }
+
+    /** Relance tout de suite une lecture des positions au lieu d'attendre le prochain tick. */
+    fun refresh() {
+        refreshRequests.trySend(Unit)
     }
 }

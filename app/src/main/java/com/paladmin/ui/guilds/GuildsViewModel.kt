@@ -36,6 +36,7 @@ import com.paladmin.data.remote.paldefender.GuildExpeditionsRaw
 import com.paladmin.data.remote.paldefender.GuildLaboratoryRaw
 import com.paladmin.data.remote.paldefender.PalDefenderClientFactory
 import com.paladmin.data.remote.paldefender.WorldPos
+import com.paladmin.data.local.db.PalEntity
 import com.paladmin.data.local.dataset.ActiveSkillCatalog
 import com.paladmin.data.local.dataset.PassiveSkillCatalog
 import com.paladmin.data.local.prefs.AppLanguage
@@ -86,7 +87,26 @@ data class GuildListItem(
     val adminName: String,
     val members: List<GuildMemberItem>,
     val basePositions: List<WorldPos>,
+    val baseCount: Int = basePositions.size,
+    val camps: List<GuildCampSummary> = emptyList(),
+    /** Emplacements occupés / totaux du coffre de guilde, quand le détail les fournit. */
+    val chestUsed: Int? = null,
+    val chestMax: Int? = null,
+    val expeditionsFinished: Int? = null,
+    val labCompleted: Int? = null,
+    val labInProgress: Int? = null,
 )
+
+/** Aperçu d'un camp sur la carte de guilde (le détail complet reste dans PalGridDialog). */
+data class GuildCampSummary(
+    val level: Int,
+    val palCount: Int,
+    /** Images des premiers Pals du camp seulement (aperçu, voir [CAMP_PREVIEW_COUNT]). */
+    val palImages: List<String>,
+)
+
+/** Nombre de Pals montrés en aperçu par camp ; le reste est résumé par "+N". */
+const val CAMP_PREVIEW_COUNT = 5
 
 data class GuildsUiState(
     val isLoading: Boolean = true,
@@ -260,6 +280,7 @@ class GuildsViewModel @Inject constructor(
             _isLoading.value = true
             val profile = serverRepository.getProfile(profileId) ?: return@launch
             val api = palDefenderClientFactory.create(profile)
+            val language = appPreferences.language.first()
             runCatching { api.getGuilds().guilds }
                 .onSuccess { guildMap ->
                     val items = coroutineScope {
@@ -280,6 +301,21 @@ class GuildsViewModel @Inject constructor(
                                         )
                                     }.orEmpty(),
                                     basePositions = guild.camps.mapNotNull { it.worldPos },
+                                    baseCount = guild.camps.size,
+                                    camps = detail?.camps.orEmpty().map { camp ->
+                                        GuildCampSummary(
+                                            level = camp.level,
+                                            palCount = camp.pals.size,
+                                            palImages = camp.pals.values.take(CAMP_PREVIEW_COUNT)
+                                                .map { resolveCampPal(it.palId, language).imagePath },
+                                        )
+                                    },
+                                    chestUsed = (detail?.items?.get("current") as? JsonPrimitive)?.intOrNull,
+                                    chestMax = (detail?.items?.get("max") as? JsonPrimitive)?.intOrNull,
+                                    expeditionsFinished = detail?.expeditions?.finished,
+                                    // Même règle que formatLab : terminée = 100 %, le reste est en cours.
+                                    labCompleted = detail?.laboratory?.researches?.values?.count { it.percentage >= 1.0 },
+                                    labInProgress = detail?.laboratory?.researches?.values?.count { it.percentage < 1.0 },
                                 )
                             }
                         }.awaitAll()
@@ -341,21 +377,10 @@ class GuildsViewModel @Inject constructor(
         camps.mapIndexed { index, camp ->
             val label = context.getString(R.string.guild_camp_label_fmt, index + 1, camp.level)
             val pals = camp.pals.values.map { pal ->
-                // pal_id sert à la fois aux Pals (pals.json) et aux PNJ humains asservis comme
-                // ouvriers de camp (humans.json, ex. "Male_Trader01_v25") — npc_id vaut "None" pour
-                // ces derniers, ce n'est pas le champ à utiliser. On tente Pal d'abord, puis Humain.
-                val palEntry = palRepository.getById(basePalImageId(pal.palId))
-                val (speciesName, imagePath) = if (palEntry != null) {
-                    val name = pickLocalizedName(palEntry.nameFr, palEntry.nameEn, language)
-                    val image = "file:///android_asset/images/pals/${palEntry.image}"
-                    name to image
-                } else {
-                    val humanEntry = humanRepository.getById(pal.palId)
-                    val name = humanEntry?.let { pickLocalizedName(it.nameFr, it.nameEn, language) } ?: pal.palId
-                    val image = humanEntry?.image?.let { "file:///android_asset/images/humans/$it" }
-                        ?: "file:///android_asset/images/humans/${pal.palId}.webp"
-                    name to image
-                }
+                val resolved = resolveCampPal(pal.palId, language)
+                val palEntry = resolved.palEntry
+                val speciesName = resolved.speciesName
+                val imagePath = resolved.imagePath
                 PalInfo(
                     imagePath = imagePath,
                     speciesName = speciesName,
@@ -373,6 +398,29 @@ class GuildsViewModel @Inject constructor(
             }
             PalGroup(label = label, pals = pals)
         }
+
+    private class ResolvedCampPal(val speciesName: String, val imagePath: String, val palEntry: PalEntity?)
+
+    /** pal_id sert à la fois aux Pals (pals.json) et aux PNJ humains asservis comme ouvriers de
+     * camp (humans.json, ex. "Male_Trader01_v25") — npc_id vaut "None" pour ces derniers, ce n'est
+     * pas le champ à utiliser. On tente Pal d'abord, puis Humain. */
+    private suspend fun resolveCampPal(palId: String, language: AppLanguage): ResolvedCampPal {
+        val palEntry = palRepository.getById(basePalImageId(palId))
+        if (palEntry != null) {
+            return ResolvedCampPal(
+                speciesName = pickLocalizedName(palEntry.nameFr, palEntry.nameEn, language),
+                imagePath = "file:///android_asset/images/pals/${palEntry.image}",
+                palEntry = palEntry,
+            )
+        }
+        val humanEntry = humanRepository.getById(palId)
+        return ResolvedCampPal(
+            speciesName = humanEntry?.let { pickLocalizedName(it.nameFr, it.nameEn, language) } ?: palId,
+            imagePath = humanEntry?.image?.let { "file:///android_asset/images/humans/$it" }
+                ?: "file:///android_asset/images/humans/$palId.webp",
+            palEntry = null,
+        )
+    }
 
     private suspend fun formatChest(items: JsonObject?, language: AppLanguage): List<DetailRow> {
         if (items == null) return listOf(DetailRow.Plain(context.getString(R.string.guild_chest_unavailable)))
