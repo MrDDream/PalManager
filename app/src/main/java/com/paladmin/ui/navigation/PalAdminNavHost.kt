@@ -50,7 +50,15 @@ fun PalAdminNavHost(navController: NavHostController) {
             )
         }
         composable(NavRoutes.APP_SETTINGS) {
-            AppSettingsScreen(onBack = { navController.popBackStack() })
+            AppSettingsScreen(
+                onBack = { navController.popBackStack() },
+                onManageServers = {
+                    // La liste est toujours dans la pile (le splash l'y place) : on y revient.
+                    if (!navController.popBackStack(NavRoutes.PROFILE_LIST, inclusive = false)) {
+                        navController.navigate(NavRoutes.PROFILE_LIST)
+                    }
+                },
+            )
         }
         composable(
             route = NavRoutes.ADD_EDIT_PROFILE,

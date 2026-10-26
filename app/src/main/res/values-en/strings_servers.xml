@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Server list -->
+    <string name="servers_title">My servers</string>
+    <plurals name="servers_profile_count">
+        <item quantity="one">%d profile</item>
+        <item quantity="other">%d profiles</item>
+    </plurals>
+    <string name="servers_status_online">Online</string>
+    <string name="servers_status_offline">Offline</string>
+    <string name="servers_status_checking">Checking…</string>
+    <string name="servers_status_denied">Access denied</string>
+    <string name="servers_status_error">Error</string>
+    <string name="servers_stat_players">players</string>
+    <string name="servers_stat_fps">FPS</string>
+    <string name="servers_stat_latency">latency</string>
+    <string name="servers_stat_ms"> ms</string>
+    <string name="servers_offline_detail">The server is not responding</string>
+    <string name="servers_denied_detail">Admin password rejected</string>
+    <string name="servers_http_error_detail">Unexpected response (HTTP %1$d)</string>
+    <string name="servers_checking_detail">Contacting the REST API…</string>
+    <string name="servers_verify">Check</string>
+    <string name="servers_add">Add a server</string>
+    <string name="servers_sftp_hint">Add SFTP credentials to a profile to unlock logs, the file manager and the Pal creator.</string>
+    <string name="servers_more_actions">Actions for %1$s</string>
+    <string name="servers_open_actions">Show actions</string>
+    <string name="servers_empty_title">No server configured</string>
+    <string name="servers_empty_message">Add your first Palworld server to get started.</string>
+
+    <!-- Add / edit profile -->
+    <string name="servers_form_sftp_title">Advanced</string>
+    <string name="servers_form_optional">Optional</string>
+    <string name="servers_form_sftp_intro">Enables logs, the file manager and the Pal creator over SFTP (same host).</string>
+    <string name="servers_form_sftp_expand">Show SFTP settings</string>
+    <string name="servers_form_sftp_collapse">Hide SFTP settings</string>
+    <string name="servers_form_host_key">Pinned host key fingerprint</string>
+    <string name="servers_form_required">Required field</string>
+    <string name="servers_form_icon_cd">Icon %1$s</string>
+    <string name="servers_icon_dns">server</string>
+    <string name="servers_icon_storage">storage</string>
+    <string name="servers_icon_cloud">cloud</string>
+    <string name="servers_icon_public">globe</string>
+    <string name="servers_icon_terminal">terminal</string>
+    <string name="servers_icon_games">gamepad</string>
+    <string name="servers_icon_shield">shield</string>
+    <string name="servers_icon_star">star</string>
+    <string name="servers_icon_forest">forest</string>
+    <string name="servers_verify_title">Check result</string>
+    <string name="servers_verify_checking">checking…</string>
+    <string name="servers_verify_ok">OK</string>
+    <string name="servers_verify_failed">failed</string>
+    <string name="servers_verify_latency_fmt">%1$d ms</string>
+    <string name="servers_verify_dismiss">Hide the result</string>
+
+    <!-- SFTP path picker -->
+    <string name="servers_picker_title">Browse the server</string>
+    <string name="servers_picker_empty">Empty folder</string>
+    <string name="servers_picker_error_title">Could not list this folder</string>
+
+    <!-- Settings -->
+    <string name="servers_settings_debug_title">Debug mode</string>
+    <string name="servers_settings_language_hint">Language of the app interface.</string>
+    <string name="servers_settings_manage">Manage servers</string>
+    <string name="servers_settings_version">Version</string>
+    <string name="servers_settings_disclaimer">Unofficial project, not affiliated with Pocketpair. Game data: paldb.cc.</string>
+    <string name="servers_settings_folder_cd">Change log folder</string>
+
+    <!-- Splash / crash -->
+    <string name="servers_splash_loading">Loading…</string>
+    <string name="servers_crash_trace">Error trace</string>
+</resources>

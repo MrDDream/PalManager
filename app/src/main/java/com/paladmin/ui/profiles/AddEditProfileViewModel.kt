@@ -17,7 +17,8 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 enum class CheckStatus { CHECKING, SUCCESS, FAILURE }
-data class CheckResult(val status: CheckStatus, val message: String? = null)
+/** [latencyMs] : durée mesurée de l'appel de vérification (renseignée en cas de succès). */
+data class CheckResult(val status: CheckStatus, val message: String? = null, val latencyMs: Long? = null)
 data class VerifyState(
     val palworld: CheckResult,
     val palDefender: CheckResult,
@@ -166,18 +167,20 @@ class AddEditProfileViewModel @Inject constructor(
         )
 
         viewModelScope.launch {
+            val start = System.nanoTime()
             val palworldResult = runCatching { palworldClientFactory.create(tempProfile).getInfo() }
                 .fold(
-                    onSuccess = { CheckResult(CheckStatus.SUCCESS) },
+                    onSuccess = { CheckResult(CheckStatus.SUCCESS, latencyMs = elapsedMs(start)) },
                     onFailure = { CheckResult(CheckStatus.FAILURE, it.message) },
                 )
             _verifyState.value = _verifyState.value?.copy(palworld = palworldResult)
         }
 
         viewModelScope.launch {
+            val start = System.nanoTime()
             val palDefenderResult = runCatching { palDefenderClientFactory.create(tempProfile).getVersion() }
                 .fold(
-                    onSuccess = { CheckResult(CheckStatus.SUCCESS) },
+                    onSuccess = { CheckResult(CheckStatus.SUCCESS, latencyMs = elapsedMs(start)) },
                     onFailure = { CheckResult(CheckStatus.FAILURE, it.message) },
                 )
             _verifyState.value = _verifyState.value?.copy(palDefender = palDefenderResult)
@@ -185,14 +188,17 @@ class AddEditProfileViewModel @Inject constructor(
 
         if (sftpConfigured) {
             viewModelScope.launch {
+                val start = System.nanoTime()
                 val sftpResult = when (val result = browseSftp(".")) {
-                    is SftpBrowseResult.Success -> CheckResult(CheckStatus.SUCCESS)
+                    is SftpBrowseResult.Success -> CheckResult(CheckStatus.SUCCESS, latencyMs = elapsedMs(start))
                     is SftpBrowseResult.Failure -> CheckResult(CheckStatus.FAILURE, result.message)
                 }
                 _verifyState.value = _verifyState.value?.copy(sftp = sftpResult)
             }
         }
     }
+
+    private fun elapsedMs(startNanos: Long): Long = (System.nanoTime() - startNanos) / 1_000_000
 
     fun dismissVerify() {
         if (_verifyState.value?.isChecking == true) return
