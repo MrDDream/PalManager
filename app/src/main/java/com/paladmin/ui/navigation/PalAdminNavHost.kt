@@ -97,8 +97,12 @@ fun PalAdminNavHost(navController: NavHostController) {
         composable(
             route = NavRoutes.PAL_PICKER,
             arguments = listOf(navArgument("profileId") { type = NavType.StringType }),
-        ) {
-            PalPickerScreen(onBack = { navController.popBackStack() })
+        ) { backStackEntry ->
+            val profileId = checkNotNull(backStackEntry.arguments?.getString("profileId")).toLong()
+            PalPickerScreen(
+                onBack = { navController.popBackStack() },
+                onOpenPalCreator = { navController.navigate(NavRoutes.palCreator(profileId)) },
+            )
         }
         composable(
             route = NavRoutes.PLAYERS,

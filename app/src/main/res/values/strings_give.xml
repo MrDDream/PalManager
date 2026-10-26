@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Destinataire (puce d'en-tête + feuille de sélection) -->
+    <string name="give_target_choose">Choisir</string>
+    <string name="give_target_cd_fmt">Destinataire : %1$s</string>
+    <string name="give_target_none_cd">Choisir le destinataire</string>
+    <string name="give_player_sheet_title">Destinataire</string>
+    <string name="give_player_sheet_subtitle_fmt">En ligne : %1$d</string>
+    <string name="give_player_level_fmt">Niveau %1$d</string>
+    <string name="give_player_empty_title">Aucun joueur connecté</string>
+    <string name="give_player_empty_message">Le destinataire doit être en ligne pour recevoir un don.</string>
+    <string name="give_player_no_match">Aucun joueur ne correspond</string>
+    <string name="give_refresh">Actualiser</string>
+    <string name="give_choose_player_cta">Choisir un destinataire</string>
+
+    <!-- Commun -->
+    <string name="give_details_cd">Voir le détail</string>
+    <string name="give_empty_results_title">Aucun résultat</string>
+    <string name="give_empty_results_message">Essayez un autre nom ou retirez un filtre.</string>
+    <string name="give_decrease_cd">Moins</string>
+    <string name="give_increase_cd">Plus</string>
+    <string name="give_preset_fmt">×%1$d</string>
+    <string name="give_stats_fmt">PV %1$d · ATQ %2$d · DEF %3$d</string>
+    <string name="give_detail_description">Description</string>
+    <string name="give_detail_stats">Caractéristiques</string>
+    <string name="give_detail_id">ID</string>
+
+    <!-- Items -->
+    <string name="give_item_cta_fmt">Donner %1$s ×%2$d</string>
+    <string name="give_item_none_selected">Aucun item sélectionné</string>
+    <string name="give_item_none_hint">Touchez une tuile pour la sélectionner.</string>
+    <string name="give_quantity_cd">Quantité</string>
+    <string name="give_category_group_cd">Catégorie</string>
+    <string name="give_cat_weapon">Armes</string>
+    <string name="give_cat_sphere">Sphères</string>
+    <string name="give_cat_sphere_module">Modules de sphère</string>
+    <string name="give_cat_armor">Armures</string>
+    <string name="give_cat_accessory">Accessoires</string>
+    <string name="give_cat_material">Matériaux</string>
+    <string name="give_cat_consumable">Consommables</string>
+    <string name="give_cat_ammo">Munitions</string>
+    <string name="give_cat_ingredient">Ingrédients</string>
+    <string name="give_cat_key_items">Objets clés</string>
+    <string name="give_cat_glider">Planeurs</string>
+    <string name="give_cat_schematic">Plans</string>
+
+    <!-- Pals -->
+    <string name="give_pal_search_hint">Rechercher un Pal par nom ou ID</string>
+    <string name="give_pal_cta_fmt">Donner %1$s niv. %2$d à %3$s</string>
+    <string name="give_pal_none_selected">Aucun Pal sélectionné</string>
+    <string name="give_pal_none_hint">Touchez un Pal pour le sélectionner.</string>
+    <string name="give_element_group_cd">Filtrer par élément</string>
+    <string name="give_element_all_cd">Tous les éléments</string>
+    <string name="give_level_up_cd">Monter le niveau</string>
+    <string name="give_level_down_cd">Baisser le niveau</string>
+    <string name="give_filters_reset">Réinitialiser</string>
+    <string name="give_filters_show_fmt">Afficher %1$d résultats</string>
+    <string name="give_paldeck_fmt">#%1$03d</string>
+    <string name="give_template_open_creator">Créer un template dans le Créateur de Pal</string>
+
+    <!-- PNJ -->
+    <string name="give_npc_cta_fmt">Faire apparaître pour %1$s</string>
+    <string name="give_npc_none_selected">Aucun PNJ sélectionné</string>
+    <string name="give_npc_no_drops">Aucun butin pour ce PNJ</string>
+    <string name="give_npc_drop_fmt">%1$s ×%2$s (%3$d %%)</string>
+</resources>
