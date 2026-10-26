@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Libellés de la refonte UI/UX : liste des joueurs connectés et fiche joueur (onglets). -->
+<resources>
+    <string name="players_v2_search_placeholder">Nom, ID Steam ou IP</string>
+    <string name="players_v2_sort_label">Trier par</string>
+    <string name="players_v2_sort_level">Niveau</string>
+    <string name="players_v2_sort_ping">Latence</string>
+    <string name="players_v2_sort_name">Nom</string>
+    <string name="players_v2_count_cd">%1$d joueurs connectés sur %2$d</string>
+    <string name="players_v2_level_ip_fmt">"Niv. %1$d · "</string>
+    <string name="players_v2_stat_work_short">TRAV</string>
+    <string name="players_v2_ping_fmt">%1$d ms</string>
+    <string name="players_v2_ping_cd_fmt">Latence %1$d ms</string>
+    <string name="players_v2_platform_steam">Steam</string>
+    <string name="players_v2_platform_xbox">Xbox</string>
+    <string name="players_v2_state_expanded">Déplié</string>
+    <string name="players_v2_state_collapsed">Replié</string>
+    <string name="players_v2_btn_inventory">Inventaire</string>
+    <string name="players_v2_btn_team">Équipe</string>
+    <string name="players_v2_btn_palbox">Palbox</string>
+    <string name="players_v2_btn_progression">Progression</string>
+    <string name="players_v2_btn_techs">Technologies</string>
+    <string name="players_v2_btn_message">Message</string>
+    <string name="players_v2_btn_kick">Exclure</string>
+    <string name="players_v2_btn_ban">Bannir</string>
+    <string name="players_v2_no_match">Aucun joueur ne correspond</string>
+    <string name="players_v2_tab_team">Équipe</string>
+    <string name="players_v2_tab_inventory">Inventaire</string>
+    <string name="players_v2_tab_palbox">Palbox</string>
+    <string name="players_v2_tab_progress">Progrès</string>
+    <string name="players_v2_tab_techs">Techs</string>
+    <string name="players_v2_tabs_label">Sections</string>
+    <string name="players_v2_sheet_subtitle_fmt">Niveau %1$d · %2$d ms</string>
+    <string name="players_v2_team_empty">Aucun Pal dans l\'équipe</string>
+    <string name="players_v2_level_short">Niv.</string>
+    <string name="players_v2_no_passive">aucun passif</string>
+    <string name="players_v2_skill_power_short_fmt">Puiss. %1$d</string>
+    <string name="players_v2_skill_cooldown_short_fmt">%1$d s</string>
+    <string name="players_v2_detail_empty">Rien à afficher</string>
+    <string name="players_v2_techs_unlocked">Débloquées</string>
+    <string name="players_v2_tech_unlocked">Débloquée</string>
+    <string name="players_v2_tech_locked">Verrouillée</string>
+    <plurals name="players_v2_passive_count">
+        <item quantity="one">%d passif</item>
+        <item quantity="other">%d passifs</item>
+    </plurals>
+    <plurals name="players_v2_pal_count">
+        <item quantity="one">%d Pal</item>
+        <item quantity="other">%d Pals</item>
+    </plurals>
+</resources>
