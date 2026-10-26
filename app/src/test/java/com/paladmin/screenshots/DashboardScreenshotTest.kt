@@ -5,8 +5,6 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import app.cash.paparazzi.DeviceConfig
-import app.cash.paparazzi.Paparazzi
 import com.paladmin.data.model.ServerProfile
 import com.paladmin.data.remote.palworld.PalworldInfo
 import com.paladmin.data.remote.palworld.PalworldMetrics
@@ -23,7 +21,7 @@ import org.junit.Test
 class DashboardScreenshotTest {
 
     @get:Rule
-    val paparazzi = Paparazzi(deviceConfig = DeviceConfig.PIXEL_6.copy(softButtons = false))
+    val paparazzi = palPaparazzi()
 
     private val sampleState = DashboardUiState(
         isLoading = false,

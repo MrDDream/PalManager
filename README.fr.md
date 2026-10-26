@@ -13,16 +13,21 @@ officielle Palworld et l'API REST du mod **[PalDefender](https://github.com/Ulti
 
 ## ✨ Fonctionnalités
 
-- 📊 **Dashboard** : infos serveur, joueurs en ligne, FPS, versions Palworld/PalDefender, sauvegarde,
-  redémarrage/arrêt.
-- 👥 **Joueurs connectés** : liste en temps réel, kick/ban, message privé, inventaire/équipe/
-  progression/technologies détaillés par joueur. Les Pals de l'équipe sont cliquables pour une
-  fiche détaillée (IV, Âme de Pal, compétences actives, passifs).
+- 📊 **Dashboard** : adresse du serveur, joueurs en ligne (avec avatars), FPS, durée en ligne,
+  versions Palworld/PalDefender, raccourcis en un geste, sauvegarde, et une feuille Alimentation
+  pour programmer un redémarrage ou forcer l'arrêt (appui maintenu).
+- 🖥️ **Mes serveurs** : chaque profil affiche son état en direct (en ligne/hors ligne, joueurs,
+  FPS, latence) et les API configurées (REST, PalDefender, SFTP).
+- 👥 **Joueurs connectés** : liste en temps réel avec recherche et tri (niveau, latence, nom),
+  kick/ban, message privé, et une fiche joueur à onglets (équipe, inventaire, Palbox, progression,
+  technologies). Les Pals de l'équipe se déplient pour montrer IV, Âme de Pal, compétences actives
+  et passifs.
 - 🛡️ **Guildes** : liste des membres (recherche par nom de guilde ou de membre), toutes les bases
   épinglées sur la carte en direct, Pals de chaque camp avec fiche détaillée, coffre, expéditions
   et progression des recherches de labo.
-- 🎁 **Give item / Give Pal** : recherche par nom ou image dans un catalogue embarqué (items, Pals,
-  PNJ, technologies), filtres par catégorie/élément/rareté/métier.
+- 🎁 **Donner un item / un Pal / un PNJ** : choix du destinataire une seule fois, recherche par nom
+  ou image dans un catalogue embarqué, filtres par catégorie/élément/rareté/métier, quantité
+  (×1/×10/×100) ou niveau, et don en un geste.
 - 🗺️ **Carte en direct** : position des joueurs sur la carte des Îles Palpagos.
 - 🚫 **Bannissements** (joueurs + IP).
 - 📣 **Diffusion & maintenance** : broadcast, alertes, messages, zone danger (reload config,
@@ -30,6 +35,9 @@ officielle Palworld et l'API REST du mod **[PalDefender](https://github.com/Ulti
 - 🐞 **Mode debug** : log réseau optionnel écrit dans un dossier de votre choix, pour diagnostiquer
   les problèmes de connexion.
 - 🌗 Thème clair/sombre, interface FR/EN (appliquée aussi aux données de jeu).
+- 🎨 **Nouvelle interface** : refonte complète — palette sombre, typographies
+  Sora/Inter/JetBrains Mono, cibles tactiles de 44 dp, feuilles du bas plutôt que des dialogues
+  empilés.
 
 ### 🔐 Boîte à outils SFTP (optionnelle)
 
@@ -50,14 +58,24 @@ Renseignez des identifiants SSH/SFTP sur un profil serveur pour débloquer :
 
 <table>
 <tr>
+<td align="center"><b>Dashboard</b><br><img src="docs/screenshots/home.png" width="230"></td>
+<td align="center"><b>Mes serveurs</b><br><img src="docs/screenshots/servers.png" width="230"></td>
 <td align="center"><b>Joueurs connectés</b><br><img src="docs/screenshots/players.png" width="230"></td>
-<td align="center"><b>Donner un Pal</b><br><img src="docs/screenshots/give_pals.png" width="230"></td>
-<td align="center"><b>Inventaire d'un joueur</b><br><img src="docs/screenshots/inventory.png" width="230"></td>
 </tr>
 <tr>
+<td align="center"><b>Fiche joueur</b><br><img src="docs/screenshots/player_team.png" width="230"></td>
+<td align="center"><b>Donner un item</b><br><img src="docs/screenshots/give_item.png" width="230"></td>
+<td align="center"><b>Donner un Pal</b><br><img src="docs/screenshots/give_pals.png" width="230"></td>
+</tr>
+<tr>
+<td align="center"><b>Guildes</b><br><img src="docs/screenshots/guilds.png" width="230"></td>
+<td align="center"><b>Carte en direct</b><br><img src="docs/screenshots/livemap.png" width="230"></td>
 <td align="center"><b>Diffusion & maintenance</b><br><img src="docs/screenshots/alert.png" width="230"></td>
+</tr>
+<tr>
 <td align="center"><b>Gestionnaire SFTP</b><br><img src="docs/screenshots/sftp.png" width="230"></td>
 <td align="center"><b>Logs</b><br><img src="docs/screenshots/logs.png" width="230"></td>
+<td align="center"><b>Créateur de Pal</b><br><img src="docs/screenshots/pal_creator.png" width="230"></td>
 </tr>
 </table>
 
@@ -89,6 +107,14 @@ Compose sur JVM sans émulateur (utile en dev pour vérifier rapidement un écra
 
 ```bash
 ./gradlew :app:recordPaparazziDebug
+```
+
+Chaque écran expose un composable sans état `XxxContent`, rendu par les tests de
+`app/src/test/java/com/paladmin/screenshots/` en thème sombre et clair. Les captures du README et
+du site (`docs/screenshots/`) viennent des mêmes tests, rendus à la résolution réelle de l'appareil :
+
+```bash
+PALMANAGER_DOCS_SHOTS=1 ./gradlew :app:cleanTestDebugUnitTest :app:recordPaparazziDebug
 ```
 
 ### Régénérer le dataset items/Pals

@@ -12,8 +12,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import app.cash.paparazzi.DeviceConfig
-import app.cash.paparazzi.Paparazzi
 import com.paladmin.data.local.db.HumanEntity
 import com.paladmin.data.local.db.ItemEntity
 import com.paladmin.data.local.db.PalEntity
@@ -40,7 +38,7 @@ import org.junit.Test
 class GiveScreenshotTest {
 
     @get:Rule
-    val paparazzi = Paparazzi(deviceConfig = DeviceConfig.PIXEL_6.copy(softButtons = false))
+    val paparazzi = palPaparazzi()
 
     private val players = listOf(
         PalworldPlayer(name = "Dorian", userId = "steam_1", level = 42),

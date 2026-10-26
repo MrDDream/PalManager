@@ -1,7 +1,6 @@
 package com.paladmin.screenshots
 
 import app.cash.paparazzi.DeviceConfig
-import app.cash.paparazzi.Paparazzi
 import com.paladmin.data.local.db.PalEntity
 import com.paladmin.data.local.prefs.AppLanguage
 import com.paladmin.data.sftp.SftpEntry
@@ -24,7 +23,7 @@ import org.junit.Test
 class ToolsScreenshotTest {
 
     @get:Rule
-    val paparazzi = Paparazzi(deviceConfig = DeviceConfig.PIXEL_6.copy(softButtons = false))
+    val paparazzi = palPaparazzi()
 
     private val logLines = listOf(
         "[10:02:26][info] Dorian (steam_76561198000000001) connected from 192.168.1.24",

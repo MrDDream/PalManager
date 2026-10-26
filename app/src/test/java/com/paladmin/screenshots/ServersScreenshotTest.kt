@@ -1,7 +1,6 @@
 package com.paladmin.screenshots
 
 import app.cash.paparazzi.DeviceConfig
-import app.cash.paparazzi.Paparazzi
 import com.paladmin.data.local.prefs.AppLanguage
 import com.paladmin.data.local.prefs.ThemeMode
 import com.paladmin.data.model.ServerProfile
@@ -29,7 +28,7 @@ import org.junit.Test
 class ServersScreenshotTest {
 
     @get:Rule
-    val paparazzi = Paparazzi(deviceConfig = DeviceConfig.PIXEL_6.copy(softButtons = false))
+    val paparazzi = palPaparazzi()
 
     private val dorian = ServerProfile(
         id = 1,

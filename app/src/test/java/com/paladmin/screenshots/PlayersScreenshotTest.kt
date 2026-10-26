@@ -19,8 +19,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
-import app.cash.paparazzi.DeviceConfig
-import app.cash.paparazzi.Paparazzi
 import com.paladmin.data.remote.palworld.PalworldPlayer
 import com.paladmin.ui.components.ActiveSkillDisplay
 import com.paladmin.ui.components.DetailRow
@@ -48,7 +46,7 @@ import org.junit.Test
 class PlayersScreenshotTest {
 
     @get:Rule
-    val paparazzi = Paparazzi(deviceConfig = DeviceConfig.PIXEL_6.copy(softButtons = false))
+    val paparazzi = palPaparazzi()
 
     private val players = listOf(
         PalworldPlayer(name = "Dorian", userId = "steam_76561198000000001", ip = "192.168.1.24", ping = 18.0, level = 42),

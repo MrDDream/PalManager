@@ -1,7 +1,5 @@
 package com.paladmin.screenshots
 
-import app.cash.paparazzi.DeviceConfig
-import app.cash.paparazzi.Paparazzi
 import com.paladmin.data.remote.paldefender.BanEntry
 import com.paladmin.data.remote.paldefender.WorldPos
 import com.paladmin.data.remote.palworld.PalworldPlayer
@@ -31,7 +29,7 @@ import org.junit.Test
 class ManageScreenshotTest {
 
     @get:Rule
-    val paparazzi = Paparazzi(deviceConfig = DeviceConfig.PIXEL_6.copy(softButtons = false))
+    val paparazzi = palPaparazzi()
 
     private fun pal(name: String) = "file:///android_asset/images/pals/$name.webp"
 
