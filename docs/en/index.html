@@ -5,6 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>PalManager — Android admin app for Palworld servers</title>
 <meta name="description" content="Android administration app for dedicated Palworld servers, via the official REST API and PalDefender.">
+<meta name="theme-color" content="#0e1316">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="PalManager — Android admin app for Palworld servers">
+<meta property="og:description" content="Android administration app for dedicated Palworld servers, via the official REST API and PalDefender.">
+<meta property="og:url" content="https://mrddream.github.io/PalManager/en/">
+<meta property="og:image" content="https://mrddream.github.io/PalManager/hero.png">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="alternate" hreflang="fr" href="https://mrddream.github.io/PalManager/">
 <link rel="alternate" hreflang="en" href="https://mrddream.github.io/PalManager/en/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 108 108'%3E%3Cpath fill='%234CD08A' d='M39,66 a15,12 0 1,0 30,0 a15,12 0 1,0 -30,0 Z'/%3E%3Cpath fill='%234CD08A' d='M24,46 a8,10 0 1,0 16,0 a8,10 0 1,0 -16,0 Z'/%3E%3Cpath fill='%234CD08A' d='M36.5,34 a8.5,10.5 0 1,0 17,0 a8.5,10.5 0 1,0 -17,0 Z'/%3E%3Cpath fill='%234CD08A' d='M54.5,34 a8.5,10.5 0 1,0 17,0 a8.5,10.5 0 1,0 -17,0 Z'/%3E%3Cpath fill='%234CD08A' d='M68,46 a8,10 0 1,0 16,0 a8,10 0 1,0 -16,0 Z'/%3E%3C/svg%3E">
@@ -242,16 +250,31 @@
     box-shadow: var(--shadow);
   }
   .shots img { display: block; width: 100%; height: auto; }
-  @media (max-width: 520px) {
-    .shots { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
-    .shots figcaption { padding: 7px 10px; font-size: .78rem; }
-  }
   .shots figcaption {
     padding: 9px 14px;
     font-size: .85rem;
     color: var(--text-muted);
     border-top: 1px solid var(--border);
   }
+
+  @media (max-width: 520px) {
+    .shots { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+    .shots figcaption { padding: 7px 10px; font-size: .78rem; }
+  }
+
+  .group-title {
+    margin: 22px 0 10px;
+    font: 600 .8rem Inter, sans-serif;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+  .group-title:first-of-type { margin-top: 0; }
+  .hero-meta { margin: 12px 0 0; font-size: .82rem; color: var(--text-muted); }
+  .two-col { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; }
+  .steps { margin: 0; padding-left: 22px; color: var(--text-muted); }
+  .steps li { margin-bottom: 10px; }
+  .steps strong, .req-list strong { color: var(--text); }
 
   .features {
     display: grid;
@@ -383,6 +406,7 @@
         </svg>
       </a>
     </div>
+    <p class="hero-meta">Android 8.0 or later · free and open source (MIT)</p>
     <div class="phone-stage">
       <div class="phone phone-left"><img src="../screenshots/give_item.png" alt="Give an item" loading="lazy"></div>
       <div class="phone phone-center"><img src="../screenshots/home.png" alt="Dashboard" loading="lazy"></div>
@@ -398,57 +422,77 @@
 <section>
   <div class="wrap">
     <h2>Features</h2>
-    <p class="section-sub">A full admin panel, not just a give-item tool.</p>
+    <p class="section-sub">A full admin panel in your pocket, not just a give-item tool.</p>
+    <h3 class="group-title">Server</h3>
     <div class="features">
       <div class="feature">
         <span class="emoji">📊</span>
         <h3>Dashboard</h3>
-        <p>Address, online players, FPS, uptime, versions, one-tap shortcuts, save, and a Power sheet (scheduled shutdown, hold-to-confirm force stop).</p>
+        <p>Address, online players with avatars, FPS, uptime and in-game day, versions, shortcuts to every tool, and world save.</p>
       </div>
       <div class="feature">
-        <span class="emoji">👥</span>
-        <h3>Connected players</h3>
-        <p>Real-time list with search and sort (level, ping, name), kick/ban, private message, and a tabbed player sheet: team (IVs, Pal Souls, skills, passives), inventory, Palbox, progression, technologies.</p>
-      </div>
-      <div class="feature">
-        <span class="emoji">🛡️</span>
-        <h3>Guilds</h3>
-        <p>Search by guild or member name, all base locations pinned on the map, per-camp Pal roster with detail view, chest, expeditions and lab research.</p>
-      </div>
-      <div class="feature">
-        <span class="emoji">🎁</span>
-        <h3>Give item / Pal / NPC</h3>
-        <p>Pick the recipient once, search a bundled catalog by name or image, filter by category/element/rarity/work suitability, set the quantity ×1/×10/×100 or level, and give in one tap.</p>
-      </div>
-      <div class="feature">
-        <span class="emoji">🗺️</span>
-        <h3>Live map</h3>
-        <p>Player and guild base positions on the Palpagos Islands map, with zoom and player selection.</p>
-      </div>
-      <div class="feature">
-        <span class="emoji">🚫</span>
-        <h3>Bans</h3>
-        <p>Player and IP bans.</p>
-      </div>
-      <div class="feature">
-        <span class="emoji">📣</span>
-        <h3>Broadcast & maintenance</h3>
-        <p>Broadcast, alerts, messages, danger zone (reload config, delete base).</p>
+        <span class="emoji">🔌</span>
+        <h3>Power</h3>
+        <p>Scheduled clean shutdown with a delay and a message to players, or a force stop guarded by a hold-to-confirm button.</p>
       </div>
       <div class="feature">
         <span class="emoji">🖥️</span>
         <h3>My servers</h3>
-        <p>Every profile shows its live status (online/offline, players, FPS, latency) and which APIs are configured (REST, PalDefender, SFTP).</p>
+        <p>Several profiles with their live status (players, FPS, latency) and a Verify button that checks the APIs and SFTP in one tap.</p>
+      </div>
+    </div>
+    <h3 class="group-title">Players</h3>
+    <div class="features">
+      <div class="feature">
+        <span class="emoji">👥</span>
+        <h3>Connected players</h3>
+        <p>Live list with search (name, ID, IP) and sorting (level, ping, name), private message, kick and ban.</p>
       </div>
       <div class="feature">
-        <span class="emoji">🎨</span>
-        <h3>New UI</h3>
-        <p>Full redesign: dark-first palette, Sora/Inter/JetBrains Mono typography, large touch targets, bottom sheets, a polished light theme.</p>
+        <span class="emoji">🪪</span>
+        <h3>Player sheet</h3>
+        <p>Tabs for the team (IVs, Pal Souls, skills, passives), inventory, Palbox, progression and technologies.</p>
+      </div>
+      <div class="feature">
+        <span class="emoji">🎁</span>
+        <h3>Give items, Pals and NPCs</h3>
+        <p>Pick the recipient once, search a bundled catalog with filters, set the quantity ×1/×10/×100 or level, and give in one tap.</p>
+      </div>
+    </div>
+    <h3 class="group-title">World & moderation</h3>
+    <div class="features">
+      <div class="feature">
+        <span class="emoji">🛡️</span>
+        <h3>Guilds</h3>
+        <p>Members online, Pals of each camp, chest, expeditions, lab research, and bases pinned on the map.</p>
+      </div>
+      <div class="feature">
+        <span class="emoji">🗺️</span>
+        <h3>Live map</h3>
+        <p>Players and guild bases on the Palpagos Islands and World Tree maps, with zoom and player selection.</p>
+      </div>
+      <div class="feature">
+        <span class="emoji">🚫</span>
+        <h3>Bans</h3>
+        <p>Ban and unban players and IP addresses.</p>
+      </div>
+      <div class="feature">
+        <span class="emoji">📣</span>
+        <h3>Broadcast & maintenance</h3>
+        <p>Announcements, alerts, private messages, PalDefender config reload, restart and base deletion.</p>
+      </div>
+    </div>
+    <h3 class="group-title">App</h3>
+    <div class="features">
+      <div class="feature">
+        <span class="emoji">🌗</span>
+        <h3>Theme and language</h3>
+        <p>Dark, light or system theme; French or English interface.</p>
       </div>
       <div class="feature">
         <span class="emoji">🐞</span>
         <h3>Debug logging</h3>
-        <p>Optional network request log written to a folder you choose, to help diagnose connectivity issues.</p>
+        <p>Optional network request log, written to a folder you choose, to diagnose connection issues.</p>
       </div>
     </div>
   </div>
@@ -457,36 +501,31 @@
 <section class="alt">
   <div class="wrap">
     <h2>SFTP toolkit <span style="font-weight:400;color:var(--text-muted);font-size:1rem;">(optional)</span></h2>
-    <p class="section-sub">Add SSH/SFTP credentials to a server profile to unlock a few extras.</p>
+    <p class="section-sub">Add SSH/SFTP credentials to a server profile to unlock these tools.</p>
     <div class="features">
       <div class="feature">
         <span class="emoji">📜</span>
         <h3>Logs</h3>
-        <p>PalDefender/UE4SS log viewer with search and colored severity.</p>
+        <p>PalDefender and UE4SS logs with search, level filters and colored severity.</p>
       </div>
       <div class="feature">
         <span class="emoji">🗂️</span>
-        <h3>SFTP file manager</h3>
-        <p>Browse/upload (file or whole folder)/download/rename/copy/cut/paste/delete, with trust-on-first-use host key pinning.</p>
+        <h3>Files</h3>
+        <p>Browse, upload (a file or a folder), download, rename, copy, cut, paste and delete, with the host key pinned on first connection.</p>
       </div>
       <div class="feature">
         <span class="emoji">✨</span>
         <h3>Pal Creator</h3>
-        <p>Build a PalDefender Pal Template (species, gender, level, shiny/alpha, IVs, Pal Souls, skills) from a form and save it straight to the server's template folder.</p>
-      </div>
-      <div class="feature">
-        <span class="emoji">✅</span>
-        <h3>Verify</h3>
-        <p>One tap on the Add/Edit server screen checks the Palworld API, PalDefender API, and SFTP are all reachable with what you just typed in.</p>
+        <p>Build a PalDefender Pal Template (species, gender, level, lucky/alpha, IVs, Pal Souls, skills, passives) and save it straight to the server.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="alt">
+<section>
   <div class="wrap">
-    <h2>Preview</h2>
-    <p class="section-sub">Real renders of the app's screens, with sample data.</p>
+    <h2>Screenshots</h2>
+    <p class="section-sub">Renders of the app's real screens, with sample data.</p>
     <div class="shots">
       <figure><img src="../screenshots/home.png" alt="Dashboard" loading="lazy"><figcaption>Dashboard</figcaption></figure>
       <figure><img src="../screenshots/servers.png" alt="My servers" loading="lazy"><figcaption>My servers</figcaption></figure>
@@ -500,7 +539,7 @@
       <figure><img src="../screenshots/power.png" alt="Power" loading="lazy"><figcaption>Power</figcaption></figure>
       <figure><img src="../screenshots/add_server.png" alt="Add a server" loading="lazy"><figcaption>Add a server</figcaption></figure>
       <figure><img src="../screenshots/settings.png" alt="Settings" loading="lazy"><figcaption>Settings</figcaption></figure>
-      <figure><img src="../screenshots/sftp.png" alt="SFTP file manager" loading="lazy"><figcaption>SFTP file manager</figcaption></figure>
+      <figure><img src="../screenshots/sftp.png" alt="SFTP files" loading="lazy"><figcaption>SFTP files</figcaption></figure>
       <figure><img src="../screenshots/logs.png" alt="Logs" loading="lazy"><figcaption>Logs</figcaption></figure>
       <figure><img src="../screenshots/pal_creator.png" alt="Pal Creator" loading="lazy"><figcaption>Pal Creator</figcaption></figure>
       <figure><img src="../screenshots/home_light.png" alt="Light theme" loading="lazy"><figcaption>Light theme</figcaption></figure>
@@ -508,14 +547,30 @@
   </div>
 </section>
 
+<section class="alt">
+  <div class="wrap two-col">
+    <div>
+      <h2>Install</h2>
+      <ol class="steps">
+      <li>Download the APK from the <a href="https://github.com/MrDDream/PalManager/releases/latest">latest release</a> and install it (Android 8.0 or later; allow installs from unknown sources if asked).</li>
+      <li>Add a server: host, Palworld REST API port (8212 by default) and admin password, PalDefender API port (17993 by default) and token, and optionally SSH/SFTP credentials.</li>
+      <li>Tap <strong>Verify</strong> to check everything is reachable, then save.</li>
+      </ol>
+    </div>
+    <div>
+      <h2>Server requirements</h2>
+      <ul class="req-list">
+      <li>A Palworld server with the <a href="https://docs.palworldgame.com/">official REST API</a> enabled (<code>RESTAPIEnabled=True</code> in <code>PalWorldSettings.ini</code>).</li>
+      <li>The <a href="https://github.com/UltimeIT/PalDefender">PalDefender</a> mod with its REST API enabled, for what the official API doesn't cover (giving items and Pals, technologies, guilds, IP bans…).</li>
+      <li>Optional: SSH/SFTP access to the server machine, for the SFTP toolkit.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 <section>
   <div class="wrap">
-    <h2>Server requirements</h2>
-    <ul class="req-list">
-      <li>A Palworld server with the <a href="https://docs.palworldgame.com/">official REST API</a> enabled (<code>RESTAPIEnabled=True</code> in <code>PalWorldSettings.ini</code>).</li>
-      <li>The <a href="https://github.com/UltimeIT/PalDefender">PalDefender</a> mod installed with its REST API enabled, for features the official API doesn't cover (give item/Pal, techs, guilds, IP bans...).</li>
-    </ul>
-    <h2 style="margin-top:28px">Tech stack</h2>
+    <h2>Tech stack</h2>
     <div class="stack-pills">
       <span class="pill">Kotlin</span>
       <span class="pill">Jetpack Compose</span>
@@ -523,8 +578,12 @@
       <span class="pill">Hilt</span>
       <span class="pill">Room</span>
       <span class="pill">Retrofit / OkHttp</span>
+      <span class="pill">kotlinx.serialization</span>
       <span class="pill">Coil</span>
       <span class="pill">Navigation Compose</span>
+      <span class="pill">DataStore</span>
+      <span class="pill">sshj</span>
+      <span class="pill">Paparazzi</span>
     </div>
   </div>
 </section>

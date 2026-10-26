@@ -5,6 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>PalManager — Admin Android pour serveurs Palworld</title>
 <meta name="description" content="Application Android d'administration pour serveurs dédiés Palworld, via l'API REST officielle et PalDefender.">
+<meta name="theme-color" content="#0e1316">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="PalManager — Admin Android pour serveurs Palworld">
+<meta property="og:description" content="Application Android d'administration pour serveurs dédiés Palworld, via l'API REST officielle et PalDefender.">
+<meta property="og:url" content="https://mrddream.github.io/PalManager/">
+<meta property="og:image" content="https://mrddream.github.io/PalManager/hero.png">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="alternate" hreflang="fr" href="https://mrddream.github.io/PalManager/">
 <link rel="alternate" hreflang="en" href="https://mrddream.github.io/PalManager/en/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 108 108'%3E%3Cpath fill='%234CD08A' d='M39,66 a15,12 0 1,0 30,0 a15,12 0 1,0 -30,0 Z'/%3E%3Cpath fill='%234CD08A' d='M24,46 a8,10 0 1,0 16,0 a8,10 0 1,0 -16,0 Z'/%3E%3Cpath fill='%234CD08A' d='M36.5,34 a8.5,10.5 0 1,0 17,0 a8.5,10.5 0 1,0 -17,0 Z'/%3E%3Cpath fill='%234CD08A' d='M54.5,34 a8.5,10.5 0 1,0 17,0 a8.5,10.5 0 1,0 -17,0 Z'/%3E%3Cpath fill='%234CD08A' d='M68,46 a8,10 0 1,0 16,0 a8,10 0 1,0 -16,0 Z'/%3E%3C/svg%3E">
@@ -242,16 +250,31 @@
     box-shadow: var(--shadow);
   }
   .shots img { display: block; width: 100%; height: auto; }
-  @media (max-width: 520px) {
-    .shots { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
-    .shots figcaption { padding: 7px 10px; font-size: .78rem; }
-  }
   .shots figcaption {
     padding: 9px 14px;
     font-size: .85rem;
     color: var(--text-muted);
     border-top: 1px solid var(--border);
   }
+
+  @media (max-width: 520px) {
+    .shots { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+    .shots figcaption { padding: 7px 10px; font-size: .78rem; }
+  }
+
+  .group-title {
+    margin: 22px 0 10px;
+    font: 600 .8rem Inter, sans-serif;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+  .group-title:first-of-type { margin-top: 0; }
+  .hero-meta { margin: 12px 0 0; font-size: .82rem; color: var(--text-muted); }
+  .two-col { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; }
+  .steps { margin: 0; padding-left: 22px; color: var(--text-muted); }
+  .steps li { margin-bottom: 10px; }
+  .steps strong, .req-list strong { color: var(--text); }
 
   .features {
     display: grid;
@@ -369,7 +392,7 @@
     </svg>
     <h1>PalManager</h1>
     <p class="tagline">Pilote ton serveur dédié Palworld depuis ton téléphone.</p>
-    <div class="badge">⚠️ Projet non-officiel, sans lien avec Pocketpair</div>
+    <div class="badge">⚠️ Projet non officiel, sans lien avec Pocketpair</div>
     <div class="cta-row">
       <a class="btn btn-primary" href="https://github.com/MrDDream/PalManager/releases/latest">
         <svg class="icon" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -383,6 +406,7 @@
         </svg>
       </a>
     </div>
+    <p class="hero-meta">Android 8.0 ou plus · gratuit et open source (MIT)</p>
     <div class="phone-stage">
       <div class="phone phone-left"><img src="screenshots/give_item.png" alt="Donner un item" loading="lazy"></div>
       <div class="phone phone-center"><img src="screenshots/home.png" alt="Dashboard" loading="lazy"></div>
@@ -398,57 +422,77 @@
 <section>
   <div class="wrap">
     <h2>Fonctionnalités</h2>
-    <p class="section-sub">Un panel d'admin complet, pas juste un give-item.</p>
+    <p class="section-sub">Un vrai panneau d'admin dans ta poche, pas juste un outil pour donner des items.</p>
+    <h3 class="group-title">Serveur</h3>
     <div class="features">
       <div class="feature">
         <span class="emoji">📊</span>
         <h3>Dashboard</h3>
-        <p>Adresse, joueurs en ligne, FPS, durée en ligne, versions, raccourcis en un geste, sauvegarde et feuille Alimentation (arrêt programmé, arrêt forcé par appui maintenu).</p>
+        <p>Adresse, joueurs en ligne avec avatars, FPS, durée en ligne et jour en jeu, versions, raccourcis vers chaque outil et sauvegarde du monde.</p>
       </div>
       <div class="feature">
-        <span class="emoji">👥</span>
-        <h3>Joueurs connectés</h3>
-        <p>Liste en temps réel avec recherche et tri (niveau, latence, nom), kick/ban, message privé, et fiche joueur à onglets : équipe (IV, Âme de Pal, compétences, passifs), inventaire, Palbox, progression, technologies.</p>
-      </div>
-      <div class="feature">
-        <span class="emoji">🛡️</span>
-        <h3>Guildes</h3>
-        <p>Recherche par guilde ou membre, toutes les bases épinglées sur la carte, Pals de chaque camp avec fiche détaillée, coffre, expéditions et recherches de labo.</p>
-      </div>
-      <div class="feature">
-        <span class="emoji">🎁</span>
-        <h3>Donner un item / Pal / PNJ</h3>
-        <p>Destinataire choisi une fois, catalogue embarqué avec recherche par nom ou image, filtres catégorie/élément/rareté/métier, quantité ×1/×10/×100 ou niveau, don en un geste.</p>
-      </div>
-      <div class="feature">
-        <span class="emoji">🗺️</span>
-        <h3>Carte en direct</h3>
-        <p>Position des joueurs et des bases de guilde sur la carte des Îles Palpagos, avec zoom et sélection d'un joueur.</p>
-      </div>
-      <div class="feature">
-        <span class="emoji">🚫</span>
-        <h3>Bannissements</h3>
-        <p>Bannissements joueurs et IP.</p>
-      </div>
-      <div class="feature">
-        <span class="emoji">📣</span>
-        <h3>Diffusion & maintenance</h3>
-        <p>Broadcast, alertes, messages, zone danger (reload config, suppression de base).</p>
+        <span class="emoji">🔌</span>
+        <h3>Alimentation</h3>
+        <p>Arrêt propre programmé avec délai et message aux joueurs, ou arrêt forcé protégé par un appui maintenu.</p>
       </div>
       <div class="feature">
         <span class="emoji">🖥️</span>
         <h3>Mes serveurs</h3>
-        <p>Chaque profil affiche son état en direct (en ligne/hors ligne, joueurs, FPS, latence) et les API configurées (REST, PalDefender, SFTP).</p>
+        <p>Plusieurs profils avec leur état en direct (joueurs, FPS, latence) et un bouton Vérifier qui teste les API et le SFTP en un geste.</p>
+      </div>
+    </div>
+    <h3 class="group-title">Joueurs</h3>
+    <div class="features">
+      <div class="feature">
+        <span class="emoji">👥</span>
+        <h3>Joueurs connectés</h3>
+        <p>Liste en direct avec recherche (nom, ID, IP) et tri (niveau, latence, nom), message privé, exclusion et bannissement.</p>
       </div>
       <div class="feature">
-        <span class="emoji">🎨</span>
-        <h3>Nouvelle interface</h3>
-        <p>Refonte complète : palette sombre, typographies Sora/Inter/JetBrains Mono, grandes cibles tactiles, feuilles du bas, thème clair soigné.</p>
+        <span class="emoji">🪪</span>
+        <h3>Fiche joueur</h3>
+        <p>Onglets équipe (IV, Âme de Pal, compétences, passifs), inventaire, Palbox, progression et technologies.</p>
+      </div>
+      <div class="feature">
+        <span class="emoji">🎁</span>
+        <h3>Donner items, Pals et PNJ</h3>
+        <p>Destinataire choisi une fois, catalogue embarqué avec recherche et filtres, quantité ×1/×10/×100 ou niveau, don en un geste.</p>
+      </div>
+    </div>
+    <h3 class="group-title">Monde & modération</h3>
+    <div class="features">
+      <div class="feature">
+        <span class="emoji">🛡️</span>
+        <h3>Guildes</h3>
+        <p>Membres en ligne, Pals de chaque camp, coffre, expéditions, recherches de labo et bases épinglées sur la carte.</p>
+      </div>
+      <div class="feature">
+        <span class="emoji">🗺️</span>
+        <h3>Carte en direct</h3>
+        <p>Joueurs et bases de guilde sur les Îles Palpagos et l'Arbre-Monde, avec zoom et sélection d'un joueur.</p>
+      </div>
+      <div class="feature">
+        <span class="emoji">🚫</span>
+        <h3>Bannissements</h3>
+        <p>Bannir et débannir des joueurs et des adresses IP.</p>
+      </div>
+      <div class="feature">
+        <span class="emoji">📣</span>
+        <h3>Diffusion & maintenance</h3>
+        <p>Annonces, alertes, messages privés, rechargement de la config PalDefender, redémarrage et suppression de base.</p>
+      </div>
+    </div>
+    <h3 class="group-title">Application</h3>
+    <div class="features">
+      <div class="feature">
+        <span class="emoji">🌗</span>
+        <h3>Thème et langue</h3>
+        <p>Thème sombre, clair ou système ; interface en français ou en anglais.</p>
       </div>
       <div class="feature">
         <span class="emoji">🐞</span>
         <h3>Mode debug</h3>
-        <p>Log réseau optionnel écrit dans un dossier de votre choix, pour diagnostiquer les problèmes de connexion.</p>
+        <p>Journal optionnel des requêtes réseau, écrit dans le dossier de ton choix, pour diagnostiquer les problèmes de connexion.</p>
       </div>
     </div>
   </div>
@@ -457,36 +501,31 @@
 <section class="alt">
   <div class="wrap">
     <h2>Boîte à outils SFTP <span style="font-weight:400;color:var(--text-muted);font-size:1rem;">(optionnelle)</span></h2>
-    <p class="section-sub">Ajoutez des identifiants SSH/SFTP à un profil serveur pour débloquer quelques extras.</p>
+    <p class="section-sub">Ajoute des identifiants SSH/SFTP à un profil de serveur pour débloquer ces outils.</p>
     <div class="features">
       <div class="feature">
         <span class="emoji">📜</span>
         <h3>Logs</h3>
-        <p>Visionneuse de logs PalDefender/UE4SS avec recherche et sévérité en couleur.</p>
+        <p>Logs PalDefender et UE4SS avec recherche, filtres par niveau et sévérité en couleur.</p>
       </div>
       <div class="feature">
         <span class="emoji">🗂️</span>
-        <h3>Gestionnaire de fichiers SFTP</h3>
-        <p>Parcourir/upload (fichier ou dossier entier)/télécharger/renommer/copier/couper/coller/supprimer, avec épinglage de la clé hôte à la première connexion.</p>
+        <h3>Fichiers</h3>
+        <p>Parcourir, envoyer (fichier ou dossier), télécharger, renommer, copier, couper, coller et supprimer, avec la clé hôte épinglée à la première connexion.</p>
       </div>
       <div class="feature">
         <span class="emoji">✨</span>
         <h3>Créateur de Pal</h3>
-        <p>Construire un Pal Template PalDefender (espèce, sexe, niveau, chanceux/alpha, IV, Âme de Pal, compétences) depuis un formulaire et l'enregistrer directement dans le dossier templates du serveur.</p>
-      </div>
-      <div class="feature">
-        <span class="emoji">✅</span>
-        <h3>Vérifier</h3>
-        <p>Un bouton sur l'écran d'ajout/modification de serveur teste que l'API Palworld, l'API PalDefender et le SFTP sont bien joignables avec ce que vous venez de saisir.</p>
+        <p>Construire un modèle de Pal PalDefender (espèce, sexe, niveau, chanceux/alpha, IV, Âme de Pal, compétences, passifs) et l'enregistrer directement sur le serveur.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="alt">
+<section>
   <div class="wrap">
     <h2>Aperçu</h2>
-    <p class="section-sub">Rendus réels des écrans de l'application, avec des données d'exemple.</p>
+    <p class="section-sub">Rendus des vrais écrans de l'application, avec des données d'exemple.</p>
     <div class="shots">
       <figure><img src="screenshots/home.png" alt="Dashboard" loading="lazy"><figcaption>Dashboard</figcaption></figure>
       <figure><img src="screenshots/servers.png" alt="Mes serveurs" loading="lazy"><figcaption>Mes serveurs</figcaption></figure>
@@ -500,7 +539,7 @@
       <figure><img src="screenshots/power.png" alt="Alimentation" loading="lazy"><figcaption>Alimentation</figcaption></figure>
       <figure><img src="screenshots/add_server.png" alt="Ajout d'un serveur" loading="lazy"><figcaption>Ajout d'un serveur</figcaption></figure>
       <figure><img src="screenshots/settings.png" alt="Paramètres" loading="lazy"><figcaption>Paramètres</figcaption></figure>
-      <figure><img src="screenshots/sftp.png" alt="Gestionnaire SFTP" loading="lazy"><figcaption>Gestionnaire SFTP</figcaption></figure>
+      <figure><img src="screenshots/sftp.png" alt="Fichiers SFTP" loading="lazy"><figcaption>Fichiers SFTP</figcaption></figure>
       <figure><img src="screenshots/logs.png" alt="Logs" loading="lazy"><figcaption>Logs</figcaption></figure>
       <figure><img src="screenshots/pal_creator.png" alt="Créateur de Pal" loading="lazy"><figcaption>Créateur de Pal</figcaption></figure>
       <figure><img src="screenshots/home_light.png" alt="Thème clair" loading="lazy"><figcaption>Thème clair</figcaption></figure>
@@ -508,14 +547,30 @@
   </div>
 </section>
 
+<section class="alt">
+  <div class="wrap two-col">
+    <div>
+      <h2>Installation</h2>
+      <ol class="steps">
+      <li>Télécharge l'APK depuis la <a href="https://github.com/MrDDream/PalManager/releases/latest">dernière version</a> et installe-le (Android 8.0 ou plus ; autorise les sources inconnues si demandé).</li>
+      <li>Ajoute un serveur : hôte, port de l'API REST Palworld (8212 par défaut) et mot de passe admin, port de l'API PalDefender (17993 par défaut) et token, et en option les identifiants SSH/SFTP.</li>
+      <li>Touche <strong>Vérifier</strong> pour contrôler que tout répond, puis enregistre.</li>
+      </ol>
+    </div>
+    <div>
+      <h2>Prérequis serveur</h2>
+      <ul class="req-list">
+      <li>Un serveur Palworld avec l'<a href="https://docs.palworldgame.com/">API REST officielle</a> activée (<code>RESTAPIEnabled=True</code> dans <code>PalWorldSettings.ini</code>).</li>
+      <li>Le mod <a href="https://github.com/UltimeIT/PalDefender">PalDefender</a> avec son API REST activée, pour ce que l'API officielle ne couvre pas (don d'items et de Pals, technologies, guildes, bannissements IP…).</li>
+      <li>En option : un accès SSH/SFTP à la machine du serveur, pour la boîte à outils SFTP.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 <section>
   <div class="wrap">
-    <h2>Prérequis serveur</h2>
-    <ul class="req-list">
-      <li>Un serveur Palworld avec l'<a href="https://docs.palworldgame.com/">API REST officielle</a> activée (<code>RESTAPIEnabled=True</code> dans <code>PalWorldSettings.ini</code>).</li>
-      <li>Le mod <a href="https://github.com/UltimeIT/PalDefender">PalDefender</a> installé et son API REST activée, pour les fonctionnalités que l'API officielle ne couvre pas (give item/Pal, techs, guildes, bans IP...).</li>
-    </ul>
-    <h2 style="margin-top:28px">Stack technique</h2>
+    <h2>Stack technique</h2>
     <div class="stack-pills">
       <span class="pill">Kotlin</span>
       <span class="pill">Jetpack Compose</span>
@@ -523,8 +578,12 @@
       <span class="pill">Hilt</span>
       <span class="pill">Room</span>
       <span class="pill">Retrofit / OkHttp</span>
+      <span class="pill">kotlinx.serialization</span>
       <span class="pill">Coil</span>
       <span class="pill">Navigation Compose</span>
+      <span class="pill">DataStore</span>
+      <span class="pill">sshj</span>
+      <span class="pill">Paparazzi</span>
     </div>
   </div>
 </section>
@@ -538,7 +597,7 @@
       <a href="https://github.com/MrDDream/PalManager/blob/main/README.fr.md">README (FR)</a>
       <a href="https://github.com/MrDDream/PalManager/blob/main/LICENSE">Licence MIT</a>
     </div>
-    Les données de jeu (noms/images d'objets et de Pals) proviennent de <a href="https://paldb.cc">paldb.cc</a>
+    Les données de jeu (noms et images d'objets et de Pals) proviennent de <a href="https://paldb.cc">paldb.cc</a>
     et restent la propriété de leurs ayants droit.
   </div>
 </footer>
