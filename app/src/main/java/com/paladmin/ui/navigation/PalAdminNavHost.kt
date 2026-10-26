@@ -65,6 +65,8 @@ fun PalAdminNavHost(navController: NavHostController) {
             val profileId = checkNotNull(backStackEntry.arguments?.getString("profileId")).toLong()
             DashboardScreen(
                 onBack = { navController.popBackStack() },
+                onOpenSettings = { navController.navigate(NavRoutes.APP_SETTINGS) },
+                onEditProfile = { navController.navigate(NavRoutes.addEditProfile(profileId)) },
                 onOpenItemPicker = { navController.navigate(NavRoutes.itemPicker(profileId)) },
                 onOpenPalPicker = { navController.navigate(NavRoutes.palPicker(profileId)) },
                 onOpenPlayers = { navController.navigate(NavRoutes.players(profileId)) },

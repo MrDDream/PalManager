@@ -36,6 +36,8 @@ data class PalworldMetrics(
     val serverframetime: Double = 0.0,
     val maxplayernum: Int = 0,
     val uptime: Long = 0,
+    /** Jour en jeu — ajouté par les versions récentes du serveur, absent des plus anciennes. */
+    val days: Int? = null,
 )
 
 /** Structure de /settings très large et versionnée par le jeu : gardée en JSON brut, affichée clé/valeur. */

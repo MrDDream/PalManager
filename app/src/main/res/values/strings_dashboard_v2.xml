@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Libellés de la refonte UI/UX : dashboard, barre de navigation, feuille Alimentation. -->
+<resources>
+    <string name="dashboard_address">Adresse</string>
+    <string name="cd_copy_address">Copier l\'adresse</string>
+    <string name="cd_switch_server">Changer de serveur</string>
+    <string name="dashboard_address_copied">Adresse copiée</string>
+    <string name="dashboard_status_online">En ligne</string>
+    <string name="dashboard_status_offline">Hors ligne</string>
+    <string name="dashboard_stat_uptime">En ligne depuis</string>
+    <string name="unit_days_short"> j </string>
+    <string name="unit_hours_short"> h</string>
+    <string name="unit_minutes_short"> min</string>
+    <string name="dashboard_ingame_day_fmt">Jour %1$d en jeu</string>
+    <string name="dashboard_frame_time_fmt">%1$.1f ms / image</string>
+    <string name="dashboard_players_none">Aucun joueur en ligne</string>
+    <string name="dashboard_players_two_fmt">%1$s et %2$s</string>
+    <string name="dashboard_players_many_fmt">%1$s, %2$s et %3$d autres</string>
+    <string name="dashboard_save_short">Sauvegarder</string>
+    <string name="dashboard_power">Alimentation</string>
+    <string name="dashboard_section_give">Donner</string>
+    <string name="dashboard_give_item_short">Un item</string>
+    <string name="dashboard_give_pal_short">Un Pal</string>
+    <string name="dashboard_give_human_short">Un PNJ</string>
+    <string name="dashboard_section_manage">Gérer</string>
+    <string name="dashboard_manage_guilds">Guildes</string>
+    <string name="dashboard_manage_map">Carte</string>
+    <string name="dashboard_manage_bans">Bannis</string>
+    <string name="dashboard_manage_broadcast">Diffusion</string>
+    <string name="dashboard_section_tools">Outils serveur</string>
+    <string name="dashboard_tool_logs">Logs</string>
+    <string name="dashboard_tool_files">Fichiers</string>
+    <string name="dashboard_tool_creator">Créateur</string>
+    <string name="dashboard_sftp_locked">Ajoute des identifiants SFTP à ce profil pour débloquer les logs, le gestionnaire de fichiers et le créateur de Pal.</string>
+    <string name="dashboard_sftp_configure">Configurer SFTP</string>
+    <string name="dashboard_versions_fmt">Palworld %1$s · PalDefender %2$s</string>
+
+    <string name="nav_home">Accueil</string>
+    <string name="nav_players">Joueurs</string>
+    <string name="nav_map">Carte</string>
+    <string name="nav_give">Donner</string>
+    <string name="nav_main_label">Navigation principale</string>
+
+    <string name="power_subtitle_fmt">%1$s · %2$d joueurs en ligne</string>
+    <string name="power_restart_title">Redémarrer le serveur</string>
+    <string name="power_restart_explanation">Aucune API n\'a de commande « redémarrer » : on programme un arrêt propre, et ton gestionnaire (Docker, service…) relance le serveur.</string>
+    <string name="power_delay_label">Délai avant l\'arrêt</string>
+    <string name="power_delay_30s">30 s</string>
+    <string name="power_delay_1m">1 min</string>
+    <string name="power_delay_5m">5 min</string>
+    <string name="power_delay_10m">10 min</string>
+    <string name="power_message_label">Message aux joueurs</string>
+    <string name="power_schedule_fmt">Programmer l\'arrêt dans %1$s</string>
+    <string name="power_force_title">Arrêt immédiat (force)</string>
+    <string name="power_force_message">Le serveur s\'arrête sans délai et sans sauvegarde garantie.</string>
+    <string name="power_hold_to_stop">Maintenir pour arrêter</string>
+    <string name="power_holding">Continuer d\'appuyer…</string>
+</resources>

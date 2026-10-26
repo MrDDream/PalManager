@@ -23,6 +23,9 @@
 
     <!-- Shared content descriptions -->
     <string name="cd_back">Back</string>
+    <string name="cd_clear">Clear</string>
+    <string name="cd_show_password">Show</string>
+    <string name="cd_hide_password">Hide</string>
     <string name="cd_refresh">Refresh</string>
     <string name="cd_actions">Actions</string>
     <string name="cd_settings">Settings</string>

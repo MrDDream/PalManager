@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dashboard_address">Address</string>
+    <string name="cd_copy_address">Copy address</string>
+    <string name="cd_switch_server">Switch server</string>
+    <string name="dashboard_address_copied">Address copied</string>
+    <string name="dashboard_status_online">Online</string>
+    <string name="dashboard_status_offline">Offline</string>
+    <string name="dashboard_stat_uptime">Up for</string>
+    <string name="unit_days_short"> d </string>
+    <string name="unit_hours_short"> h</string>
+    <string name="unit_minutes_short"> min</string>
+    <string name="dashboard_ingame_day_fmt">In-game day %1$d</string>
+    <string name="dashboard_frame_time_fmt">%1$.1f ms / frame</string>
+    <string name="dashboard_players_none">No players online</string>
+    <string name="dashboard_players_two_fmt">%1$s and %2$s</string>
+    <string name="dashboard_players_many_fmt">%1$s, %2$s and %3$d others</string>
+    <string name="dashboard_save_short">Save</string>
+    <string name="dashboard_power">Power</string>
+    <string name="dashboard_section_give">Give</string>
+    <string name="dashboard_give_item_short">An item</string>
+    <string name="dashboard_give_pal_short">A Pal</string>
+    <string name="dashboard_give_human_short">An NPC</string>
+    <string name="dashboard_section_manage">Manage</string>
+    <string name="dashboard_manage_guilds">Guilds</string>
+    <string name="dashboard_manage_map">Map</string>
+    <string name="dashboard_manage_bans">Bans</string>
+    <string name="dashboard_manage_broadcast">Broadcast</string>
+    <string name="dashboard_section_tools">Server tools</string>
+    <string name="dashboard_tool_logs">Logs</string>
+    <string name="dashboard_tool_files">Files</string>
+    <string name="dashboard_tool_creator">Creator</string>
+    <string name="dashboard_sftp_locked">Add SFTP credentials to this profile to unlock logs, the file manager and the Pal Creator.</string>
+    <string name="dashboard_sftp_configure">Set up SFTP</string>
+    <string name="dashboard_versions_fmt">Palworld %1$s · PalDefender %2$s</string>
+
+    <string name="nav_home">Home</string>
+    <string name="nav_players">Players</string>
+    <string name="nav_map">Map</string>
+    <string name="nav_give">Give</string>
+    <string name="nav_main_label">Main navigation</string>
+
+    <string name="power_subtitle_fmt">%1$s · %2$d players online</string>
+    <string name="power_restart_title">Restart the server</string>
+    <string name="power_restart_explanation">Neither API has a "restart" command: this schedules a clean shutdown, and your process manager (Docker, service…) brings the server back up.</string>
+    <string name="power_delay_label">Delay before shutdown</string>
+    <string name="power_delay_30s">30 s</string>
+    <string name="power_delay_1m">1 min</string>
+    <string name="power_delay_5m">5 min</string>
+    <string name="power_delay_10m">10 min</string>
+    <string name="power_message_label">Message to players</string>
+    <string name="power_schedule_fmt">Schedule shutdown in %1$s</string>
+    <string name="power_force_title">Immediate stop (force)</string>
+    <string name="power_force_message">The server stops right away, with no guaranteed save.</string>
+    <string name="power_hold_to_stop">Hold to stop</string>
+    <string name="power_holding">Keep holding…</string>
+</resources>

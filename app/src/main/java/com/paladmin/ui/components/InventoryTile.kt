@@ -1,5 +1,7 @@
 package com.paladmin.ui.components
 
+import android.graphics.BitmapFactory
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -14,11 +16,15 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
+import androidx.compose.ui.graphics.asImageBitmap
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalInspectionMode
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImagePainter
@@ -72,6 +78,20 @@ fun InventoryTile(item: InventoryGridItem, onClick: () -> Unit) {
  * tint : pour les icônes monochromes (ex. chevrons de rang de passif) à colorer dynamiquement. */
 @Composable
 fun FallbackAsyncImage(model: String, modifier: Modifier = Modifier, tint: Color? = null) {
+    // Aperçus / captures Paparazzi : une seule frame est rendue, avant qu'un chargement Coil
+    // asynchrone ait pu aboutir — les assets locaux sont alors décodés de façon synchrone.
+    if (LocalInspectionMode.current && model.startsWith(ASSET_PREFIX)) {
+        val context = LocalContext.current
+        val bitmap = remember(model) {
+            runCatching { context.assets.open(model.removePrefix(ASSET_PREFIX)).use { BitmapFactory.decodeStream(it) } }.getOrNull()
+        }
+        if (bitmap != null) {
+            Image(bitmap.asImageBitmap(), contentDescription = null, colorFilter = tint?.let { ColorFilter.tint(it) }, modifier = modifier)
+        } else {
+            Box(modifier)
+        }
+        return
+    }
     SubcomposeAsyncImage(
         model = model,
         contentDescription = null,
@@ -88,6 +108,8 @@ fun FallbackAsyncImage(model: String, modifier: Modifier = Modifier, tint: Color
         }
     }
 }
+
+private const val ASSET_PREFIX = "file:///android_asset/"
 
 /** Abrège les grosses quantités (ex. pièces d'or) façon jeu : 3 346 473 -> "3.3M". */
 fun formatQuantity(value: Int): String {
