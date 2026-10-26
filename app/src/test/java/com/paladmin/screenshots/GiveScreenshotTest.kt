@@ -41,7 +41,7 @@ class GiveScreenshotTest {
     val paparazzi = palPaparazzi()
 
     private val players = listOf(
-        PalworldPlayer(name = "Dorian", userId = "steam_1", level = 42),
+        PalworldPlayer(name = "Kaito", userId = "steam_1", level = 42),
         PalworldPlayer(name = "Aelys", userId = "steam_2", level = 37),
         PalworldPlayer(name = "Ryuujin", userId = "steam_3", level = 51),
         PalworldPlayer(name = "Fennecoeur", userId = "steam_4", level = 18),

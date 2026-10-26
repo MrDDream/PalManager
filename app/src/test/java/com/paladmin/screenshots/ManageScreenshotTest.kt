@@ -40,9 +40,9 @@ class ManageScreenshotTest {
                 guildId = "g1",
                 name = "Les Pattes Vertes",
                 level = 12,
-                adminName = "Dorian",
+                adminName = "Kaito",
                 members = listOf(
-                    GuildMemberItem("Dorian", online = true, isAdmin = true),
+                    GuildMemberItem("Kaito", online = true, isAdmin = true),
                     GuildMemberItem("Aelys", online = true, isAdmin = false),
                     GuildMemberItem("Fennecoeur", online = false, isAdmin = false),
                     GuildMemberItem("Mirou", online = false, isAdmin = false),
@@ -81,7 +81,7 @@ class ManageScreenshotTest {
     private val mapState = LiveMapUiState(
         isLoading = false,
         worldPlayers = listOf(
-            LiveMapPlayer("Dorian", 42, 38f, 40f, ping = 34, userId = "steam_1"),
+            LiveMapPlayer("Kaito", 42, 38f, 40f, ping = 34, userId = "steam_1"),
             LiveMapPlayer("Aelys", 37, 52f, 36f, ping = 61, userId = "steam_2"),
             LiveMapPlayer("Ryuujin", 25, 60f, 56f, ping = 88, userId = "steam_3"),
             LiveMapPlayer("Fennecoeur", 19, 30f, 62f, ping = 42, userId = "steam_4"),
@@ -93,7 +93,7 @@ class ManageScreenshotTest {
     @Test
     fun liveMapDark() {
         paparazzi.snapshotScreen(darkTheme = true) {
-            LiveMapContent(mapState, LiveMapTab.WORLD, focusedPlayerName = "Dorian", actions = LiveMapActions())
+            LiveMapContent(mapState, LiveMapTab.WORLD, focusedPlayerName = "Kaito", actions = LiveMapActions())
         }
     }
 
@@ -124,8 +124,8 @@ class ManageScreenshotTest {
     }
 
     private val broadcastState = BroadcastUiState(
-        serverName = "Serveur de Dorian",
-        players = listOf("Dorian", "Aelys", "Ryuujin", "Fennecoeur", "Vexil", "Lunaé", "Mirou").map { PalworldPlayer(name = it, userId = "steam_$it") },
+        serverName = "Serveur Palpagos",
+        players = listOf("Kaito", "Aelys", "Ryuujin", "Fennecoeur", "Vexil", "Lunaé", "Mirou").map { PalworldPlayer(name = it, userId = "steam_$it") },
         playersLoaded = true,
     )
 
@@ -149,7 +149,7 @@ class ManageScreenshotTest {
                 BroadcastActions(),
                 initialMode = BroadcastMode.Private,
                 initialMessage = "Ta base déborde sur la route, tu peux la déplacer ?",
-                initialRecipientId = "steam_Dorian",
+                initialRecipientId = "steam_Kaito",
             )
         }
     }

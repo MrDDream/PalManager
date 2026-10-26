@@ -49,7 +49,7 @@ class PlayersScreenshotTest {
     val paparazzi = palPaparazzi()
 
     private val players = listOf(
-        PalworldPlayer(name = "Dorian", userId = "steam_76561198000000001", ip = "192.168.1.24", ping = 18.0, level = 42),
+        PalworldPlayer(name = "Kaito", userId = "steam_76561198000000001", ip = "192.168.1.24", ping = 18.0, level = 42),
         PalworldPlayer(name = "Aelys", userId = "steam_76561198000000002", ip = "192.168.1.31", ping = 32.0, level = 37),
         PalworldPlayer(name = "Ryuujin", userId = "gdk_2814639284756192", ip = "192.168.1.45", ping = 54.0, level = 25),
         PalworldPlayer(name = "Fennecoeur", userId = "steam_76561198000000004", ip = "192.168.1.52", ping = 21.0, level = 19),

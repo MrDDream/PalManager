@@ -26,8 +26,8 @@ class ToolsScreenshotTest {
     val paparazzi = palPaparazzi()
 
     private val logLines = listOf(
-        "[10:02:26][info] Dorian (steam_76561198000000001) connected from 192.168.1.24",
-        "[10:02:31][info] Command give_pal executed: Anubis lvl 50 -> Dorian",
+        "[10:02:26][info] Kaito (steam_76561198000000001) connected from 192.168.1.24",
+        "[10:02:31][info] Command give_pal executed: Anubis lvl 50 -> Kaito",
         "[10:03:02][warning] Vexil: high latency (112 ms) on 3 consecutive samples",
         "[10:03:40][info] World save completed in 1.8 s",
         "[10:04:12][error] Failed to read templates/anubis_test.json: missing \"Level\" field",

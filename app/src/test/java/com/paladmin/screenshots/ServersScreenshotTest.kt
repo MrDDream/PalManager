@@ -32,7 +32,7 @@ class ServersScreenshotTest {
 
     private val dorian = ServerProfile(
         id = 1,
-        name = "Serveur de Dorian",
+        name = "Serveur Palpagos",
         iconKey = "dns",
         host = "208.115.214.218",
         palworldPort = 8211,
@@ -78,7 +78,7 @@ class ServersScreenshotTest {
     }
 
     private val formState = ProfileFormState(
-        name = "Serveur de Dorian",
+        name = "Serveur Palpagos",
         iconKey = "dns",
         host = "208.115.214.218",
         palworldPort = "8212",
