@@ -3,558 +3,139 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PalManager — Admin Android pour serveurs Palworld</title>
-<meta name="description" content="Application Android d'administration pour serveurs dédiés Palworld, via l'API REST officielle et PalDefender.">
+<title>PalManager — ton serveur Palworld depuis ton téléphone</title>
+<meta name="description" content="Application Android open source pour administrer un serveur dédié Palworld : joueurs, dons d'items et de Pals, guildes, carte en direct, modération, logs et fichiers SFTP.">
+<meta name="theme-color" content="#0e1316">
+<meta property="og:type" content="website">
+<meta property="og:title" content="PalManager — ton serveur Palworld depuis ton téléphone">
+<meta property="og:description" content="Application Android open source pour administrer un serveur dédié Palworld : joueurs, dons d'items et de Pals, guildes, carte en direct, modération, logs et fichiers SFTP.">
+<meta property="og:url" content="https://mrddream.github.io/PalManager/">
+<meta property="og:image" content="https://mrddream.github.io/PalManager/hero.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://mrddream.github.io/PalManager/">
 <link rel="alternate" hreflang="fr" href="https://mrddream.github.io/PalManager/">
 <link rel="alternate" hreflang="en" href="https://mrddream.github.io/PalManager/en/">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 108 108'%3E%3Cpath fill='%234CD08A' d='M39,66 a15,12 0 1,0 30,0 a15,12 0 1,0 -30,0 Z'/%3E%3Cpath fill='%234CD08A' d='M24,46 a8,10 0 1,0 16,0 a8,10 0 1,0 -16,0 Z'/%3E%3Cpath fill='%234CD08A' d='M36.5,34 a8.5,10.5 0 1,0 17,0 a8.5,10.5 0 1,0 -17,0 Z'/%3E%3Cpath fill='%234CD08A' d='M54.5,34 a8.5,10.5 0 1,0 17,0 a8.5,10.5 0 1,0 -17,0 Z'/%3E%3Cpath fill='%234CD08A' d='M68,46 a8,10 0 1,0 16,0 a8,10 0 1,0 -16,0 Z'/%3E%3C/svg%3E">
-<script>
-  if (localStorage.getItem('theme') === 'light') {
-    document.documentElement.setAttribute('data-theme', 'light');
-  }
-</script>
+<link rel="icon" href="logo.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
-<style>
-  /* Palette de l'app (refonte UI/UX) : mêmes jetons que ui/theme/Color.kt. */
-  :root {
-    --green: #4cd08a;
-    --green-strong: #7fe0ac;
-    --green-soft: #0f2a1d;
-    --amber: #e8a33d;
-    --sky: #6fc3e8;
-    --danger: #f07a7a;
-    --bg: #0e1316;
-    --surface: #161d21;
-    --surface-alt: #131a1e;
-    --text: #e8eeea;
-    --text-muted: #9aaba3;
-    --border: #243036;
-    --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 8px 24px -12px rgba(0, 0, 0, .5);
-  }
-  :root[data-theme="light"] {
-    --green: #1f9d5c;
-    --green-strong: #167a47;
-    --green-soft: #ddf4e6;
-    --amber: #935a00;
-    --sky: #136a8e;
-    --danger: #b02727;
-    --bg: #f3f7f4;
-    --surface: #ffffff;
-    --surface-alt: #edf2ee;
-    --text: #121a16;
-    --text-muted: #5a6962;
-    --border: #dce5df;
-    --shadow: 0 1px 2px rgba(20, 40, 30, .06), 0 8px 24px -12px rgba(20, 40, 30, .18);
-  }
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--text);
-    font: 16px/1.55 Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-  }
-  a { color: var(--green); }
-  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
-
-  .topbar { border-bottom: 1px solid var(--border); }
-  .topbar-inner {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 10px;
-    padding: 9px 0;
-  }
-  .lang-switch { display: flex; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
-  .lang-btn {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    padding: 6px 10px;
-    font-size: .76rem;
-    font-weight: 700;
-    letter-spacing: .02em;
-    color: var(--text-muted);
-    text-decoration: none;
-    background: var(--surface-alt);
-    border: none;
-  }
-  .lang-switch a.lang-btn:hover { color: var(--text); }
-  .lang-switch .lang-btn:first-child { border-right: 1px solid var(--border); }
-  .lang-btn.active { background: var(--green); color: #04180f; }
-  .lang-btn .flag { width: 16px; height: 11px; flex: none; border-radius: 2px; box-shadow: 0 0 0 1px rgba(0, 0, 0, .25); }
-
-  .theme-toggle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 32px;
-    height: 32px;
-    border-radius: 8px;
-    border: 1px solid var(--border);
-    background: var(--surface-alt);
-    color: var(--text-muted);
-    cursor: pointer;
-    padding: 0;
-  }
-  .theme-toggle:hover { color: var(--text); }
-  .theme-toggle svg { width: 16px; height: 16px; fill: currentColor; }
-  .theme-toggle .icon-sun { display: none; }
-  :root[data-theme="light"] .theme-toggle .icon-sun { display: block; }
-  :root[data-theme="light"] .theme-toggle .icon-moon { display: none; }
-
-  header.hero {
-    padding: 44px 0 34px;
-    text-align: center;
-    background:
-      radial-gradient(60% 50% at 50% 0%, var(--green-soft), transparent 70%);
-  }
-  .logo {
-    width: clamp(80px, 12vw, 108px);
-    height: clamp(80px, 12vw, 108px);
-    margin-bottom: 14px;
-  }
-  h1, h2, h3 { font-family: Sora, Inter, sans-serif; }
-  code { font-family: "JetBrains Mono", ui-monospace, monospace; }
-  h1 {
-    font-size: clamp(1.9rem, 4.6vw, 2.6rem);
-    margin: 0 0 6px;
-    letter-spacing: -0.02em;
-  }
-  .tagline {
-    font-size: 1.1rem;
-    color: var(--text-muted);
-    max-width: 600px;
-    margin: 0 auto 16px;
-  }
-  .badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: .8rem;
-    font-weight: 600;
-    color: var(--amber);
-    background: color-mix(in srgb, var(--amber) 14%, transparent);
-    border: 1px solid color-mix(in srgb, var(--amber) 35%, transparent);
-    padding: 5px 12px;
-    border-radius: 999px;
-    margin-bottom: 18px;
-  }
-  .cta-row {
-    display: flex;
-    gap: 12px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 12px 22px;
-    border-radius: 12px;
-    font-weight: 600;
-    font-size: .95rem;
-    text-decoration: none;
-    border: 1px solid transparent;
-    transition: transform .15s ease, box-shadow .15s ease;
-  }
-  .btn:hover { transform: translateY(-1px); }
-  .btn-primary {
-    background: var(--green);
-    color: #062414;
-    box-shadow: var(--shadow);
-  }
-  .btn-secondary {
-    background: var(--surface);
-    color: var(--text);
-    border-color: var(--border);
-  }
-  .btn-icon {
-    padding: 12px;
-    width: 46px;
-    height: 46px;
-    justify-content: center;
-  }
-  .btn .icon {
-    width: 20px;
-    height: 20px;
-    flex-shrink: 0;
-    fill: currentColor;
-  }
-
-  .phone-stage { position: relative; height: 450px; max-width: 620px; margin: 40px auto 0; }
-  .phone {
-    position: absolute;
-    top: 0;
-    width: 172px;
-    border-radius: 24px;
-    border: 5px solid #1c252a;
-    background: #0e1316;
-    overflow: hidden;
-    box-shadow: 0 24px 48px -18px rgba(0, 0, 0, .55), 0 2px 6px rgba(0, 0, 0, .25);
-  }
-  :root[data-theme="light"] .phone { box-shadow: 0 24px 48px -20px rgba(20, 40, 30, .35), 0 2px 6px rgba(20, 40, 30, .12); }
-  .phone img { display: block; width: 100%; height: auto; }
-  .phone-left { left: 50%; transform: translateX(calc(-50% - 144px)) rotate(-7deg); z-index: 1; opacity: .92; }
-  .phone-center { left: 50%; transform: translateX(-50%) translateY(-14px); z-index: 2; width: 188px; }
-  .phone-right { left: 50%; transform: translateX(calc(-50% + 144px)) rotate(7deg); z-index: 1; opacity: .92; }
-  .phone-cap {
-    position: absolute;
-    left: 50%;
-    text-align: center;
-    font-size: .74rem;
-    font-weight: 700;
-    color: var(--text-muted);
-    letter-spacing: .02em;
-    width: 172px;
-  }
-  .cap-left { transform: translateX(calc(-50% - 144px)); top: 404px; }
-  .cap-center { transform: translateX(-50%); top: 420px; width: 188px; }
-  .cap-right { transform: translateX(calc(-50% + 144px)); top: 404px; }
-
-  section { padding: 34px 0; }
-  section.alt { background: var(--surface-alt); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-  h2 {
-    font-size: 1.5rem;
-    margin: 0 0 6px;
-    letter-spacing: -0.01em;
-  }
-  .section-sub {
-    color: var(--text-muted);
-    margin: 0 0 20px;
-    max-width: 620px;
-  }
-
-  .shots {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 12px;
-  }
-  .shots figure {
-    margin: 0;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: var(--shadow);
-  }
-  .shots img { display: block; width: 100%; height: auto; }
-  @media (max-width: 520px) {
-    .shots { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
-    .shots figcaption { padding: 7px 10px; font-size: .78rem; }
-  }
-  .shots figcaption {
-    padding: 9px 14px;
-    font-size: .85rem;
-    color: var(--text-muted);
-    border-top: 1px solid var(--border);
-  }
-
-  .features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 12px;
-  }
-  .feature {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 16px;
-  }
-  .feature h3 {
-    margin: 0 0 6px;
-    font-size: 1.02rem;
-  }
-  .feature p {
-    margin: 0;
-    color: var(--text-muted);
-    font-size: .9rem;
-  }
-  .feature .emoji { font-size: 1.4rem; margin-bottom: 6px; display: block; }
-
-  .stack-pills {
-    display: flex; flex-wrap: wrap; gap: 8px;
-  }
-  .pill {
-    font-size: .8rem;
-    padding: 6px 12px;
-    border-radius: 999px;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    color: var(--text-muted);
-  }
-
-  .req-list { padding-left: 20px; color: var(--text-muted); }
-  .req-list li { margin-bottom: 8px; }
-  .req-list code {
-    background: var(--surface-alt);
-    border: 1px solid var(--border);
-    padding: 1px 6px;
-    border-radius: 6px;
-    font-size: .85em;
-  }
-
-  footer {
-    padding: 26px 0 34px;
-    text-align: center;
-    color: var(--text-muted);
-    font-size: .85rem;
-  }
-  footer a { color: var(--text-muted); text-decoration: underline; text-underline-offset: 2px; }
-  footer .links { margin-bottom: 10px; display: flex; gap: 18px; justify-content: center; flex-wrap: wrap; }
-
-  @media (max-width: 640px) {
-    header.hero { padding: 34px 0 26px; }
-    section { padding: 24px 0; }
-    .phone-stage { height: 345px; }
-    .phone-left, .phone-right { width: 130px; }
-    .phone-left { transform: translateX(calc(-50% - 106px)) rotate(-7deg); }
-    .phone-right { transform: translateX(calc(-50% + 106px)) rotate(7deg); }
-    .phone-center { width: 144px; }
-    .cap-left, .cap-right { width: 130px; top: 296px; }
-    .cap-left { transform: translateX(calc(-50% - 106px)); }
-    .cap-right { transform: translateX(calc(-50% + 106px)); }
-    .cap-center { top: 312px; }
-  }
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<script>try { if (localStorage.getItem('theme') === 'light') document.documentElement.setAttribute('data-theme', 'light'); } catch (e) {}</script>
 </head>
 <body>
-
-<div class="topbar">
-  <div class="wrap">
-    <div class="topbar-inner">
-      <nav class="lang-switch" aria-label="Langue / Language">
-        <span class="lang-btn active" aria-current="page">
-          <svg class="flag" viewBox="0 0 3 2" aria-hidden="true">
-            <rect width="1" height="2" x="0" fill="#0055A4"/>
-            <rect width="1" height="2" x="1" fill="#FFFFFF"/>
-            <rect width="1" height="2" x="2" fill="#EF4135"/>
-          </svg>
-          FR
-        </span>
-        <a class="lang-btn" href="en/index.html">
-          <svg class="flag" viewBox="0 0 60 30" aria-hidden="true">
-            <rect width="60" height="30" fill="#00247d"/>
-            <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/>
-            <path d="M0,0 L60,30 M60,0 L0,30" stroke="#cf142b" stroke-width="2"/>
-            <path d="M30,0 V30 M0,15 H60" stroke="#fff" stroke-width="10"/>
-            <path d="M30,0 V30 M0,15 H60" stroke="#cf142b" stroke-width="6"/>
-          </svg>
-          EN
-        </a>
-      </nav>
-      <button type="button" id="themeToggle" class="theme-toggle" aria-label="Basculer le thème clair/sombre" title="Basculer le thème clair/sombre">
-        <svg class="icon icon-sun" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path fill-rule="evenodd" d="M8 12a4 4 0 100-8 4 4 0 000 8zm0 1.5a5.5 5.5 0 100-11 5.5 5.5 0 000 11zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13.5a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5a.75.75 0 01.75-.75zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM2.5 8a.75.75 0 01-.75.75H.25a.75.75 0 010-1.5h1.5A.75.75 0 012.5 8zm11.359-5.359a.75.75 0 010 1.061l-1.06 1.06a.75.75 0 11-1.062-1.06l1.061-1.06a.75.75 0 011.06 0zM4.762 11.238a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 01-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm8.476 0a.75.75 0 011.061 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061zM4.762 4.762a.75.75 0 01-1.061 0l-1.06-1.061a.75.75 0 011.06-1.06l1.06 1.06a.75.75 0 010 1.061z"/>
-        </svg>
-        <svg class="icon icon-moon" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M9.598 1.591a.749.749 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786z"/>
-        </svg>
-      </button>
-    </div>
-  </div>
+<a class="skip" href="#main">Aller au contenu</a>
+<header class="top"><div class="wrap">
+<a class="brand" href="./"><img src="logo.svg" alt="">PalManager</a>
+<nav aria-label="Sections"><a href="#screens">Écrans</a><a href="#features">Fonctionnalités</a><a href="#sftp">SFTP</a><a href="#install">Installer</a></nav>
+<div class="tools">
+<div class="lang" role="group" aria-label="Langue / Language"><a href="./" hreflang="fr" aria-current="page">FR</a><a href="en/" hreflang="en">EN</a></div>
+<button type="button" class="icon-btn" id="themeToggle" aria-label="Basculer entre thème sombre et clair" title="Basculer entre thème sombre et clair"><span class="moon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg></span><span class="sun"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4L6 18M18 6l1.4-1.4"/></svg></span></button>
+<a class="icon-btn" href="https://github.com/MrDDream/PalManager" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
 </div>
+</div></header>
 
-<header class="hero">
-  <div class="wrap">
-    <svg class="logo" viewBox="0 0 108 108" xmlns="http://www.w3.org/2000/svg">
-      <path fill="#4CD08A" d="M39,66 a15,12 0 1,0 30,0 a15,12 0 1,0 -30,0 Z"/>
-      <path fill="#4CD08A" d="M24,46 a8,10 0 1,0 16,0 a8,10 0 1,0 -16,0 Z"/>
-      <path fill="#4CD08A" d="M36.5,34 a8.5,10.5 0 1,0 17,0 a8.5,10.5 0 1,0 -17,0 Z"/>
-      <path fill="#4CD08A" d="M54.5,34 a8.5,10.5 0 1,0 17,0 a8.5,10.5 0 1,0 -17,0 Z"/>
-      <path fill="#4CD08A" d="M68,46 a8,10 0 1,0 16,0 a8,10 0 1,0 -16,0 Z"/>
-    </svg>
-    <h1>PalManager</h1>
-    <p class="tagline">Pilote ton serveur dédié Palworld depuis ton téléphone.</p>
-    <div class="badge">⚠️ Projet non-officiel, sans lien avec Pocketpair</div>
-    <div class="cta-row">
-      <a class="btn btn-primary" href="https://github.com/MrDDream/PalManager/releases/latest">
-        <svg class="icon" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path fill-rule="evenodd" d="M7.47 10.78a.75.75 0 001.06 0l3.75-3.75a.75.75 0 00-1.06-1.06L8.75 8.44V1.75a.75.75 0 00-1.5 0v6.69L4.78 5.97a.75.75 0 00-1.06 1.06l3.75 3.75zM3.75 13a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5z"/>
-        </svg>
-        Télécharger l'APK
-      </a>
-      <a class="btn btn-secondary btn-icon" href="https://github.com/MrDDream/PalManager" aria-label="Voir le code sur GitHub" title="Voir le code sur GitHub">
-        <svg class="icon" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
-        </svg>
-      </a>
-    </div>
-    <div class="phone-stage">
-      <div class="phone phone-left"><img src="screenshots/give_item.png" alt="Donner un item" loading="lazy"></div>
-      <div class="phone phone-center"><img src="screenshots/home.png" alt="Dashboard" loading="lazy"></div>
-      <div class="phone phone-right"><img src="screenshots/pal_creator.png" alt="Créateur de Pal" loading="lazy"></div>
-      <div class="phone-cap cap-left">Donner un item</div>
-      <div class="phone-cap cap-center">Dashboard</div>
-      <div class="phone-cap cap-right">Créateur de Pal</div>
-    </div>
-    </div>
-  </div>
-</header>
+<main id="main">
+<section class="hero"><div class="wrap">
+<div>
+<span class="eyebrow">Android 8.0+ · gratuit et open source</span>
+<h1>Ton serveur Palworld,<br><em>dans ta poche.</em></h1>
+<p class="lead">PalManager pilote ton serveur dédié Palworld via l'API REST officielle et le mod PalDefender : joueurs en direct, dons d'items et de Pals, guildes, carte, modération — et via SFTP, logs, fichiers et créateur de Pal.</p>
+<div class="cta">
+<a class="btn primary" href="https://github.com/MrDDream/PalManager/releases/latest"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>Télécharger l'APK</a>
+<a class="btn" href="https://github.com/MrDDream/PalManager"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>Code source</a>
+</div>
+<div class="facts"><span><b>2 400+</b>objets</span><span><b>299</b>Pals</span><span><b>429</b>PNJ</span><span><b>587</b>technologies</span></div>
+<p class="warn">Projet non officiel, sans lien avec Pocketpair.</p>
+</div>
+<div class="hero-phones" aria-hidden="true">
+<div class="phone"><img src="screenshots/give_item.png" alt="" width="1080" height="2400"></div>
+<div class="phone"><img src="screenshots/home.png" alt="" width="1080" height="2400"></div>
+<div class="badge-float"><span class="dot"></span><span>Serveur de Dorian · <b>7/32</b></span></div>
+</div>
+</div></section>
 
-<section>
-  <div class="wrap">
-    <h2>Fonctionnalités</h2>
-    <p class="section-sub">Un panel d'admin complet, pas juste un give-item.</p>
-    <div class="features">
-      <div class="feature">
-        <span class="emoji">📊</span>
-        <h3>Dashboard</h3>
-        <p>Adresse, joueurs en ligne, FPS, durée en ligne, versions, raccourcis en un geste, sauvegarde et feuille Alimentation (arrêt programmé, arrêt forcé par appui maintenu).</p>
-      </div>
-      <div class="feature">
-        <span class="emoji">👥</span>
-        <h3>Joueurs connectés</h3>
-        <p>Liste en temps réel avec recherche et tri (niveau, latence, nom), kick/ban, message privé, et fiche joueur à onglets : équipe (IV, Âme de Pal, compétences, passifs), inventaire, Palbox, progression, technologies.</p>
-      </div>
-      <div class="feature">
-        <span class="emoji">🛡️</span>
-        <h3>Guildes</h3>
-        <p>Recherche par guilde ou membre, toutes les bases épinglées sur la carte, Pals de chaque camp avec fiche détaillée, coffre, expéditions et recherches de labo.</p>
-      </div>
-      <div class="feature">
-        <span class="emoji">🎁</span>
-        <h3>Donner un item / Pal / PNJ</h3>
-        <p>Destinataire choisi une fois, catalogue embarqué avec recherche par nom ou image, filtres catégorie/élément/rareté/métier, quantité ×1/×10/×100 ou niveau, don en un geste.</p>
-      </div>
-      <div class="feature">
-        <span class="emoji">🗺️</span>
-        <h3>Carte en direct</h3>
-        <p>Position des joueurs et des bases de guilde sur la carte des Îles Palpagos, avec zoom et sélection d'un joueur.</p>
-      </div>
-      <div class="feature">
-        <span class="emoji">🚫</span>
-        <h3>Bannissements</h3>
-        <p>Bannissements joueurs et IP.</p>
-      </div>
-      <div class="feature">
-        <span class="emoji">📣</span>
-        <h3>Diffusion & maintenance</h3>
-        <p>Broadcast, alertes, messages, zone danger (reload config, suppression de base).</p>
-      </div>
-      <div class="feature">
-        <span class="emoji">🖥️</span>
-        <h3>Mes serveurs</h3>
-        <p>Chaque profil affiche son état en direct (en ligne/hors ligne, joueurs, FPS, latence) et les API configurées (REST, PalDefender, SFTP).</p>
-      </div>
-      <div class="feature">
-        <span class="emoji">🎨</span>
-        <h3>Nouvelle interface</h3>
-        <p>Refonte complète : palette sombre, typographies Sora/Inter/JetBrains Mono, grandes cibles tactiles, feuilles du bas, thème clair soigné.</p>
-      </div>
-      <div class="feature">
-        <span class="emoji">🐞</span>
-        <h3>Mode debug</h3>
-        <p>Log réseau optionnel écrit dans un dossier de votre choix, pour diagnostiquer les problèmes de connexion.</p>
-      </div>
-    </div>
-  </div>
-</section>
+<section id="screens" class="alt"><div class="wrap">
+<div class="section-head"><span class="kicker">// écrans</span><h2>Tout le serveur en un coup d'œil</h2><p>Une interface sombre et lisible, pensée pour agir vite : de grosses cibles, des couleurs qui ont du sens, et chaque action à deux gestes du dashboard.</p></div>
+<div class="gallery">
+<figure><div class="phone"><img src="screenshots/home.png" alt="Dashboard" loading="lazy" width="1080" height="2400"></div><figcaption>Dashboard<small>état, raccourcis, alimentation</small></figcaption></figure>
+<figure><div class="phone"><img src="screenshots/servers.png" alt="Mes serveurs" loading="lazy" width="1080" height="2400"></div><figcaption>Mes serveurs<small>statut en direct de chaque profil</small></figcaption></figure>
+<figure><div class="phone"><img src="screenshots/players.png" alt="Joueurs connectés" loading="lazy" width="1080" height="2400"></div><figcaption>Joueurs connectés<small>tri, recherche, actions</small></figcaption></figure>
+<figure><div class="phone"><img src="screenshots/player_team.png" alt="Fiche joueur" loading="lazy" width="1080" height="2400"></div><figcaption>Fiche joueur<small>équipe, inventaire, Palbox…</small></figcaption></figure>
+<figure><div class="phone"><img src="screenshots/give_item.png" alt="Donner un item" loading="lazy" width="1080" height="2400"></div><figcaption>Donner un item<small>quantité ×1 ×10 ×100</small></figcaption></figure>
+<figure><div class="phone"><img src="screenshots/give_pals.png" alt="Donner un Pal" loading="lazy" width="1080" height="2400"></div><figcaption>Donner un Pal<small>filtres par élément</small></figcaption></figure>
+<figure><div class="phone"><img src="screenshots/guilds.png" alt="Guildes" loading="lazy" width="1080" height="2400"></div><figcaption>Guildes<small>camps, coffre, labo</small></figcaption></figure>
+<figure><div class="phone"><img src="screenshots/livemap.png" alt="Carte en direct" loading="lazy" width="1080" height="2400"></div><figcaption>Carte en direct<small>joueurs et bases</small></figcaption></figure>
+<figure><div class="phone"><img src="screenshots/alert.png" alt="Diffusion" loading="lazy" width="1080" height="2400"></div><figcaption>Diffusion<small>annonces et maintenance</small></figcaption></figure>
+<figure><div class="phone"><img src="screenshots/power.png" alt="Alimentation" loading="lazy" width="1080" height="2400"></div><figcaption>Alimentation<small>arrêt programmé ou forcé</small></figcaption></figure>
+<figure><div class="phone"><img src="screenshots/logs.png" alt="Logs" loading="lazy" width="1080" height="2400"></div><figcaption>Logs<small>PalDefender et UE4SS</small></figcaption></figure>
+<figure><div class="phone"><img src="screenshots/home_light.png" alt="Thème clair" loading="lazy" width="1080" height="2400"></div><figcaption>Thème clair<small>ou sombre, ou système</small></figcaption></figure>
+</div>
+</div></section>
 
-<section class="alt">
-  <div class="wrap">
-    <h2>Boîte à outils SFTP <span style="font-weight:400;color:var(--text-muted);font-size:1rem;">(optionnelle)</span></h2>
-    <p class="section-sub">Ajoutez des identifiants SSH/SFTP à un profil serveur pour débloquer quelques extras.</p>
-    <div class="features">
-      <div class="feature">
-        <span class="emoji">📜</span>
-        <h3>Logs</h3>
-        <p>Visionneuse de logs PalDefender/UE4SS avec recherche et sévérité en couleur.</p>
-      </div>
-      <div class="feature">
-        <span class="emoji">🗂️</span>
-        <h3>Gestionnaire de fichiers SFTP</h3>
-        <p>Parcourir/upload (fichier ou dossier entier)/télécharger/renommer/copier/couper/coller/supprimer, avec épinglage de la clé hôte à la première connexion.</p>
-      </div>
-      <div class="feature">
-        <span class="emoji">✨</span>
-        <h3>Créateur de Pal</h3>
-        <p>Construire un Pal Template PalDefender (espèce, sexe, niveau, chanceux/alpha, IV, Âme de Pal, compétences) depuis un formulaire et l'enregistrer directement dans le dossier templates du serveur.</p>
-      </div>
-      <div class="feature">
-        <span class="emoji">✅</span>
-        <h3>Vérifier</h3>
-        <p>Un bouton sur l'écran d'ajout/modification de serveur teste que l'API Palworld, l'API PalDefender et le SFTP sont bien joignables avec ce que vous venez de saisir.</p>
-      </div>
-    </div>
-  </div>
-</section>
+<section id="features"><div class="wrap">
+<div class="section-head"><span class="kicker">// fonctionnalités</span><h2>Un vrai panneau d'admin, pas juste un give-item</h2><p>Tout ce dont un admin a besoin au quotidien, du canapé comme en déplacement.</p></div>
+<div class="features">
+<article class="feature"><span class="ico green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="7" height="9" rx="1.8"/><rect x="13.5" y="3.5" width="7" height="5" rx="1.8"/><rect x="13.5" y="11.5" width="7" height="9" rx="1.8"/><rect x="3.5" y="15.5" width="7" height="5" rx="1.8"/></svg></span><h3>Dashboard</h3><p>Joueurs en ligne, FPS, durée en ligne, versions et sauvegarde du monde, avec un raccourci vers chaque outil.</p></article>
+<article class="feature"><span class="ico amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v8"/><path d="M6.4 6.6a8 8 0 1 0 11.2 0"/></svg></span><h3>Alimentation</h3><p>Programme un arrêt propre avec délai et message aux joueurs, ou force l'arrêt avec un bouton à maintenir.</p></article>
+<article class="feature"><span class="ico sky"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4" width="17" height="7" rx="2"/><rect x="3.5" y="13" width="17" height="7" rx="2"/><path d="M7.5 7.5h.01M7.5 16.5h.01"/></svg></span><h3>Plusieurs serveurs</h3><p>Chaque profil affiche son état en direct, et un bouton Vérifier teste les API et le SFTP en un geste.</p></article>
+<article class="feature"><span class="ico green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.6-3.6 3.3-5.5 6.5-5.5s5.9 1.9 6.5 5.5"/><path d="M16 4.6a3.5 3.5 0 0 1 0 6.8"/><path d="M18 14.8c2 .7 3.2 2.5 3.5 5.2"/></svg></span><h3>Joueurs & fiche joueur</h3><p>Recherche, tri, message, exclusion, bannissement — et une fiche à onglets : équipe, inventaire, Palbox, progression, technologies.</p></article>
+<article class="feature"><span class="ico amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="8" width="17" height="4" rx="1"/><path d="M5 12v7.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V12M12 8v12.5"/><path d="M12 8c-1.5-3.5-5.5-4-5.5-1.5S10 8 12 8zm0 0c1.5-3.5 5.5-4 5.5-1.5S14 8 12 8z"/></svg></span><h3>Donner items, Pals et PNJ</h3><p>Destinataire choisi une fois, catalogue embarqué avec filtres, quantité ou niveau, et don en un geste.</p></article>
+<article class="feature"><span class="ico purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.2-7 10-4-1.8-7-5.5-7-10V6z"/></svg></span><h3>Guildes</h3><p>Membres en ligne, Pals de chaque camp, coffre, expéditions et recherches de labo.</p></article>
+<article class="feature"><span class="ico sky"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4L3 6.5v13.5L9 17.5l6 2.5 6-2.5V4l-6 2.5z"/><path d="M9 4v13.5M15 6.5V20"/></svg></span><h3>Carte en direct</h3><p>Joueurs et bases de guilde sur les Îles Palpagos et l'Arbre-Monde, avec zoom.</p></article>
+<article class="feature"><span class="ico danger"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M6 6l12 12"/></svg></span><h3>Bannissements</h3><p>Bannis et débannis des joueurs et des adresses IP.</p></article>
+<article class="feature"><span class="ico green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10v4h3l7 4V6L7 10z"/><path d="M17.5 9a4 4 0 0 1 0 6"/></svg></span><h3>Diffusion & maintenance</h3><p>Annonces, alertes, messages privés, rechargement de la config PalDefender et suppression de base.</p></article>
+</div>
+</div></section>
 
-<section class="alt">
-  <div class="wrap">
-    <h2>Aperçu</h2>
-    <p class="section-sub">Rendus réels des écrans de l'application, avec des données d'exemple.</p>
-    <div class="shots">
-      <figure><img src="screenshots/home.png" alt="Dashboard" loading="lazy"><figcaption>Dashboard</figcaption></figure>
-      <figure><img src="screenshots/servers.png" alt="Mes serveurs" loading="lazy"><figcaption>Mes serveurs</figcaption></figure>
-      <figure><img src="screenshots/players.png" alt="Joueurs connectés" loading="lazy"><figcaption>Joueurs connectés</figcaption></figure>
-      <figure><img src="screenshots/player_team.png" alt="Fiche joueur" loading="lazy"><figcaption>Fiche joueur</figcaption></figure>
-      <figure><img src="screenshots/give_item.png" alt="Donner un item" loading="lazy"><figcaption>Donner un item</figcaption></figure>
-      <figure><img src="screenshots/give_pals.png" alt="Donner un Pal" loading="lazy"><figcaption>Donner un Pal</figcaption></figure>
-      <figure><img src="screenshots/guilds.png" alt="Guildes" loading="lazy"><figcaption>Guildes</figcaption></figure>
-      <figure><img src="screenshots/livemap.png" alt="Carte en direct" loading="lazy"><figcaption>Carte en direct</figcaption></figure>
-      <figure><img src="screenshots/alert.png" alt="Diffusion & maintenance" loading="lazy"><figcaption>Diffusion & maintenance</figcaption></figure>
-      <figure><img src="screenshots/power.png" alt="Alimentation" loading="lazy"><figcaption>Alimentation</figcaption></figure>
-      <figure><img src="screenshots/add_server.png" alt="Ajout d'un serveur" loading="lazy"><figcaption>Ajout d'un serveur</figcaption></figure>
-      <figure><img src="screenshots/settings.png" alt="Paramètres" loading="lazy"><figcaption>Paramètres</figcaption></figure>
-      <figure><img src="screenshots/sftp.png" alt="Gestionnaire SFTP" loading="lazy"><figcaption>Gestionnaire SFTP</figcaption></figure>
-      <figure><img src="screenshots/logs.png" alt="Logs" loading="lazy"><figcaption>Logs</figcaption></figure>
-      <figure><img src="screenshots/pal_creator.png" alt="Créateur de Pal" loading="lazy"><figcaption>Créateur de Pal</figcaption></figure>
-      <figure><img src="screenshots/home_light.png" alt="Thème clair" loading="lazy"><figcaption>Thème clair</figcaption></figure>
-    </div>
-  </div>
-</section>
+<section id="sftp" class="alt"><div class="wrap split">
+<div>
+<div class="section-head"><span class="kicker">// optionnel</span><h2>La boîte à outils SFTP<span class="chip">SFTP</span></h2><p>Ajoute des identifiants SSH/SFTP à un profil de serveur pour aller plus loin que les API.</p></div>
+<div class="tool-list">
+<div class="tool"><span class="ico sky"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="15" rx="2.5"/><path d="M7 9.5l3 2.5-3 2.5M12.5 15H17"/></svg></span><div><h3>Logs</h3><p>Logs PalDefender et UE4SS avec recherche, filtres par niveau et sévérité en couleur.</p></div></div>
+<div class="tool"><span class="ico sky"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7.5a2 2 0 0 1 2-2h4l2 2.2h8a2 2 0 0 1 2 2V17a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></span><div><h3>Fichiers</h3><p>Parcourir, envoyer, télécharger, renommer, copier, couper, coller et supprimer — avec la clé hôte épinglée.</p></div></div>
+<div class="tool"><span class="ico sky"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="4"/><path d="M12 8v8M8 12h8"/></svg></span><div><h3>Créateur de Pal</h3><p>Construis un modèle de Pal PalDefender (espèce, niveau, IV, Âme de Pal, compétences, passifs) et enregistre-le directement sur le serveur.</p></div></div>
+</div>
+</div>
+<div class="phone"><img src="screenshots/pal_creator.png" alt="Créateur de Pal" loading="lazy" width="1080" height="2400"></div>
+</div></section>
 
-<section>
-  <div class="wrap">
-    <h2>Prérequis serveur</h2>
-    <ul class="req-list">
-      <li>Un serveur Palworld avec l'<a href="https://docs.palworldgame.com/">API REST officielle</a> activée (<code>RESTAPIEnabled=True</code> dans <code>PalWorldSettings.ini</code>).</li>
-      <li>Le mod <a href="https://github.com/UltimeIT/PalDefender">PalDefender</a> installé et son API REST activée, pour les fonctionnalités que l'API officielle ne couvre pas (give item/Pal, techs, guildes, bans IP...).</li>
-    </ul>
-    <h2 style="margin-top:28px">Stack technique</h2>
-    <div class="stack-pills">
-      <span class="pill">Kotlin</span>
-      <span class="pill">Jetpack Compose</span>
-      <span class="pill">Material 3</span>
-      <span class="pill">Hilt</span>
-      <span class="pill">Room</span>
-      <span class="pill">Retrofit / OkHttp</span>
-      <span class="pill">Coil</span>
-      <span class="pill">Navigation Compose</span>
-    </div>
-  </div>
-</section>
+<section id="install"><div class="wrap">
+<div class="section-head"><span class="kicker">// installation</span><h2>Prêt en quelques minutes</h2><p>Il te faut un serveur Palworld avec son API REST, et le mod PalDefender pour les fonctions avancées.</p></div>
+<ol class="steps">
+<li><h3>Installe l'APK</h3><p>Télécharge-le depuis la <a href="https://github.com/MrDDream/PalManager/releases/latest">dernière version</a> et ouvre-le sur ton téléphone (Android 8.0+).</p></li>
+<li><h3>Active l'API REST</h3><p>Dans <code>PalWorldSettings.ini</code> : <code>RESTAPIEnabled=True</code> et un mot de passe admin.</p></li>
+<li><h3>Ajoute PalDefender</h3><p>Installe le mod <a href="https://github.com/UltimeIT/PalDefender">PalDefender</a> et active son API REST pour les dons, guildes et bans IP.</p></li>
+<li><h3>Ajoute ton serveur</h3><p>Hôte, ports (8212 et 17993 par défaut), mot de passe et token, SFTP en option — puis touche Vérifier.</p></li>
+</ol>
+</div></section>
 
-<footer>
-  <div class="wrap">
-    <div class="links">
-      <a href="https://github.com/MrDDream/PalManager">Code source</a>
-      <a href="https://github.com/MrDDream/PalManager/releases">Releases</a>
-      <a href="https://github.com/MrDDream/PalManager/blob/main/README.md">README (EN)</a>
-      <a href="https://github.com/MrDDream/PalManager/blob/main/README.fr.md">README (FR)</a>
-      <a href="https://github.com/MrDDream/PalManager/blob/main/LICENSE">Licence MIT</a>
-    </div>
-    Les données de jeu (noms/images d'objets et de Pals) proviennent de <a href="https://paldb.cc">paldb.cc</a>
-    et restent la propriété de leurs ayants droit.
-  </div>
-</footer>
+<section><div class="wrap"><div class="trust">
+<div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/><circle cx="5" cy="12" r="1.5"/></svg><h3>Directement chez toi</h3><p>L'app parle directement aux API de ton serveur. Aucun compte, aucun service intermédiaire.</p></div>
+<div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9.5" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><h3>Secrets chiffrés</h3><p>Mots de passe et tokens sont chiffrés sur le téléphone ; la clé SSH du serveur est épinglée à la première connexion.</p></div>
+<div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3l18 18"/><path d="M10.6 6.1A9.8 9.8 0 0 1 12 6c5.5 0 9.5 6 9.5 6a17 17 0 0 1-3.2 3.8M6.3 7.6C3.9 9.3 2.5 12 2.5 12s4 6 9.5 6c1.4 0 2.7-.3 3.9-.9"/></svg><h3>Aucun pistage</h3><p>Pas de statistiques d'usage, pas de publicité, aucun SDK de pistage.</p></div>
+</div></div></section>
+
+<section id="download" style="padding-top:0"><div class="wrap">
+<div class="download">
+<div><h2>Installer PalManager</h2><p>Téléchargement gratuit pour Android 8.0 et plus récent. En français et en anglais.</p></div>
+<a class="btn primary" href="https://github.com/MrDDream/PalManager/releases/latest"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>Télécharger l'APK</a>
+</div>
+<div class="stack" aria-label="Technologies"><span>Kotlin</span><span>Jetpack Compose</span><span>Material 3</span><span>Hilt</span><span>Room</span><span>Retrofit / OkHttp</span><span>kotlinx.serialization</span><span>Coil</span><span>DataStore</span><span>sshj</span><span>Paparazzi</span></div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+<span>Projet de fan non officiel. Données de jeu : <a href="https://paldb.cc">paldb.cc</a>, propriété de Pocketpair.</span>
+<nav aria-label="Liens"><a href="https://github.com/MrDDream/PalManager">Code source</a><a href="https://github.com/MrDDream/PalManager/releases">Versions</a><a href="https://github.com/MrDDream/PalManager/blob/main/README.fr.md">README</a><a href="https://github.com/MrDDream/PalManager/blob/main/LICENSE">Licence MIT</a></nav>
+</div></footer>
 
 <script>
   document.getElementById('themeToggle').addEventListener('click', function () {
     var root = document.documentElement;
-    if (root.getAttribute('data-theme') === 'light') {
-      root.removeAttribute('data-theme');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      root.setAttribute('data-theme', 'light');
-      localStorage.setItem('theme', 'light');
-    }
+    var light = root.getAttribute('data-theme') !== 'light';
+    if (light) root.setAttribute('data-theme', 'light'); else root.removeAttribute('data-theme');
+    try { localStorage.setItem('theme', light ? 'light' : 'dark'); } catch (e) {}
   });
 </script>
-
 </body>
 </html>
