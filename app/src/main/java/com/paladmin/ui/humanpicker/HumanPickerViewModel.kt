@@ -5,6 +5,7 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.paladmin.R
+import com.paladmin.data.local.dataset.HumanDropDto
 import com.paladmin.data.local.db.HumanEntity
 import com.paladmin.data.remote.paldefender.GivePalEntry
 import com.paladmin.data.remote.paldefender.GivePalRequest
@@ -12,6 +13,7 @@ import com.paladmin.data.remote.paldefender.PalDefenderClientFactory
 import com.paladmin.data.remote.palworld.PalworldClientFactory
 import com.paladmin.data.remote.palworld.PalworldPlayer
 import com.paladmin.data.repository.HumanRepository
+import com.paladmin.data.repository.ItemRepository
 import com.paladmin.data.repository.ServerRepository
 import com.paladmin.util.describe
 import com.paladmin.util.requireSuccess
@@ -22,6 +24,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.flatMapLatest
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
@@ -32,6 +35,7 @@ import javax.inject.Inject
 class HumanPickerViewModel @Inject constructor(
     @ApplicationContext private val context: Context,
     private val humanRepository: HumanRepository,
+    private val itemRepository: ItemRepository,
     private val serverRepository: ServerRepository,
     private val palworldClientFactory: PalworldClientFactory,
     private val palDefenderClientFactory: PalDefenderClientFactory,
@@ -53,8 +57,29 @@ class HumanPickerViewModel @Inject constructor(
         .flatMapLatest { query -> humanRepository.search(query) }
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
 
+    /** Image (fichier d'assets items/) de chaque objet de butin déjà résolu, par itemId de butin. */
+    private val _dropImages = MutableStateFlow<Map<String, String>>(emptyMap())
+    val dropImages: StateFlow<Map<String, String>> = _dropImages.asStateFlow()
+
     init {
         loadPlayers()
+    }
+
+    /** Les butins référencent les objets par slug wiki (≠ id du catalogue) : on retrouve l'item par
+     * son nom FR exact pour afficher son icône. Purement décoratif — silencieux si introuvable. */
+    fun resolveDropImages(drops: List<HumanDropDto>) {
+        val missing = drops.distinctBy { it.itemId }.filter { it.itemId !in _dropImages.value }
+        if (missing.isEmpty()) return
+        viewModelScope.launch {
+            val found = missing.mapNotNull { drop ->
+                runCatching {
+                    itemRepository.search(drop.name, null).first()
+                        .firstOrNull { it.nameFr.equals(drop.name, ignoreCase = true) }
+                        ?.let { drop.itemId to it.image }
+                }.getOrNull()
+            }
+            _dropImages.value = _dropImages.value + found
+        }
     }
 
     fun onQueryChange(value: String) {

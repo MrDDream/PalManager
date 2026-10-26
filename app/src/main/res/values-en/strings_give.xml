@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="give_target_choose">Choose</string>
+    <string name="give_target_cd_fmt">Recipient: %1$s</string>
+    <string name="give_target_none_cd">Choose the recipient</string>
+    <string name="give_player_sheet_title">Recipient</string>
+    <string name="give_player_sheet_subtitle_fmt">Online: %1$d</string>
+    <string name="give_player_level_fmt">Level %1$d</string>
+    <string name="give_player_empty_title">No player online</string>
+    <string name="give_player_empty_message">The recipient must be online to receive a gift.</string>
+    <string name="give_player_no_match">No matching player</string>
+    <string name="give_refresh">Refresh</string>
+    <string name="give_choose_player_cta">Choose a recipient</string>
+
+    <string name="give_details_cd">View details</string>
+    <string name="give_empty_results_title">No results</string>
+    <string name="give_empty_results_message">Try another name or remove a filter.</string>
+    <string name="give_decrease_cd">Decrease</string>
+    <string name="give_increase_cd">Increase</string>
+    <string name="give_preset_fmt">×%1$d</string>
+    <string name="give_stats_fmt">HP %1$d · ATK %2$d · DEF %3$d</string>
+    <string name="give_detail_description">Description</string>
+    <string name="give_detail_stats">Stats</string>
+    <string name="give_detail_id">ID</string>
+
+    <string name="give_item_cta_fmt">Give %1$s ×%2$d</string>
+    <string name="give_item_none_selected">No item selected</string>
+    <string name="give_item_none_hint">Tap a tile to select it.</string>
+    <string name="give_quantity_cd">Quantity</string>
+    <string name="give_category_group_cd">Category</string>
+    <string name="give_cat_weapon">Weapons</string>
+    <string name="give_cat_sphere">Spheres</string>
+    <string name="give_cat_sphere_module">Sphere modules</string>
+    <string name="give_cat_armor">Armor</string>
+    <string name="give_cat_accessory">Accessories</string>
+    <string name="give_cat_material">Materials</string>
+    <string name="give_cat_consumable">Consumables</string>
+    <string name="give_cat_ammo">Ammo</string>
+    <string name="give_cat_ingredient">Ingredients</string>
+    <string name="give_cat_key_items">Key items</string>
+    <string name="give_cat_glider">Gliders</string>
+    <string name="give_cat_schematic">Schematics</string>
+
+    <string name="give_pal_search_hint">Search a Pal by name or ID</string>
+    <string name="give_pal_cta_fmt">Give %1$s lv. %2$d to %3$s</string>
+    <string name="give_pal_none_selected">No Pal selected</string>
+    <string name="give_pal_none_hint">Tap a Pal to select it.</string>
+    <string name="give_element_group_cd">Filter by element</string>
+    <string name="give_element_all_cd">All elements</string>
+    <string name="give_level_up_cd">Level up</string>
+    <string name="give_level_down_cd">Level down</string>
+    <string name="give_filters_reset">Reset</string>
+    <string name="give_filters_show_fmt">Show %1$d results</string>
+    <string name="give_paldeck_fmt">#%1$03d</string>
+    <string name="give_template_open_creator">Create a template in Pal Creator</string>
+
+    <string name="give_npc_cta_fmt">Spawn for %1$s</string>
+    <string name="give_npc_none_selected">No NPC selected</string>
+    <string name="give_npc_no_drops">No loot for this NPC</string>
+    <string name="give_npc_drop_fmt">%1$s ×%2$s (%3$d%%)</string>
+</resources>
