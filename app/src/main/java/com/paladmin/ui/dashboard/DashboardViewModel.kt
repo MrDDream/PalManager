@@ -14,6 +14,7 @@ import com.paladmin.data.remote.paldefender.PalDefenderClientFactory
 import com.paladmin.data.remote.palworld.PalworldClientFactory
 import com.paladmin.data.remote.palworld.PalworldInfo
 import com.paladmin.data.remote.palworld.PalworldMetrics
+import com.paladmin.data.remote.palworld.PalworldPlayer
 import com.paladmin.data.remote.palworld.ShutdownRequest
 import com.paladmin.data.repository.ServerRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -29,6 +30,8 @@ data class DashboardUiState(
     val profile: ServerProfile? = null,
     val info: PalworldInfo? = null,
     val metrics: PalworldMetrics? = null,
+    /** Joueurs en ligne (avatars + résumé sur la carte serveur) — vide si l'appel échoue. */
+    val players: List<PalworldPlayer> = emptyList(),
     val palDefenderVersion: String? = null,
     val errorMessage: String? = null,
     val actionMessage: String? = null,
@@ -70,19 +73,24 @@ class DashboardViewModel @Inject constructor(
                 val api = palworldClientFactory.create(profile)
                 val info = api.getInfo()
                 val metrics = api.getMetrics()
-                info to metrics
-            }.onSuccess { (info, metrics) ->
+                val players = runCatching { api.getPlayers().players }.getOrDefault(emptyList())
+                Triple(info, metrics, players)
+            }.onSuccess { (info, metrics, players) ->
                 _state.value = _state.value.copy(
                     isLoading = false,
                     profile = profile,
                     info = info,
                     metrics = metrics,
+                    players = players,
                     palDefenderVersion = palDefenderVersion,
                 )
             }.onFailure { error ->
                 _state.value = _state.value.copy(
                     isLoading = false,
                     profile = profile,
+                    info = null,
+                    metrics = null,
+                    players = emptyList(),
                     palDefenderVersion = palDefenderVersion,
                     errorMessage = error.describe(context.getString(R.string.dashboard_error_connection)),
                 )

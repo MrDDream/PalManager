@@ -1,30 +1,19 @@
 package com.paladmin.ui.components
 
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Search
-import androidx.compose.material3.Icon
-import androidx.compose.material3.OutlinedTextField
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
 
-/** Champ de recherche à coins arrondis (pilule), cohérent sur tous les écrans de recherche. */
+/**
+ * Champ de recherche commun aux écrans de liste — délègue à [PalSearchBar] (barre 48 dp de la
+ * maquette, loupe + croix d'effacement). [label] sert de texte indicatif.
+ */
 @Composable
 fun SearchField(
     value: String,
     onValueChange: (String) -> Unit,
     label: String,
     modifier: Modifier = Modifier,
+    trailing: (@Composable () -> Unit)? = null,
 ) {
-    OutlinedTextField(
-        value = value,
-        onValueChange = onValueChange,
-        label = { Text(label) },
-        singleLine = true,
-        leadingIcon = { Icon(Icons.Filled.Search, contentDescription = null) },
-        shape = RoundedCornerShape(28.dp),
-        modifier = modifier,
-    )
+    PalSearchBar(value = value, onValueChange = onValueChange, placeholder = label, modifier = modifier, trailing = trailing)
 }

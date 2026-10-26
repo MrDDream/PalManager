@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Redesigned "Manage" screens (Guilds, Map, Bans, Broadcast) — UI/UX redesign mockup. -->
+<resources>
+    <!-- Guilds -->
+    <string name="manage_guilds_summary_fmt">Level %1$d · %2$d member(s) · %3$d base(s)</string>
+    <string name="manage_guilds_count_cd">%1$d guild(s)</string>
+    <string name="manage_guilds_role_chief">leader</string>
+    <string name="manage_guilds_online">online</string>
+    <string name="manage_guilds_expand">Show details</string>
+    <string name="manage_guilds_collapse">Hide details</string>
+    <string name="manage_guilds_camp_title_fmt">Camp Pals · Base %1$d</string>
+    <string name="manage_guilds_camp_info_fmt">Level %1$d · %2$d Pals</string>
+    <string name="manage_guilds_camp_empty">No Pals in this camp</string>
+    <string name="manage_guilds_show_on_map">Show on map</string>
+    <string name="manage_guilds_no_base">No base</string>
+    <string name="manage_guilds_chest">Chest</string>
+    <string name="manage_guilds_chest_fmt">%1$d/%2$d</string>
+    <string name="manage_guilds_expeditions">Expeditions</string>
+    <plurals name="manage_guilds_completed">
+        <item quantity="one">%1$d completed</item>
+        <item quantity="other">%1$d completed</item>
+    </plurals>
+    <string name="manage_guilds_lab">Laboratory</string>
+    <string name="manage_guilds_lab_fmt">%1$s · %2$d in progress</string>
+    <string name="manage_guilds_no_results_fmt">No guild or member matches “%1$s”</string>
+    <string name="manage_guilds_empty_message">Guilds will show up here as soon as a player creates one.</string>
+
+    <!-- Live map -->
+    <string name="manage_map_tabs_cd">Map</string>
+    <string name="manage_map_zoom_in">Zoom in</string>
+    <string name="manage_map_zoom_out">Zoom out</string>
+    <string name="manage_map_focus_title_fmt">%1$s · Level %2$d</string>
+    <string name="manage_map_players_title">Players on the map</string>
+    <string name="manage_map_players_count_fmt">%1$d player(s)</string>
+    <string name="manage_map_ping_fmt">%1$d ms</string>
+    <string name="manage_map_bases_fmt">Guild bases · %1$d shown</string>
+    <string name="manage_map_bases_other_tab_fmt">Guild bases · %1$d on the other map</string>
+
+    <!-- Bans -->
+    <string name="manage_bans_ip_unban_hint">The server does not list banned IPs: type the address to unban.</string>
+
+    <!-- Broadcast & maintenance -->
+    <string name="manage_bc_modes_cd">Message type</string>
+    <string name="manage_bc_mode_announce">Announcement</string>
+    <string name="manage_bc_mode_alert">Alert</string>
+    <string name="manage_bc_mode_dm">Private message</string>
+    <string name="manage_bc_field_dm_fmt">Private message to %1$s</string>
+    <string name="manage_bc_recipient">Recipient</string>
+    <string name="manage_bc_no_players">No player online to receive a private message.</string>
+    <string name="manage_bc_send_announce_fmt">Broadcast to %1$d player(s)</string>
+    <string name="manage_bc_send_dm_fmt">Send to %1$s</string>
+    <string name="manage_bc_send_dm">Send</string>
+    <string name="manage_bc_maintenance">Maintenance</string>
+    <string name="manage_bc_reload">Reload PalDefender config</string>
+    <string name="manage_bc_reload_done">PalDefender config reloaded</string>
+    <string name="manage_bc_power">Restart or shut down</string>
+    <string name="manage_bc_power_sub">Clean scheduled shutdown with a message</string>
+    <string name="manage_bc_danger_show">Show</string>
+    <string name="manage_bc_danger_hide">Hide</string>
+    <string name="manage_bc_base_placeholder">e.g. 7F3A…C21</string>
+</resources>

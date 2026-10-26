@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Liste des serveurs -->
+    <string name="servers_brand" translatable="false">PalManager</string>
+    <string name="servers_title">Mes serveurs</string>
+    <plurals name="servers_profile_count">
+        <item quantity="one">%d profil</item>
+        <item quantity="other">%d profils</item>
+    </plurals>
+    <string name="servers_status_online">En ligne</string>
+    <string name="servers_status_offline">Hors ligne</string>
+    <string name="servers_status_checking">Vérification…</string>
+    <string name="servers_status_denied">Accès refusé</string>
+    <string name="servers_status_error">Erreur</string>
+    <string name="servers_stat_players">joueurs</string>
+    <string name="servers_stat_fps">FPS</string>
+    <string name="servers_stat_latency">latence</string>
+    <string name="servers_stat_ms"> ms</string>
+    <string name="servers_offline_detail">Le serveur ne répond pas</string>
+    <string name="servers_denied_detail">Mot de passe admin refusé</string>
+    <string name="servers_http_error_detail">Réponse inattendue (HTTP %1$d)</string>
+    <string name="servers_checking_detail">Connexion à l\'API REST…</string>
+    <string name="servers_verify">Vérifier</string>
+    <string name="servers_add">Ajouter un serveur</string>
+    <string name="servers_sftp_hint">Ajoute des identifiants SFTP à un profil pour débloquer les logs, le gestionnaire de fichiers et le créateur de Pal.</string>
+    <string name="servers_badge_rest" translatable="false">API REST</string>
+    <string name="servers_badge_paldefender" translatable="false">PalDefender</string>
+    <string name="servers_badge_sftp" translatable="false">SFTP</string>
+    <string name="servers_more_actions">Actions pour %1$s</string>
+    <string name="servers_open_actions">Afficher les actions</string>
+    <string name="servers_empty_title">Aucun serveur configuré</string>
+    <string name="servers_empty_message">Ajoute ton premier serveur Palworld pour commencer.</string>
+
+    <!-- Ajout / modification d'un profil -->
+    <string name="servers_form_sftp_title">Avancées</string>
+    <string name="servers_form_optional">Optionnel</string>
+    <string name="servers_form_sftp_intro">Active les logs, le gestionnaire de fichiers et le créateur de Pal via SFTP (même hôte).</string>
+    <string name="servers_form_sftp_expand">Afficher les réglages SFTP</string>
+    <string name="servers_form_sftp_collapse">Masquer les réglages SFTP</string>
+    <string name="servers_form_host_key">Empreinte de clé hôte épinglée</string>
+    <string name="servers_form_required">Champ obligatoire</string>
+    <string name="servers_form_icon_cd">Icône %1$s</string>
+    <string name="servers_icon_dns">serveur</string>
+    <string name="servers_icon_storage">stockage</string>
+    <string name="servers_icon_cloud">nuage</string>
+    <string name="servers_icon_public">monde</string>
+    <string name="servers_icon_terminal">terminal</string>
+    <string name="servers_icon_games">manette</string>
+    <string name="servers_icon_shield">bouclier</string>
+    <string name="servers_icon_star">étoile</string>
+    <string name="servers_icon_forest">forêt</string>
+    <string name="servers_verify_title">Résultat de la vérification</string>
+    <string name="servers_verify_checking">en cours…</string>
+    <string name="servers_verify_ok">OK</string>
+    <string name="servers_verify_failed">échec</string>
+    <string name="servers_verify_latency_fmt">%1$d ms</string>
+    <string name="servers_verify_dismiss">Masquer le résultat</string>
+
+    <!-- Sélecteur de chemin SFTP -->
+    <string name="servers_picker_title">Parcourir le serveur</string>
+    <string name="servers_picker_empty">Dossier vide</string>
+    <string name="servers_picker_error_title">Impossible de lister ce dossier</string>
+
+    <!-- Paramètres -->
+    <string name="servers_settings_debug_title">Mode debug</string>
+    <string name="servers_settings_language_hint">Langue de l\'interface de l\'app.</string>
+    <string name="servers_settings_manage">Gérer les serveurs</string>
+    <string name="servers_settings_version">Version</string>
+    <string name="servers_settings_disclaimer">Projet non officiel, sans lien avec Pocketpair. Données de jeu : paldb.cc.</string>
+    <string name="servers_settings_folder_cd">Changer de dossier de log</string>
+
+    <!-- Démarrage / plantage -->
+    <string name="servers_splash_loading">Chargement…</string>
+    <string name="servers_crash_trace">Trace de l\'erreur</string>
+</resources>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- UI/UX redesign labels: SFTP tools (Logs, Files, Pal creator). -->
+<resources>
+    <!-- Shared states -->
+    <string name="tools_not_configured_title">SFTP not configured</string>
+    <string name="tools_host_key_title">Host key changed</string>
+    <string name="tools_host_key_expected">Expected</string>
+    <string name="tools_host_key_actual">Current</string>
+    <string name="tools_error_title">Connection failed</string>
+
+    <!-- Logs -->
+    <string name="tools_logs_source_cd">Log source</string>
+    <string name="tools_logs_level_all">All</string>
+    <string name="tools_logs_level_info">Info</string>
+    <string name="tools_logs_level_warn">Warn.</string>
+    <string name="tools_logs_level_error">Error</string>
+    <string name="tools_logs_level_empty">No lines for this level</string>
+
+    <!-- Files -->
+    <string name="tools_files_title">Files</string>
+    <string name="tools_files_host_key_verified">host key verified</string>
+    <string name="tools_files_go_to_fmt">Go to %1$s</string>
+    <string name="tools_files_home_cd">Login folder</string>
+    <string name="tools_files_select_fmt">Actions for %1$s</string>
+    <string name="tools_files_deselect">Deselect</string>
+    <string name="tools_files_clipboard_copied">Copied</string>
+    <string name="tools_files_clipboard_cut">Cut</string>
+    <string name="tools_files_paste_here">Paste here</string>
+    <string name="tools_files_clipboard_clear">Clear clipboard</string>
+    <string name="tools_files_size_b">%1$s B</string>
+    <string name="tools_files_size_kb">%1$s KB</string>
+    <string name="tools_files_size_mb">%1$s MB</string>
+    <string name="tools_files_size_gb">%1$s GB</string>
+
+    <!-- Pal creator -->
+    <string name="tools_creator_species_index_fmt">Species · #%1$d</string>
+    <string name="tools_creator_species_search_hint">Search for a Pal</string>
+    <string name="tools_creator_change">Change</string>
+    <string name="tools_creator_gender">Gender</string>
+    <string name="tools_creator_type">Type</string>
+    <string name="tools_creator_level_dec">Lower level</string>
+    <string name="tools_creator_level_inc">Raise level</string>
+    <string name="tools_creator_dec_fmt">Lower %1$s</string>
+    <string name="tools_creator_inc_fmt">Raise %1$s</string>
+    <string name="tools_creator_iv_range">0 to 100</string>
+    <string name="tools_creator_soul_range">rank 0 to 20</string>
+    <string name="tools_creator_skill_meta_fmt">%1$d · %2$d s</string>
+    <string name="tools_creator_remove_fmt">Remove %1$s</string>
+    <string name="tools_creator_skills_max">Limit reached — remove a skill to add another one.</string>
+    <string name="tools_creator_passives_max">Limit reached — remove a passive to add another one.</string>
+    <string name="tools_creator_no_match">No results</string>
+    <string name="tools_creator_filename_label">File name</string>
+</resources>

@@ -13,35 +13,39 @@
     document.documentElement.setAttribute('data-theme', 'light');
   }
 </script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
+  /* Palette de l'app (refonte UI/UX) : mêmes jetons que ui/theme/Color.kt. */
   :root {
     --green: #4cd08a;
-    --green-strong: #7fe6b3;
-    --green-soft: #103524;
+    --green-strong: #7fe0ac;
+    --green-soft: #0f2a1d;
     --amber: #e8a33d;
     --sky: #6fc3e8;
-    --danger: #e8837c;
-    --bg: #0e1512;
-    --surface: #141d19;
-    --surface-alt: #182420;
-    --text: #eaf3ef;
-    --text-muted: #9fb3ab;
-    --border: #263832;
+    --danger: #f07a7a;
+    --bg: #0e1316;
+    --surface: #161d21;
+    --surface-alt: #131a1e;
+    --text: #e8eeea;
+    --text-muted: #9aaba3;
+    --border: #243036;
     --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 8px 24px -12px rgba(0, 0, 0, .5);
   }
   :root[data-theme="light"] {
-    --green: #2fae72;
-    --green-strong: #1f7a4e;
-    --green-soft: #e6f9f0;
-    --amber: #c9821f;
-    --sky: #2f8fb3;
-    --danger: #d1483f;
-    --bg: #fbfdfc;
+    --green: #1f9d5c;
+    --green-strong: #167a47;
+    --green-soft: #ddf4e6;
+    --amber: #935a00;
+    --sky: #136a8e;
+    --danger: #b02727;
+    --bg: #f3f7f4;
     --surface: #ffffff;
-    --surface-alt: #f3f7f5;
-    --text: #16211c;
-    --text-muted: #52645c;
-    --border: #dfe8e3;
+    --surface-alt: #edf2ee;
+    --text: #121a16;
+    --text-muted: #5a6962;
+    --border: #dce5df;
     --shadow: 0 1px 2px rgba(20, 40, 30, .06), 0 8px 24px -12px rgba(20, 40, 30, .18);
   }
   * { box-sizing: border-box; }
@@ -50,7 +54,7 @@
     margin: 0;
     background: var(--bg);
     color: var(--text);
-    font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font: 16px/1.55 Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
   }
   a { color: var(--green); }
@@ -113,6 +117,8 @@
     height: clamp(80px, 12vw, 108px);
     margin-bottom: 14px;
   }
+  h1, h2, h3 { font-family: Sora, Inter, sans-serif; }
+  code { font-family: "JetBrains Mono", ui-monospace, monospace; }
   h1 {
     font-size: clamp(1.9rem, 4.6vw, 2.6rem);
     margin: 0 0 6px;
@@ -158,7 +164,7 @@
   .btn:hover { transform: translateY(-1px); }
   .btn-primary {
     background: var(--green);
-    color: #04180f;
+    color: #062414;
     box-shadow: var(--shadow);
   }
   .btn-secondary {
@@ -179,14 +185,14 @@
     fill: currentColor;
   }
 
-  .phone-stage { position: relative; height: 420px; max-width: 620px; margin: 40px auto 0; }
+  .phone-stage { position: relative; height: 450px; max-width: 620px; margin: 40px auto 0; }
   .phone {
     position: absolute;
     top: 0;
     width: 172px;
-    border-radius: 20px;
-    border: 5px solid var(--surface-alt);
-    background: var(--surface-alt);
+    border-radius: 24px;
+    border: 5px solid #1c252a;
+    background: #0e1316;
     overflow: hidden;
     box-shadow: 0 24px 48px -18px rgba(0, 0, 0, .55), 0 2px 6px rgba(0, 0, 0, .25);
   }
@@ -205,9 +211,9 @@
     letter-spacing: .02em;
     width: 172px;
   }
-  .cap-left { transform: translateX(calc(-50% - 144px)); top: 344px; }
-  .cap-center { transform: translateX(-50%); top: 372px; width: 188px; }
-  .cap-right { transform: translateX(calc(-50% + 144px)); top: 344px; }
+  .cap-left { transform: translateX(calc(-50% - 144px)); top: 404px; }
+  .cap-center { transform: translateX(-50%); top: 420px; width: 188px; }
+  .cap-right { transform: translateX(calc(-50% + 144px)); top: 404px; }
 
   section { padding: 34px 0; }
   section.alt { background: var(--surface-alt); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
@@ -236,6 +242,10 @@
     box-shadow: var(--shadow);
   }
   .shots img { display: block; width: 100%; height: auto; }
+  @media (max-width: 520px) {
+    .shots { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+    .shots figcaption { padding: 7px 10px; font-size: .78rem; }
+  }
   .shots figcaption {
     padding: 9px 14px;
     font-size: .85rem;
@@ -299,15 +309,15 @@
   @media (max-width: 640px) {
     header.hero { padding: 34px 0 26px; }
     section { padding: 24px 0; }
-    .phone-stage { height: 350px; }
+    .phone-stage { height: 345px; }
     .phone-left, .phone-right { width: 130px; }
     .phone-left { transform: translateX(calc(-50% - 106px)) rotate(-7deg); }
     .phone-right { transform: translateX(calc(-50% + 106px)) rotate(7deg); }
     .phone-center { width: 144px; }
-    .cap-left, .cap-right { width: 130px; top: 258px; }
+    .cap-left, .cap-right { width: 130px; top: 296px; }
     .cap-left { transform: translateX(calc(-50% - 106px)); }
     .cap-right { transform: translateX(calc(-50% + 106px)); }
-    .cap-center { top: 280px; }
+    .cap-center { top: 312px; }
   }
 </style>
 </head>
@@ -374,12 +384,13 @@
       </a>
     </div>
     <div class="phone-stage">
-      <div class="phone phone-left"><img src="screenshots/give_pals.png" alt="Donner un Pal" loading="lazy"></div>
+      <div class="phone phone-left"><img src="screenshots/give_item.png" alt="Donner un item" loading="lazy"></div>
       <div class="phone phone-center"><img src="screenshots/home.png" alt="Dashboard" loading="lazy"></div>
       <div class="phone phone-right"><img src="screenshots/pal_creator.png" alt="Créateur de Pal" loading="lazy"></div>
-      <div class="phone-cap cap-left">Donner un Pal</div>
+      <div class="phone-cap cap-left">Donner un item</div>
       <div class="phone-cap cap-center">Dashboard</div>
-      <div class="phone-cap cap-right">Créateur de Pal ✨</div>
+      <div class="phone-cap cap-right">Créateur de Pal</div>
+    </div>
     </div>
   </div>
 </header>
@@ -392,12 +403,12 @@
       <div class="feature">
         <span class="emoji">📊</span>
         <h3>Dashboard</h3>
-        <p>Infos serveur, joueurs en ligne, FPS, versions Palworld/PalDefender, sauvegarde, redémarrage/arrêt.</p>
+        <p>Adresse, joueurs en ligne, FPS, durée en ligne, versions, raccourcis en un geste, sauvegarde et feuille Alimentation (arrêt programmé, arrêt forcé par appui maintenu).</p>
       </div>
       <div class="feature">
         <span class="emoji">👥</span>
         <h3>Joueurs connectés</h3>
-        <p>Liste en temps réel, kick/ban, message privé, inventaire/équipe/progression/technologies par joueur. Pals de l'équipe cliquables (IV, Âme de Pal, compétences, passifs).</p>
+        <p>Liste en temps réel avec recherche et tri (niveau, latence, nom), kick/ban, message privé, et fiche joueur à onglets : équipe (IV, Âme de Pal, compétences, passifs), inventaire, Palbox, progression, technologies.</p>
       </div>
       <div class="feature">
         <span class="emoji">🛡️</span>
@@ -406,13 +417,13 @@
       </div>
       <div class="feature">
         <span class="emoji">🎁</span>
-        <h3>Give item / Give Pal</h3>
-        <p>Recherche par nom ou image dans un catalogue embarqué (items, Pals, PNJ, technologies), filtres par catégorie/élément/rareté/métier.</p>
+        <h3>Donner un item / Pal / PNJ</h3>
+        <p>Destinataire choisi une fois, catalogue embarqué avec recherche par nom ou image, filtres catégorie/élément/rareté/métier, quantité ×1/×10/×100 ou niveau, don en un geste.</p>
       </div>
       <div class="feature">
         <span class="emoji">🗺️</span>
         <h3>Carte en direct</h3>
-        <p>Position des joueurs sur la carte des Îles Palpagos.</p>
+        <p>Position des joueurs et des bases de guilde sur la carte des Îles Palpagos, avec zoom et sélection d'un joueur.</p>
       </div>
       <div class="feature">
         <span class="emoji">🚫</span>
@@ -423,6 +434,16 @@
         <span class="emoji">📣</span>
         <h3>Diffusion & maintenance</h3>
         <p>Broadcast, alertes, messages, zone danger (reload config, suppression de base).</p>
+      </div>
+      <div class="feature">
+        <span class="emoji">🖥️</span>
+        <h3>Mes serveurs</h3>
+        <p>Chaque profil affiche son état en direct (en ligne/hors ligne, joueurs, FPS, latence) et les API configurées (REST, PalDefender, SFTP).</p>
+      </div>
+      <div class="feature">
+        <span class="emoji">🎨</span>
+        <h3>Nouvelle interface</h3>
+        <p>Refonte complète : palette sombre, typographies Sora/Inter/JetBrains Mono, grandes cibles tactiles, feuilles du bas, thème clair soigné.</p>
       </div>
       <div class="feature">
         <span class="emoji">🐞</span>
@@ -465,18 +486,24 @@
 <section class="alt">
   <div class="wrap">
     <h2>Aperçu</h2>
-    <p class="section-sub">Captures d'écran réelles de l'application (serveur/joueurs floutés pour la confidentialité).</p>
+    <p class="section-sub">Rendus réels des écrans de l'application, avec des données d'exemple.</p>
     <div class="shots">
       <figure><img src="screenshots/home.png" alt="Dashboard" loading="lazy"><figcaption>Dashboard</figcaption></figure>
+      <figure><img src="screenshots/servers.png" alt="Mes serveurs" loading="lazy"><figcaption>Mes serveurs</figcaption></figure>
       <figure><img src="screenshots/players.png" alt="Joueurs connectés" loading="lazy"><figcaption>Joueurs connectés</figcaption></figure>
+      <figure><img src="screenshots/player_team.png" alt="Fiche joueur" loading="lazy"><figcaption>Fiche joueur</figcaption></figure>
       <figure><img src="screenshots/give_item.png" alt="Donner un item" loading="lazy"><figcaption>Donner un item</figcaption></figure>
       <figure><img src="screenshots/give_pals.png" alt="Donner un Pal" loading="lazy"><figcaption>Donner un Pal</figcaption></figure>
-      <figure><img src="screenshots/inventory.png" alt="Inventaire d'un joueur" loading="lazy"><figcaption>Inventaire d'un joueur</figcaption></figure>
+      <figure><img src="screenshots/guilds.png" alt="Guildes" loading="lazy"><figcaption>Guildes</figcaption></figure>
+      <figure><img src="screenshots/livemap.png" alt="Carte en direct" loading="lazy"><figcaption>Carte en direct</figcaption></figure>
       <figure><img src="screenshots/alert.png" alt="Diffusion & maintenance" loading="lazy"><figcaption>Diffusion & maintenance</figcaption></figure>
+      <figure><img src="screenshots/power.png" alt="Alimentation" loading="lazy"><figcaption>Alimentation</figcaption></figure>
       <figure><img src="screenshots/add_server.png" alt="Ajout d'un serveur" loading="lazy"><figcaption>Ajout d'un serveur</figcaption></figure>
-      <figure><img src="screenshots/pal_creator.png" alt="Créateur de Pal" loading="lazy"><figcaption>Créateur de Pal</figcaption></figure>
+      <figure><img src="screenshots/settings.png" alt="Paramètres" loading="lazy"><figcaption>Paramètres</figcaption></figure>
       <figure><img src="screenshots/sftp.png" alt="Gestionnaire SFTP" loading="lazy"><figcaption>Gestionnaire SFTP</figcaption></figure>
       <figure><img src="screenshots/logs.png" alt="Logs" loading="lazy"><figcaption>Logs</figcaption></figure>
+      <figure><img src="screenshots/pal_creator.png" alt="Créateur de Pal" loading="lazy"><figcaption>Créateur de Pal</figcaption></figure>
+      <figure><img src="screenshots/home_light.png" alt="Thème clair" loading="lazy"><figcaption>Thème clair</figcaption></figure>
     </div>
   </div>
 </section>

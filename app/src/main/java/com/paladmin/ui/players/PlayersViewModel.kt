@@ -17,7 +17,6 @@ import androidx.compose.material.icons.filled.Diamond
 import androidx.compose.material.icons.filled.Pets
 import androidx.compose.material.icons.filled.TrendingUp
 import androidx.compose.material.icons.filled.Warning
-import androidx.compose.ui.graphics.Color
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -27,11 +26,11 @@ import com.paladmin.data.local.dataset.PassiveSkillCatalog
 import com.paladmin.data.local.dataset.TechnologyCatalog
 import com.paladmin.data.local.prefs.AppLanguage
 import com.paladmin.data.local.prefs.AppPreferences
+import com.paladmin.data.remote.paldefender.PalDefenderApiService
 import com.paladmin.data.remote.paldefender.PalDefenderClientFactory
 import com.paladmin.data.remote.paldefender.PlayerItemsResponse
 import com.paladmin.data.remote.paldefender.PlayerMessageRequest
 import com.paladmin.data.remote.paldefender.PlayerPalInstance
-import com.paladmin.data.remote.paldefender.PlayerPalsResponse
 import com.paladmin.data.remote.paldefender.PlayerProgressionResponse
 import com.paladmin.data.remote.paldefender.TechsResponse
 import com.paladmin.data.remote.palworld.KickBanRequest
@@ -41,17 +40,12 @@ import com.paladmin.data.repository.HumanRepository
 import com.paladmin.data.repository.ItemRepository
 import com.paladmin.data.repository.PalRepository
 import com.paladmin.data.repository.ServerRepository
-import com.paladmin.ui.theme.PalAmber
-import com.paladmin.ui.theme.PalDanger
-import com.paladmin.ui.theme.PalGreen
-import com.paladmin.ui.theme.PalSky
 import com.paladmin.ui.components.DetailRow
 import com.paladmin.ui.components.InventoryGridItem
-import com.paladmin.ui.components.PalGridUiState
-import com.paladmin.ui.components.PalGroup
 import com.paladmin.ui.components.PalInfo
 import com.paladmin.ui.components.PalIvInfo
 import com.paladmin.ui.components.PalSoulInfo
+import com.paladmin.ui.components.ToneKey
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -61,34 +55,71 @@ import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-/** Fond des technologies "ancienne"/boss (débloquées via des points de technologie ancienne
- * plutôt que normaux) — même violet que le palier Épique des passifs, pour rester dans la
- * palette déjà établie plutôt qu'inventer une nouvelle teinte. */
-private val ANCIENT_TECH_TINT = Color(0xFFA855F7).copy(alpha = 0.22f)
-
-/** Section "Activités" de la progression joueur — même violet que le fond des technologies
- * ancienne/boss, pour compléter la palette vert/ambre/rouge/bleu déjà utilisée sur les 4 autres
- * catégories de la fiche. */
-private val ACTIVITIES_ACCENT = Color(0xFFA855F7)
+/** Tri de la liste des joueurs (chips "Niveau / Latence / Nom" de la maquette). */
+enum class PlayerSort { LEVEL, PING, NAME }
 
 data class PlayersUiState(
     val isLoading: Boolean = true,
     val players: List<PalworldPlayer> = emptyList(),
+    /** Capacité du serveur (GET /metrics), pour le badge "x/max" — null si indisponible. */
+    val maxPlayers: Int? = null,
+    val query: String = "",
+    val sort: PlayerSort = PlayerSort.LEVEL,
     val statusMessage: String? = null,
-)
-
-enum class PlayerDetailKind(@StringRes val titleRes: Int) {
-    INVENTORY(R.string.player_detail_inventory),
-    PROGRESSION(R.string.player_detail_progression),
-    TECHS(R.string.player_detail_techs),
+) {
+    /** Joueurs filtrés (nom, ID ou IP) puis triés selon [sort]. */
+    val visiblePlayers: List<PalworldPlayer> get() = filterAndSortPlayers(players, query, sort)
 }
 
-data class PlayerDetailUiState(
-    val kind: PlayerDetailKind,
-    val playerName: String,
+fun filterAndSortPlayers(players: List<PalworldPlayer>, query: String, sort: PlayerSort): List<PalworldPlayer> {
+    val q = query.trim()
+    val filtered = if (q.isEmpty()) {
+        players
+    } else {
+        players.filter {
+            it.name.contains(q, ignoreCase = true) || it.userId.contains(q, ignoreCase = true) ||
+                it.playerId.contains(q, ignoreCase = true) || it.ip.contains(q, ignoreCase = true)
+        }
+    }
+    return when (sort) {
+        PlayerSort.LEVEL -> filtered.sortedWith(compareByDescending<PalworldPlayer> { it.level }.thenBy(String.CASE_INSENSITIVE_ORDER) { it.name })
+        PlayerSort.PING -> filtered.sortedBy { it.ping }
+        PlayerSort.NAME -> filtered.sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { it.name })
+    }
+}
+
+/** Onglets de la fiche joueur (maquette "Fiche joueur"). */
+enum class PlayerTab(@StringRes val labelRes: Int) {
+    TEAM(R.string.players_v2_tab_team),
+    INVENTORY(R.string.players_v2_tab_inventory),
+    PALBOX(R.string.players_v2_tab_palbox),
+    PROGRESSION(R.string.players_v2_tab_progress),
+    TECHS(R.string.players_v2_tab_techs),
+}
+
+/** Onglet rendu en liste de [DetailRow] (inventaire, progression, technologies). */
+data class DetailTabState(
     val isLoading: Boolean = true,
     val rows: List<DetailRow> = emptyList(),
     val error: String? = null,
+)
+
+/** Équipe et Palbox viennent du même appel (GET /pals) : chargés ensemble. */
+data class PalsTabState(
+    val isLoading: Boolean = true,
+    val team: List<PalInfo> = emptyList(),
+    val palbox: List<PalInfo> = emptyList(),
+    val error: String? = null,
+)
+
+/** Fiche joueur ouverte. Un onglet à null n'a pas encore été demandé (chargé à la première visite). */
+data class PlayerSheetUiState(
+    val player: PalworldPlayer,
+    val tab: PlayerTab,
+    val pals: PalsTabState? = null,
+    val inventory: DetailTabState? = null,
+    val progression: DetailTabState? = null,
+    val techs: DetailTabState? = null,
 )
 
 @HiltViewModel
@@ -112,11 +143,8 @@ class PlayersViewModel @Inject constructor(
     private val _state = MutableStateFlow(PlayersUiState())
     val state: StateFlow<PlayersUiState> = _state.asStateFlow()
 
-    private val _detail = MutableStateFlow<PlayerDetailUiState?>(null)
-    val detail: StateFlow<PlayerDetailUiState?> = _detail.asStateFlow()
-
-    private val _palGrid = MutableStateFlow<PalGridUiState?>(null)
-    val palGrid: StateFlow<PalGridUiState?> = _palGrid.asStateFlow()
+    private val _sheet = MutableStateFlow<PlayerSheetUiState?>(null)
+    val sheet: StateFlow<PlayerSheetUiState?> = _sheet.asStateFlow()
 
     init {
         refresh()
@@ -126,7 +154,8 @@ class PlayersViewModel @Inject constructor(
         viewModelScope.launch {
             _state.value = _state.value.copy(isLoading = true)
             val profile = serverRepository.getProfile(profileId) ?: return@launch
-            runCatching { palworldClientFactory.create(profile).getPlayers().players }
+            val api = palworldClientFactory.create(profile)
+            runCatching { api.getPlayers().players }
                 .onSuccess { players -> _state.value = _state.value.copy(isLoading = false, players = players) }
                 .onFailure { error ->
                     _state.value = _state.value.copy(
@@ -134,7 +163,18 @@ class PlayersViewModel @Inject constructor(
                         statusMessage = error.describe(context.getString(R.string.players_error_load_failed)),
                     )
                 }
+            // Capacité du serveur pour le badge "x/max" : secondaire, un échec n'est pas signalé.
+            runCatching { api.getMetrics().maxplayernum }
+                .onSuccess { max -> _state.value = _state.value.copy(maxPlayers = max.takeIf { it > 0 }) }
         }
+    }
+
+    fun onQueryChange(query: String) {
+        _state.value = _state.value.copy(query = query)
+    }
+
+    fun onSortChange(sort: PlayerSort) {
+        _state.value = _state.value.copy(sort = sort)
     }
 
     fun kick(player: PalworldPlayer, reason: String) = runPalworldAction(context.getString(R.string.players_msg_kicked_fmt, player.name)) { api ->
@@ -160,58 +200,107 @@ class PlayersViewModel @Inject constructor(
         }
     }
 
-    fun openDetail(player: PalworldPlayer, kind: PlayerDetailKind) {
-        _detail.value = PlayerDetailUiState(kind = kind, playerName = player.name)
+    // --- Fiche joueur -------------------------------------------------------------------------
+
+    /** Ouvre la fiche de [player] sur [tab] (les boutons Inventaire/Équipe/... de la carte). */
+    fun openSheet(player: PalworldPlayer, tab: PlayerTab) {
+        val current = _sheet.value
+        _sheet.value = if (current != null && current.player.userId == player.userId) {
+            current.copy(player = player, tab = tab)
+        } else {
+            PlayerSheetUiState(player = player, tab = tab)
+        }
+        ensureLoaded(tab)
+    }
+
+    fun selectTab(tab: PlayerTab) {
+        val current = _sheet.value ?: return
+        _sheet.value = current.copy(tab = tab)
+        ensureLoaded(tab)
+    }
+
+    /** Relance le chargement de l'onglet courant après une erreur. */
+    fun retryTab() {
+        val current = _sheet.value ?: return
+        _sheet.value = when (current.tab) {
+            PlayerTab.TEAM, PlayerTab.PALBOX -> current.copy(pals = null)
+            PlayerTab.INVENTORY -> current.copy(inventory = null)
+            PlayerTab.PROGRESSION -> current.copy(progression = null)
+            PlayerTab.TECHS -> current.copy(techs = null)
+        }
+        ensureLoaded(current.tab)
+    }
+
+    fun dismissSheet() {
+        _sheet.value = null
+    }
+
+    private fun ensureLoaded(tab: PlayerTab) {
+        val current = _sheet.value ?: return
+        val player = current.player
+        when (tab) {
+            PlayerTab.TEAM, PlayerTab.PALBOX -> if (current.pals == null) loadPals(player)
+            PlayerTab.INVENTORY -> if (current.inventory == null) {
+                loadDetail(player, { it.copy(inventory = DetailTabState()) }, { s, v -> s.copy(inventory = v) }) { api, language ->
+                    formatInventory(api.getItems(player.userId), language)
+                }
+            }
+            PlayerTab.PROGRESSION -> if (current.progression == null) {
+                loadDetail(player, { it.copy(progression = DetailTabState()) }, { s, v -> s.copy(progression = v) }) { api, _ ->
+                    formatProgression(api.getProgression(player.userId))
+                }
+            }
+            PlayerTab.TECHS -> if (current.techs == null) {
+                loadDetail(player, { it.copy(techs = DetailTabState()) }, { s, v -> s.copy(techs = v) }) { api, language ->
+                    formatTechs(api.getTechs(player.userId), language)
+                }
+            }
+        }
+    }
+
+    /** Applique [transform] à la fiche seulement si elle concerne toujours [userId] (une réponse
+     * tardive d'un joueur précédent ne doit pas écraser la fiche d'un autre). */
+    private fun updateSheet(userId: String, transform: (PlayerSheetUiState) -> PlayerSheetUiState) {
+        val current = _sheet.value ?: return
+        if (current.player.userId == userId) _sheet.value = transform(current)
+    }
+
+    private fun loadDetail(
+        player: PalworldPlayer,
+        markLoading: (PlayerSheetUiState) -> PlayerSheetUiState,
+        set: (PlayerSheetUiState, DetailTabState) -> PlayerSheetUiState,
+        load: suspend (PalDefenderApiService, AppLanguage) -> List<DetailRow>,
+    ) {
+        updateSheet(player.userId, markLoading)
+        viewModelScope.launch {
+            val profile = serverRepository.getProfile(profileId) ?: return@launch
+            val api = palDefenderClientFactory.create(profile)
+            val language = appPreferences.language.first()
+            runCatching { load(api, language) }
+                .onSuccess { rows -> updateSheet(player.userId) { set(it, DetailTabState(isLoading = false, rows = rows)) } }
+                .onFailure { error ->
+                    val message = error.describe(context.getString(R.string.players_error_detail_load_failed))
+                    updateSheet(player.userId) { set(it, DetailTabState(isLoading = false, error = message)) }
+                }
+        }
+    }
+
+    private fun loadPals(player: PalworldPlayer) {
+        updateSheet(player.userId) { it.copy(pals = PalsTabState()) }
         viewModelScope.launch {
             val profile = serverRepository.getProfile(profileId) ?: return@launch
             val api = palDefenderClientFactory.create(profile)
             val language = appPreferences.language.first()
             runCatching {
-                when (kind) {
-                    PlayerDetailKind.INVENTORY -> formatInventory(api.getItems(player.userId), language)
-                    PlayerDetailKind.PROGRESSION -> formatProgression(api.getProgression(player.userId))
-                    PlayerDetailKind.TECHS -> formatTechs(api.getTechs(player.userId), language)
-                }
-            }.onSuccess { rows ->
-                _detail.value = _detail.value?.copy(isLoading = false, rows = rows)
+                val response = api.getPals(player.userId)
+                formatPals(response.pals.team.values, language) to formatPals(response.pals.palbox.values, language)
+            }.onSuccess { (team, palbox) ->
+                updateSheet(player.userId) { it.copy(pals = PalsTabState(isLoading = false, team = team, palbox = palbox)) }
             }.onFailure { error ->
-                _detail.value = _detail.value?.copy(isLoading = false, error = error.describe(context.getString(R.string.players_error_detail_load_failed)))
+                val message = error.describe(context.getString(R.string.players_error_detail_load_failed))
+                updateSheet(player.userId) { it.copy(pals = PalsTabState(isLoading = false, error = message)) }
             }
         }
-    }
-
-    fun dismissDetail() {
-        _detail.value = null
-    }
-
-    fun openTeam(player: PalworldPlayer) = openPalGrid(player, R.string.player_detail_team) { it.pals.team.values }
-
-    fun openPalbox(player: PalworldPlayer) = openPalGrid(player, R.string.player_detail_palbox, searchable = true) { it.pals.palbox.values }
-
-    private fun openPalGrid(
-        player: PalworldPlayer,
-        @StringRes titleRes: Int,
-        searchable: Boolean = false,
-        pals: (PlayerPalsResponse) -> Collection<PlayerPalInstance>,
-    ) {
-        _palGrid.value = PalGridUiState(
-            title = context.getString(R.string.player_detail_title_fmt, context.getString(titleRes), player.name),
-            searchable = searchable,
-        )
-        viewModelScope.launch {
-            val profile = serverRepository.getProfile(profileId) ?: return@launch
-            val api = palDefenderClientFactory.create(profile)
-            val language = appPreferences.language.first()
-            runCatching { formatPals(pals(api.getPals(player.userId)), language) }
-                .onSuccess { groups -> _palGrid.value = _palGrid.value?.copy(isLoading = false, groups = groups) }
-                .onFailure { error ->
-                    _palGrid.value = _palGrid.value?.copy(isLoading = false, error = error.describe(context.getString(R.string.players_error_detail_load_failed)))
-                }
-        }
-    }
-
-    fun dismissPalGrid() {
-        _palGrid.value = null
     }
 
     private suspend fun formatInventory(response: PlayerItemsResponse, language: AppLanguage): List<DetailRow> {
@@ -228,7 +317,7 @@ class PlayersViewModel @Inject constructor(
         sections.forEach { (label, container) ->
             val slots = container?.slots?.values?.filter { it.itemId.isNotBlank() }.orEmpty()
             if (slots.isNotEmpty()) {
-                rows += DetailRow.Section("$label (${container?.usedSlots ?: 0}/${container?.maxSlots ?: 0})")
+                rows += DetailRow.Section(label, trailing = "${container?.usedSlots ?: 0}/${container?.maxSlots ?: 0}")
                 rows += DetailRow.Grid(
                     slots.map {
                         val itemEntry = itemRepository.getById(it.itemId)
@@ -243,39 +332,36 @@ class PlayersViewModel @Inject constructor(
         return rows.ifEmpty { listOf(DetailRow.Plain(context.getString(R.string.inventory_empty))) }
     }
 
-    private suspend fun formatPals(pals: Collection<PlayerPalInstance>, language: AppLanguage): List<PalGroup> {
-        val infos = pals.map { pal ->
-            // PalID sert aussi aux PNJ humains asservis comme ouvriers (humans.json, ex.
-            // "Male_Trader01_v25") — on tente Pal d'abord, puis Humain, comme pour les camps de guilde.
-            val palEntry = palRepository.getById(basePalImageId(pal.palId))
-            val (speciesName, imagePath) = if (palEntry != null) {
-                pickLocalizedName(palEntry.nameFr, palEntry.nameEn, language) to "file:///android_asset/images/pals/${palEntry.image}"
-            } else {
-                val humanEntry = humanRepository.getById(pal.palId)
-                val name = humanEntry?.let { pickLocalizedName(it.nameFr, it.nameEn, language) } ?: pal.palId
-                val image = humanEntry?.image?.let { "file:///android_asset/images/humans/$it" }
-                    ?: "file:///android_asset/images/humans/${pal.palId}.webp"
-                name to image
-            }
-            PalInfo(
-                imagePath = imagePath,
-                speciesName = speciesName,
-                nickname = pal.nickname,
-                level = pal.level,
-                genderRaw = pal.gender,
-                gender = translatePalGender(context, pal.gender),
-                shiny = pal.shiny,
-                isBoss = pal.palId.startsWith("boss_", ignoreCase = true),
-                workerSick = pal.workerSick,
-                element = palEntry?.element1,
-                exp = pal.exp,
-                activeSkills = pal.activeSkills.map { resolvePalSkill(activeSkillCatalog, itemRepository, it, language) },
-                passives = pal.passives.map { resolvePalPassive(passiveSkillCatalog, itemRepository, it, language) },
-                iv = pal.ivs?.let { PalIvInfo(it.health, maxOf(it.attackMelee, it.attackShot), it.defense) },
-                soul = pal.palSouls?.let { PalSoulInfo(it.health, it.attack, it.defense, it.craftSpeed) },
-            )
+    private suspend fun formatPals(pals: Collection<PlayerPalInstance>, language: AppLanguage): List<PalInfo> = pals.map { pal ->
+        // PalID sert aussi aux PNJ humains asservis comme ouvriers (humans.json, ex.
+        // "Male_Trader01_v25") — on tente Pal d'abord, puis Humain, comme pour les camps de guilde.
+        val palEntry = palRepository.getById(basePalImageId(pal.palId))
+        val (speciesName, imagePath) = if (palEntry != null) {
+            pickLocalizedName(palEntry.nameFr, palEntry.nameEn, language) to "file:///android_asset/images/pals/${palEntry.image}"
+        } else {
+            val humanEntry = humanRepository.getById(pal.palId)
+            val name = humanEntry?.let { pickLocalizedName(it.nameFr, it.nameEn, language) } ?: pal.palId
+            val image = humanEntry?.image?.let { "file:///android_asset/images/humans/$it" }
+                ?: "file:///android_asset/images/humans/${pal.palId}.webp"
+            name to image
         }
-        return listOf(PalGroup(label = null, pals = infos))
+        PalInfo(
+            imagePath = imagePath,
+            speciesName = speciesName,
+            nickname = pal.nickname,
+            level = pal.level,
+            genderRaw = pal.gender,
+            gender = translatePalGender(context, pal.gender),
+            shiny = pal.shiny,
+            isBoss = pal.palId.startsWith("boss_", ignoreCase = true),
+            workerSick = pal.workerSick,
+            element = palEntry?.element1,
+            exp = pal.exp,
+            activeSkills = pal.activeSkills.map { resolvePalSkill(activeSkillCatalog, itemRepository, it, language) },
+            passives = pal.passives.map { resolvePalPassive(passiveSkillCatalog, itemRepository, it, language) },
+            iv = pal.ivs?.let { PalIvInfo(it.health, maxOf(it.attackMelee, it.attackShot), it.defense) },
+            soul = pal.palSouls?.let { PalSoulInfo(it.health, it.attack, it.defense, it.craftSpeed) },
+        )
     }
 
     private fun formatProgression(response: PlayerProgressionResponse): List<DetailRow> {
@@ -288,17 +374,25 @@ class PlayersViewModel @Inject constructor(
 
         val rows = mutableListOf<DetailRow>()
 
-        rows += DetailRow.Section(context.getString(R.string.progression_section_player), Icons.Filled.TrendingUp, PalGreen)
-        rows += DetailRow.Stats(
-            listOfNotNull(
+        // Chiffres clés en tête (maquette) — retirés des sections ci-dessous pour ne pas les répéter.
+        rows += DetailRow.Kpis(
+            listOf(
                 stat(R.string.progression_label_level, progression.player.level),
+                stat(R.string.progression_label_boss_total, bosses.totalBossDefeatCount),
+                stat(R.string.progression_label_pal_capture, captures.palCaptureCounts.values.sum()),
+            ),
+        )
+
+        rows += DetailRow.Section(context.getString(R.string.progression_section_player), Icons.Filled.TrendingUp, tone = ToneKey.Green)
+        rows += DetailRow.Stats(
+            listOf(
                 context.getString(R.string.progression_label_exp) to formatThousands(progression.player.exp),
                 stat(R.string.progression_label_unused_points, progression.player.unusedStatusPoints),
             ),
-            accent = PalGreen,
+            tone = ToneKey.Green,
         )
 
-        rows += DetailRow.Section(context.getString(R.string.progression_section_currencies), Icons.Filled.Diamond, PalAmber)
+        rows += DetailRow.Section(context.getString(R.string.progression_section_currencies), Icons.Filled.Diamond, tone = ToneKey.Amber)
         rows += DetailRow.Stats(
             listOfNotNull(
                 stat(R.string.progression_label_tech_points, progression.currencies.technologyPoints),
@@ -306,33 +400,31 @@ class PlayersViewModel @Inject constructor(
                 progression.currencies.relics.takeIf { it.isNotEmpty() }
                     ?.let { stat(R.string.progression_label_relics, it.values.sum()) },
             ),
-            accent = PalAmber,
+            tone = ToneKey.Amber,
         )
 
-        rows += DetailRow.Section(context.getString(R.string.progression_section_bosses), Icons.Filled.Warning, PalDanger)
+        rows += DetailRow.Section(context.getString(R.string.progression_section_bosses), Icons.Filled.Warning, tone = ToneKey.Danger)
         rows += DetailRow.Stats(
             listOf(
-                stat(R.string.progression_label_boss_total, bosses.totalBossDefeatCount),
-                stat(R.string.progression_label_predator, bosses.predatorDefeatCount),
                 stat(R.string.progression_label_tower_boss, bosses.towerBossDefeatCounts.values.sum()),
                 stat(R.string.progression_label_raid_boss, bosses.raidBossDefeatCounts.values.sum()),
                 stat(R.string.progression_label_normal_boss, bosses.normalBossDefeatFlags.values.count { it }),
+                stat(R.string.progression_label_predator, bosses.predatorDefeatCount),
             ),
-            accent = PalDanger,
+            tone = ToneKey.Danger,
         )
 
-        rows += DetailRow.Section(context.getString(R.string.progression_section_captures), Icons.Filled.Pets, PalSky)
+        rows += DetailRow.Section(context.getString(R.string.progression_section_captures), Icons.Filled.Pets, tone = ToneKey.Sky)
         rows += DetailRow.Stats(
             listOf(
                 stat(R.string.progression_label_tribe_capture, captures.tribeCaptureCount),
-                stat(R.string.progression_label_pal_capture, captures.palCaptureCounts.values.sum()),
                 stat(R.string.progression_label_pal_capture_bonus, captures.palCaptureBonusCounts.values.sum()),
                 stat(R.string.progression_label_pal_butcher, captures.palButcherCounts.values.sum()),
             ),
-            accent = PalSky,
+            tone = ToneKey.Sky,
         )
 
-        rows += DetailRow.Section(context.getString(R.string.progression_section_activities), Icons.Filled.Construction, ACTIVITIES_ACCENT)
+        rows += DetailRow.Section(context.getString(R.string.progression_section_activities), Icons.Filled.Construction, tone = ToneKey.Purple)
         rows += DetailRow.Stats(
             listOf(
                 stat(R.string.progression_label_craft, activities.craftItemCounts.values.sum()),
@@ -348,35 +440,41 @@ class PlayersViewModel @Inject constructor(
                 context.getString(R.string.progression_label_first_fishing) to
                     context.getString(if (activities.firstFishingComplete) R.string.common_yes else R.string.common_no),
             ),
-            accent = ACTIVITIES_ACCENT,
+            tone = ToneKey.Purple,
         )
 
         return rows
     }
 
     private suspend fun formatTechs(response: TechsResponse, language: AppLanguage): List<DetailRow> {
-        val header = context.getString(R.string.techs_unlocked_fmt, response.meta.unlockedCount, response.meta.totalCount)
-        val rows = mutableListOf<DetailRow>(DetailRow.Plain(header))
+        val rows = mutableListOf<DetailRow>(
+            DetailRow.Progress(
+                label = context.getString(R.string.players_v2_techs_unlocked),
+                current = response.meta.unlockedCount,
+                total = response.meta.totalCount,
+            ),
+        )
+        val unlockedLabel = context.getString(R.string.players_v2_tech_unlocked)
+        val lockedLabel = context.getString(R.string.players_v2_tech_locked)
 
         // Comparaison insensible à la casse : certains ids de techno.json sont en MAJUSCULES tel
         // que scrapés sur paldb.cc (ex. "PALBOX") alors que l'API PalDefender renvoie une casse
         // différente pour ce même id (ex. "Palbox") — un Set.contains strict ratait ces entrées et
-        // les affichait verrouillées (rouge) alors qu'elles étaient bien débloquées en jeu.
+        // les affichait verrouillées alors qu'elles étaient bien débloquées en jeu.
         val unlocked = response.techs.unlocked.mapTo(mutableSetOf()) { it.uppercase() }
         technologyCatalog.all().groupBy { it.level }.toSortedMap().forEach { (level, techs) ->
             rows += DetailRow.Section(context.getString(R.string.techs_level_fmt, level))
-            rows += DetailRow.Grid(
-                techs.sortedBy { it.isAncient }.map {
-                    val isUnlocked = it.id.uppercase() in unlocked
-                    InventoryGridItem(
-                        imagePath = "file:///android_asset/images/technologies/${it.image}",
-                        label = pickLocalizedName(it.nameFr, it.nameEn, language).ifBlank { it.id },
-                        dimmed = !isUnlocked,
-                        borderColor = if (isUnlocked) PalGreen else PalDanger,
-                        tintBackground = if (it.isAncient) ANCIENT_TECH_TINT else null,
-                    )
-                },
-            )
+            techs.sortedBy { it.isAncient }.forEach {
+                val isUnlocked = it.id.uppercase() in unlocked
+                // Technologies "ancienne"/boss (points de technologie ancienne) : vignette violette.
+                rows += DetailRow.WithImage(
+                    imagePath = "file:///android_asset/images/technologies/${it.image}",
+                    text = pickLocalizedName(it.nameFr, it.nameEn, language).ifBlank { it.id },
+                    status = if (isUnlocked) unlockedLabel else lockedLabel,
+                    positive = isUnlocked,
+                    tint = if (it.isAncient) ToneKey.Purple else null,
+                )
+            }
         }
         return rows
     }
