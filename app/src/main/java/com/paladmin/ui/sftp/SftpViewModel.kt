@@ -68,6 +68,9 @@ class SftpViewModel @Inject constructor(
 
     fun navigateUp() = load(sftpParentPath(_state.value.currentPath))
 
+    /** Saut direct vers un dossier ancêtre (fil d'Ariane du chemin). */
+    fun navigateTo(path: String) = load(path)
+
     fun refresh() = load(_state.value.currentPath)
 
     fun trustNewHostKey() = load(_state.value.currentPath, trustNewKey = true)

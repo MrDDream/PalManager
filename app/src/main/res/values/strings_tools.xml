@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Libellés de la refonte UI/UX : outils SFTP (Logs, Fichiers, Créateur de Pal). -->
+<resources>
+    <!-- États communs -->
+    <string name="tools_not_configured_title">SFTP non configuré</string>
+    <string name="tools_host_key_title">Clé d\'hôte modifiée</string>
+    <string name="tools_host_key_expected">Attendue</string>
+    <string name="tools_host_key_actual">Actuelle</string>
+    <string name="tools_error_title">Connexion impossible</string>
+
+    <!-- Logs -->
+    <string name="tools_logs_source_cd">Source du log</string>
+    <string name="tools_logs_level_all">Tout</string>
+    <string name="tools_logs_level_info">Info</string>
+    <string name="tools_logs_level_warn">Avert.</string>
+    <string name="tools_logs_level_error">Erreur</string>
+    <string name="tools_logs_level_empty">Aucune ligne pour ce niveau</string>
+
+    <!-- Fichiers -->
+    <string name="tools_files_title">Fichiers</string>
+    <string name="tools_files_host_key_verified">clé hôte vérifiée</string>
+    <string name="tools_files_go_to_fmt">Aller à %1$s</string>
+    <string name="tools_files_home_cd">Dossier de connexion</string>
+    <string name="tools_files_select_fmt">Actions pour %1$s</string>
+    <string name="tools_files_deselect">Désélectionner</string>
+    <string name="tools_files_clipboard_copied">Copié</string>
+    <string name="tools_files_clipboard_cut">Coupé</string>
+    <string name="tools_files_paste_here">Coller ici</string>
+    <string name="tools_files_clipboard_clear">Vider le presse-papiers</string>
+    <string name="tools_files_size_b">%1$s o</string>
+    <string name="tools_files_size_kb">%1$s Ko</string>
+    <string name="tools_files_size_mb">%1$s Mo</string>
+    <string name="tools_files_size_gb">%1$s Go</string>
+
+    <!-- Créateur de Pal -->
+    <string name="tools_creator_species_index_fmt">Espèce · #%1$d</string>
+    <string name="tools_creator_species_search_hint">Rechercher un Pal</string>
+    <string name="tools_creator_change">Changer</string>
+    <string name="tools_creator_gender">Sexe</string>
+    <string name="tools_creator_type">Type</string>
+    <string name="tools_creator_level_dec">Baisser le niveau</string>
+    <string name="tools_creator_level_inc">Monter le niveau</string>
+    <string name="tools_creator_dec_fmt">Baisser %1$s</string>
+    <string name="tools_creator_inc_fmt">Monter %1$s</string>
+    <string name="tools_creator_iv_range">0 à 100</string>
+    <string name="tools_creator_soul_range">rang 0 à 20</string>
+    <string name="tools_creator_skill_meta_fmt">%1$d · %2$d s</string>
+    <string name="tools_creator_remove_fmt">Retirer %1$s</string>
+    <string name="tools_creator_skills_max">Maximum atteint — retire une compétence pour en ajouter une autre.</string>
+    <string name="tools_creator_passives_max">Maximum atteint — retire un passif pour en ajouter un autre.</string>
+    <string name="tools_creator_no_match">Aucun résultat</string>
+    <string name="tools_creator_filename_label">Nom du fichier</string>
+</resources>
