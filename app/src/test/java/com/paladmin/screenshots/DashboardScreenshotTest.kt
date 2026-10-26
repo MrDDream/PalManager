@@ -26,14 +26,14 @@ class DashboardScreenshotTest {
     private val sampleState = DashboardUiState(
         isLoading = false,
         profile = ServerProfile(
-            name = "Serveur de Dorian",
+            name = "Serveur Palpagos",
             host = "208.115.214.218",
             sftpUsername = "steam",
             sftpPassword = "x",
         ),
         info = PalworldInfo(version = "v0.6.1.1", servername = "Palworld Server"),
         metrics = PalworldMetrics(serverfps = 60, currentplayernum = 7, serverframetime = 16.6, maxplayernum = 32, uptime = 310_000, days = 128),
-        players = listOf("Dorian", "Aelys", "Ryuujin", "Fennecoeur", "Vexil", "Lunaé", "Mirou").map { PalworldPlayer(name = it, userId = "steam_$it") },
+        players = listOf("Kaito", "Aelys", "Ryuujin", "Fennecoeur", "Vexil", "Lunaé", "Mirou").map { PalworldPlayer(name = it, userId = "steam_$it") },
         palDefenderVersion = "v1.4.2",
     )
 
@@ -53,7 +53,7 @@ class DashboardScreenshotTest {
     fun powerSheetDark() {
         paparazzi.snapshotScreen(darkTheme = true) {
             Box(Modifier.fillMaxSize().background(PalTheme.colors.surfaceBar), contentAlignment = Alignment.BottomCenter) {
-                PowerSheetContent("Serveur de Dorian", 7, { _, _ -> }, {})
+                PowerSheetContent("Serveur Palpagos", 7, { _, _ -> }, {})
             }
         }
     }
