@@ -39,7 +39,14 @@ sealed interface SftpLogResult {
     data class Failure(val message: String) : SftpLogResult
 }
 
-data class SftpEntry(val name: String, val path: String, val isDirectory: Boolean)
+/** [size] (octets) et [modifiedEpochSeconds] : attributs SFTP, null quand le serveur ne les fournit pas. */
+data class SftpEntry(
+    val name: String,
+    val path: String,
+    val isDirectory: Boolean,
+    val size: Long? = null,
+    val modifiedEpochSeconds: Long? = null,
+)
 
 /** Élément d'une arborescence locale à envoyer via [SftpLogClient.uploadTree] — [open] est différé
  * (pas ouvert tant que l'upload de ce fichier précis n'est pas atteint), un dossier avec beaucoup
@@ -150,7 +157,16 @@ class SftpLogClient @Inject constructor() {
         knownHostKeyFingerprint: String?,
     ): TofuResult<List<SftpEntry>> = withTofu(host, port, username, password, knownHostKeyFingerprint) { sftp ->
         sftp.ls(path)
-            .map { SftpEntry(it.name, it.path, it.attributes.type == FileMode.Type.DIRECTORY) }
+            .map {
+                val attrs = it.attributes
+                SftpEntry(
+                    name = it.name,
+                    path = it.path,
+                    isDirectory = attrs.type == FileMode.Type.DIRECTORY,
+                    size = attrs.size.takeIf { size -> size >= 0 },
+                    modifiedEpochSeconds = attrs.mtime.takeIf { mtime -> mtime > 0 },
+                )
+            }
             .sortedWith(compareByDescending<SftpEntry> { it.isDirectory }.thenBy { it.name.lowercase() })
     }
 

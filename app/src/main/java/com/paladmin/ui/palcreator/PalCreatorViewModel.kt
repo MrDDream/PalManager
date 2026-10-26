@@ -36,7 +36,15 @@ import kotlinx.serialization.json.Json
 import java.io.ByteArrayInputStream
 import javax.inject.Inject
 
-data class CatalogOption(val id: String, val name: String)
+/** [element]/[power]/[cooldown] : compétences actives ; [rank] : passifs (null = inconnu/non applicable). */
+data class CatalogOption(
+    val id: String,
+    val name: String,
+    val element: String? = null,
+    val power: Int? = null,
+    val cooldown: Int? = null,
+    val rank: Int? = null,
+)
 
 data class PalCreatorFormState(
     val speciesQuery: String = "",
@@ -108,8 +116,18 @@ class PalCreatorViewModel @Inject constructor(
         viewModelScope.launch {
             _profile.value = serverRepository.getProfile(profileId)
             val language = appPreferences.language.first()
-            allActiveSkills = activeSkillCatalog.all().map { CatalogOption(it.id, pickLocalizedName(it.nameFr, it.nameEn, language)) }.sortedBy { it.name }
-            allPassives = passiveSkillCatalog.all().map { CatalogOption(it.id, pickLocalizedName(it.nameFr, it.nameEn, language)) }.sortedBy { it.name }
+            allActiveSkills = activeSkillCatalog.all().map {
+                CatalogOption(
+                    id = it.id,
+                    name = pickLocalizedName(it.nameFr, it.nameEn, language),
+                    element = it.element.ifBlank { null },
+                    power = it.power.takeIf { power -> power > 0 },
+                    cooldown = it.cooldown.takeIf { cooldown -> cooldown > 0 },
+                )
+            }.sortedBy { it.name }
+            allPassives = passiveSkillCatalog.all().map {
+                CatalogOption(it.id, pickLocalizedName(it.nameFr, it.nameEn, language), rank = it.rank)
+            }.sortedBy { it.name }
         }
     }
 
